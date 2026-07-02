@@ -1,5 +1,5 @@
-const CACHE_NAME = 'marine-platform-v5';
-const ASSETS = ['./','./index.html','./styles.css','./search-index.js','./search-data.json','./parts-database.json','./trainer-data.json','./manifest.webmanifest','./offline.html','./icon.svg'];
+const CACHE_NAME = 'marine-platform-v7';
+const ASSETS = ['./','./index.html','./styles.css?v=7','./search-index.js?v=7','./search-data.json','./parts-database.json','./trainer-data.json','./manifest.webmanifest','./offline.html','./icon.svg'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS)).then(() => self.skipWaiting()));
 });

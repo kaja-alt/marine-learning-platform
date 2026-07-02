@@ -39559,17 +39559,67 @@ function chapterStepLabels(chapterId) {
   if ([11, 16, 33, 34, 35, 36, 37, 44, 45, 46].includes(n)) return ['Forstå systemet', 'Observer symptom', 'Kontroller komponent', 'Anbefal tiltak'];
   return ['Les situasjonen', 'Samle data', 'Kontroller kilde', 'Følg opp saken'];
 }
+function chapterExplanationCards(chapterId) {
+  const n = Number(chapterId);
+  if ([12, 13, 14, 15, 17, 39, 41].includes(n)) {
+    return [
+      ['Motoridentitet', 'Fabrikat, modell, serienummer, motornummer og variant må bekreftes før delvalg.'],
+      ['Delnummer', 'Delnummer må kobles til riktig posisjon, antall, kitinnhold og eventuell supersession.'],
+      ['Dokumentasjon', 'Bilder, katalogkilde og forbehold gjør at saken kan overtas av en kollega.']
+    ];
+  }
+  if ([18, 21, 22, 23, 24, 25, 42, 43].includes(n)) {
+    return [
+      ['Kundedialog', 'Start med å roe saken, skille fakta fra antakelser og avtale neste oppdatering.'],
+      ['Beslutningsgrunnlag', 'Et svar skal bygge på motor-ID, symptom, delbehov, lagerstatus og dokumenterte forbehold.'],
+      ['Oppfølging', 'Lukk ikke saken før kunden vet hva som skjer videre og hva som eventuelt mangler.']
+    ];
+  }
+  if (n >= 26 && n <= 32) {
+    return [
+      ['Produsentdata', 'Bruk produsentens egne ID-felt og katalogspråk før du sammenligner deler.'],
+      ['Motorfamilie', 'Samme motorfamilie kan ha flere ratinger, applikasjoner og produksjonsendringer.'],
+      ['Verifisering', 'Konkrete delnumre skal kontrolleres mot offisiell dokumentasjon før tilbud eller ordre.']
+    ];
+  }
+  return [
+    ['Systemforståelse', 'Se komponenten som en del av et system: luft, drivstoff, kjøling, smøring, elektrisk eller mekanisk.'],
+    ['Feilsøking', 'Gå fra symptom til kontroll før du anbefaler en komponent eller et servicekit.'],
+    ['Reservedelsvalg', 'Koble funksjon, posisjon, variant og produsentdata før du bekrefter delnummer.']
+  ];
+}
+function chapterBeginnerMistakes(chapterId) {
+  const n = Number(chapterId);
+  if ([12, 13, 14, 15, 17, 39, 41].includes(n)) return ['Leser av feil tegn i serienummer.', 'Antar at modellnavn alene er nok.', 'Glemmer å sjekke om gammelt nummer er erstattet.'];
+  if ([18, 19, 20, 21, 22, 23, 24, 25, 42, 43].includes(n)) return ['Lover levering før lager og frakt er kontrollert.', 'Svar blir for kort når kunden er stresset.', 'Dokumenterer ikke hva kunden faktisk ba om.'];
+  if (n >= 26 && n <= 32) return ['Blander produsentenes ID-begreper.', 'Bruker generell motorfamilie i stedet for korrekt variant.', 'Overser at marine gear eller drev kan ha egen identitet.'];
+  return ['Bytter del før enkel kontroll er gjort.', 'Blander symptom og årsak.', 'Glemmer miljø, driftstimer og siste service.'];
+}
+function chapterCustomerExample(chapter, parts) {
+  const part = parts[0];
+  return `Kunde spør etter ${part ? part.component : 'en reservedel'} til kapitteltemaet, men mangler komplett motor-ID. Riktig respons er å be om bilde av typeplate, serienummer/motornummer, symptom og bilde av aktuell komponent før delnummer bekreftes.`;
+}
+function chapterWorkshopExample(chapter, parts) {
+  const part = parts[1] || parts[0];
+  return `Mekaniker står med demontert område og trenger rask avklaring. Sjekk posisjon, antall, pakninger og om ${part ? part.component : 'delen'} inngår i enkeltkomponent, reparasjonssett eller servicekit.`;
+}
+function chapterInteractiveSummary(chapter) {
+  return `Etter kapittel ${chapter.chapter} skal du kunne forklare hovedpoenget, stille riktige kontrollspørsmål, velge relevant simulatortrening og beskrive hva som må verifiseres før kunden får et bindende svar.`;
+}
 function renderInteractiveChapterBlock(chapter) {
   const quiz = quizById(chapter.chapter);
   const question = quiz?.questions?.[0];
   const parts = chapterPartsForInteractive(chapter.chapter);
   const steps = chapterStepLabels(chapter.chapter);
   const simModes = simulatorModesForChapter(chapter.chapter);
+  const explanationCards = chapterExplanationCards(chapter.chapter);
+  const beginnerMistakes = chapterBeginnerMistakes(chapter.chapter);
   return `<section class="chapter-interactive" data-interactive-chapter="${chapter.chapter}">
-    <div class="interactive-head"><span class="kicker">Interaktiv trening</span><h2>Øv mens du leser kapittel ${chapter.chapter}</h2><p>Bruk illustrasjoner, delkort, stegvis arbeidsflyt, verkstedtips og korte spørsmål for å gjøre kapitlet praktisk.</p></div>
+    <div class="interactive-head"><span class="kicker">Digital leksjon</span><h2>Øv mens du leser kapittel ${chapter.chapter}</h2><p>Bruk forklaringskort, motordeler, stegvis arbeidsflyt, miniquiz og simulatorlenker for å gjøre kapitlet praktisk.</p></div>
+    <div class="explain-card-grid">${explanationCards.map((card, index) => `<button class="explain-card" data-explain-card="${index}" aria-expanded="false"><strong>${escapeHtml(card[0])}</strong><span>${escapeHtml(card[1])}</span></button>`).join('')}</div>
     <div class="interactive-chapter-grid">
       <article class="interactive-panel">
-        <h3>Illustrasjoner og motordeler</h3>
+        <h3>Illustrasjoner og bilder av motordeler</h3>
         <div class="part-card-grid">${parts.map(part => `<div class="part-card"><div class="part-visual" aria-hidden="true"><span></span></div><strong>${escapeHtml(part.component)}</strong><em>${escapeHtml(part.system)} · ${escapeHtml(part.manufacturer)}</em><small>${escapeHtml(part.partNumber)}</small><p>Kontroller faktisk delnummer, variant og supersession mot produsentens dokumentasjon.</p></div>`).join('')}</div>
       </article>
       <article class="interactive-panel">
@@ -39585,9 +39635,21 @@ function renderInteractiveChapterBlock(chapter) {
           <li>Glemmer å sjekke variant, side, antall eller kitinnhold.</li>
         </ul>
       </article>
+      <article class="interactive-panel">
+        <h3>Vanlige nybegynnerfeil</h3>
+        <ul>${beginnerMistakes.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+      </article>
       <article class="interactive-panel workshop-tip">
         <h3>Tips fra verkstedet</h3>
         <p>${escapeHtml(chapterWorkshopTip(chapter.chapter))}</p>
+      </article>
+      <article class="interactive-panel case-card">
+        <h3>Praktisk kundeservice</h3>
+        <p>${escapeHtml(chapterCustomerExample(chapter, parts))}</p>
+      </article>
+      <article class="interactive-panel case-card">
+        <h3>Praktisk verksted</h3>
+        <p>${escapeHtml(chapterWorkshopExample(chapter, parts))}</p>
       </article>
       <article class="interactive-panel">
         <h3>Miniquiz underveis</h3>
@@ -39599,7 +39661,7 @@ function renderInteractiveChapterBlock(chapter) {
         <div class="action-row">${simModes.map(mode => `<button class="secondary" data-start-sim="${mode}">${escapeHtml(simModeLabel(mode))}</button>`).join('')}</div>
       </article>
     </div>
-    <div class="interactive-summary"><strong>Oppsummering til slutt:</strong> Forklar kapitlets hovedpoeng med egne ord, gjennomfør minst ett simulatorvalg og noter ett tema du vil repetere senere.</div>
+    <div class="interactive-summary"><strong>Kort oppsummering:</strong> ${escapeHtml(chapterInteractiveSummary(chapter))}</div>
   </section>`;
 }
 function initInteractiveChapters() {
@@ -39619,6 +39681,12 @@ function initInteractiveChapters() {
       block?.classList.remove('steps-running');
       void block?.offsetWidth;
       block?.classList.add('steps-running');
+    }
+    const explain = event.target.closest('[data-explain-card]');
+    if (explain) {
+      const expanded = explain.getAttribute('aria-expanded') === 'true';
+      explain.setAttribute('aria-expanded', String(!expanded));
+      explain.classList.toggle('open', !expanded);
     }
     const mini = event.target.closest('[data-mini-answer]');
     if (mini) {
