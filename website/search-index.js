@@ -17512,6 +17512,7 @@ const PARTS_DATABASE = [
 const WORK_KEY = 'marineTrainingWorkMode.v1';
 let selectedDiagramChapter = null;
 let deferredInstallPrompt = null;
+let installUnavailableReason = 'Installasjonsprompt er ikke tilgjengelig ennå. Prøv igjen etter at siden er lastet ferdig, eller bruk nettleserens meny hvis den tilbyr installasjon.';
 
 function loadWorkState() {
   try {
@@ -17538,18 +17539,99 @@ function initPwa() {
   window.addEventListener('beforeinstallprompt', event => {
     event.preventDefault();
     deferredInstallPrompt = event;
-    const btn = $('#installApp');
-    if (btn) btn.classList.remove('hidden');
+    installUnavailableReason = '';
+    updateInstallButton();
+  });
+  window.addEventListener('appinstalled', () => {
+    deferredInstallPrompt = null;
+    updateInstallButton(true);
   });
   const install = $('#installApp');
   if (install) install.addEventListener('click', async () => {
-    if (!deferredInstallPrompt) { setSyncStatus('Installer via nettleserens meny hvis knappen ikke vises automatisk.'); return; }
-    deferredInstallPrompt.prompt();
-    await deferredInstallPrompt.userChoice;
-    deferredInstallPrompt = null;
+    if (isPwaInstalled()) {
+      updateInstallButton(true);
+      return;
+    }
+    if (isIosDevice()) {
+      showInstallModal('Installer på iPhone/iPad', 'Tap the Share button, then ‘Add to Home Screen’.');
+      return;
+    }
+    if (!deferredInstallPrompt) {
+      showInstallModal('Installasjon er ikke tilgjengelig', installUnavailableReasonForPlatform());
+      return;
+    }
+    try {
+      deferredInstallPrompt.prompt();
+      const choice = await deferredInstallPrompt.userChoice;
+      deferredInstallPrompt = null;
+      if (choice.outcome === 'accepted') {
+        showInstallModal('Installasjon startet', 'Følg nettleserens bekreftelse for å fullføre installasjonen.');
+      } else {
+        showInstallModal('Installasjon avbrutt', 'Du kan trykke Installer app igjen senere hvis nettleseren fortsatt tilbyr installasjon.');
+      }
+    } catch (_) {
+      deferredInstallPrompt = null;
+      showInstallModal('Installasjon feilet', 'Nettleseren kunne ikke åpne installasjonsprompten akkurat nå. Last siden på nytt og prøv igjen.');
+    }
+    updateInstallButton();
   });
+  updateInstallButton();
 }
 function setSyncStatus(text) { const el = $('#syncStatus'); if (el) el.textContent = text; }
+function isPwaInstalled() {
+  return window.matchMedia?.('(display-mode: standalone)').matches || window.navigator.standalone === true;
+}
+function isIosDevice() {
+  const ua = navigator.userAgent || '';
+  return /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+}
+function isAndroidChrome() {
+  const ua = navigator.userAgent || '';
+  return /Android/.test(ua) && /Chrome\//.test(ua) && !/EdgA|OPR|SamsungBrowser|Firefox/.test(ua);
+}
+function installUnavailableReasonForPlatform() {
+  if (!('serviceWorker' in navigator)) return 'Denne nettleseren støtter ikke service worker, som kreves for PWA-installasjon.';
+  if (location.protocol !== 'https:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') return 'PWA-installasjon krever HTTPS. Åpne siden via GitHub Pages eller en sikker HTTPS-adresse.';
+  if (isAndroidChrome()) return 'Chrome på Android kan installere appen når nettleseren har validert manifest og service worker. Vent noen sekunder, last siden på nytt, eller åpne menyen i Chrome og velg Installer app hvis valget vises der.';
+  return 'Denne nettleseren tilbyr ikke en automatisk installasjonsprompt for denne siden. Bruk nettleserens meny hvis den har et valg for å installere eller legge siden til på startskjermen.';
+}
+function updateInstallButton(installed = false) {
+  const btn = $('#installApp');
+  if (!btn) return;
+  if (installed || isPwaInstalled()) {
+    btn.classList.add('hidden');
+    btn.disabled = true;
+    btn.setAttribute('aria-hidden', 'true');
+    btn.title = 'Appen er allerede installert.';
+    return;
+  }
+  btn.classList.remove('hidden');
+  btn.disabled = false;
+  btn.removeAttribute('aria-hidden');
+  btn.textContent = isIosDevice() ? 'Installer app' : 'Installer app';
+  btn.title = deferredInstallPrompt ? 'Installer Marine Learning Platform på denne enheten.' : installUnavailableReasonForPlatform();
+}
+function showInstallModal(title, message) {
+  let modal = $('#installModal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'installModal';
+    modal.className = 'install-modal hidden';
+    modal.innerHTML = `<div class="install-dialog" role="dialog" aria-modal="true" aria-labelledby="installModalTitle"><button class="install-close" type="button" aria-label="Lukk">x</button><h2 id="installModalTitle"></h2><p id="installModalText"></p><button id="installModalOk" type="button">OK</button></div>`;
+    document.body.appendChild(modal);
+    modal.addEventListener('click', event => { if (event.target === modal) hideInstallModal(); });
+    $('.install-close', modal)?.addEventListener('click', hideInstallModal);
+    $('#installModalOk', modal)?.addEventListener('click', hideInstallModal);
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') hideInstallModal(); });
+  }
+  $('#installModalTitle', modal).textContent = title;
+  $('#installModalText', modal).textContent = message;
+  modal.classList.remove('hidden');
+  $('#installModalOk', modal)?.focus();
+}
+function hideInstallModal() {
+  $('#installModal')?.classList.add('hidden');
+}
 
 function initInteractiveDiagrams() {
   $$('.hotspot').forEach(node => {
