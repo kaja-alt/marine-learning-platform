@@ -26,6 +26,8 @@
     <button data-view="dashboard" class="active">Dashboard</button>
     <button data-view="chapters">Kapitler</button>
     <button data-view="quiz">Quiz</button>
+    <button data-view="trainer">Trainer</button>
+    <button data-view="work-simulator">Work Simulator</button>
     <button data-view="search">Søk</button>
     <button data-view="quickrefs">Hurtigoppslag</button>
     <button data-view="manufacturers">Produsenter</button>
@@ -15223,6 +15225,28 @@
 
     <section id="view-quiz" class="view">
       <div class="panel quiz-panel"><div class="split-head"><div><span class="kicker">Quizsystem</span><h2>Test kunnskapen</h2><p>Spørsmålene stokkes tilfeldig. Resultater lagres lokalt.</p></div><label>Kapittel<select id="quizChapter"></select></label></div><div id="quizRoot"></div><div id="quizHistory" class="history"></div></div>
+    </section>
+
+
+    <section id="view-trainer" class="view">
+      <div class="trainer-shell">
+        <div class="trainer-hero panel"><span class="kicker">Marine Trainer</span><h2>Daglig teknisk trening</h2><p>En Duolingo-inspirert læringssti for marine dieselmotorer, reservedeler og teknisk kundeservice.</p><div class="trainer-metrics"><div><strong id="trainerXp">0</strong><span>XP</span></div><div><strong id="trainerLevel">1</strong><span>Level</span></div><div><strong id="trainerStreak">🔥 0</strong><span>Streak</span></div><div><strong id="trainerPercent">0%</strong><span>Fullført</span></div></div><div class="progress-rail"><span id="trainerProgressBar"></span></div><div class="action-row"><button id="startTrainerLesson">Start neste leksjon</button><button id="startReview" class="secondary">Review</button><button id="openFlashcards" class="secondary">Flashcards</button></div><p id="trainerNext" class="muted"></p></div>
+        <div class="trainer-grid"><section class="panel"><h3>Learning Path</h3><div id="trainerPath" class="trainer-path"></div></section><section class="panel"><h3>Quiz</h3><div id="trainerQuiz"></div></section></div>
+        <div class="trainer-grid"><section class="panel"><h3>Badges</h3><div id="trainerBadges" class="badge-grid"></div></section><section class="panel"><h3>Flashcards</h3><div id="trainerFlashcards"></div></section></div>
+        <section class="panel"><h3>Progress</h3><div id="trainerProgressDetails" class="trainer-progress-details"></div></section>
+      </div>
+    </section>
+
+
+    <section id="view-work-simulator" class="view">
+      <div class="sim-shell">
+        <div class="panel sim-hero"><span class="kicker">Work Simulator</span><h2>Simulert arbeidsdag</h2><p>Tren på telefon, e-post, feilsøking, deleoppslag, garantisaker, verksteddialog og prioritering slik arbeidsdagen faktisk føles.</p><div class="trainer-metrics"><div><strong id="simScore">0</strong><span>Poeng</span></div><div><strong id="simCasesDone">0</strong><span>Saker løst</span></div><div><strong id="simAccuracy">0%</strong><span>Presisjon</span></div><div><strong id="simStreak">0</strong><span>Dagens økter</span></div></div><div class="action-row"><button id="simStartDay">Start daglig oppdrag</button><button id="simNextCase" class="secondary">Neste sak</button><button id="simReset" class="secondary">Nullstill simulator</button></div></div>
+        <div class="sim-grid">
+          <aside class="panel sim-menu"><h3>Seksjoner</h3><button data-sim-mode="phone">Telefon fra kunde</button><button data-sim-mode="parts">Finn riktig reservedel</button><button data-sim-mode="troubleshooting">Feilsøking</button><button data-sim-mode="email">E-postsimulator</button><button data-sim-mode="warranty">Garantisaker</button><button data-sim-mode="workshop">Verksteddialog</button><button data-sim-mode="time">Tidsutfordringer</button><button data-sim-mode="difficult">Vanskelige kunder</button><button data-sim-mode="daily">Daglig oppdrag</button></aside>
+          <section class="panel sim-stage"><div id="simCase"></div></section>
+        </div>
+        <section class="panel"><h3>Resultat og anbefalt repetisjon</h3><div id="simResult"></div><div id="simHistory"></div></section>
+      </div>
     </section>
 
     <section id="view-search" class="view">

@@ -17684,6 +17684,21768 @@ function initPhaseModules() {
   initWorkMode();
 }
 
+
+const TRAINER_DATA = {
+  "path": [
+    {
+      "level": 1,
+      "title": "Grunnleggende dieselmotor",
+      "description": "Motorprinsipper, forbrenning og grunnbegreper",
+      "lessons": [
+        {
+          "id": "L001",
+          "level": 1,
+          "title": "Grunnleggende marine dieselmotorer",
+          "chapter": "01",
+          "description": "Tren på grunnleggende marine dieselmotorer med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "easy",
+          "xp": 10
+        },
+        {
+          "id": "L002",
+          "level": 1,
+          "title": "Vanlige termer og begreper i marine service",
+          "chapter": "05",
+          "description": "Tren på vanlige termer og begreper i marine service med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "easy",
+          "xp": 10
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Motorkomponenter",
+      "description": "Motorblokk, topplokk, turbo, intercooler og eksos",
+      "lessons": [
+        {
+          "id": "L003",
+          "level": 2,
+          "title": "Grunnleggende oppbygning av marine motorer",
+          "chapter": "11",
+          "description": "Tren på grunnleggende oppbygning av marine motorer med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "easy",
+          "xp": 10
+        },
+        {
+          "id": "L004",
+          "level": 2,
+          "title": "Oversikt over vanlige reservedelskategorier",
+          "chapter": "16",
+          "description": "Tren på oversikt over vanlige reservedelskategorier med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "easy",
+          "xp": 10
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "title": "Drivstoffsystem",
+      "description": "Filter, matepumpe, common rail og injektorer",
+      "lessons": [
+        {
+          "id": "L005",
+          "level": 3,
+          "title": "Oversikt over vanlige reservedelskategorier",
+          "chapter": "16",
+          "description": "Tren på oversikt over vanlige reservedelskategorier med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "easy",
+          "xp": 10
+        },
+        {
+          "id": "L006",
+          "level": 3,
+          "title": "Cummins identifikasjon og bestillingsveiledning",
+          "chapter": "29",
+          "description": "Tren på cummins identifikasjon og bestillingsveiledning med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "easy",
+          "xp": 10
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "title": "Smøresystem",
+      "description": "Oljeflyt, oljefilter, trykk og vedlikehold",
+      "lessons": [
+        {
+          "id": "L007",
+          "level": 4,
+          "title": "Grunnleggende marine dieselmotorer",
+          "chapter": "01",
+          "description": "Tren på grunnleggende marine dieselmotorer med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "easy",
+          "xp": 10
+        },
+        {
+          "id": "L008",
+          "level": 4,
+          "title": "Oversikt over vanlige reservedelskategorier",
+          "chapter": "16",
+          "description": "Tren på oversikt over vanlige reservedelskategorier med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "easy",
+          "xp": 10
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "title": "Kjølesystem",
+      "description": "Sjøvann, ferskvann, impeller og varmeveksler",
+      "lessons": [
+        {
+          "id": "L009",
+          "level": 5,
+          "title": "Grunnleggende oppbygning av marine motorer",
+          "chapter": "11",
+          "description": "Tren på grunnleggende oppbygning av marine motorer med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "easy",
+          "xp": 10
+        },
+        {
+          "id": "L010",
+          "level": 5,
+          "title": "Miljøhensyn og korrekt avfallshåndtering",
+          "chapter": "37",
+          "description": "Tren på miljøhensyn og korrekt avfallshåndtering med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "easy",
+          "xp": 10
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "title": "Elektriske systemer",
+      "description": "Batteri, dynamo, startmotor, ECU og sensorer",
+      "lessons": [
+        {
+          "id": "L011",
+          "level": 6,
+          "title": "Sikkerhet ved håndtering av olje, gasser, elektriske systemer og tunge deler",
+          "chapter": "36",
+          "description": "Tren på sikkerhet ved håndtering av olje, gasser, elektriske systemer og tunge deler med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "medium",
+          "xp": 20
+        },
+        {
+          "id": "L012",
+          "level": 6,
+          "title": "Fremtidige utviklinger innen marine motorservice og reservedeler",
+          "chapter": "46",
+          "description": "Tren på fremtidige utviklinger innen marine motorservice og reservedeler med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "medium",
+          "xp": 20
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "title": "Motoridentifisering",
+      "description": "Serienummer, motornummer, typeplate og variant",
+      "lessons": [
+        {
+          "id": "L013",
+          "level": 7,
+          "title": "Hvordan lese og forstå motorserienummer",
+          "chapter": "12",
+          "description": "Tren på hvordan lese og forstå motorserienummer med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "medium",
+          "xp": 20
+        },
+        {
+          "id": "L014",
+          "level": 7,
+          "title": "Viktige identifikasjonsmerker på motoren",
+          "chapter": "13",
+          "description": "Tren på viktige identifikasjonsmerker på motoren med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "medium",
+          "xp": 20
+        },
+        {
+          "id": "L015",
+          "level": 7,
+          "title": "Forskjellen mellom motorfabrikat, modell og variant",
+          "chapter": "14",
+          "description": "Tren på forskjellen mellom motorfabrikat, modell og variant med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "medium",
+          "xp": 20
+        },
+        {
+          "id": "L016",
+          "level": 7,
+          "title": "Hvordan koble serienummer til riktig reservedelsdatabase",
+          "chapter": "15",
+          "description": "Tren på hvordan koble serienummer til riktig reservedelsdatabase med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "medium",
+          "xp": 20
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "title": "Reservedelsidentifisering",
+      "description": "Part number, supersession, kit og bestilling",
+      "lessons": [
+        {
+          "id": "L017",
+          "level": 8,
+          "title": "Hvordan velge riktig del ved hjelp av delnummer og modellinfo",
+          "chapter": "17",
+          "description": "Tren på hvordan velge riktig del ved hjelp av delnummer og modellinfo med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "medium",
+          "xp": 20
+        },
+        {
+          "id": "L018",
+          "level": 8,
+          "title": "Vanlige feil ved bestilling av reservedeler",
+          "chapter": "18",
+          "description": "Tren på vanlige feil ved bestilling av reservedeler med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "medium",
+          "xp": 20
+        },
+        {
+          "id": "L019",
+          "level": 8,
+          "title": "Bestilling av deler fra leverandører og interne lagre",
+          "chapter": "20",
+          "description": "Tren på bestilling av deler fra leverandører og interne lagre med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "medium",
+          "xp": 20
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "title": "Kundesupport",
+      "description": "Behovsavklaring, kommunikasjon, hastegrad og oppfølging",
+      "lessons": [
+        {
+          "id": "L020",
+          "level": 9,
+          "title": "Identifisering av kundens behov og forespørsel",
+          "chapter": "07",
+          "description": "Tren på identifisering av kundens behov og forespørsel med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "medium",
+          "xp": 20
+        },
+        {
+          "id": "L021",
+          "level": 9,
+          "title": "Kommunikasjon med kunder og interne kollegaer",
+          "chapter": "10",
+          "description": "Tren på kommunikasjon med kunder og interne kollegaer med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "medium",
+          "xp": 20
+        },
+        {
+          "id": "L022",
+          "level": 9,
+          "title": "God kundesupport i marine bransjen",
+          "chapter": "21",
+          "description": "Tren på god kundesupport i marine bransjen med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "medium",
+          "xp": 20
+        },
+        {
+          "id": "L023",
+          "level": 9,
+          "title": "Hvordan håndtere uklare eller mangelfulle opplysninger",
+          "chapter": "22",
+          "description": "Tren på hvordan håndtere uklare eller mangelfulle opplysninger med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "medium",
+          "xp": 20
+        },
+        {
+          "id": "L024",
+          "level": 9,
+          "title": "Kommunikasjon ved forsinkelser eller manglende tilgjengelighet",
+          "chapter": "23",
+          "description": "Tren på kommunikasjon ved forsinkelser eller manglende tilgjengelighet med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "medium",
+          "xp": 20
+        },
+        {
+          "id": "L025",
+          "level": 9,
+          "title": "Oppfølging etter bestilling og leveranse",
+          "chapter": "24",
+          "description": "Tren på oppfølging etter bestilling og leveranse med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "medium",
+          "xp": 20
+        }
+      ]
+    },
+    {
+      "level": 10,
+      "title": "Produsent: Caterpillar",
+      "description": "CAT ESN, prefix, Arrangement Number og SIS",
+      "lessons": [
+        {
+          "id": "L026",
+          "level": 10,
+          "title": "Caterpillar identifikasjon, vanlige deler og typiske utfordringer",
+          "chapter": "26",
+          "description": "Tren på caterpillar identifikasjon, vanlige deler og typiske utfordringer med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "medium",
+          "xp": 20
+        }
+      ]
+    },
+    {
+      "level": 11,
+      "title": "Produsent: Volvo Penta",
+      "description": "Engine Type, Serial Number, Product Number og drev/gear",
+      "lessons": [
+        {
+          "id": "L027",
+          "level": 11,
+          "title": "Volvo Penta serienummer, delvalg og servicekunnskap",
+          "chapter": "27",
+          "description": "Tren på volvo penta serienummer, delvalg og servicekunnskap med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "hard",
+          "xp": 40
+        }
+      ]
+    },
+    {
+      "level": 12,
+      "title": "Produsent: Mitsubishi",
+      "description": "Base engine, mariniseringsleverandør og eldre data",
+      "lessons": [
+        {
+          "id": "L028",
+          "level": 12,
+          "title": "Mitsubishi motorvarianter og reservedelspraksis",
+          "chapter": "28",
+          "description": "Tren på mitsubishi motorvarianter og reservedelspraksis med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "hard",
+          "xp": 40
+        }
+      ]
+    },
+    {
+      "level": 13,
+      "title": "Produsent: Cummins",
+      "description": "ESN, CPL, QuickServe og BOM",
+      "lessons": [
+        {
+          "id": "L029",
+          "level": 13,
+          "title": "Cummins identifikasjon og bestillingsveiledning",
+          "chapter": "29",
+          "description": "Tren på cummins identifikasjon og bestillingsveiledning med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "hard",
+          "xp": 40
+        }
+      ]
+    },
+    {
+      "level": 14,
+      "title": "Produsent: MAN",
+      "description": "Engine number, rating, ECU og service documentation",
+      "lessons": [
+        {
+          "id": "L030",
+          "level": 14,
+          "title": "MAN motorfamilier og standardiserte løsninger",
+          "chapter": "30",
+          "description": "Tren på man motorfamilier og standardiserte løsninger med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "hard",
+          "xp": 40
+        }
+      ]
+    },
+    {
+      "level": 15,
+      "title": "Produsent: Scania",
+      "description": "Engine number, application og rating",
+      "lessons": [
+        {
+          "id": "L031",
+          "level": 15,
+          "title": "Scania marine bruk, motoropplysninger og reservedelsnøkkel",
+          "chapter": "31",
+          "description": "Tren på scania marine bruk, motoropplysninger og reservedelsnøkkel med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "hard",
+          "xp": 40
+        }
+      ]
+    },
+    {
+      "level": 16,
+      "title": "Produsent: Yanmar",
+      "description": "Model code, serial, gear og saildrive",
+      "lessons": [
+        {
+          "id": "L032",
+          "level": 16,
+          "title": "Yanmar typiske motorer, delnummer og støttepunkt",
+          "chapter": "32",
+          "description": "Tren på yanmar typiske motorer, delnummer og støttepunkt med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "case",
+          "xp": 60
+        }
+      ]
+    },
+    {
+      "level": 17,
+      "title": "Eldre motorer og dokumentasjon",
+      "description": "Manglende skilt, historiske deler og alternative kilder",
+      "lessons": [
+        {
+          "id": "L033",
+          "level": 17,
+          "title": "Hvordan arbeide med eldre motorer og historiske deler",
+          "chapter": "33",
+          "description": "Tren på hvordan arbeide med eldre motorer og historiske deler med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "case",
+          "xp": 60
+        },
+        {
+          "id": "L034",
+          "level": 17,
+          "title": "Hvordan håndtere motorer med manglende dokumentasjon",
+          "chapter": "34",
+          "description": "Tren på hvordan håndtere motorer med manglende dokumentasjon med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "case",
+          "xp": 60
+        },
+        {
+          "id": "L035",
+          "level": 17,
+          "title": "Bruk av skjemaer, bilder og tekniske opplysninger i support",
+          "chapter": "35",
+          "description": "Tren på bruk av skjemaer, bilder og tekniske opplysninger i support med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "case",
+          "xp": 60
+        }
+      ]
+    },
+    {
+      "level": 18,
+      "title": "Sikkerhet og miljø",
+      "description": "HMS, olje, strøm, tunge deler og avfall",
+      "lessons": [
+        {
+          "id": "L036",
+          "level": 18,
+          "title": "Sikkerhet ved håndtering av olje, gasser, elektriske systemer og tunge deler",
+          "chapter": "36",
+          "description": "Tren på sikkerhet ved håndtering av olje, gasser, elektriske systemer og tunge deler med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "case",
+          "xp": 60
+        },
+        {
+          "id": "L037",
+          "level": 18,
+          "title": "Miljøhensyn og korrekt avfallshåndtering",
+          "chapter": "37",
+          "description": "Tren på miljøhensyn og korrekt avfallshåndtering med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "case",
+          "xp": 60
+        }
+      ]
+    },
+    {
+      "level": 19,
+      "title": "Kontrollister og kvalitet",
+      "description": "Mottak, validering, mismatch og ordreoppfølging",
+      "lessons": [
+        {
+          "id": "L038",
+          "level": 19,
+          "title": "Kontrollist for mottak av forespørsel om reservedeler",
+          "chapter": "38",
+          "description": "Tren på kontrollist for mottak av forespørsel om reservedeler med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "case",
+          "xp": 60
+        },
+        {
+          "id": "L039",
+          "level": 19,
+          "title": "Kontrollist for validering av serienummer og delnummer",
+          "chapter": "39",
+          "description": "Tren på kontrollist for validering av serienummer og delnummer med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "case",
+          "xp": 60
+        },
+        {
+          "id": "L040",
+          "level": 19,
+          "title": "Kontrollist for ordreoppfølging og kundesvar",
+          "chapter": "40",
+          "description": "Tren på kontrollist for ordreoppfølging og kundesvar med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "case",
+          "xp": 60
+        },
+        {
+          "id": "L041",
+          "level": 19,
+          "title": "Kontrollist for feilsøking ved manglende match mellom del og motor",
+          "chapter": "41",
+          "description": "Tren på kontrollist for feilsøking ved manglende match mellom del og motor med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "case",
+          "xp": 60
+        },
+        {
+          "id": "L042",
+          "level": 19,
+          "title": "Kvalitetsmål og rutiner for pålitelig service",
+          "chapter": "45",
+          "description": "Tren på kvalitetsmål og rutiner for pålitelig service med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "case",
+          "xp": 60
+        }
+      ]
+    },
+    {
+      "level": 20,
+      "title": "Avansert praksis",
+      "description": "Akutt support, erfaring, FAQ, videre læring og referanser",
+      "lessons": [
+        {
+          "id": "L043",
+          "level": 20,
+          "title": "Kontrollist for kundesupport ved akutte situasjoner",
+          "chapter": "42",
+          "description": "Tren på kontrollist for kundesupport ved akutte situasjoner med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "case",
+          "xp": 60
+        },
+        {
+          "id": "L044",
+          "level": 20,
+          "title": "Vanlige læringsfelter for nye medarbeidere",
+          "chapter": "43",
+          "description": "Tren på vanlige læringsfelter for nye medarbeidere med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "case",
+          "xp": 60
+        },
+        {
+          "id": "L045",
+          "level": 20,
+          "title": "Hvordan bygge erfaring gjennom praktisk arbeid og feilsøking",
+          "chapter": "44",
+          "description": "Tren på hvordan bygge erfaring gjennom praktisk arbeid og feilsøking med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "case",
+          "xp": 60
+        },
+        {
+          "id": "L046",
+          "level": 20,
+          "title": "Oppsummering og neste steg for videre læring",
+          "chapter": "47",
+          "description": "Tren på oppsummering og neste steg for videre læring med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "case",
+          "xp": 60
+        },
+        {
+          "id": "L047",
+          "level": 20,
+          "title": "Ordliste over marine fagbegreper",
+          "chapter": "48",
+          "description": "Tren på ordliste over marine fagbegreper med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "case",
+          "xp": 60
+        },
+        {
+          "id": "L048",
+          "level": 20,
+          "title": "Vanlige spørsmål og svar for nye medarbeidere",
+          "chapter": "49",
+          "description": "Tren på vanlige spørsmål og svar for nye medarbeidere med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "case",
+          "xp": 60
+        },
+        {
+          "id": "L049",
+          "level": 20,
+          "title": "Referanseliste over relevante leverandører og dokumentasjon",
+          "chapter": "50",
+          "description": "Tren på referanseliste over relevante leverandører og dokumentasjon med quiz, flashcards og praktiske spørsmål.",
+          "difficulty": "case",
+          "xp": 60
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "TQ-0001",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 01 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "01"
+      ]
+    },
+    {
+      "id": "TQ-0002",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 01: Riktig fordi kapittel 01 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "01"
+      ]
+    },
+    {
+      "id": "TQ-0003",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 01 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "01"
+      ]
+    },
+    {
+      "id": "TQ-0004",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 01: Riktig fordi kapittel 01 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "01"
+      ]
+    },
+    {
+      "id": "TQ-0005",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 01 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "01"
+      ]
+    },
+    {
+      "id": "TQ-0006",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 01: Riktig fordi kapittel 01 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "01"
+      ]
+    },
+    {
+      "id": "TQ-0007",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 02 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "02"
+      ]
+    },
+    {
+      "id": "TQ-0008",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 02: Riktig fordi kapittel 02 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "02"
+      ]
+    },
+    {
+      "id": "TQ-0009",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 02 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "02"
+      ]
+    },
+    {
+      "id": "TQ-0010",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 02: Riktig fordi kapittel 02 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "02"
+      ]
+    },
+    {
+      "id": "TQ-0011",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 02 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "02"
+      ]
+    },
+    {
+      "id": "TQ-0012",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 02: Riktig fordi kapittel 02 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "02"
+      ]
+    },
+    {
+      "id": "TQ-0013",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 03 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "03"
+      ]
+    },
+    {
+      "id": "TQ-0014",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 03: Riktig fordi kapittel 03 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "03"
+      ]
+    },
+    {
+      "id": "TQ-0015",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 03 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "03"
+      ]
+    },
+    {
+      "id": "TQ-0016",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 03: Riktig fordi kapittel 03 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "03"
+      ]
+    },
+    {
+      "id": "TQ-0017",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 03 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "03"
+      ]
+    },
+    {
+      "id": "TQ-0018",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 03: Riktig fordi kapittel 03 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "03"
+      ]
+    },
+    {
+      "id": "TQ-0019",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 04 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "04"
+      ]
+    },
+    {
+      "id": "TQ-0020",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 04: Riktig fordi kapittel 04 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "04"
+      ]
+    },
+    {
+      "id": "TQ-0021",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 04 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "04"
+      ]
+    },
+    {
+      "id": "TQ-0022",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 04: Riktig fordi kapittel 04 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "04"
+      ]
+    },
+    {
+      "id": "TQ-0023",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 04 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "04"
+      ]
+    },
+    {
+      "id": "TQ-0024",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 04: Riktig fordi kapittel 04 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "04"
+      ]
+    },
+    {
+      "id": "TQ-0025",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 05 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "05"
+      ]
+    },
+    {
+      "id": "TQ-0026",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 05: Riktig fordi kapittel 05 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "05"
+      ]
+    },
+    {
+      "id": "TQ-0027",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 05 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "05"
+      ]
+    },
+    {
+      "id": "TQ-0028",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 05: Riktig fordi kapittel 05 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "05"
+      ]
+    },
+    {
+      "id": "TQ-0029",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 05 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "05"
+      ]
+    },
+    {
+      "id": "TQ-0030",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 05: Riktig fordi kapittel 05 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "05"
+      ]
+    },
+    {
+      "id": "TQ-0031",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 06 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "06"
+      ]
+    },
+    {
+      "id": "TQ-0032",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 06: Riktig fordi kapittel 06 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "06"
+      ]
+    },
+    {
+      "id": "TQ-0033",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 06 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "06"
+      ]
+    },
+    {
+      "id": "TQ-0034",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 06: Riktig fordi kapittel 06 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "06"
+      ]
+    },
+    {
+      "id": "TQ-0035",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 06 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "06"
+      ]
+    },
+    {
+      "id": "TQ-0036",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 06: Riktig fordi kapittel 06 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "06"
+      ]
+    },
+    {
+      "id": "TQ-0037",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 07 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "07"
+      ]
+    },
+    {
+      "id": "TQ-0038",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 07: Riktig fordi kapittel 07 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "07"
+      ]
+    },
+    {
+      "id": "TQ-0039",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 07 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "07"
+      ]
+    },
+    {
+      "id": "TQ-0040",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 07: Riktig fordi kapittel 07 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "07"
+      ]
+    },
+    {
+      "id": "TQ-0041",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 07 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "07"
+      ]
+    },
+    {
+      "id": "TQ-0042",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 07: Riktig fordi kapittel 07 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "07"
+      ]
+    },
+    {
+      "id": "TQ-0043",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 08 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "08"
+      ]
+    },
+    {
+      "id": "TQ-0044",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 08: Riktig fordi kapittel 08 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "08"
+      ]
+    },
+    {
+      "id": "TQ-0045",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 08 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "08"
+      ]
+    },
+    {
+      "id": "TQ-0046",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 08: Riktig fordi kapittel 08 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "08"
+      ]
+    },
+    {
+      "id": "TQ-0047",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 08 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "08"
+      ]
+    },
+    {
+      "id": "TQ-0048",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 08: Riktig fordi kapittel 08 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "08"
+      ]
+    },
+    {
+      "id": "TQ-0049",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 09 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "09"
+      ]
+    },
+    {
+      "id": "TQ-0050",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 09: Riktig fordi kapittel 09 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "09"
+      ]
+    },
+    {
+      "id": "TQ-0051",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 09 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "09"
+      ]
+    },
+    {
+      "id": "TQ-0052",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 09: Riktig fordi kapittel 09 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "09"
+      ]
+    },
+    {
+      "id": "TQ-0053",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 09 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "09"
+      ]
+    },
+    {
+      "id": "TQ-0054",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 09: Riktig fordi kapittel 09 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "09"
+      ]
+    },
+    {
+      "id": "TQ-0055",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 10 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "10"
+      ]
+    },
+    {
+      "id": "TQ-0056",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 10: Riktig fordi kapittel 10 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "10"
+      ]
+    },
+    {
+      "id": "TQ-0057",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 10 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "10"
+      ]
+    },
+    {
+      "id": "TQ-0058",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 10: Riktig fordi kapittel 10 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "10"
+      ]
+    },
+    {
+      "id": "TQ-0059",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 10 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "10"
+      ]
+    },
+    {
+      "id": "TQ-0060",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 10: Riktig fordi kapittel 10 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "10"
+      ]
+    },
+    {
+      "id": "TQ-0061",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 11 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "11"
+      ]
+    },
+    {
+      "id": "TQ-0062",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 11: Riktig fordi kapittel 11 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "11"
+      ]
+    },
+    {
+      "id": "TQ-0063",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 11 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "11"
+      ]
+    },
+    {
+      "id": "TQ-0064",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 11: Riktig fordi kapittel 11 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "11"
+      ]
+    },
+    {
+      "id": "TQ-0065",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 11 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "11"
+      ]
+    },
+    {
+      "id": "TQ-0066",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 11: Riktig fordi kapittel 11 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "11"
+      ]
+    },
+    {
+      "id": "TQ-0067",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 12 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "12"
+      ]
+    },
+    {
+      "id": "TQ-0068",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 12: Riktig fordi kapittel 12 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "12"
+      ]
+    },
+    {
+      "id": "TQ-0069",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 12 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "12"
+      ]
+    },
+    {
+      "id": "TQ-0070",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 12: Riktig fordi kapittel 12 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "12"
+      ]
+    },
+    {
+      "id": "TQ-0071",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 12 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "12"
+      ]
+    },
+    {
+      "id": "TQ-0072",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 12: Riktig fordi kapittel 12 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "12"
+      ]
+    },
+    {
+      "id": "TQ-0073",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 13 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "13"
+      ]
+    },
+    {
+      "id": "TQ-0074",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 13: Riktig fordi kapittel 13 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "13"
+      ]
+    },
+    {
+      "id": "TQ-0075",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 13 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "13"
+      ]
+    },
+    {
+      "id": "TQ-0076",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 13: Riktig fordi kapittel 13 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "13"
+      ]
+    },
+    {
+      "id": "TQ-0077",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 13 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "13"
+      ]
+    },
+    {
+      "id": "TQ-0078",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 13: Riktig fordi kapittel 13 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "13"
+      ]
+    },
+    {
+      "id": "TQ-0079",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 14 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "14"
+      ]
+    },
+    {
+      "id": "TQ-0080",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 14: Riktig fordi kapittel 14 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "14"
+      ]
+    },
+    {
+      "id": "TQ-0081",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 14 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "14"
+      ]
+    },
+    {
+      "id": "TQ-0082",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 14: Riktig fordi kapittel 14 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "14"
+      ]
+    },
+    {
+      "id": "TQ-0083",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 14 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "14"
+      ]
+    },
+    {
+      "id": "TQ-0084",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 14: Riktig fordi kapittel 14 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "14"
+      ]
+    },
+    {
+      "id": "TQ-0085",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 15 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "15"
+      ]
+    },
+    {
+      "id": "TQ-0086",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 15: Riktig fordi kapittel 15 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "15"
+      ]
+    },
+    {
+      "id": "TQ-0087",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 15 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "15"
+      ]
+    },
+    {
+      "id": "TQ-0088",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 15: Riktig fordi kapittel 15 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "15"
+      ]
+    },
+    {
+      "id": "TQ-0089",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 15 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "15"
+      ]
+    },
+    {
+      "id": "TQ-0090",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 15: Riktig fordi kapittel 15 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "15"
+      ]
+    },
+    {
+      "id": "TQ-0091",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 16 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "16"
+      ]
+    },
+    {
+      "id": "TQ-0092",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 16: Riktig fordi kapittel 16 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "16"
+      ]
+    },
+    {
+      "id": "TQ-0093",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 16 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "16"
+      ]
+    },
+    {
+      "id": "TQ-0094",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 16: Riktig fordi kapittel 16 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "16"
+      ]
+    },
+    {
+      "id": "TQ-0095",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 16 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "16"
+      ]
+    },
+    {
+      "id": "TQ-0096",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 16: Riktig fordi kapittel 16 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "16"
+      ]
+    },
+    {
+      "id": "TQ-0097",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 17 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "17"
+      ]
+    },
+    {
+      "id": "TQ-0098",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 17: Riktig fordi kapittel 17 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "17"
+      ]
+    },
+    {
+      "id": "TQ-0099",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 17 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "17"
+      ]
+    },
+    {
+      "id": "TQ-0100",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 17: Riktig fordi kapittel 17 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "17"
+      ]
+    },
+    {
+      "id": "TQ-0101",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 17 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "17"
+      ]
+    },
+    {
+      "id": "TQ-0102",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 17: Riktig fordi kapittel 17 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "17"
+      ]
+    },
+    {
+      "id": "TQ-0103",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 18 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "18"
+      ]
+    },
+    {
+      "id": "TQ-0104",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 18: Riktig fordi kapittel 18 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "18"
+      ]
+    },
+    {
+      "id": "TQ-0105",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 18 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "18"
+      ]
+    },
+    {
+      "id": "TQ-0106",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 18: Riktig fordi kapittel 18 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "18"
+      ]
+    },
+    {
+      "id": "TQ-0107",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 18 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "18"
+      ]
+    },
+    {
+      "id": "TQ-0108",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 18: Riktig fordi kapittel 18 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "18"
+      ]
+    },
+    {
+      "id": "TQ-0109",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 19 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "19"
+      ]
+    },
+    {
+      "id": "TQ-0110",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 19: Riktig fordi kapittel 19 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "19"
+      ]
+    },
+    {
+      "id": "TQ-0111",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 19 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "19"
+      ]
+    },
+    {
+      "id": "TQ-0112",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 19: Riktig fordi kapittel 19 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "19"
+      ]
+    },
+    {
+      "id": "TQ-0113",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 19 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "19"
+      ]
+    },
+    {
+      "id": "TQ-0114",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 19: Riktig fordi kapittel 19 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "19"
+      ]
+    },
+    {
+      "id": "TQ-0115",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 20 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "20"
+      ]
+    },
+    {
+      "id": "TQ-0116",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 20: Riktig fordi kapittel 20 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "20"
+      ]
+    },
+    {
+      "id": "TQ-0117",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 20 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "20"
+      ]
+    },
+    {
+      "id": "TQ-0118",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 20: Riktig fordi kapittel 20 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "20"
+      ]
+    },
+    {
+      "id": "TQ-0119",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 20 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "20"
+      ]
+    },
+    {
+      "id": "TQ-0120",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 20: Riktig fordi kapittel 20 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "20"
+      ]
+    },
+    {
+      "id": "TQ-0121",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 21 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "21"
+      ]
+    },
+    {
+      "id": "TQ-0122",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 21: Riktig fordi kapittel 21 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "21"
+      ]
+    },
+    {
+      "id": "TQ-0123",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 21 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "21"
+      ]
+    },
+    {
+      "id": "TQ-0124",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 21: Riktig fordi kapittel 21 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "21"
+      ]
+    },
+    {
+      "id": "TQ-0125",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 21 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "21"
+      ]
+    },
+    {
+      "id": "TQ-0126",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 21: Riktig fordi kapittel 21 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "21"
+      ]
+    },
+    {
+      "id": "TQ-0127",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 22 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "22"
+      ]
+    },
+    {
+      "id": "TQ-0128",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 22: Riktig fordi kapittel 22 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "22"
+      ]
+    },
+    {
+      "id": "TQ-0129",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 22 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "22"
+      ]
+    },
+    {
+      "id": "TQ-0130",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 22: Riktig fordi kapittel 22 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "22"
+      ]
+    },
+    {
+      "id": "TQ-0131",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 22 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "22"
+      ]
+    },
+    {
+      "id": "TQ-0132",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 22: Riktig fordi kapittel 22 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "22"
+      ]
+    },
+    {
+      "id": "TQ-0133",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 23 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "23"
+      ]
+    },
+    {
+      "id": "TQ-0134",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 23: Riktig fordi kapittel 23 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "23"
+      ]
+    },
+    {
+      "id": "TQ-0135",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 23 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "23"
+      ]
+    },
+    {
+      "id": "TQ-0136",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 23: Riktig fordi kapittel 23 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "23"
+      ]
+    },
+    {
+      "id": "TQ-0137",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 23 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "23"
+      ]
+    },
+    {
+      "id": "TQ-0138",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 23: Riktig fordi kapittel 23 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "23"
+      ]
+    },
+    {
+      "id": "TQ-0139",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 24 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "24"
+      ]
+    },
+    {
+      "id": "TQ-0140",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 24: Riktig fordi kapittel 24 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "24"
+      ]
+    },
+    {
+      "id": "TQ-0141",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 24 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "24"
+      ]
+    },
+    {
+      "id": "TQ-0142",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 24: Riktig fordi kapittel 24 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "24"
+      ]
+    },
+    {
+      "id": "TQ-0143",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 24 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "24"
+      ]
+    },
+    {
+      "id": "TQ-0144",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 24: Riktig fordi kapittel 24 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "24"
+      ]
+    },
+    {
+      "id": "TQ-0145",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 25 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "25"
+      ]
+    },
+    {
+      "id": "TQ-0146",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 25: Riktig fordi kapittel 25 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "25"
+      ]
+    },
+    {
+      "id": "TQ-0147",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 25 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "25"
+      ]
+    },
+    {
+      "id": "TQ-0148",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 25: Riktig fordi kapittel 25 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "25"
+      ]
+    },
+    {
+      "id": "TQ-0149",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 25 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "25"
+      ]
+    },
+    {
+      "id": "TQ-0150",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 25: Riktig fordi kapittel 25 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "25"
+      ]
+    },
+    {
+      "id": "TQ-0151",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 26 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "26"
+      ]
+    },
+    {
+      "id": "TQ-0152",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 26: Riktig fordi kapittel 26 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "26"
+      ]
+    },
+    {
+      "id": "TQ-0153",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 26 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "26"
+      ]
+    },
+    {
+      "id": "TQ-0154",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 26: Riktig fordi kapittel 26 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "26"
+      ]
+    },
+    {
+      "id": "TQ-0155",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 26 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "26"
+      ]
+    },
+    {
+      "id": "TQ-0156",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 26: Riktig fordi kapittel 26 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "26"
+      ]
+    },
+    {
+      "id": "TQ-0157",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 27 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "27"
+      ]
+    },
+    {
+      "id": "TQ-0158",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 27: Riktig fordi kapittel 27 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "27"
+      ]
+    },
+    {
+      "id": "TQ-0159",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 27 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "27"
+      ]
+    },
+    {
+      "id": "TQ-0160",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 27: Riktig fordi kapittel 27 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "27"
+      ]
+    },
+    {
+      "id": "TQ-0161",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 27 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "27"
+      ]
+    },
+    {
+      "id": "TQ-0162",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 27: Riktig fordi kapittel 27 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "27"
+      ]
+    },
+    {
+      "id": "TQ-0163",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 28 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "28"
+      ]
+    },
+    {
+      "id": "TQ-0164",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 28: Riktig fordi kapittel 28 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "28"
+      ]
+    },
+    {
+      "id": "TQ-0165",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 28 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "28"
+      ]
+    },
+    {
+      "id": "TQ-0166",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 28: Riktig fordi kapittel 28 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "28"
+      ]
+    },
+    {
+      "id": "TQ-0167",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 28 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "28"
+      ]
+    },
+    {
+      "id": "TQ-0168",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 28: Riktig fordi kapittel 28 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "28"
+      ]
+    },
+    {
+      "id": "TQ-0169",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 29 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "29"
+      ]
+    },
+    {
+      "id": "TQ-0170",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 29: Riktig fordi kapittel 29 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "29"
+      ]
+    },
+    {
+      "id": "TQ-0171",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 29 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "29"
+      ]
+    },
+    {
+      "id": "TQ-0172",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 29: Riktig fordi kapittel 29 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "29"
+      ]
+    },
+    {
+      "id": "TQ-0173",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 29 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "29"
+      ]
+    },
+    {
+      "id": "TQ-0174",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 29: Riktig fordi kapittel 29 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "29"
+      ]
+    },
+    {
+      "id": "TQ-0175",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 30 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "30"
+      ]
+    },
+    {
+      "id": "TQ-0176",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 30: Riktig fordi kapittel 30 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "30"
+      ]
+    },
+    {
+      "id": "TQ-0177",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 30 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "30"
+      ]
+    },
+    {
+      "id": "TQ-0178",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 30: Riktig fordi kapittel 30 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "30"
+      ]
+    },
+    {
+      "id": "TQ-0179",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 30 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "30"
+      ]
+    },
+    {
+      "id": "TQ-0180",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 30: Riktig fordi kapittel 30 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "30"
+      ]
+    },
+    {
+      "id": "TQ-0181",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 31 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "31"
+      ]
+    },
+    {
+      "id": "TQ-0182",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 31: Riktig fordi kapittel 31 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "31"
+      ]
+    },
+    {
+      "id": "TQ-0183",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 31 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "31"
+      ]
+    },
+    {
+      "id": "TQ-0184",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 31: Riktig fordi kapittel 31 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "31"
+      ]
+    },
+    {
+      "id": "TQ-0185",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 31 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "31"
+      ]
+    },
+    {
+      "id": "TQ-0186",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 31: Riktig fordi kapittel 31 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "31"
+      ]
+    },
+    {
+      "id": "TQ-0187",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 32 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "32"
+      ]
+    },
+    {
+      "id": "TQ-0188",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 32: Riktig fordi kapittel 32 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "32"
+      ]
+    },
+    {
+      "id": "TQ-0189",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 32 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "32"
+      ]
+    },
+    {
+      "id": "TQ-0190",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 32: Riktig fordi kapittel 32 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "32"
+      ]
+    },
+    {
+      "id": "TQ-0191",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 32 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "32"
+      ]
+    },
+    {
+      "id": "TQ-0192",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 32: Riktig fordi kapittel 32 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "32"
+      ]
+    },
+    {
+      "id": "TQ-0193",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 33 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "33"
+      ]
+    },
+    {
+      "id": "TQ-0194",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 33: Riktig fordi kapittel 33 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "33"
+      ]
+    },
+    {
+      "id": "TQ-0195",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 33 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "33"
+      ]
+    },
+    {
+      "id": "TQ-0196",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 33: Riktig fordi kapittel 33 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "33"
+      ]
+    },
+    {
+      "id": "TQ-0197",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 33 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "33"
+      ]
+    },
+    {
+      "id": "TQ-0198",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 33: Riktig fordi kapittel 33 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "33"
+      ]
+    },
+    {
+      "id": "TQ-0199",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 34 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "34"
+      ]
+    },
+    {
+      "id": "TQ-0200",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 34: Riktig fordi kapittel 34 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "34"
+      ]
+    },
+    {
+      "id": "TQ-0201",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 34 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "34"
+      ]
+    },
+    {
+      "id": "TQ-0202",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 34: Riktig fordi kapittel 34 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "34"
+      ]
+    },
+    {
+      "id": "TQ-0203",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 34 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "34"
+      ]
+    },
+    {
+      "id": "TQ-0204",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 34: Riktig fordi kapittel 34 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "34"
+      ]
+    },
+    {
+      "id": "TQ-0205",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 35 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "35"
+      ]
+    },
+    {
+      "id": "TQ-0206",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 35: Riktig fordi kapittel 35 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "35"
+      ]
+    },
+    {
+      "id": "TQ-0207",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 35 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "35"
+      ]
+    },
+    {
+      "id": "TQ-0208",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 35: Riktig fordi kapittel 35 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "35"
+      ]
+    },
+    {
+      "id": "TQ-0209",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 35 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "35"
+      ]
+    },
+    {
+      "id": "TQ-0210",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 35: Riktig fordi kapittel 35 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "35"
+      ]
+    },
+    {
+      "id": "TQ-0211",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 36 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "36"
+      ]
+    },
+    {
+      "id": "TQ-0212",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 36: Riktig fordi kapittel 36 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "36"
+      ]
+    },
+    {
+      "id": "TQ-0213",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 36 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "36"
+      ]
+    },
+    {
+      "id": "TQ-0214",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 36: Riktig fordi kapittel 36 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "36"
+      ]
+    },
+    {
+      "id": "TQ-0215",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 36 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "36"
+      ]
+    },
+    {
+      "id": "TQ-0216",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 36: Riktig fordi kapittel 36 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "36"
+      ]
+    },
+    {
+      "id": "TQ-0217",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 37 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "37"
+      ]
+    },
+    {
+      "id": "TQ-0218",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 37: Riktig fordi kapittel 37 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "37"
+      ]
+    },
+    {
+      "id": "TQ-0219",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 37 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "37"
+      ]
+    },
+    {
+      "id": "TQ-0220",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 37: Riktig fordi kapittel 37 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "37"
+      ]
+    },
+    {
+      "id": "TQ-0221",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 37 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "37"
+      ]
+    },
+    {
+      "id": "TQ-0222",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 37: Riktig fordi kapittel 37 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "37"
+      ]
+    },
+    {
+      "id": "TQ-0223",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 38 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "38"
+      ]
+    },
+    {
+      "id": "TQ-0224",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 38: Riktig fordi kapittel 38 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "38"
+      ]
+    },
+    {
+      "id": "TQ-0225",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 38 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "38"
+      ]
+    },
+    {
+      "id": "TQ-0226",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 38: Riktig fordi kapittel 38 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "38"
+      ]
+    },
+    {
+      "id": "TQ-0227",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 38 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "38"
+      ]
+    },
+    {
+      "id": "TQ-0228",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 38: Riktig fordi kapittel 38 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "38"
+      ]
+    },
+    {
+      "id": "TQ-0229",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 39 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "39"
+      ]
+    },
+    {
+      "id": "TQ-0230",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 39: Riktig fordi kapittel 39 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "39"
+      ]
+    },
+    {
+      "id": "TQ-0231",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 39 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "39"
+      ]
+    },
+    {
+      "id": "TQ-0232",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 39: Riktig fordi kapittel 39 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "39"
+      ]
+    },
+    {
+      "id": "TQ-0233",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 39 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "39"
+      ]
+    },
+    {
+      "id": "TQ-0234",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 39: Riktig fordi kapittel 39 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "39"
+      ]
+    },
+    {
+      "id": "TQ-0235",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 40 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "40"
+      ]
+    },
+    {
+      "id": "TQ-0236",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 40: Riktig fordi kapittel 40 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "40"
+      ]
+    },
+    {
+      "id": "TQ-0237",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 40 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "40"
+      ]
+    },
+    {
+      "id": "TQ-0238",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 40: Riktig fordi kapittel 40 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "40"
+      ]
+    },
+    {
+      "id": "TQ-0239",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 40 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "40"
+      ]
+    },
+    {
+      "id": "TQ-0240",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 40: Riktig fordi kapittel 40 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "40"
+      ]
+    },
+    {
+      "id": "TQ-0241",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 41 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "41"
+      ]
+    },
+    {
+      "id": "TQ-0242",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 41: Riktig fordi kapittel 41 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "41"
+      ]
+    },
+    {
+      "id": "TQ-0243",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 41 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "41"
+      ]
+    },
+    {
+      "id": "TQ-0244",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 41: Riktig fordi kapittel 41 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "41"
+      ]
+    },
+    {
+      "id": "TQ-0245",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 41 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "41"
+      ]
+    },
+    {
+      "id": "TQ-0246",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 41: Riktig fordi kapittel 41 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "41"
+      ]
+    },
+    {
+      "id": "TQ-0247",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 42 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "42"
+      ]
+    },
+    {
+      "id": "TQ-0248",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 42: Riktig fordi kapittel 42 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "42"
+      ]
+    },
+    {
+      "id": "TQ-0249",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 42 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "42"
+      ]
+    },
+    {
+      "id": "TQ-0250",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 42: Riktig fordi kapittel 42 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "42"
+      ]
+    },
+    {
+      "id": "TQ-0251",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 42 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "42"
+      ]
+    },
+    {
+      "id": "TQ-0252",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 42: Riktig fordi kapittel 42 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "42"
+      ]
+    },
+    {
+      "id": "TQ-0253",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 43 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "43"
+      ]
+    },
+    {
+      "id": "TQ-0254",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 43: Riktig fordi kapittel 43 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "43"
+      ]
+    },
+    {
+      "id": "TQ-0255",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 43 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "43"
+      ]
+    },
+    {
+      "id": "TQ-0256",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 43: Riktig fordi kapittel 43 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "43"
+      ]
+    },
+    {
+      "id": "TQ-0257",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 43 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "43"
+      ]
+    },
+    {
+      "id": "TQ-0258",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 43: Riktig fordi kapittel 43 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "43"
+      ]
+    },
+    {
+      "id": "TQ-0259",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 44 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "44"
+      ]
+    },
+    {
+      "id": "TQ-0260",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 44: Riktig fordi kapittel 44 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "44"
+      ]
+    },
+    {
+      "id": "TQ-0261",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 44 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "44"
+      ]
+    },
+    {
+      "id": "TQ-0262",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 44: Riktig fordi kapittel 44 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "44"
+      ]
+    },
+    {
+      "id": "TQ-0263",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 44 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "44"
+      ]
+    },
+    {
+      "id": "TQ-0264",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 44: Riktig fordi kapittel 44 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "44"
+      ]
+    },
+    {
+      "id": "TQ-0265",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 45 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "45"
+      ]
+    },
+    {
+      "id": "TQ-0266",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 45: Riktig fordi kapittel 45 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "45"
+      ]
+    },
+    {
+      "id": "TQ-0267",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 45 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "45"
+      ]
+    },
+    {
+      "id": "TQ-0268",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 45: Riktig fordi kapittel 45 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "45"
+      ]
+    },
+    {
+      "id": "TQ-0269",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 45 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "45"
+      ]
+    },
+    {
+      "id": "TQ-0270",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 45: Riktig fordi kapittel 45 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "45"
+      ]
+    },
+    {
+      "id": "TQ-0271",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 46 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "46"
+      ]
+    },
+    {
+      "id": "TQ-0272",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 46: Riktig fordi kapittel 46 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "46"
+      ]
+    },
+    {
+      "id": "TQ-0273",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 46 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "46"
+      ]
+    },
+    {
+      "id": "TQ-0274",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 46: Riktig fordi kapittel 46 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "46"
+      ]
+    },
+    {
+      "id": "TQ-0275",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 46 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "46"
+      ]
+    },
+    {
+      "id": "TQ-0276",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 46: Riktig fordi kapittel 46 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "46"
+      ]
+    },
+    {
+      "id": "TQ-0277",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 47 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "47"
+      ]
+    },
+    {
+      "id": "TQ-0278",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 47: Riktig fordi kapittel 47 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "47"
+      ]
+    },
+    {
+      "id": "TQ-0279",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 47 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "47"
+      ]
+    },
+    {
+      "id": "TQ-0280",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 47: Riktig fordi kapittel 47 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "47"
+      ]
+    },
+    {
+      "id": "TQ-0281",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 47 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "47"
+      ]
+    },
+    {
+      "id": "TQ-0282",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 47: Riktig fordi kapittel 47 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "47"
+      ]
+    },
+    {
+      "id": "TQ-0283",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 48 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "48"
+      ]
+    },
+    {
+      "id": "TQ-0284",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 48: Riktig fordi kapittel 48 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "48"
+      ]
+    },
+    {
+      "id": "TQ-0285",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 48 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "48"
+      ]
+    },
+    {
+      "id": "TQ-0286",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 48: Riktig fordi kapittel 48 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "48"
+      ]
+    },
+    {
+      "id": "TQ-0287",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 48 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "48"
+      ]
+    },
+    {
+      "id": "TQ-0288",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 48: Riktig fordi kapittel 48 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "48"
+      ]
+    },
+    {
+      "id": "TQ-0289",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 49 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "49"
+      ]
+    },
+    {
+      "id": "TQ-0290",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 49: Riktig fordi kapittel 49 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "49"
+      ]
+    },
+    {
+      "id": "TQ-0291",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 49 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "49"
+      ]
+    },
+    {
+      "id": "TQ-0292",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 49: Riktig fordi kapittel 49 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "49"
+      ]
+    },
+    {
+      "id": "TQ-0293",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 49 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "49"
+      ]
+    },
+    {
+      "id": "TQ-0294",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 49: Riktig fordi kapittel 49 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "49"
+      ]
+    },
+    {
+      "id": "TQ-0295",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvilke tekniske data bør alltid samles før en del bekreftes?",
+      "choices": [
+        "Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 50 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "50"
+      ]
+    },
+    {
+      "id": "TQ-0296",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 50: Riktig fordi kapittel 50 legger vekt på dokumentert vurdering: Fabrikat, modell, serienummer, variantdata, bilde av typeplate, delnummer, posisjon og kundens symptombeskrivelse.",
+      "lesson": null,
+      "tags": [
+        "50"
+      ]
+    },
+    {
+      "id": "TQ-0297",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hvorfor er engelsk terminologi viktig i marine reservedeler?",
+      "choices": [
+        "Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 50 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "50"
+      ]
+    },
+    {
+      "id": "TQ-0298",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 50: Riktig fordi kapittel 50 legger vekt på dokumentert vurdering: Fordi kataloger, portaler, servicemanualer og leverandørdialog ofte bruker engelske begreper som må forstås presist.",
+      "lesson": null,
+      "tags": [
+        "50"
+      ]
+    },
+    {
+      "id": "TQ-0299",
+      "type": "multiple",
+      "difficulty": "easy",
+      "prompt": "Hva bør gjøres dersom kunden bare sender et bilde av delen?",
+      "choices": [
+        "Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+        "Velg del ut fra bilde alene.",
+        "Bekreft levering før motoridentitet er kontrollert.",
+        "Hopp over dokumentasjon når saken haster."
+      ],
+      "answer": 0,
+      "explanation": "Riktig fordi kapittel 50 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "50"
+      ]
+    },
+    {
+      "id": "TQ-0300",
+      "type": "truefalse",
+      "difficulty": "easy",
+      "prompt": "Sant eller usant: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "choices": [
+        "Sant",
+        "Usant"
+      ],
+      "answer": 0,
+      "explanation": "Sant. Dette følger av kapittel 50: Riktig fordi kapittel 50 legger vekt på dokumentert vurdering: Be om serienummer, oversiktsbilde av motoren og eventuelle nummer på delen; bildet brukes som støtte, ikke eneste grunnlag.",
+      "lesson": null,
+      "tags": [
+        "50"
+      ]
+    },
+    {
+      "id": "TQ-0301",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for Caterpillar (CAT)?",
+      "choices": [
+        "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0302",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0303",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0304",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor ESN, CPL og dataplate trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0305",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0306",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0307",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for Yanmar?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0308",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir Caterpillar (CAT) og modellnavn?",
+      "choices": [
+        "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0309",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0310",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor holder det ikke med bilde av delen alene?",
+      "choices": [
+        "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0311",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for Cummins?",
+      "choices": [
+        "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0312",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0313",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0314",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor model code, serial number og marine gear/saildrive trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0315",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0316",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0317",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for Mitsubishi?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0318",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir Cummins og modellnavn?",
+      "choices": [
+        "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0319",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0320",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er forskjellen på symptom og årsak?",
+      "choices": [
+        "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0321",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for Yanmar?",
+      "choices": [
+        "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0322",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0323",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0324",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor engine model, serial number og mariniseringsleverandør trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0325",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0326",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0327",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for Scania?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0328",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir Yanmar og modellnavn?",
+      "choices": [
+        "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0329",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0330",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor holder det ikke med bilde av delen alene?",
+      "choices": [
+        "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0331",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for Mitsubishi?",
+      "choices": [
+        "Kontroller engine model, serial number og mariniseringsleverandør og verifiser opplysningene i Mitsubishi/mariniseringsdokumentasjon.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller engine model, serial number og mariniseringsleverandør og verifiser opplysningene i Mitsubishi/mariniseringsdokumentasjon.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0332",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0333",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0334",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor engine number, application og rating trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0335",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0336",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0337",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for Volvo Penta?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Volvo Penta parts documentation.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Volvo Penta parts documentation.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0338",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir Mitsubishi og modellnavn?",
+      "choices": [
+        "Be om engine model, serial number og mariniseringsleverandør, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om engine model, serial number og mariniseringsleverandør, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0339",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0340",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er forskjellen på symptom og årsak?",
+      "choices": [
+        "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0341",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for Scania?",
+      "choices": [
+        "Kontroller engine number, application og rating og verifiser opplysningene i Scania parts catalogue.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller engine number, application og rating og verifiser opplysningene i Scania parts catalogue.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0342",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0343",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0344",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor Engine Type, Serial Number og Product Number trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0345",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0346",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0347",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for MAN?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i MAN service documentation.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i MAN service documentation.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0348",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir Scania og modellnavn?",
+      "choices": [
+        "Be om engine number, application og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om engine number, application og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0349",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0350",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor holder det ikke med bilde av delen alene?",
+      "choices": [
+        "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0351",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for Volvo Penta?",
+      "choices": [
+        "Kontroller Engine Type, Serial Number og Product Number og verifiser opplysningene i Volvo Penta parts documentation.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller Engine Type, Serial Number og Product Number og verifiser opplysningene i Volvo Penta parts documentation.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0352",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0353",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0354",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor engine type, engine number og rating trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0355",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0356",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0357",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for Caterpillar (CAT)?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i SIS / Parts Manual.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i SIS / Parts Manual.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0358",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir Volvo Penta og modellnavn?",
+      "choices": [
+        "Be om Engine Type, Serial Number og Product Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om Engine Type, Serial Number og Product Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0359",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0360",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er forskjellen på symptom og årsak?",
+      "choices": [
+        "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0361",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for MAN?",
+      "choices": [
+        "Kontroller engine type, engine number og rating og verifiser opplysningene i MAN service documentation.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller engine type, engine number og rating og verifiser opplysningene i MAN service documentation.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0362",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0363",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0364",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor ESN, Serial Number Prefix og Arrangement Number trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0365",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0366",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0367",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for Cummins?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i QuickServe / BOM.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i QuickServe / BOM.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0368",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir MAN og modellnavn?",
+      "choices": [
+        "Be om engine type, engine number og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om engine type, engine number og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0369",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0370",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor holder det ikke med bilde av delen alene?",
+      "choices": [
+        "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0371",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for Caterpillar (CAT)?",
+      "choices": [
+        "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0372",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0373",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0374",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor ESN, CPL og dataplate trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0375",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0376",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0377",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for Yanmar?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0378",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir Caterpillar (CAT) og modellnavn?",
+      "choices": [
+        "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0379",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0380",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er forskjellen på symptom og årsak?",
+      "choices": [
+        "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0381",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for Cummins?",
+      "choices": [
+        "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0382",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0383",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0384",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor model code, serial number og marine gear/saildrive trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0385",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0386",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0387",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for Mitsubishi?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0388",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir Cummins og modellnavn?",
+      "choices": [
+        "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0389",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0390",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor holder det ikke med bilde av delen alene?",
+      "choices": [
+        "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0391",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for Yanmar?",
+      "choices": [
+        "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0392",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0393",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0394",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor engine model, serial number og mariniseringsleverandør trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0395",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0396",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0397",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for Scania?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0398",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir Yanmar og modellnavn?",
+      "choices": [
+        "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0399",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0400",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er forskjellen på symptom og årsak?",
+      "choices": [
+        "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0401",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for Mitsubishi?",
+      "choices": [
+        "Kontroller engine model, serial number og mariniseringsleverandør og verifiser opplysningene i Mitsubishi/mariniseringsdokumentasjon.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller engine model, serial number og mariniseringsleverandør og verifiser opplysningene i Mitsubishi/mariniseringsdokumentasjon.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0402",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0403",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0404",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor engine number, application og rating trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0405",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0406",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0407",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for Volvo Penta?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Volvo Penta parts documentation.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Volvo Penta parts documentation.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0408",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir Mitsubishi og modellnavn?",
+      "choices": [
+        "Be om engine model, serial number og mariniseringsleverandør, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om engine model, serial number og mariniseringsleverandør, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0409",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0410",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor holder det ikke med bilde av delen alene?",
+      "choices": [
+        "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0411",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for Scania?",
+      "choices": [
+        "Kontroller engine number, application og rating og verifiser opplysningene i Scania parts catalogue.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller engine number, application og rating og verifiser opplysningene i Scania parts catalogue.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0412",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0413",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0414",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor Engine Type, Serial Number og Product Number trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0415",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0416",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0417",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for MAN?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i MAN service documentation.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i MAN service documentation.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0418",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir Scania og modellnavn?",
+      "choices": [
+        "Be om engine number, application og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om engine number, application og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0419",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0420",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er forskjellen på symptom og årsak?",
+      "choices": [
+        "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0421",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for Volvo Penta?",
+      "choices": [
+        "Kontroller Engine Type, Serial Number og Product Number og verifiser opplysningene i Volvo Penta parts documentation.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller Engine Type, Serial Number og Product Number og verifiser opplysningene i Volvo Penta parts documentation.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0422",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0423",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0424",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor engine type, engine number og rating trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0425",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0426",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0427",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for Caterpillar (CAT)?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i SIS / Parts Manual.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i SIS / Parts Manual.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0428",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir Volvo Penta og modellnavn?",
+      "choices": [
+        "Be om Engine Type, Serial Number og Product Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om Engine Type, Serial Number og Product Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0429",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0430",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor holder det ikke med bilde av delen alene?",
+      "choices": [
+        "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0431",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for MAN?",
+      "choices": [
+        "Kontroller engine type, engine number og rating og verifiser opplysningene i MAN service documentation.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller engine type, engine number og rating og verifiser opplysningene i MAN service documentation.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0432",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0433",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0434",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor ESN, Serial Number Prefix og Arrangement Number trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0435",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0436",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0437",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for Cummins?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i QuickServe / BOM.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i QuickServe / BOM.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0438",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir MAN og modellnavn?",
+      "choices": [
+        "Be om engine type, engine number og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om engine type, engine number og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0439",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0440",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er forskjellen på symptom og årsak?",
+      "choices": [
+        "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0441",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for Caterpillar (CAT)?",
+      "choices": [
+        "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0442",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0443",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0444",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor ESN, CPL og dataplate trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0445",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0446",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0447",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for Yanmar?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0448",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir Caterpillar (CAT) og modellnavn?",
+      "choices": [
+        "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0449",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0450",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor holder det ikke med bilde av delen alene?",
+      "choices": [
+        "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0451",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for Cummins?",
+      "choices": [
+        "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0452",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0453",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0454",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor model code, serial number og marine gear/saildrive trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0455",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0456",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0457",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for Mitsubishi?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0458",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir Cummins og modellnavn?",
+      "choices": [
+        "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0459",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0460",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er forskjellen på symptom og årsak?",
+      "choices": [
+        "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0461",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for Yanmar?",
+      "choices": [
+        "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0462",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0463",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0464",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor engine model, serial number og mariniseringsleverandør trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0465",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0466",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0467",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for Scania?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0468",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir Yanmar og modellnavn?",
+      "choices": [
+        "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0469",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0470",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor holder det ikke med bilde av delen alene?",
+      "choices": [
+        "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0471",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for Mitsubishi?",
+      "choices": [
+        "Kontroller engine model, serial number og mariniseringsleverandør og verifiser opplysningene i Mitsubishi/mariniseringsdokumentasjon.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller engine model, serial number og mariniseringsleverandør og verifiser opplysningene i Mitsubishi/mariniseringsdokumentasjon.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0472",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0473",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0474",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor engine number, application og rating trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0475",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0476",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0477",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for Volvo Penta?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Volvo Penta parts documentation.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Volvo Penta parts documentation.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0478",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir Mitsubishi og modellnavn?",
+      "choices": [
+        "Be om engine model, serial number og mariniseringsleverandør, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om engine model, serial number og mariniseringsleverandør, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0479",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0480",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er forskjellen på symptom og årsak?",
+      "choices": [
+        "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0481",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for Scania?",
+      "choices": [
+        "Kontroller engine number, application og rating og verifiser opplysningene i Scania parts catalogue.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller engine number, application og rating og verifiser opplysningene i Scania parts catalogue.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0482",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0483",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0484",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor Engine Type, Serial Number og Product Number trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0485",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0486",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0487",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for MAN?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i MAN service documentation.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i MAN service documentation.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0488",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir Scania og modellnavn?",
+      "choices": [
+        "Be om engine number, application og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om engine number, application og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0489",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0490",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor holder det ikke med bilde av delen alene?",
+      "choices": [
+        "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0491",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for Volvo Penta?",
+      "choices": [
+        "Kontroller Engine Type, Serial Number og Product Number og verifiser opplysningene i Volvo Penta parts documentation.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller Engine Type, Serial Number og Product Number og verifiser opplysningene i Volvo Penta parts documentation.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0492",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0493",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0494",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor engine type, engine number og rating trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0495",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0496",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0497",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for Caterpillar (CAT)?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i SIS / Parts Manual.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i SIS / Parts Manual.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0498",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir Volvo Penta og modellnavn?",
+      "choices": [
+        "Be om Engine Type, Serial Number og Product Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om Engine Type, Serial Number og Product Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0499",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0500",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er forskjellen på symptom og årsak?",
+      "choices": [
+        "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0501",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for MAN?",
+      "choices": [
+        "Kontroller engine type, engine number og rating og verifiser opplysningene i MAN service documentation.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller engine type, engine number og rating og verifiser opplysningene i MAN service documentation.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0502",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0503",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0504",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor ESN, Serial Number Prefix og Arrangement Number trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0505",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0506",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0507",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for Cummins?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i QuickServe / BOM.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i QuickServe / BOM.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0508",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir MAN og modellnavn?",
+      "choices": [
+        "Be om engine type, engine number og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om engine type, engine number og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0509",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0510",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor holder det ikke med bilde av delen alene?",
+      "choices": [
+        "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0511",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for Caterpillar (CAT)?",
+      "choices": [
+        "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0512",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0513",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0514",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor ESN, CPL og dataplate trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0515",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0516",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0517",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for Yanmar?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0518",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir Caterpillar (CAT) og modellnavn?",
+      "choices": [
+        "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0519",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0520",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er forskjellen på symptom og årsak?",
+      "choices": [
+        "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0521",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for Cummins?",
+      "choices": [
+        "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0522",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0523",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0524",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor model code, serial number og marine gear/saildrive trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0525",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0526",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0527",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for Mitsubishi?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0528",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir Cummins og modellnavn?",
+      "choices": [
+        "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0529",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0530",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor holder det ikke med bilde av delen alene?",
+      "choices": [
+        "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0531",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilke identifikasjonsdata er viktigst for Yanmar?",
+      "choices": [
+        "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0532",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+      "choices": [
+        "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0533",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er vanlig feil ved bestilling av impeller?",
+      "choices": [
+        "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0534",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvordan forklarer du kunden hvorfor engine model, serial number og mariniseringsleverandør trengs?",
+      "choices": [
+        "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Mitsubishi"
+      ]
+    },
+    {
+      "id": "TQ-0535",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører impeller oftest til?",
+      "choices": [
+        "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Cummins"
+      ]
+    },
+    {
+      "id": "TQ-0536",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva skal stå i et godt saksnotat?",
+      "choices": [
+        "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "MAN"
+      ]
+    },
+    {
+      "id": "TQ-0537",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva må verifiseres før serviceintervall oppgis for Scania?",
+      "choices": [
+        "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Scania"
+      ]
+    },
+    {
+      "id": "TQ-0538",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva gjør du hvis kunden bare oppgir Yanmar og modellnavn?",
+      "choices": [
+        "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Yanmar"
+      ]
+    },
+    {
+      "id": "TQ-0539",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+      "choices": [
+        "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem",
+        "Caterpillar (CAT)"
+      ]
+    },
+    {
+      "id": "TQ-0540",
+      "type": "flashcard",
+      "difficulty": "medium",
+      "prompt": "Hva er forskjellen på symptom og årsak?",
+      "choices": [
+        "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+        "Bestill fra bilde uten motor-ID.",
+        "Hopp over produsentverifikasjon.",
+        "Bruk modellnavn alene."
+      ],
+      "answer": 0,
+      "explanation": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+      "lesson": null,
+      "tags": [
+        "eksosanlegg",
+        "Volvo Penta"
+      ]
+    },
+    {
+      "id": "TQ-0541",
+      "type": "match",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører Impeller primært til?",
+      "choices": [
+        "sjøvannssystem",
+        "kjølesystem",
+        "smøresystem",
+        "drivstoffsystem"
+      ],
+      "answer": 0,
+      "explanation": "Impeller vurderes normalt i sjøvannssystem, men produsentdata og monteringsposisjon må alltid bekreftes.",
+      "lesson": null,
+      "tags": [
+        "sjøvannssystem"
+      ]
+    },
+    {
+      "id": "TQ-0542",
+      "type": "match",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører Oljefilter primært til?",
+      "choices": [
+        "smøresystem",
+        "kjølesystem",
+        "drivstoffsystem",
+        "common rail"
+      ],
+      "answer": 0,
+      "explanation": "Oljefilter vurderes normalt i smøresystem, men produsentdata og monteringsposisjon må alltid bekreftes.",
+      "lesson": null,
+      "tags": [
+        "smøresystem"
+      ]
+    },
+    {
+      "id": "TQ-0543",
+      "type": "match",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører Drivstoffilter primært til?",
+      "choices": [
+        "drivstoffsystem",
+        "kjølesystem",
+        "smøresystem",
+        "common rail"
+      ],
+      "answer": 0,
+      "explanation": "Drivstoffilter vurderes normalt i drivstoffsystem, men produsentdata og monteringsposisjon må alltid bekreftes.",
+      "lesson": null,
+      "tags": [
+        "drivstoffsystem"
+      ]
+    },
+    {
+      "id": "TQ-0544",
+      "type": "match",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører Rail pressure sensor primært til?",
+      "choices": [
+        "common rail",
+        "kjølesystem",
+        "smøresystem",
+        "drivstoffsystem"
+      ],
+      "answer": 0,
+      "explanation": "Rail pressure sensor vurderes normalt i common rail, men produsentdata og monteringsposisjon må alltid bekreftes.",
+      "lesson": null,
+      "tags": [
+        "common rail"
+      ]
+    },
+    {
+      "id": "TQ-0545",
+      "type": "match",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører ECU primært til?",
+      "choices": [
+        "elektrisk system",
+        "kjølesystem",
+        "smøresystem",
+        "drivstoffsystem"
+      ],
+      "answer": 0,
+      "explanation": "ECU vurderes normalt i elektrisk system, men produsentdata og monteringsposisjon må alltid bekreftes.",
+      "lesson": null,
+      "tags": [
+        "elektrisk system"
+      ]
+    },
+    {
+      "id": "TQ-0546",
+      "type": "match",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører Startmotor primært til?",
+      "choices": [
+        "startsystem",
+        "kjølesystem",
+        "smøresystem",
+        "drivstoffsystem"
+      ],
+      "answer": 0,
+      "explanation": "Startmotor vurderes normalt i startsystem, men produsentdata og monteringsposisjon må alltid bekreftes.",
+      "lesson": null,
+      "tags": [
+        "startsystem"
+      ]
+    },
+    {
+      "id": "TQ-0547",
+      "type": "match",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører Dynamo primært til?",
+      "choices": [
+        "lading",
+        "kjølesystem",
+        "smøresystem",
+        "drivstoffsystem"
+      ],
+      "answer": 0,
+      "explanation": "Dynamo vurderes normalt i lading, men produsentdata og monteringsposisjon må alltid bekreftes.",
+      "lesson": null,
+      "tags": [
+        "lading"
+      ]
+    },
+    {
+      "id": "TQ-0548",
+      "type": "match",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører Gearoljekjøler primært til?",
+      "choices": [
+        "girsystem",
+        "kjølesystem",
+        "smøresystem",
+        "drivstoffsystem"
+      ],
+      "answer": 0,
+      "explanation": "Gearoljekjøler vurderes normalt i girsystem, men produsentdata og monteringsposisjon må alltid bekreftes.",
+      "lesson": null,
+      "tags": [
+        "girsystem"
+      ]
+    },
+    {
+      "id": "TQ-0549",
+      "type": "match",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører CAN-kabel primært til?",
+      "choices": [
+        "CAN-bus",
+        "kjølesystem",
+        "smøresystem",
+        "drivstoffsystem"
+      ],
+      "answer": 0,
+      "explanation": "CAN-kabel vurderes normalt i CAN-bus, men produsentdata og monteringsposisjon må alltid bekreftes.",
+      "lesson": null,
+      "tags": [
+        "CAN-bus"
+      ]
+    },
+    {
+      "id": "TQ-0550",
+      "type": "match",
+      "difficulty": "medium",
+      "prompt": "Hvilket system hører Varmeveksler primært til?",
+      "choices": [
+        "kjølesystem",
+        "smøresystem",
+        "drivstoffsystem",
+        "common rail"
+      ],
+      "answer": 0,
+      "explanation": "Varmeveksler vurderes normalt i kjølesystem, men produsentdata og monteringsposisjon må alltid bekreftes.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem"
+      ]
+    },
+    {
+      "id": "TQ-0551",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Caterpillar (CAT) C7.1 / Oljefilter.",
+      "choices": [
+        "CAT-C71-OLJEFI-001",
+        "CAT-C71-DRIVST-002",
+        "CAT-C71-VANNUT-003",
+        "CAT-C71-IMPELL-004"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er CAT-C71-OLJEFI-001. I reell ordre må dette verifiseres mot SIS / Parts Manual.",
+      "lesson": "01",
+      "tags": [
+        "Caterpillar (CAT)",
+        "Oljefilter"
+      ]
+    },
+    {
+      "id": "TQ-0552",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Caterpillar (CAT) C9 / Temperatursensor.",
+      "choices": [
+        "CAT-C9-TEMPER-014",
+        "CAT-C71-OLJEFI-001",
+        "CAT-C71-DRIVST-002",
+        "CAT-C71-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er CAT-C9-TEMPER-014. I reell ordre må dette verifiseres mot SIS / Parts Manual.",
+      "lesson": "36",
+      "tags": [
+        "Caterpillar (CAT)",
+        "Temperatursensor"
+      ]
+    },
+    {
+      "id": "TQ-0553",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Caterpillar (CAT) C18 / Vannutskiller.",
+      "choices": [
+        "CAT-C18-VANNUT-003",
+        "CAT-C71-OLJEFI-001",
+        "CAT-C71-DRIVST-002",
+        "CAT-C71-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er CAT-C18-VANNUT-003. I reell ordre må dette verifiseres mot SIS / Parts Manual.",
+      "lesson": "16",
+      "tags": [
+        "Caterpillar (CAT)",
+        "Vannutskiller"
+      ]
+    },
+    {
+      "id": "TQ-0554",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Caterpillar (CAT) 3126 / Startmotor.",
+      "choices": [
+        "CAT-3126-STARTM-016",
+        "CAT-C71-OLJEFI-001",
+        "CAT-C71-DRIVST-002",
+        "CAT-C71-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er CAT-3126-STARTM-016. I reell ordre må dette verifiseres mot SIS / Parts Manual.",
+      "lesson": "36",
+      "tags": [
+        "Caterpillar (CAT)",
+        "Startmotor"
+      ]
+    },
+    {
+      "id": "TQ-0555",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Caterpillar (CAT) 3512 / Sjøvannspumpe.",
+      "choices": [
+        "CAT-3512-SJOVAN-005",
+        "CAT-C71-OLJEFI-001",
+        "CAT-C71-DRIVST-002",
+        "CAT-C71-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er CAT-3512-SJOVAN-005. I reell ordre må dette verifiseres mot SIS / Parts Manual.",
+      "lesson": "11",
+      "tags": [
+        "Caterpillar (CAT)",
+        "Sjøvannspumpe"
+      ]
+    },
+    {
+      "id": "TQ-0556",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Volvo Penta D3 / Reim.",
+      "choices": [
+        "VP-D3-REIM-018",
+        "VP-D3-OLJEFI-001",
+        "VP-D3-DRIVST-002",
+        "VP-D3-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er VP-D3-REIM-018. I reell ordre må dette verifiseres mot Volvo Penta parts documentation.",
+      "lesson": "16",
+      "tags": [
+        "Volvo Penta",
+        "Reim"
+      ]
+    },
+    {
+      "id": "TQ-0557",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Volvo Penta D6 / Varmeveksler.",
+      "choices": [
+        "VP-D6-VARMEV-007",
+        "VP-D3-OLJEFI-001",
+        "VP-D3-DRIVST-002",
+        "VP-D3-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er VP-D6-VARMEV-007. I reell ordre må dette verifiseres mot Volvo Penta parts documentation.",
+      "lesson": "11",
+      "tags": [
+        "Volvo Penta",
+        "Varmeveksler"
+      ]
+    },
+    {
+      "id": "TQ-0558",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Volvo Penta D8 / Anode.",
+      "choices": [
+        "VP-D8-ANODE-020",
+        "VP-D3-OLJEFI-001",
+        "VP-D3-DRIVST-002",
+        "VP-D3-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er VP-D8-ANODE-020. I reell ordre må dette verifiseres mot Volvo Penta parts documentation.",
+      "lesson": "37",
+      "tags": [
+        "Volvo Penta",
+        "Anode"
+      ]
+    },
+    {
+      "id": "TQ-0559",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Volvo Penta TAMD74 / Intercooler.",
+      "choices": [
+        "VP-TAMD74-INTERC-009",
+        "VP-D3-OLJEFI-001",
+        "VP-D3-DRIVST-002",
+        "VP-D3-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er VP-TAMD74-INTERC-009. I reell ordre må dette verifiseres mot Volvo Penta parts documentation.",
+      "lesson": "11",
+      "tags": [
+        "Volvo Penta",
+        "Intercooler"
+      ]
+    },
+    {
+      "id": "TQ-0560",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Volvo Penta KAD44 / Akseltetning.",
+      "choices": [
+        "VP-KAD44-AKSELT-022",
+        "VP-D3-OLJEFI-001",
+        "VP-D3-DRIVST-002",
+        "VP-D3-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er VP-KAD44-AKSELT-022. I reell ordre må dette verifiseres mot Volvo Penta parts documentation.",
+      "lesson": "16",
+      "tags": [
+        "Volvo Penta",
+        "Akseltetning"
+      ]
+    },
+    {
+      "id": "TQ-0561",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Mitsubishi S4Q2 / Injektor.",
+      "choices": [
+        "MIT-S4Q2-INJEKT-011",
+        "MIT-S4L2-OLJEFI-001",
+        "MIT-S4L2-DRIVST-002",
+        "MIT-S4L2-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er MIT-S4Q2-INJEKT-011. I reell ordre må dette verifiseres mot Mitsubishi/mariniseringsdokumentasjon.",
+      "lesson": "29",
+      "tags": [
+        "Mitsubishi",
+        "Injektor"
+      ]
+    },
+    {
+      "id": "TQ-0562",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Mitsubishi S6S / CAN-kabel.",
+      "choices": [
+        "MIT-S6S-CAN-KA-024",
+        "MIT-S4L2-OLJEFI-001",
+        "MIT-S4L2-DRIVST-002",
+        "MIT-S4L2-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er MIT-S6S-CAN-KA-024. I reell ordre må dette verifiseres mot Mitsubishi/mariniseringsdokumentasjon.",
+      "lesson": "46",
+      "tags": [
+        "Mitsubishi",
+        "CAN-kabel"
+      ]
+    },
+    {
+      "id": "TQ-0563",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Mitsubishi S6A3 / ECU.",
+      "choices": [
+        "MIT-S6A3-ECU-013",
+        "MIT-S4L2-OLJEFI-001",
+        "MIT-S4L2-DRIVST-002",
+        "MIT-S4L2-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er MIT-S6A3-ECU-013. I reell ordre må dette verifiseres mot Mitsubishi/mariniseringsdokumentasjon.",
+      "lesson": "46",
+      "tags": [
+        "Mitsubishi",
+        "ECU"
+      ]
+    },
+    {
+      "id": "TQ-0564",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Mitsubishi 6D16 / Drivstoffilter.",
+      "choices": [
+        "MIT-6D16-DRIVST-002",
+        "MIT-S4L2-OLJEFI-001",
+        "MIT-S4L2-DRIVST-002",
+        "MIT-S4L2-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er MIT-6D16-DRIVST-002. I reell ordre må dette verifiseres mot Mitsubishi/mariniseringsdokumentasjon.",
+      "lesson": "16",
+      "tags": [
+        "Mitsubishi",
+        "Drivstoffilter"
+      ]
+    },
+    {
+      "id": "TQ-0565",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Cummins 6BT / Oljetrykksgiver.",
+      "choices": [
+        "CUM-6BT-OLJETR-015",
+        "CUM-6BT-OLJEFI-001",
+        "CUM-6BT-DRIVST-002",
+        "CUM-6BT-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er CUM-6BT-OLJETR-015. I reell ordre må dette verifiseres mot QuickServe / BOM.",
+      "lesson": "36",
+      "tags": [
+        "Cummins",
+        "Oljetrykksgiver"
+      ]
+    },
+    {
+      "id": "TQ-0566",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Cummins QSB5.9 / Impeller.",
+      "choices": [
+        "CUM-QSB59-IMPELL-004",
+        "CUM-6BT-OLJEFI-001",
+        "CUM-6BT-DRIVST-002",
+        "CUM-6BT-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er CUM-QSB59-IMPELL-004. I reell ordre må dette verifiseres mot QuickServe / BOM.",
+      "lesson": "11",
+      "tags": [
+        "Cummins",
+        "Impeller"
+      ]
+    },
+    {
+      "id": "TQ-0567",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Cummins QSB6.7 / Dynamo.",
+      "choices": [
+        "CUM-QSB67-DYNAMO-017",
+        "CUM-6BT-OLJEFI-001",
+        "CUM-6BT-DRIVST-002",
+        "CUM-6BT-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er CUM-QSB67-DYNAMO-017. I reell ordre må dette verifiseres mot QuickServe / BOM.",
+      "lesson": "36",
+      "tags": [
+        "Cummins",
+        "Dynamo"
+      ]
+    },
+    {
+      "id": "TQ-0568",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Cummins QSL9 / Termostat.",
+      "choices": [
+        "CUM-QSL9-TERMOS-006",
+        "CUM-6BT-OLJEFI-001",
+        "CUM-6BT-DRIVST-002",
+        "CUM-6BT-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er CUM-QSL9-TERMOS-006. I reell ordre må dette verifiseres mot QuickServe / BOM.",
+      "lesson": "11",
+      "tags": [
+        "Cummins",
+        "Termostat"
+      ]
+    },
+    {
+      "id": "TQ-0569",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Cummins KTA19 / Pakningssett.",
+      "choices": [
+        "CUM-KTA19-PAKNIN-019",
+        "CUM-6BT-OLJEFI-001",
+        "CUM-6BT-DRIVST-002",
+        "CUM-6BT-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er CUM-KTA19-PAKNIN-019. I reell ordre må dette verifiseres mot QuickServe / BOM.",
+      "lesson": "17",
+      "tags": [
+        "Cummins",
+        "Pakningssett"
+      ]
+    },
+    {
+      "id": "TQ-0570",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for MAN D2676 / Turbocharger.",
+      "choices": [
+        "MAN-D2676-TURBOC-008",
+        "MAN-D0836-OLJEFI-001",
+        "MAN-D0836-DRIVST-002",
+        "MAN-D0836-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er MAN-D2676-TURBOC-008. I reell ordre må dette verifiseres mot MAN service documentation.",
+      "lesson": "11",
+      "tags": [
+        "MAN",
+        "Turbocharger"
+      ]
+    },
+    {
+      "id": "TQ-0571",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for MAN D2862 / Gearoljekjøler.",
+      "choices": [
+        "MAN-D2862-GEAROL-021",
+        "MAN-D0836-OLJEFI-001",
+        "MAN-D0836-DRIVST-002",
+        "MAN-D0836-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er MAN-D2862-GEAROL-021. I reell ordre må dette verifiseres mot MAN service documentation.",
+      "lesson": "16",
+      "tags": [
+        "MAN",
+        "Gearoljekjøler"
+      ]
+    },
+    {
+      "id": "TQ-0572",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for MAN V12-1550 / Eksosbend.",
+      "choices": [
+        "MAN-V121550-EKSOSB-010",
+        "MAN-D0836-OLJEFI-001",
+        "MAN-D0836-DRIVST-002",
+        "MAN-D0836-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er MAN-V121550-EKSOSB-010. I reell ordre må dette verifiseres mot MAN service documentation.",
+      "lesson": "11",
+      "tags": [
+        "MAN",
+        "Eksosbend"
+      ]
+    },
+    {
+      "id": "TQ-0573",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for MAN D2842 / Hydraulikkfilter.",
+      "choices": [
+        "MAN-D2842-HYDRAU-023",
+        "MAN-D0836-OLJEFI-001",
+        "MAN-D0836-DRIVST-002",
+        "MAN-D0836-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er MAN-D2842-HYDRAU-023. I reell ordre må dette verifiseres mot MAN service documentation.",
+      "lesson": "36",
+      "tags": [
+        "MAN",
+        "Hydraulikkfilter"
+      ]
+    },
+    {
+      "id": "TQ-0574",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Scania DI09 / Rail pressure sensor.",
+      "choices": [
+        "SCA-DI09-RAILPR-012",
+        "SCA-DI09-OLJEFI-001",
+        "SCA-DI09-DRIVST-002",
+        "SCA-DI09-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er SCA-DI09-RAILPR-012. I reell ordre må dette verifiseres mot Scania parts catalogue.",
+      "lesson": "29",
+      "tags": [
+        "Scania",
+        "Rail pressure sensor"
+      ]
+    },
+    {
+      "id": "TQ-0575",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Scania DI16 / Oljefilter.",
+      "choices": [
+        "SCA-DI16-OLJEFI-001",
+        "SCA-DI09-OLJEFI-001",
+        "SCA-DI09-DRIVST-002",
+        "SCA-DI09-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er SCA-DI16-OLJEFI-001. I reell ordre må dette verifiseres mot Scania parts catalogue.",
+      "lesson": "01",
+      "tags": [
+        "Scania",
+        "Oljefilter"
+      ]
+    },
+    {
+      "id": "TQ-0576",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Scania D9 / Temperatursensor.",
+      "choices": [
+        "SCA-D9-TEMPER-014",
+        "SCA-DI09-OLJEFI-001",
+        "SCA-DI09-DRIVST-002",
+        "SCA-DI09-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er SCA-D9-TEMPER-014. I reell ordre må dette verifiseres mot Scania parts catalogue.",
+      "lesson": "36",
+      "tags": [
+        "Scania",
+        "Temperatursensor"
+      ]
+    },
+    {
+      "id": "TQ-0577",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Scania D16 / Vannutskiller.",
+      "choices": [
+        "SCA-D16-VANNUT-003",
+        "SCA-DI09-OLJEFI-001",
+        "SCA-DI09-DRIVST-002",
+        "SCA-DI09-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er SCA-D16-VANNUT-003. I reell ordre må dette verifiseres mot Scania parts catalogue.",
+      "lesson": "16",
+      "tags": [
+        "Scania",
+        "Vannutskiller"
+      ]
+    },
+    {
+      "id": "TQ-0578",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Yanmar 2GM20 / Startmotor.",
+      "choices": [
+        "YAN-2GM20-STARTM-016",
+        "YAN-2GM20-OLJEFI-001",
+        "YAN-2GM20-DRIVST-002",
+        "YAN-2GM20-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er YAN-2GM20-STARTM-016. I reell ordre må dette verifiseres mot Yanmar parts documentation.",
+      "lesson": "36",
+      "tags": [
+        "Yanmar",
+        "Startmotor"
+      ]
+    },
+    {
+      "id": "TQ-0579",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Yanmar 4JH57 / Sjøvannspumpe.",
+      "choices": [
+        "YAN-4JH57-SJOVAN-005",
+        "YAN-2GM20-OLJEFI-001",
+        "YAN-2GM20-DRIVST-002",
+        "YAN-2GM20-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er YAN-4JH57-SJOVAN-005. I reell ordre må dette verifiseres mot Yanmar parts documentation.",
+      "lesson": "11",
+      "tags": [
+        "Yanmar",
+        "Sjøvannspumpe"
+      ]
+    },
+    {
+      "id": "TQ-0580",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Yanmar 4LV / Reim.",
+      "choices": [
+        "YAN-4LV-REIM-018",
+        "YAN-2GM20-OLJEFI-001",
+        "YAN-2GM20-DRIVST-002",
+        "YAN-2GM20-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er YAN-4LV-REIM-018. I reell ordre må dette verifiseres mot Yanmar parts documentation.",
+      "lesson": "16",
+      "tags": [
+        "Yanmar",
+        "Reim"
+      ]
+    },
+    {
+      "id": "TQ-0581",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Yanmar 6BY / Varmeveksler.",
+      "choices": [
+        "YAN-6BY-VARMEV-007",
+        "YAN-2GM20-OLJEFI-001",
+        "YAN-2GM20-DRIVST-002",
+        "YAN-2GM20-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er YAN-6BY-VARMEV-007. I reell ordre må dette verifiseres mot Yanmar parts documentation.",
+      "lesson": "11",
+      "tags": [
+        "Yanmar",
+        "Varmeveksler"
+      ]
+    },
+    {
+      "id": "TQ-0582",
+      "type": "partnumber",
+      "difficulty": "hard",
+      "prompt": "Finn riktig opplærings-delnummer for Yanmar 8LV / Anode.",
+      "choices": [
+        "YAN-8LV-ANODE-020",
+        "YAN-2GM20-OLJEFI-001",
+        "YAN-2GM20-DRIVST-002",
+        "YAN-2GM20-VANNUT-003"
+      ],
+      "answer": 0,
+      "explanation": "Riktig opplæringspost er YAN-8LV-ANODE-020. I reell ordre må dette verifiseres mot Yanmar parts documentation.",
+      "lesson": "37",
+      "tags": [
+        "Yanmar",
+        "Anode"
+      ]
+    },
+    {
+      "id": "TQ-0583",
+      "type": "system",
+      "difficulty": "medium",
+      "prompt": "Identifiser mest relevant system: Høy temperatur under belastning",
+      "choices": [
+        "kjølesystem",
+        "smøresystem",
+        "drivstoffsystem",
+        "common rail"
+      ],
+      "answer": 0,
+      "explanation": "Symptomet peker først mot kjølesystem, men grunnkontroller og produsentdata må styre videre arbeid.",
+      "lesson": null,
+      "tags": [
+        "kjølesystem"
+      ]
+    },
+    {
+      "id": "TQ-0584",
+      "type": "system",
+      "difficulty": "medium",
+      "prompt": "Identifiser mest relevant system: Lavt oljetrykk ved varm motor",
+      "choices": [
+        "smøresystem",
+        "kjølesystem",
+        "drivstoffsystem",
+        "common rail"
+      ],
+      "answer": 0,
+      "explanation": "Symptomet peker først mot smøresystem, men grunnkontroller og produsentdata må styre videre arbeid.",
+      "lesson": null,
+      "tags": [
+        "smøresystem"
+      ]
+    },
+    {
+      "id": "TQ-0585",
+      "type": "system",
+      "difficulty": "medium",
+      "prompt": "Identifiser mest relevant system: Ujevn gange etter filterbytte",
+      "choices": [
+        "drivstoffsystem",
+        "kjølesystem",
+        "smøresystem",
+        "common rail"
+      ],
+      "answer": 0,
+      "explanation": "Symptomet peker først mot drivstoffsystem, men grunnkontroller og produsentdata må styre videre arbeid.",
+      "lesson": null,
+      "tags": [
+        "drivstoffsystem"
+      ]
+    },
+    {
+      "id": "TQ-0586",
+      "type": "system",
+      "difficulty": "medium",
+      "prompt": "Identifiser mest relevant system: Alarm og redusert effekt med rail pressure-kode",
+      "choices": [
+        "common rail",
+        "kjølesystem",
+        "smøresystem",
+        "drivstoffsystem"
+      ],
+      "answer": 0,
+      "explanation": "Symptomet peker først mot common rail, men grunnkontroller og produsentdata må styre videre arbeid.",
+      "lesson": null,
+      "tags": [
+        "common rail"
+      ]
+    },
+    {
+      "id": "TQ-0587",
+      "type": "system",
+      "difficulty": "medium",
+      "prompt": "Identifiser mest relevant system: Klikkelyd uten start",
+      "choices": [
+        "startsystem",
+        "kjølesystem",
+        "smøresystem",
+        "drivstoffsystem"
+      ],
+      "answer": 0,
+      "explanation": "Symptomet peker først mot startsystem, men grunnkontroller og produsentdata må styre videre arbeid.",
+      "lesson": null,
+      "tags": [
+        "startsystem"
+      ]
+    },
+    {
+      "id": "TQ-0588",
+      "type": "system",
+      "difficulty": "medium",
+      "prompt": "Identifiser mest relevant system: Lav ladespenning",
+      "choices": [
+        "lading",
+        "kjølesystem",
+        "smøresystem",
+        "drivstoffsystem"
+      ],
+      "answer": 0,
+      "explanation": "Symptomet peker først mot lading, men grunnkontroller og produsentdata må styre videre arbeid.",
+      "lesson": null,
+      "tags": [
+        "lading"
+      ]
+    },
+    {
+      "id": "TQ-0589",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder yrkesbåt som skal ut på oppdrag med Caterpillar (CAT) og beskriver høy temperatur. Kunden ber om impeller fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi høy temperatur kan skyldes flere forhold i kjølesystem, blant annet sjøvannsfilter, impeller, varmeveksler og termostat. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Caterpillar (CAT)",
+        "kjølesystem"
+      ]
+    },
+    {
+      "id": "TQ-0590",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder fritidsbåt før ferie med Volvo Penta og beskriver lavt oljetrykk. Kunden ber om oljefilter fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi lavt oljetrykk kan skyldes flere forhold i smøresystem, blant annet oljenivå, filter, giver, viskositet og lekkasje. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Volvo Penta",
+        "smøresystem"
+      ]
+    },
+    {
+      "id": "TQ-0591",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder et serviceverksted med demontert motor og Mitsubishi og beskriver ujevn gange. Kunden ber om drivstoffilter fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi ujevn gange kan skyldes flere forhold i drivstoffsystem, blant annet vann i diesel, luft, filterrestriksjon og matepumpe. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Mitsubishi",
+        "drivstoffsystem"
+      ]
+    },
+    {
+      "id": "TQ-0592",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder marina som håndterer flere kunder med Cummins og beskriver alarm og redusert effekt. Kunden ber om trykksensor fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi alarm og redusert effekt kan skyldes flere forhold i common rail, blant annet feilkode, rail pressure, kontakt og renhet. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Cummins",
+        "common rail"
+      ]
+    },
+    {
+      "id": "TQ-0593",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder et fiskefartøy med kort liggetid og MAN og beskriver lav effekt og sort røyk. Kunden ber om turbocharger fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi lav effekt og sort røyk kan skyldes flere forhold i turbo/luft, blant annet luftfilter, slanger, intercooler og eksosmottrykk. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "MAN",
+        "turbo/luft"
+      ]
+    },
+    {
+      "id": "TQ-0594",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder et rednings-/beredskapsfartøy med Scania og beskriver vannlekkasje eller varmgang. Kunden ber om eksosbend fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi vannlekkasje eller varmgang kan skyldes flere forhold i eksosanlegg, blant annet korrosjon, vanninjeksjon, slange og mottrykk. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Scania",
+        "eksosanlegg"
+      ]
+    },
+    {
+      "id": "TQ-0595",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder en generatorinstallasjon om bord med Yanmar og beskriver intermitterende alarm. Kunden ber om sensor fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi intermitterende alarm kan skyldes flere forhold i elektrisk system, blant annet spenning, jord, kontakt, kabel og feilkode. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Yanmar",
+        "elektrisk system"
+      ]
+    },
+    {
+      "id": "TQ-0596",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder charterbåt med planlagt avgang med Caterpillar (CAT) og beskriver klikkelyd uten start. Kunden ber om startmotor fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi klikkelyd uten start kan skyldes flere forhold i startsystem, blant annet batteri, hovedbryter, rele, solenoid og jord. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Caterpillar (CAT)",
+        "startsystem"
+      ]
+    },
+    {
+      "id": "TQ-0597",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder yrkesbåt som skal ut på oppdrag med Volvo Penta og beskriver lav ladespenning. Kunden ber om dynamo fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi lav ladespenning kan skyldes flere forhold i lading, blant annet reim, regulator, batteri og spenningsfall. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Volvo Penta",
+        "lading"
+      ]
+    },
+    {
+      "id": "TQ-0598",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder fritidsbåt før ferie med Mitsubishi og beskriver vibrasjon eller varm gearolje. Kunden ber om gearoljekjøler fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi vibrasjon eller varm gearolje kan skyldes flere forhold i gear/propell, blant annet oljenivå, kjøling, oppretting og belastning. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Mitsubishi",
+        "gear/propell"
+      ]
+    },
+    {
+      "id": "TQ-0599",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder et serviceverksted med demontert motor og Cummins og beskriver høy temperatur. Kunden ber om impeller fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi høy temperatur kan skyldes flere forhold i kjølesystem, blant annet sjøvannsfilter, impeller, varmeveksler og termostat. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Cummins",
+        "kjølesystem"
+      ]
+    },
+    {
+      "id": "TQ-0600",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder marina som håndterer flere kunder med MAN og beskriver lavt oljetrykk. Kunden ber om oljefilter fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi lavt oljetrykk kan skyldes flere forhold i smøresystem, blant annet oljenivå, filter, giver, viskositet og lekkasje. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "MAN",
+        "smøresystem"
+      ]
+    },
+    {
+      "id": "TQ-0601",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder et fiskefartøy med kort liggetid og Scania og beskriver ujevn gange. Kunden ber om drivstoffilter fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi ujevn gange kan skyldes flere forhold i drivstoffsystem, blant annet vann i diesel, luft, filterrestriksjon og matepumpe. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Scania",
+        "drivstoffsystem"
+      ]
+    },
+    {
+      "id": "TQ-0602",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder et rednings-/beredskapsfartøy med Yanmar og beskriver alarm og redusert effekt. Kunden ber om trykksensor fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi alarm og redusert effekt kan skyldes flere forhold i common rail, blant annet feilkode, rail pressure, kontakt og renhet. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Yanmar",
+        "common rail"
+      ]
+    },
+    {
+      "id": "TQ-0603",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder en generatorinstallasjon om bord med Caterpillar (CAT) og beskriver lav effekt og sort røyk. Kunden ber om turbocharger fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi lav effekt og sort røyk kan skyldes flere forhold i turbo/luft, blant annet luftfilter, slanger, intercooler og eksosmottrykk. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Caterpillar (CAT)",
+        "turbo/luft"
+      ]
+    },
+    {
+      "id": "TQ-0604",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder charterbåt med planlagt avgang med Volvo Penta og beskriver vannlekkasje eller varmgang. Kunden ber om eksosbend fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi vannlekkasje eller varmgang kan skyldes flere forhold i eksosanlegg, blant annet korrosjon, vanninjeksjon, slange og mottrykk. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Volvo Penta",
+        "eksosanlegg"
+      ]
+    },
+    {
+      "id": "TQ-0605",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder yrkesbåt som skal ut på oppdrag med Mitsubishi og beskriver intermitterende alarm. Kunden ber om sensor fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi intermitterende alarm kan skyldes flere forhold i elektrisk system, blant annet spenning, jord, kontakt, kabel og feilkode. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Mitsubishi",
+        "elektrisk system"
+      ]
+    },
+    {
+      "id": "TQ-0606",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder fritidsbåt før ferie med Cummins og beskriver klikkelyd uten start. Kunden ber om startmotor fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi klikkelyd uten start kan skyldes flere forhold i startsystem, blant annet batteri, hovedbryter, rele, solenoid og jord. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Cummins",
+        "startsystem"
+      ]
+    },
+    {
+      "id": "TQ-0607",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder et serviceverksted med demontert motor og MAN og beskriver lav ladespenning. Kunden ber om dynamo fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi lav ladespenning kan skyldes flere forhold i lading, blant annet reim, regulator, batteri og spenningsfall. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "MAN",
+        "lading"
+      ]
+    },
+    {
+      "id": "TQ-0608",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder marina som håndterer flere kunder med Scania og beskriver vibrasjon eller varm gearolje. Kunden ber om gearoljekjøler fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi vibrasjon eller varm gearolje kan skyldes flere forhold i gear/propell, blant annet oljenivå, kjøling, oppretting og belastning. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Scania",
+        "gear/propell"
+      ]
+    },
+    {
+      "id": "TQ-0609",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder et fiskefartøy med kort liggetid og Yanmar og beskriver høy temperatur. Kunden ber om impeller fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi høy temperatur kan skyldes flere forhold i kjølesystem, blant annet sjøvannsfilter, impeller, varmeveksler og termostat. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Yanmar",
+        "kjølesystem"
+      ]
+    },
+    {
+      "id": "TQ-0610",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder et rednings-/beredskapsfartøy med Caterpillar (CAT) og beskriver lavt oljetrykk. Kunden ber om oljefilter fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi lavt oljetrykk kan skyldes flere forhold i smøresystem, blant annet oljenivå, filter, giver, viskositet og lekkasje. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Caterpillar (CAT)",
+        "smøresystem"
+      ]
+    },
+    {
+      "id": "TQ-0611",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder en generatorinstallasjon om bord med Volvo Penta og beskriver ujevn gange. Kunden ber om drivstoffilter fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi ujevn gange kan skyldes flere forhold i drivstoffsystem, blant annet vann i diesel, luft, filterrestriksjon og matepumpe. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Volvo Penta",
+        "drivstoffsystem"
+      ]
+    },
+    {
+      "id": "TQ-0612",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder charterbåt med planlagt avgang med Mitsubishi og beskriver alarm og redusert effekt. Kunden ber om trykksensor fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi alarm og redusert effekt kan skyldes flere forhold i common rail, blant annet feilkode, rail pressure, kontakt og renhet. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Mitsubishi",
+        "common rail"
+      ]
+    },
+    {
+      "id": "TQ-0613",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder yrkesbåt som skal ut på oppdrag med Cummins og beskriver lav effekt og sort røyk. Kunden ber om turbocharger fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi lav effekt og sort røyk kan skyldes flere forhold i turbo/luft, blant annet luftfilter, slanger, intercooler og eksosmottrykk. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Cummins",
+        "turbo/luft"
+      ]
+    },
+    {
+      "id": "TQ-0614",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder fritidsbåt før ferie med MAN og beskriver vannlekkasje eller varmgang. Kunden ber om eksosbend fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi vannlekkasje eller varmgang kan skyldes flere forhold i eksosanlegg, blant annet korrosjon, vanninjeksjon, slange og mottrykk. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "MAN",
+        "eksosanlegg"
+      ]
+    },
+    {
+      "id": "TQ-0615",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder et serviceverksted med demontert motor og Scania og beskriver intermitterende alarm. Kunden ber om sensor fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi intermitterende alarm kan skyldes flere forhold i elektrisk system, blant annet spenning, jord, kontakt, kabel og feilkode. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Scania",
+        "elektrisk system"
+      ]
+    },
+    {
+      "id": "TQ-0616",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder marina som håndterer flere kunder med Yanmar og beskriver klikkelyd uten start. Kunden ber om startmotor fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi klikkelyd uten start kan skyldes flere forhold i startsystem, blant annet batteri, hovedbryter, rele, solenoid og jord. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Yanmar",
+        "startsystem"
+      ]
+    },
+    {
+      "id": "TQ-0617",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder et fiskefartøy med kort liggetid og Caterpillar (CAT) og beskriver lav ladespenning. Kunden ber om dynamo fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi lav ladespenning kan skyldes flere forhold i lading, blant annet reim, regulator, batteri og spenningsfall. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Caterpillar (CAT)",
+        "lading"
+      ]
+    },
+    {
+      "id": "TQ-0618",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder et rednings-/beredskapsfartøy med Volvo Penta og beskriver vibrasjon eller varm gearolje. Kunden ber om gearoljekjøler fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi vibrasjon eller varm gearolje kan skyldes flere forhold i gear/propell, blant annet oljenivå, kjøling, oppretting og belastning. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Volvo Penta",
+        "gear/propell"
+      ]
+    },
+    {
+      "id": "TQ-0619",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder en generatorinstallasjon om bord med Mitsubishi og beskriver høy temperatur. Kunden ber om impeller fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi høy temperatur kan skyldes flere forhold i kjølesystem, blant annet sjøvannsfilter, impeller, varmeveksler og termostat. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Mitsubishi",
+        "kjølesystem"
+      ]
+    },
+    {
+      "id": "TQ-0620",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder charterbåt med planlagt avgang med Cummins og beskriver lavt oljetrykk. Kunden ber om oljefilter fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi lavt oljetrykk kan skyldes flere forhold i smøresystem, blant annet oljenivå, filter, giver, viskositet og lekkasje. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Cummins",
+        "smøresystem"
+      ]
+    },
+    {
+      "id": "TQ-0621",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder yrkesbåt som skal ut på oppdrag med MAN og beskriver ujevn gange. Kunden ber om drivstoffilter fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi ujevn gange kan skyldes flere forhold i drivstoffsystem, blant annet vann i diesel, luft, filterrestriksjon og matepumpe. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "MAN",
+        "drivstoffsystem"
+      ]
+    },
+    {
+      "id": "TQ-0622",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder fritidsbåt før ferie med Scania og beskriver alarm og redusert effekt. Kunden ber om trykksensor fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi alarm og redusert effekt kan skyldes flere forhold i common rail, blant annet feilkode, rail pressure, kontakt og renhet. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Scania",
+        "common rail"
+      ]
+    },
+    {
+      "id": "TQ-0623",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder et serviceverksted med demontert motor og Yanmar og beskriver lav effekt og sort røyk. Kunden ber om turbocharger fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi lav effekt og sort røyk kan skyldes flere forhold i turbo/luft, blant annet luftfilter, slanger, intercooler og eksosmottrykk. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Yanmar",
+        "turbo/luft"
+      ]
+    },
+    {
+      "id": "TQ-0624",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder marina som håndterer flere kunder med Caterpillar (CAT) og beskriver vannlekkasje eller varmgang. Kunden ber om eksosbend fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi vannlekkasje eller varmgang kan skyldes flere forhold i eksosanlegg, blant annet korrosjon, vanninjeksjon, slange og mottrykk. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Caterpillar (CAT)",
+        "eksosanlegg"
+      ]
+    },
+    {
+      "id": "TQ-0625",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder et fiskefartøy med kort liggetid og Volvo Penta og beskriver intermitterende alarm. Kunden ber om sensor fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi intermitterende alarm kan skyldes flere forhold i elektrisk system, blant annet spenning, jord, kontakt, kabel og feilkode. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Volvo Penta",
+        "elektrisk system"
+      ]
+    },
+    {
+      "id": "TQ-0626",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder et rednings-/beredskapsfartøy med Mitsubishi og beskriver klikkelyd uten start. Kunden ber om startmotor fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi klikkelyd uten start kan skyldes flere forhold i startsystem, blant annet batteri, hovedbryter, rele, solenoid og jord. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Mitsubishi",
+        "startsystem"
+      ]
+    },
+    {
+      "id": "TQ-0627",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder en generatorinstallasjon om bord med Cummins og beskriver lav ladespenning. Kunden ber om dynamo fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi lav ladespenning kan skyldes flere forhold i lading, blant annet reim, regulator, batteri og spenningsfall. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Cummins",
+        "lading"
+      ]
+    },
+    {
+      "id": "TQ-0628",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder charterbåt med planlagt avgang med MAN og beskriver vibrasjon eller varm gearolje. Kunden ber om gearoljekjøler fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi vibrasjon eller varm gearolje kan skyldes flere forhold i gear/propell, blant annet oljenivå, kjøling, oppretting og belastning. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "MAN",
+        "gear/propell"
+      ]
+    },
+    {
+      "id": "TQ-0629",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder yrkesbåt som skal ut på oppdrag med Scania og beskriver høy temperatur. Kunden ber om impeller fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi høy temperatur kan skyldes flere forhold i kjølesystem, blant annet sjøvannsfilter, impeller, varmeveksler og termostat. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Scania",
+        "kjølesystem"
+      ]
+    },
+    {
+      "id": "TQ-0630",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder fritidsbåt før ferie med Yanmar og beskriver lavt oljetrykk. Kunden ber om oljefilter fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi lavt oljetrykk kan skyldes flere forhold i smøresystem, blant annet oljenivå, filter, giver, viskositet og lekkasje. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Yanmar",
+        "smøresystem"
+      ]
+    },
+    {
+      "id": "TQ-0631",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder et serviceverksted med demontert motor og Caterpillar (CAT) og beskriver ujevn gange. Kunden ber om drivstoffilter fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi ujevn gange kan skyldes flere forhold i drivstoffsystem, blant annet vann i diesel, luft, filterrestriksjon og matepumpe. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Caterpillar (CAT)",
+        "drivstoffsystem"
+      ]
+    },
+    {
+      "id": "TQ-0632",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder marina som håndterer flere kunder med Volvo Penta og beskriver alarm og redusert effekt. Kunden ber om trykksensor fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi alarm og redusert effekt kan skyldes flere forhold i common rail, blant annet feilkode, rail pressure, kontakt og renhet. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Volvo Penta",
+        "common rail"
+      ]
+    },
+    {
+      "id": "TQ-0633",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder et fiskefartøy med kort liggetid og Mitsubishi og beskriver lav effekt og sort røyk. Kunden ber om turbocharger fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi lav effekt og sort røyk kan skyldes flere forhold i turbo/luft, blant annet luftfilter, slanger, intercooler og eksosmottrykk. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Mitsubishi",
+        "turbo/luft"
+      ]
+    },
+    {
+      "id": "TQ-0634",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder et rednings-/beredskapsfartøy med Cummins og beskriver vannlekkasje eller varmgang. Kunden ber om eksosbend fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi vannlekkasje eller varmgang kan skyldes flere forhold i eksosanlegg, blant annet korrosjon, vanninjeksjon, slange og mottrykk. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Cummins",
+        "eksosanlegg"
+      ]
+    },
+    {
+      "id": "TQ-0635",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder en generatorinstallasjon om bord med MAN og beskriver intermitterende alarm. Kunden ber om sensor fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi intermitterende alarm kan skyldes flere forhold i elektrisk system, blant annet spenning, jord, kontakt, kabel og feilkode. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "MAN",
+        "elektrisk system"
+      ]
+    },
+    {
+      "id": "TQ-0636",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder charterbåt med planlagt avgang med Scania og beskriver klikkelyd uten start. Kunden ber om startmotor fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi klikkelyd uten start kan skyldes flere forhold i startsystem, blant annet batteri, hovedbryter, rele, solenoid og jord. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Scania",
+        "startsystem"
+      ]
+    },
+    {
+      "id": "TQ-0637",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder yrkesbåt som skal ut på oppdrag med Yanmar og beskriver lav ladespenning. Kunden ber om dynamo fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi lav ladespenning kan skyldes flere forhold i lading, blant annet reim, regulator, batteri og spenningsfall. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Yanmar",
+        "lading"
+      ]
+    },
+    {
+      "id": "TQ-0638",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder fritidsbåt før ferie med Caterpillar (CAT) og beskriver vibrasjon eller varm gearolje. Kunden ber om gearoljekjøler fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi vibrasjon eller varm gearolje kan skyldes flere forhold i gear/propell, blant annet oljenivå, kjøling, oppretting og belastning. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Caterpillar (CAT)",
+        "gear/propell"
+      ]
+    },
+    {
+      "id": "TQ-0639",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder et serviceverksted med demontert motor og Volvo Penta og beskriver høy temperatur. Kunden ber om impeller fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi høy temperatur kan skyldes flere forhold i kjølesystem, blant annet sjøvannsfilter, impeller, varmeveksler og termostat. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Volvo Penta",
+        "kjølesystem"
+      ]
+    },
+    {
+      "id": "TQ-0640",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder marina som håndterer flere kunder med Mitsubishi og beskriver lavt oljetrykk. Kunden ber om oljefilter fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi lavt oljetrykk kan skyldes flere forhold i smøresystem, blant annet oljenivå, filter, giver, viskositet og lekkasje. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Mitsubishi",
+        "smøresystem"
+      ]
+    },
+    {
+      "id": "TQ-0641",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder et fiskefartøy med kort liggetid og Cummins og beskriver ujevn gange. Kunden ber om drivstoffilter fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi ujevn gange kan skyldes flere forhold i drivstoffsystem, blant annet vann i diesel, luft, filterrestriksjon og matepumpe. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Cummins",
+        "drivstoffsystem"
+      ]
+    },
+    {
+      "id": "TQ-0642",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder et rednings-/beredskapsfartøy med MAN og beskriver alarm og redusert effekt. Kunden ber om trykksensor fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi alarm og redusert effekt kan skyldes flere forhold i common rail, blant annet feilkode, rail pressure, kontakt og renhet. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "MAN",
+        "common rail"
+      ]
+    },
+    {
+      "id": "TQ-0643",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder en generatorinstallasjon om bord med Scania og beskriver lav effekt og sort røyk. Kunden ber om turbocharger fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi lav effekt og sort røyk kan skyldes flere forhold i turbo/luft, blant annet luftfilter, slanger, intercooler og eksosmottrykk. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Scania",
+        "turbo/luft"
+      ]
+    },
+    {
+      "id": "TQ-0644",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder charterbåt med planlagt avgang med Yanmar og beskriver vannlekkasje eller varmgang. Kunden ber om eksosbend fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi vannlekkasje eller varmgang kan skyldes flere forhold i eksosanlegg, blant annet korrosjon, vanninjeksjon, slange og mottrykk. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Yanmar",
+        "eksosanlegg"
+      ]
+    },
+    {
+      "id": "TQ-0645",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder yrkesbåt som skal ut på oppdrag med Caterpillar (CAT) og beskriver intermitterende alarm. Kunden ber om sensor fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi intermitterende alarm kan skyldes flere forhold i elektrisk system, blant annet spenning, jord, kontakt, kabel og feilkode. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Caterpillar (CAT)",
+        "elektrisk system"
+      ]
+    },
+    {
+      "id": "TQ-0646",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder fritidsbåt før ferie med Volvo Penta og beskriver klikkelyd uten start. Kunden ber om startmotor fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi klikkelyd uten start kan skyldes flere forhold i startsystem, blant annet batteri, hovedbryter, rele, solenoid og jord. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Volvo Penta",
+        "startsystem"
+      ]
+    },
+    {
+      "id": "TQ-0647",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder et serviceverksted med demontert motor og Mitsubishi og beskriver lav ladespenning. Kunden ber om dynamo fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi lav ladespenning kan skyldes flere forhold i lading, blant annet reim, regulator, batteri og spenningsfall. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Mitsubishi",
+        "lading"
+      ]
+    },
+    {
+      "id": "TQ-0648",
+      "type": "customer-case",
+      "difficulty": "case",
+      "prompt": "Kundescenario: Saken gjelder marina som håndterer flere kunder med Cummins og beskriver vibrasjon eller varm gearolje. Kunden ber om gearoljekjøler fordi en bekjent mente dette var årsaken. Hva bør du gjøre først?",
+      "choices": [
+        "Be om manglende motoridentitet og dokumentasjon før bindende delbekreftelse.",
+        "Sende delen kunden foreslår umiddelbart.",
+        "Love levering før lagerstatus er kontrollert.",
+        "Avslutte saken fordi kunden ikke har nok informasjon."
+      ],
+      "answer": 0,
+      "explanation": "Løsningen er riktig fordi vibrasjon eller varm gearolje kan skyldes flere forhold i gear/propell, blant annet oljenivå, kjøling, oppretting og belastning. Motoridentitet og produsentkilde reduserer risiko for feil del, returproblem og ny driftsstans.",
+      "lesson": null,
+      "tags": [
+        "Cummins",
+        "gear/propell"
+      ]
+    },
+    {
+      "id": "TQ-0649",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Caterpillar (CAT) i marine installasjon viser høy temperatur. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i kjølesystem, ofte knyttet til sjøvannsfilter, impeller, varmeveksler og termostat, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Caterpillar (CAT)",
+        "kjølesystem"
+      ]
+    },
+    {
+      "id": "TQ-0650",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Mitsubishi i marine installasjon viser alarm og redusert effekt. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i common rail, ofte knyttet til feilkode, rail pressure, kontakt og renhet, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Mitsubishi",
+        "common rail"
+      ]
+    },
+    {
+      "id": "TQ-0651",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: MAN i marine installasjon viser intermitterende alarm. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i elektrisk system, ofte knyttet til spenning, jord, kontakt, kabel og feilkode, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "MAN",
+        "elektrisk system"
+      ]
+    },
+    {
+      "id": "TQ-0652",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Yanmar i marine installasjon viser vibrasjon eller varm gearolje. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i gear/propell, ofte knyttet til oljenivå, kjøling, oppretting og belastning, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Yanmar",
+        "gear/propell"
+      ]
+    },
+    {
+      "id": "TQ-0653",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Volvo Penta i marine installasjon viser ujevn gange. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i drivstoffsystem, ofte knyttet til vann i diesel, luft, filterrestriksjon og matepumpe, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Volvo Penta",
+        "drivstoffsystem"
+      ]
+    },
+    {
+      "id": "TQ-0654",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Cummins i marine installasjon viser vannlekkasje eller varmgang. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i eksosanlegg, ofte knyttet til korrosjon, vanninjeksjon, slange og mottrykk, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Cummins",
+        "eksosanlegg"
+      ]
+    },
+    {
+      "id": "TQ-0655",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Scania i marine installasjon viser lav ladespenning. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i lading, ofte knyttet til reim, regulator, batteri og spenningsfall, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Scania",
+        "lading"
+      ]
+    },
+    {
+      "id": "TQ-0656",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Caterpillar (CAT) i marine installasjon viser lavt oljetrykk. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i smøresystem, ofte knyttet til oljenivå, filter, giver, viskositet og lekkasje, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Caterpillar (CAT)",
+        "smøresystem"
+      ]
+    },
+    {
+      "id": "TQ-0657",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Mitsubishi i marine installasjon viser lav effekt og sort røyk. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i turbo/luft, ofte knyttet til luftfilter, slanger, intercooler og eksosmottrykk, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Mitsubishi",
+        "turbo/luft"
+      ]
+    },
+    {
+      "id": "TQ-0658",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: MAN i marine installasjon viser klikkelyd uten start. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i startsystem, ofte knyttet til batteri, hovedbryter, rele, solenoid og jord, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "MAN",
+        "startsystem"
+      ]
+    },
+    {
+      "id": "TQ-0659",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Yanmar i marine installasjon viser høy temperatur. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i kjølesystem, ofte knyttet til sjøvannsfilter, impeller, varmeveksler og termostat, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Yanmar",
+        "kjølesystem"
+      ]
+    },
+    {
+      "id": "TQ-0660",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Volvo Penta i marine installasjon viser alarm og redusert effekt. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i common rail, ofte knyttet til feilkode, rail pressure, kontakt og renhet, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Volvo Penta",
+        "common rail"
+      ]
+    },
+    {
+      "id": "TQ-0661",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Cummins i marine installasjon viser intermitterende alarm. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i elektrisk system, ofte knyttet til spenning, jord, kontakt, kabel og feilkode, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Cummins",
+        "elektrisk system"
+      ]
+    },
+    {
+      "id": "TQ-0662",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Scania i marine installasjon viser vibrasjon eller varm gearolje. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i gear/propell, ofte knyttet til oljenivå, kjøling, oppretting og belastning, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Scania",
+        "gear/propell"
+      ]
+    },
+    {
+      "id": "TQ-0663",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Caterpillar (CAT) i marine installasjon viser ujevn gange. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i drivstoffsystem, ofte knyttet til vann i diesel, luft, filterrestriksjon og matepumpe, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Caterpillar (CAT)",
+        "drivstoffsystem"
+      ]
+    },
+    {
+      "id": "TQ-0664",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Mitsubishi i marine installasjon viser vannlekkasje eller varmgang. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i eksosanlegg, ofte knyttet til korrosjon, vanninjeksjon, slange og mottrykk, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Mitsubishi",
+        "eksosanlegg"
+      ]
+    },
+    {
+      "id": "TQ-0665",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: MAN i marine installasjon viser lav ladespenning. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i lading, ofte knyttet til reim, regulator, batteri og spenningsfall, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "MAN",
+        "lading"
+      ]
+    },
+    {
+      "id": "TQ-0666",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Yanmar i marine installasjon viser lavt oljetrykk. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i smøresystem, ofte knyttet til oljenivå, filter, giver, viskositet og lekkasje, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Yanmar",
+        "smøresystem"
+      ]
+    },
+    {
+      "id": "TQ-0667",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Volvo Penta i marine installasjon viser lav effekt og sort røyk. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i turbo/luft, ofte knyttet til luftfilter, slanger, intercooler og eksosmottrykk, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Volvo Penta",
+        "turbo/luft"
+      ]
+    },
+    {
+      "id": "TQ-0668",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Cummins i marine installasjon viser klikkelyd uten start. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i startsystem, ofte knyttet til batteri, hovedbryter, rele, solenoid og jord, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Cummins",
+        "startsystem"
+      ]
+    },
+    {
+      "id": "TQ-0669",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Scania i marine installasjon viser høy temperatur. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i kjølesystem, ofte knyttet til sjøvannsfilter, impeller, varmeveksler og termostat, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Scania",
+        "kjølesystem"
+      ]
+    },
+    {
+      "id": "TQ-0670",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Caterpillar (CAT) i marine installasjon viser alarm og redusert effekt. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i common rail, ofte knyttet til feilkode, rail pressure, kontakt og renhet, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Caterpillar (CAT)",
+        "common rail"
+      ]
+    },
+    {
+      "id": "TQ-0671",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Mitsubishi i marine installasjon viser intermitterende alarm. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i elektrisk system, ofte knyttet til spenning, jord, kontakt, kabel og feilkode, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Mitsubishi",
+        "elektrisk system"
+      ]
+    },
+    {
+      "id": "TQ-0672",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: MAN i marine installasjon viser vibrasjon eller varm gearolje. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i gear/propell, ofte knyttet til oljenivå, kjøling, oppretting og belastning, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "MAN",
+        "gear/propell"
+      ]
+    },
+    {
+      "id": "TQ-0673",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Yanmar i marine installasjon viser ujevn gange. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i drivstoffsystem, ofte knyttet til vann i diesel, luft, filterrestriksjon og matepumpe, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Yanmar",
+        "drivstoffsystem"
+      ]
+    },
+    {
+      "id": "TQ-0674",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Volvo Penta i marine installasjon viser vannlekkasje eller varmgang. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i eksosanlegg, ofte knyttet til korrosjon, vanninjeksjon, slange og mottrykk, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Volvo Penta",
+        "eksosanlegg"
+      ]
+    },
+    {
+      "id": "TQ-0675",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Cummins i marine installasjon viser lav ladespenning. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i lading, ofte knyttet til reim, regulator, batteri og spenningsfall, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Cummins",
+        "lading"
+      ]
+    },
+    {
+      "id": "TQ-0676",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Scania i marine installasjon viser lavt oljetrykk. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i smøresystem, ofte knyttet til oljenivå, filter, giver, viskositet og lekkasje, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Scania",
+        "smøresystem"
+      ]
+    },
+    {
+      "id": "TQ-0677",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Caterpillar (CAT) i marine installasjon viser lav effekt og sort røyk. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i turbo/luft, ofte knyttet til luftfilter, slanger, intercooler og eksosmottrykk, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Caterpillar (CAT)",
+        "turbo/luft"
+      ]
+    },
+    {
+      "id": "TQ-0678",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Mitsubishi i marine installasjon viser klikkelyd uten start. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i startsystem, ofte knyttet til batteri, hovedbryter, rele, solenoid og jord, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Mitsubishi",
+        "startsystem"
+      ]
+    },
+    {
+      "id": "TQ-0679",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: MAN i marine installasjon viser høy temperatur. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i kjølesystem, ofte knyttet til sjøvannsfilter, impeller, varmeveksler og termostat, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "MAN",
+        "kjølesystem"
+      ]
+    },
+    {
+      "id": "TQ-0680",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Yanmar i marine installasjon viser alarm og redusert effekt. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i common rail, ofte knyttet til feilkode, rail pressure, kontakt og renhet, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Yanmar",
+        "common rail"
+      ]
+    },
+    {
+      "id": "TQ-0681",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Volvo Penta i marine installasjon viser intermitterende alarm. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i elektrisk system, ofte knyttet til spenning, jord, kontakt, kabel og feilkode, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Volvo Penta",
+        "elektrisk system"
+      ]
+    },
+    {
+      "id": "TQ-0682",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Cummins i marine installasjon viser vibrasjon eller varm gearolje. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i gear/propell, ofte knyttet til oljenivå, kjøling, oppretting og belastning, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Cummins",
+        "gear/propell"
+      ]
+    },
+    {
+      "id": "TQ-0683",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Scania i marine installasjon viser ujevn gange. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i drivstoffsystem, ofte knyttet til vann i diesel, luft, filterrestriksjon og matepumpe, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Scania",
+        "drivstoffsystem"
+      ]
+    },
+    {
+      "id": "TQ-0684",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Caterpillar (CAT) i marine installasjon viser vannlekkasje eller varmgang. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i eksosanlegg, ofte knyttet til korrosjon, vanninjeksjon, slange og mottrykk, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Caterpillar (CAT)",
+        "eksosanlegg"
+      ]
+    },
+    {
+      "id": "TQ-0685",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Mitsubishi i marine installasjon viser lav ladespenning. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i lading, ofte knyttet til reim, regulator, batteri og spenningsfall, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Mitsubishi",
+        "lading"
+      ]
+    },
+    {
+      "id": "TQ-0686",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: MAN i marine installasjon viser lavt oljetrykk. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i smøresystem, ofte knyttet til oljenivå, filter, giver, viskositet og lekkasje, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "MAN",
+        "smøresystem"
+      ]
+    },
+    {
+      "id": "TQ-0687",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Yanmar i marine installasjon viser lav effekt og sort røyk. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i turbo/luft, ofte knyttet til luftfilter, slanger, intercooler og eksosmottrykk, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Yanmar",
+        "turbo/luft"
+      ]
+    },
+    {
+      "id": "TQ-0688",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Volvo Penta i marine installasjon viser klikkelyd uten start. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i startsystem, ofte knyttet til batteri, hovedbryter, rele, solenoid og jord, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Volvo Penta",
+        "startsystem"
+      ]
+    },
+    {
+      "id": "TQ-0689",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Cummins i marine installasjon viser høy temperatur. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i kjølesystem, ofte knyttet til sjøvannsfilter, impeller, varmeveksler og termostat, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Cummins",
+        "kjølesystem"
+      ]
+    },
+    {
+      "id": "TQ-0690",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Scania i marine installasjon viser alarm og redusert effekt. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i common rail, ofte knyttet til feilkode, rail pressure, kontakt og renhet, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Scania",
+        "common rail"
+      ]
+    },
+    {
+      "id": "TQ-0691",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Caterpillar (CAT) i marine installasjon viser intermitterende alarm. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i elektrisk system, ofte knyttet til spenning, jord, kontakt, kabel og feilkode, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Caterpillar (CAT)",
+        "elektrisk system"
+      ]
+    },
+    {
+      "id": "TQ-0692",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Mitsubishi i marine installasjon viser vibrasjon eller varm gearolje. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i gear/propell, ofte knyttet til oljenivå, kjøling, oppretting og belastning, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Mitsubishi",
+        "gear/propell"
+      ]
+    },
+    {
+      "id": "TQ-0693",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: MAN i marine installasjon viser ujevn gange. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i drivstoffsystem, ofte knyttet til vann i diesel, luft, filterrestriksjon og matepumpe, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "MAN",
+        "drivstoffsystem"
+      ]
+    },
+    {
+      "id": "TQ-0694",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Yanmar i marine installasjon viser vannlekkasje eller varmgang. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i eksosanlegg, ofte knyttet til korrosjon, vanninjeksjon, slange og mottrykk, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Yanmar",
+        "eksosanlegg"
+      ]
+    },
+    {
+      "id": "TQ-0695",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Volvo Penta i marine installasjon viser lav ladespenning. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i lading, ofte knyttet til reim, regulator, batteri og spenningsfall, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Volvo Penta",
+        "lading"
+      ]
+    },
+    {
+      "id": "TQ-0696",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Cummins i marine installasjon viser lavt oljetrykk. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i smøresystem, ofte knyttet til oljenivå, filter, giver, viskositet og lekkasje, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Cummins",
+        "smøresystem"
+      ]
+    },
+    {
+      "id": "TQ-0697",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Scania i marine installasjon viser lav effekt og sort røyk. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i turbo/luft, ofte knyttet til luftfilter, slanger, intercooler og eksosmottrykk, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Scania",
+        "turbo/luft"
+      ]
+    },
+    {
+      "id": "TQ-0698",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Caterpillar (CAT) i marine installasjon viser klikkelyd uten start. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i startsystem, ofte knyttet til batteri, hovedbryter, rele, solenoid og jord, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Caterpillar (CAT)",
+        "startsystem"
+      ]
+    },
+    {
+      "id": "TQ-0699",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Mitsubishi i marine installasjon viser høy temperatur. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i kjølesystem, ofte knyttet til sjøvannsfilter, impeller, varmeveksler og termostat, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Mitsubishi",
+        "kjølesystem"
+      ]
+    },
+    {
+      "id": "TQ-0700",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: MAN i marine installasjon viser alarm og redusert effekt. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i common rail, ofte knyttet til feilkode, rail pressure, kontakt og renhet, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "MAN",
+        "common rail"
+      ]
+    },
+    {
+      "id": "TQ-0701",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Yanmar i marine installasjon viser intermitterende alarm. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i elektrisk system, ofte knyttet til spenning, jord, kontakt, kabel og feilkode, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Yanmar",
+        "elektrisk system"
+      ]
+    },
+    {
+      "id": "TQ-0702",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Volvo Penta i marine installasjon viser vibrasjon eller varm gearolje. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i gear/propell, ofte knyttet til oljenivå, kjøling, oppretting og belastning, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Volvo Penta",
+        "gear/propell"
+      ]
+    },
+    {
+      "id": "TQ-0703",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Cummins i marine installasjon viser ujevn gange. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i drivstoffsystem, ofte knyttet til vann i diesel, luft, filterrestriksjon og matepumpe, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Cummins",
+        "drivstoffsystem"
+      ]
+    },
+    {
+      "id": "TQ-0704",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Scania i marine installasjon viser vannlekkasje eller varmgang. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i eksosanlegg, ofte knyttet til korrosjon, vanninjeksjon, slange og mottrykk, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Scania",
+        "eksosanlegg"
+      ]
+    },
+    {
+      "id": "TQ-0705",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Caterpillar (CAT) i marine installasjon viser lav ladespenning. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i lading, ofte knyttet til reim, regulator, batteri og spenningsfall, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Caterpillar (CAT)",
+        "lading"
+      ]
+    },
+    {
+      "id": "TQ-0706",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Mitsubishi i marine installasjon viser lavt oljetrykk. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i smøresystem, ofte knyttet til oljenivå, filter, giver, viskositet og lekkasje, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Mitsubishi",
+        "smøresystem"
+      ]
+    },
+    {
+      "id": "TQ-0707",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: MAN i marine installasjon viser lav effekt og sort røyk. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i turbo/luft, ofte knyttet til luftfilter, slanger, intercooler og eksosmottrykk, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "MAN",
+        "turbo/luft"
+      ]
+    },
+    {
+      "id": "TQ-0708",
+      "type": "workshop-case",
+      "difficulty": "case",
+      "prompt": "Verkstedscenario: Yanmar i marine installasjon viser klikkelyd uten start. Hva er riktig arbeidsmåte?",
+      "choices": [
+        "Sikre motoren, samle observasjoner og følge feilsøkingsprosessen før delvalg.",
+        "Bytte første aktuelle komponent uten måling.",
+        "Ignorere observasjoner og søke på bilde.",
+        "Kun spørre kunden om ønsket delnummer."
+      ],
+      "answer": 0,
+      "explanation": "Mest sannsynlig årsak er avvik i startsystem, ofte knyttet til batteri, hovedbryter, rele, solenoid og jord, men endelig konklusjon krever måling og produsentdata.",
+      "lesson": null,
+      "tags": [
+        "Yanmar",
+        "startsystem"
+      ]
+    }
+  ],
+  "badges": [
+    {
+      "id": "first-lesson",
+      "title": "First Lesson",
+      "description": "Fullfør første Trainer-leksjon"
+    },
+    {
+      "id": "questions-100",
+      "title": "100 Questions",
+      "description": "Svar på 100 Trainer-spørsmål"
+    },
+    {
+      "id": "common-rail",
+      "title": "Common Rail Expert",
+      "description": "Svar riktig på common rail-spørsmål"
+    },
+    {
+      "id": "turbo",
+      "title": "Turbo Expert",
+      "description": "Svar riktig på turbo/luft-spørsmål"
+    },
+    {
+      "id": "support",
+      "title": "Customer Support Pro",
+      "description": "Fullfør kundescenarioer"
+    },
+    {
+      "id": "workshop",
+      "title": "Workshop Specialist",
+      "description": "Fullfør verkstedscenarioer"
+    },
+    {
+      "id": "volvo",
+      "title": "Volvo Penta Specialist",
+      "description": "Tren på Volvo Penta"
+    },
+    {
+      "id": "cummins",
+      "title": "Cummins Specialist",
+      "description": "Tren på Cummins"
+    },
+    {
+      "id": "cat",
+      "title": "CAT Specialist",
+      "description": "Tren på Caterpillar"
+    },
+    {
+      "id": "man",
+      "title": "MAN Specialist",
+      "description": "Tren på MAN"
+    },
+    {
+      "id": "yanmar",
+      "title": "Yanmar Specialist",
+      "description": "Tren på Yanmar"
+    },
+    {
+      "id": "streak-7",
+      "title": "7 Day Streak",
+      "description": "Tren 7 dager på rad"
+    },
+    {
+      "id": "streak-30",
+      "title": "30 Day Streak",
+      "description": "Tren 30 dager på rad"
+    }
+  ],
+  "xpLevels": [
+    {
+      "level": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "level": 2,
+      "min": 101,
+      "max": 250
+    },
+    {
+      "level": 3,
+      "min": 251,
+      "max": 500
+    },
+    {
+      "level": 4,
+      "min": 501,
+      "max": 900
+    },
+    {
+      "level": 5,
+      "min": 901,
+      "max": 1400
+    },
+    {
+      "level": 6,
+      "min": 1401,
+      "max": 2200
+    },
+    {
+      "level": 7,
+      "min": 2201,
+      "max": 3200
+    },
+    {
+      "level": 8,
+      "min": 3201,
+      "max": 4600
+    },
+    {
+      "level": 9,
+      "min": 4601,
+      "max": 6500
+    },
+    {
+      "level": 10,
+      "min": 6501,
+      "max": 999999
+    }
+  ]
+};
+const TRAINER_FLASHCARDS = [
+  {
+    "id": "FC-0001",
+    "question": "Hvilke identifikasjonsdata er viktigst for Caterpillar (CAT)?",
+    "answer": "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0002",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0003",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0004",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, CPL og dataplate trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0005",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0006",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0007",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Yanmar?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0008",
+    "question": "Hva gjør du hvis kunden bare oppgir Caterpillar (CAT) og modellnavn?",
+    "answer": "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0009",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0010",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0011",
+    "question": "Hvilke identifikasjonsdata er viktigst for Cummins?",
+    "answer": "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0012",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0013",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0014",
+    "question": "Hvordan forklarer du kunden hvorfor model code, serial number og marine gear/saildrive trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0015",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0016",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0017",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Mitsubishi?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0018",
+    "question": "Hva gjør du hvis kunden bare oppgir Cummins og modellnavn?",
+    "answer": "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0019",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0020",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0021",
+    "question": "Hvilke identifikasjonsdata er viktigst for Yanmar?",
+    "answer": "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0022",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0023",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0024",
+    "question": "Hvordan forklarer du kunden hvorfor engine model, serial number og mariniseringsleverandør trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0025",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0026",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0027",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Scania?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0028",
+    "question": "Hva gjør du hvis kunden bare oppgir Yanmar og modellnavn?",
+    "answer": "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0029",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0030",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0031",
+    "question": "Hvilke identifikasjonsdata er viktigst for Mitsubishi?",
+    "answer": "Kontroller engine model, serial number og mariniseringsleverandør og verifiser opplysningene i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0032",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0033",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0034",
+    "question": "Hvordan forklarer du kunden hvorfor engine number, application og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0035",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0036",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0037",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Volvo Penta?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0038",
+    "question": "Hva gjør du hvis kunden bare oppgir Mitsubishi og modellnavn?",
+    "answer": "Be om engine model, serial number og mariniseringsleverandør, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0039",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0040",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0041",
+    "question": "Hvilke identifikasjonsdata er viktigst for Scania?",
+    "answer": "Kontroller engine number, application og rating og verifiser opplysningene i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0042",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0043",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0044",
+    "question": "Hvordan forklarer du kunden hvorfor Engine Type, Serial Number og Product Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0045",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0046",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0047",
+    "question": "Hva må verifiseres før serviceintervall oppgis for MAN?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0048",
+    "question": "Hva gjør du hvis kunden bare oppgir Scania og modellnavn?",
+    "answer": "Be om engine number, application og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0049",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0050",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0051",
+    "question": "Hvilke identifikasjonsdata er viktigst for Volvo Penta?",
+    "answer": "Kontroller Engine Type, Serial Number og Product Number og verifiser opplysningene i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0052",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0053",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0054",
+    "question": "Hvordan forklarer du kunden hvorfor engine type, engine number og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0055",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0056",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0057",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Caterpillar (CAT)?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0058",
+    "question": "Hva gjør du hvis kunden bare oppgir Volvo Penta og modellnavn?",
+    "answer": "Be om Engine Type, Serial Number og Product Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0059",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0060",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0061",
+    "question": "Hvilke identifikasjonsdata er viktigst for MAN?",
+    "answer": "Kontroller engine type, engine number og rating og verifiser opplysningene i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0062",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0063",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0064",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, Serial Number Prefix og Arrangement Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0065",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0066",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0067",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Cummins?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0068",
+    "question": "Hva gjør du hvis kunden bare oppgir MAN og modellnavn?",
+    "answer": "Be om engine type, engine number og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0069",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0070",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0071",
+    "question": "Hvilke identifikasjonsdata er viktigst for Caterpillar (CAT)?",
+    "answer": "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0072",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0073",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0074",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, CPL og dataplate trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0075",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0076",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0077",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Yanmar?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0078",
+    "question": "Hva gjør du hvis kunden bare oppgir Caterpillar (CAT) og modellnavn?",
+    "answer": "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0079",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0080",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0081",
+    "question": "Hvilke identifikasjonsdata er viktigst for Cummins?",
+    "answer": "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0082",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0083",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0084",
+    "question": "Hvordan forklarer du kunden hvorfor model code, serial number og marine gear/saildrive trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0085",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0086",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0087",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Mitsubishi?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0088",
+    "question": "Hva gjør du hvis kunden bare oppgir Cummins og modellnavn?",
+    "answer": "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0089",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0090",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0091",
+    "question": "Hvilke identifikasjonsdata er viktigst for Yanmar?",
+    "answer": "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0092",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0093",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0094",
+    "question": "Hvordan forklarer du kunden hvorfor engine model, serial number og mariniseringsleverandør trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0095",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0096",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0097",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Scania?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0098",
+    "question": "Hva gjør du hvis kunden bare oppgir Yanmar og modellnavn?",
+    "answer": "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0099",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0100",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0101",
+    "question": "Hvilke identifikasjonsdata er viktigst for Mitsubishi?",
+    "answer": "Kontroller engine model, serial number og mariniseringsleverandør og verifiser opplysningene i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0102",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0103",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0104",
+    "question": "Hvordan forklarer du kunden hvorfor engine number, application og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0105",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0106",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0107",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Volvo Penta?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0108",
+    "question": "Hva gjør du hvis kunden bare oppgir Mitsubishi og modellnavn?",
+    "answer": "Be om engine model, serial number og mariniseringsleverandør, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0109",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0110",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0111",
+    "question": "Hvilke identifikasjonsdata er viktigst for Scania?",
+    "answer": "Kontroller engine number, application og rating og verifiser opplysningene i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0112",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0113",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0114",
+    "question": "Hvordan forklarer du kunden hvorfor Engine Type, Serial Number og Product Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0115",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0116",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0117",
+    "question": "Hva må verifiseres før serviceintervall oppgis for MAN?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0118",
+    "question": "Hva gjør du hvis kunden bare oppgir Scania og modellnavn?",
+    "answer": "Be om engine number, application og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0119",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0120",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0121",
+    "question": "Hvilke identifikasjonsdata er viktigst for Volvo Penta?",
+    "answer": "Kontroller Engine Type, Serial Number og Product Number og verifiser opplysningene i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0122",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0123",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0124",
+    "question": "Hvordan forklarer du kunden hvorfor engine type, engine number og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0125",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0126",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0127",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Caterpillar (CAT)?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0128",
+    "question": "Hva gjør du hvis kunden bare oppgir Volvo Penta og modellnavn?",
+    "answer": "Be om Engine Type, Serial Number og Product Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0129",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0130",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0131",
+    "question": "Hvilke identifikasjonsdata er viktigst for MAN?",
+    "answer": "Kontroller engine type, engine number og rating og verifiser opplysningene i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0132",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0133",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0134",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, Serial Number Prefix og Arrangement Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0135",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0136",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0137",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Cummins?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0138",
+    "question": "Hva gjør du hvis kunden bare oppgir MAN og modellnavn?",
+    "answer": "Be om engine type, engine number og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0139",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0140",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0141",
+    "question": "Hvilke identifikasjonsdata er viktigst for Caterpillar (CAT)?",
+    "answer": "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0142",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0143",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0144",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, CPL og dataplate trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0145",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0146",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0147",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Yanmar?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0148",
+    "question": "Hva gjør du hvis kunden bare oppgir Caterpillar (CAT) og modellnavn?",
+    "answer": "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0149",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0150",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0151",
+    "question": "Hvilke identifikasjonsdata er viktigst for Cummins?",
+    "answer": "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0152",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0153",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0154",
+    "question": "Hvordan forklarer du kunden hvorfor model code, serial number og marine gear/saildrive trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0155",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0156",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0157",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Mitsubishi?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0158",
+    "question": "Hva gjør du hvis kunden bare oppgir Cummins og modellnavn?",
+    "answer": "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0159",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0160",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0161",
+    "question": "Hvilke identifikasjonsdata er viktigst for Yanmar?",
+    "answer": "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0162",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0163",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0164",
+    "question": "Hvordan forklarer du kunden hvorfor engine model, serial number og mariniseringsleverandør trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0165",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0166",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0167",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Scania?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0168",
+    "question": "Hva gjør du hvis kunden bare oppgir Yanmar og modellnavn?",
+    "answer": "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0169",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0170",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0171",
+    "question": "Hvilke identifikasjonsdata er viktigst for Mitsubishi?",
+    "answer": "Kontroller engine model, serial number og mariniseringsleverandør og verifiser opplysningene i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0172",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0173",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0174",
+    "question": "Hvordan forklarer du kunden hvorfor engine number, application og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0175",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0176",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0177",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Volvo Penta?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0178",
+    "question": "Hva gjør du hvis kunden bare oppgir Mitsubishi og modellnavn?",
+    "answer": "Be om engine model, serial number og mariniseringsleverandør, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0179",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0180",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0181",
+    "question": "Hvilke identifikasjonsdata er viktigst for Scania?",
+    "answer": "Kontroller engine number, application og rating og verifiser opplysningene i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0182",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0183",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0184",
+    "question": "Hvordan forklarer du kunden hvorfor Engine Type, Serial Number og Product Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0185",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0186",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0187",
+    "question": "Hva må verifiseres før serviceintervall oppgis for MAN?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0188",
+    "question": "Hva gjør du hvis kunden bare oppgir Scania og modellnavn?",
+    "answer": "Be om engine number, application og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0189",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0190",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0191",
+    "question": "Hvilke identifikasjonsdata er viktigst for Volvo Penta?",
+    "answer": "Kontroller Engine Type, Serial Number og Product Number og verifiser opplysningene i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0192",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0193",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0194",
+    "question": "Hvordan forklarer du kunden hvorfor engine type, engine number og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0195",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0196",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0197",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Caterpillar (CAT)?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0198",
+    "question": "Hva gjør du hvis kunden bare oppgir Volvo Penta og modellnavn?",
+    "answer": "Be om Engine Type, Serial Number og Product Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0199",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0200",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0201",
+    "question": "Hvilke identifikasjonsdata er viktigst for MAN?",
+    "answer": "Kontroller engine type, engine number og rating og verifiser opplysningene i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0202",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0203",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0204",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, Serial Number Prefix og Arrangement Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0205",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0206",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0207",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Cummins?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0208",
+    "question": "Hva gjør du hvis kunden bare oppgir MAN og modellnavn?",
+    "answer": "Be om engine type, engine number og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0209",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0210",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0211",
+    "question": "Hvilke identifikasjonsdata er viktigst for Caterpillar (CAT)?",
+    "answer": "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0212",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0213",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0214",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, CPL og dataplate trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0215",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0216",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0217",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Yanmar?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0218",
+    "question": "Hva gjør du hvis kunden bare oppgir Caterpillar (CAT) og modellnavn?",
+    "answer": "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0219",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0220",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0221",
+    "question": "Hvilke identifikasjonsdata er viktigst for Cummins?",
+    "answer": "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0222",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0223",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0224",
+    "question": "Hvordan forklarer du kunden hvorfor model code, serial number og marine gear/saildrive trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0225",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0226",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0227",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Mitsubishi?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0228",
+    "question": "Hva gjør du hvis kunden bare oppgir Cummins og modellnavn?",
+    "answer": "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0229",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0230",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0231",
+    "question": "Hvilke identifikasjonsdata er viktigst for Yanmar?",
+    "answer": "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0232",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0233",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0234",
+    "question": "Hvordan forklarer du kunden hvorfor engine model, serial number og mariniseringsleverandør trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0235",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0236",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0237",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Scania?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0238",
+    "question": "Hva gjør du hvis kunden bare oppgir Yanmar og modellnavn?",
+    "answer": "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0239",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0240",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0241",
+    "question": "Hvilke identifikasjonsdata er viktigst for Mitsubishi?",
+    "answer": "Kontroller engine model, serial number og mariniseringsleverandør og verifiser opplysningene i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0242",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0243",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0244",
+    "question": "Hvordan forklarer du kunden hvorfor engine number, application og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0245",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0246",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0247",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Volvo Penta?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0248",
+    "question": "Hva gjør du hvis kunden bare oppgir Mitsubishi og modellnavn?",
+    "answer": "Be om engine model, serial number og mariniseringsleverandør, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0249",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0250",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0251",
+    "question": "Hvilke identifikasjonsdata er viktigst for Scania?",
+    "answer": "Kontroller engine number, application og rating og verifiser opplysningene i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0252",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0253",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0254",
+    "question": "Hvordan forklarer du kunden hvorfor Engine Type, Serial Number og Product Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0255",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0256",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0257",
+    "question": "Hva må verifiseres før serviceintervall oppgis for MAN?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0258",
+    "question": "Hva gjør du hvis kunden bare oppgir Scania og modellnavn?",
+    "answer": "Be om engine number, application og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0259",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0260",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0261",
+    "question": "Hvilke identifikasjonsdata er viktigst for Volvo Penta?",
+    "answer": "Kontroller Engine Type, Serial Number og Product Number og verifiser opplysningene i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0262",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0263",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0264",
+    "question": "Hvordan forklarer du kunden hvorfor engine type, engine number og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0265",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0266",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0267",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Caterpillar (CAT)?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0268",
+    "question": "Hva gjør du hvis kunden bare oppgir Volvo Penta og modellnavn?",
+    "answer": "Be om Engine Type, Serial Number og Product Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0269",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0270",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0271",
+    "question": "Hvilke identifikasjonsdata er viktigst for MAN?",
+    "answer": "Kontroller engine type, engine number og rating og verifiser opplysningene i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0272",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0273",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0274",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, Serial Number Prefix og Arrangement Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0275",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0276",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0277",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Cummins?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0278",
+    "question": "Hva gjør du hvis kunden bare oppgir MAN og modellnavn?",
+    "answer": "Be om engine type, engine number og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0279",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0280",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0281",
+    "question": "Hvilke identifikasjonsdata er viktigst for Caterpillar (CAT)?",
+    "answer": "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0282",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0283",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0284",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, CPL og dataplate trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0285",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0286",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0287",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Yanmar?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0288",
+    "question": "Hva gjør du hvis kunden bare oppgir Caterpillar (CAT) og modellnavn?",
+    "answer": "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0289",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0290",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0291",
+    "question": "Hvilke identifikasjonsdata er viktigst for Cummins?",
+    "answer": "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0292",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0293",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0294",
+    "question": "Hvordan forklarer du kunden hvorfor model code, serial number og marine gear/saildrive trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0295",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0296",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0297",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Mitsubishi?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0298",
+    "question": "Hva gjør du hvis kunden bare oppgir Cummins og modellnavn?",
+    "answer": "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0299",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0300",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0301",
+    "question": "Hvilke identifikasjonsdata er viktigst for Yanmar?",
+    "answer": "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0302",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0303",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0304",
+    "question": "Hvordan forklarer du kunden hvorfor engine model, serial number og mariniseringsleverandør trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0305",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0306",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0307",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Scania?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0308",
+    "question": "Hva gjør du hvis kunden bare oppgir Yanmar og modellnavn?",
+    "answer": "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0309",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0310",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0311",
+    "question": "Hvilke identifikasjonsdata er viktigst for Mitsubishi?",
+    "answer": "Kontroller engine model, serial number og mariniseringsleverandør og verifiser opplysningene i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0312",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0313",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0314",
+    "question": "Hvordan forklarer du kunden hvorfor engine number, application og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0315",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0316",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0317",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Volvo Penta?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0318",
+    "question": "Hva gjør du hvis kunden bare oppgir Mitsubishi og modellnavn?",
+    "answer": "Be om engine model, serial number og mariniseringsleverandør, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0319",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0320",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0321",
+    "question": "Hvilke identifikasjonsdata er viktigst for Scania?",
+    "answer": "Kontroller engine number, application og rating og verifiser opplysningene i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0322",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0323",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0324",
+    "question": "Hvordan forklarer du kunden hvorfor Engine Type, Serial Number og Product Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0325",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0326",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0327",
+    "question": "Hva må verifiseres før serviceintervall oppgis for MAN?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0328",
+    "question": "Hva gjør du hvis kunden bare oppgir Scania og modellnavn?",
+    "answer": "Be om engine number, application og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0329",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0330",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0331",
+    "question": "Hvilke identifikasjonsdata er viktigst for Volvo Penta?",
+    "answer": "Kontroller Engine Type, Serial Number og Product Number og verifiser opplysningene i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0332",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0333",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0334",
+    "question": "Hvordan forklarer du kunden hvorfor engine type, engine number og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0335",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0336",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0337",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Caterpillar (CAT)?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0338",
+    "question": "Hva gjør du hvis kunden bare oppgir Volvo Penta og modellnavn?",
+    "answer": "Be om Engine Type, Serial Number og Product Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0339",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0340",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0341",
+    "question": "Hvilke identifikasjonsdata er viktigst for MAN?",
+    "answer": "Kontroller engine type, engine number og rating og verifiser opplysningene i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0342",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0343",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0344",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, Serial Number Prefix og Arrangement Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0345",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0346",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0347",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Cummins?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0348",
+    "question": "Hva gjør du hvis kunden bare oppgir MAN og modellnavn?",
+    "answer": "Be om engine type, engine number og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0349",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0350",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0351",
+    "question": "Hvilke identifikasjonsdata er viktigst for Caterpillar (CAT)?",
+    "answer": "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0352",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0353",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0354",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, CPL og dataplate trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0355",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0356",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0357",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Yanmar?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0358",
+    "question": "Hva gjør du hvis kunden bare oppgir Caterpillar (CAT) og modellnavn?",
+    "answer": "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0359",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0360",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0361",
+    "question": "Hvilke identifikasjonsdata er viktigst for Cummins?",
+    "answer": "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0362",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0363",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0364",
+    "question": "Hvordan forklarer du kunden hvorfor model code, serial number og marine gear/saildrive trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0365",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0366",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0367",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Mitsubishi?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0368",
+    "question": "Hva gjør du hvis kunden bare oppgir Cummins og modellnavn?",
+    "answer": "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0369",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0370",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0371",
+    "question": "Hvilke identifikasjonsdata er viktigst for Yanmar?",
+    "answer": "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0372",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0373",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0374",
+    "question": "Hvordan forklarer du kunden hvorfor engine model, serial number og mariniseringsleverandør trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0375",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0376",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0377",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Scania?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0378",
+    "question": "Hva gjør du hvis kunden bare oppgir Yanmar og modellnavn?",
+    "answer": "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0379",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0380",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0381",
+    "question": "Hvilke identifikasjonsdata er viktigst for Mitsubishi?",
+    "answer": "Kontroller engine model, serial number og mariniseringsleverandør og verifiser opplysningene i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0382",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0383",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0384",
+    "question": "Hvordan forklarer du kunden hvorfor engine number, application og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0385",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0386",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0387",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Volvo Penta?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0388",
+    "question": "Hva gjør du hvis kunden bare oppgir Mitsubishi og modellnavn?",
+    "answer": "Be om engine model, serial number og mariniseringsleverandør, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0389",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0390",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0391",
+    "question": "Hvilke identifikasjonsdata er viktigst for Scania?",
+    "answer": "Kontroller engine number, application og rating og verifiser opplysningene i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0392",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0393",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0394",
+    "question": "Hvordan forklarer du kunden hvorfor Engine Type, Serial Number og Product Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0395",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0396",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0397",
+    "question": "Hva må verifiseres før serviceintervall oppgis for MAN?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0398",
+    "question": "Hva gjør du hvis kunden bare oppgir Scania og modellnavn?",
+    "answer": "Be om engine number, application og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0399",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0400",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0401",
+    "question": "Hvilke identifikasjonsdata er viktigst for Volvo Penta?",
+    "answer": "Kontroller Engine Type, Serial Number og Product Number og verifiser opplysningene i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0402",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0403",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0404",
+    "question": "Hvordan forklarer du kunden hvorfor engine type, engine number og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0405",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0406",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0407",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Caterpillar (CAT)?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0408",
+    "question": "Hva gjør du hvis kunden bare oppgir Volvo Penta og modellnavn?",
+    "answer": "Be om Engine Type, Serial Number og Product Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0409",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0410",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0411",
+    "question": "Hvilke identifikasjonsdata er viktigst for MAN?",
+    "answer": "Kontroller engine type, engine number og rating og verifiser opplysningene i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0412",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0413",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0414",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, Serial Number Prefix og Arrangement Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0415",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0416",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0417",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Cummins?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0418",
+    "question": "Hva gjør du hvis kunden bare oppgir MAN og modellnavn?",
+    "answer": "Be om engine type, engine number og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0419",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0420",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0421",
+    "question": "Hvilke identifikasjonsdata er viktigst for Caterpillar (CAT)?",
+    "answer": "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0422",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0423",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0424",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, CPL og dataplate trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0425",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0426",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0427",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Yanmar?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0428",
+    "question": "Hva gjør du hvis kunden bare oppgir Caterpillar (CAT) og modellnavn?",
+    "answer": "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0429",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0430",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0431",
+    "question": "Hvilke identifikasjonsdata er viktigst for Cummins?",
+    "answer": "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0432",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0433",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0434",
+    "question": "Hvordan forklarer du kunden hvorfor model code, serial number og marine gear/saildrive trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0435",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0436",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0437",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Mitsubishi?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0438",
+    "question": "Hva gjør du hvis kunden bare oppgir Cummins og modellnavn?",
+    "answer": "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0439",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0440",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0441",
+    "question": "Hvilke identifikasjonsdata er viktigst for Yanmar?",
+    "answer": "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0442",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0443",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0444",
+    "question": "Hvordan forklarer du kunden hvorfor engine model, serial number og mariniseringsleverandør trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0445",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0446",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0447",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Scania?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0448",
+    "question": "Hva gjør du hvis kunden bare oppgir Yanmar og modellnavn?",
+    "answer": "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0449",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0450",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0451",
+    "question": "Hvilke identifikasjonsdata er viktigst for Mitsubishi?",
+    "answer": "Kontroller engine model, serial number og mariniseringsleverandør og verifiser opplysningene i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0452",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0453",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0454",
+    "question": "Hvordan forklarer du kunden hvorfor engine number, application og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0455",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0456",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0457",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Volvo Penta?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0458",
+    "question": "Hva gjør du hvis kunden bare oppgir Mitsubishi og modellnavn?",
+    "answer": "Be om engine model, serial number og mariniseringsleverandør, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0459",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0460",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0461",
+    "question": "Hvilke identifikasjonsdata er viktigst for Scania?",
+    "answer": "Kontroller engine number, application og rating og verifiser opplysningene i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0462",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0463",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0464",
+    "question": "Hvordan forklarer du kunden hvorfor Engine Type, Serial Number og Product Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0465",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0466",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0467",
+    "question": "Hva må verifiseres før serviceintervall oppgis for MAN?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0468",
+    "question": "Hva gjør du hvis kunden bare oppgir Scania og modellnavn?",
+    "answer": "Be om engine number, application og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0469",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0470",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0471",
+    "question": "Hvilke identifikasjonsdata er viktigst for Volvo Penta?",
+    "answer": "Kontroller Engine Type, Serial Number og Product Number og verifiser opplysningene i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0472",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0473",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0474",
+    "question": "Hvordan forklarer du kunden hvorfor engine type, engine number og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0475",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0476",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0477",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Caterpillar (CAT)?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0478",
+    "question": "Hva gjør du hvis kunden bare oppgir Volvo Penta og modellnavn?",
+    "answer": "Be om Engine Type, Serial Number og Product Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0479",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0480",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0481",
+    "question": "Hvilke identifikasjonsdata er viktigst for MAN?",
+    "answer": "Kontroller engine type, engine number og rating og verifiser opplysningene i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0482",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0483",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0484",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, Serial Number Prefix og Arrangement Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0485",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0486",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0487",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Cummins?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0488",
+    "question": "Hva gjør du hvis kunden bare oppgir MAN og modellnavn?",
+    "answer": "Be om engine type, engine number og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0489",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0490",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0491",
+    "question": "Hvilke identifikasjonsdata er viktigst for Caterpillar (CAT)?",
+    "answer": "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0492",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0493",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0494",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, CPL og dataplate trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0495",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0496",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0497",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Yanmar?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0498",
+    "question": "Hva gjør du hvis kunden bare oppgir Caterpillar (CAT) og modellnavn?",
+    "answer": "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0499",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0500",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0501",
+    "question": "Hvilke identifikasjonsdata er viktigst for Cummins?",
+    "answer": "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0502",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0503",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0504",
+    "question": "Hvordan forklarer du kunden hvorfor model code, serial number og marine gear/saildrive trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0505",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0506",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0507",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Mitsubishi?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0508",
+    "question": "Hva gjør du hvis kunden bare oppgir Cummins og modellnavn?",
+    "answer": "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0509",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0510",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0511",
+    "question": "Hvilke identifikasjonsdata er viktigst for Yanmar?",
+    "answer": "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0512",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0513",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0514",
+    "question": "Hvordan forklarer du kunden hvorfor engine model, serial number og mariniseringsleverandør trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0515",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0516",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0517",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Scania?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0518",
+    "question": "Hva gjør du hvis kunden bare oppgir Yanmar og modellnavn?",
+    "answer": "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0519",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0520",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0521",
+    "question": "Hvilke identifikasjonsdata er viktigst for Mitsubishi?",
+    "answer": "Kontroller engine model, serial number og mariniseringsleverandør og verifiser opplysningene i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0522",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0523",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0524",
+    "question": "Hvordan forklarer du kunden hvorfor engine number, application og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0525",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0526",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0527",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Volvo Penta?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0528",
+    "question": "Hva gjør du hvis kunden bare oppgir Mitsubishi og modellnavn?",
+    "answer": "Be om engine model, serial number og mariniseringsleverandør, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0529",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0530",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0531",
+    "question": "Hvilke identifikasjonsdata er viktigst for Scania?",
+    "answer": "Kontroller engine number, application og rating og verifiser opplysningene i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0532",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0533",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0534",
+    "question": "Hvordan forklarer du kunden hvorfor Engine Type, Serial Number og Product Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0535",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0536",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0537",
+    "question": "Hva må verifiseres før serviceintervall oppgis for MAN?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0538",
+    "question": "Hva gjør du hvis kunden bare oppgir Scania og modellnavn?",
+    "answer": "Be om engine number, application og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0539",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0540",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0541",
+    "question": "Hvilke identifikasjonsdata er viktigst for Volvo Penta?",
+    "answer": "Kontroller Engine Type, Serial Number og Product Number og verifiser opplysningene i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0542",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0543",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0544",
+    "question": "Hvordan forklarer du kunden hvorfor engine type, engine number og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0545",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0546",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0547",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Caterpillar (CAT)?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0548",
+    "question": "Hva gjør du hvis kunden bare oppgir Volvo Penta og modellnavn?",
+    "answer": "Be om Engine Type, Serial Number og Product Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0549",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0550",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0551",
+    "question": "Hvilke identifikasjonsdata er viktigst for MAN?",
+    "answer": "Kontroller engine type, engine number og rating og verifiser opplysningene i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0552",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0553",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0554",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, Serial Number Prefix og Arrangement Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0555",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0556",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0557",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Cummins?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0558",
+    "question": "Hva gjør du hvis kunden bare oppgir MAN og modellnavn?",
+    "answer": "Be om engine type, engine number og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0559",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0560",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0561",
+    "question": "Hvilke identifikasjonsdata er viktigst for Caterpillar (CAT)?",
+    "answer": "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0562",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0563",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0564",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, CPL og dataplate trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0565",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0566",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0567",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Yanmar?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0568",
+    "question": "Hva gjør du hvis kunden bare oppgir Caterpillar (CAT) og modellnavn?",
+    "answer": "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0569",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0570",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0571",
+    "question": "Hvilke identifikasjonsdata er viktigst for Cummins?",
+    "answer": "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0572",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0573",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0574",
+    "question": "Hvordan forklarer du kunden hvorfor model code, serial number og marine gear/saildrive trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0575",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0576",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0577",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Mitsubishi?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0578",
+    "question": "Hva gjør du hvis kunden bare oppgir Cummins og modellnavn?",
+    "answer": "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0579",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0580",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0581",
+    "question": "Hvilke identifikasjonsdata er viktigst for Yanmar?",
+    "answer": "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0582",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0583",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0584",
+    "question": "Hvordan forklarer du kunden hvorfor engine model, serial number og mariniseringsleverandør trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0585",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0586",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0587",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Scania?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0588",
+    "question": "Hva gjør du hvis kunden bare oppgir Yanmar og modellnavn?",
+    "answer": "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0589",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0590",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0591",
+    "question": "Hvilke identifikasjonsdata er viktigst for Mitsubishi?",
+    "answer": "Kontroller engine model, serial number og mariniseringsleverandør og verifiser opplysningene i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0592",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0593",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0594",
+    "question": "Hvordan forklarer du kunden hvorfor engine number, application og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0595",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0596",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0597",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Volvo Penta?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0598",
+    "question": "Hva gjør du hvis kunden bare oppgir Mitsubishi og modellnavn?",
+    "answer": "Be om engine model, serial number og mariniseringsleverandør, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0599",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0600",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0601",
+    "question": "Hvilke identifikasjonsdata er viktigst for Scania?",
+    "answer": "Kontroller engine number, application og rating og verifiser opplysningene i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0602",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0603",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0604",
+    "question": "Hvordan forklarer du kunden hvorfor Engine Type, Serial Number og Product Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0605",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0606",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0607",
+    "question": "Hva må verifiseres før serviceintervall oppgis for MAN?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0608",
+    "question": "Hva gjør du hvis kunden bare oppgir Scania og modellnavn?",
+    "answer": "Be om engine number, application og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0609",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0610",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0611",
+    "question": "Hvilke identifikasjonsdata er viktigst for Volvo Penta?",
+    "answer": "Kontroller Engine Type, Serial Number og Product Number og verifiser opplysningene i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0612",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0613",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0614",
+    "question": "Hvordan forklarer du kunden hvorfor engine type, engine number og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0615",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0616",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0617",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Caterpillar (CAT)?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0618",
+    "question": "Hva gjør du hvis kunden bare oppgir Volvo Penta og modellnavn?",
+    "answer": "Be om Engine Type, Serial Number og Product Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0619",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0620",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0621",
+    "question": "Hvilke identifikasjonsdata er viktigst for MAN?",
+    "answer": "Kontroller engine type, engine number og rating og verifiser opplysningene i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0622",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0623",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0624",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, Serial Number Prefix og Arrangement Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0625",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0626",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0627",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Cummins?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0628",
+    "question": "Hva gjør du hvis kunden bare oppgir MAN og modellnavn?",
+    "answer": "Be om engine type, engine number og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0629",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0630",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0631",
+    "question": "Hvilke identifikasjonsdata er viktigst for Caterpillar (CAT)?",
+    "answer": "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0632",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0633",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0634",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, CPL og dataplate trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0635",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0636",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0637",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Yanmar?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0638",
+    "question": "Hva gjør du hvis kunden bare oppgir Caterpillar (CAT) og modellnavn?",
+    "answer": "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0639",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0640",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0641",
+    "question": "Hvilke identifikasjonsdata er viktigst for Cummins?",
+    "answer": "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0642",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0643",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0644",
+    "question": "Hvordan forklarer du kunden hvorfor model code, serial number og marine gear/saildrive trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0645",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0646",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0647",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Mitsubishi?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0648",
+    "question": "Hva gjør du hvis kunden bare oppgir Cummins og modellnavn?",
+    "answer": "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0649",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0650",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0651",
+    "question": "Hvilke identifikasjonsdata er viktigst for Yanmar?",
+    "answer": "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0652",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0653",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0654",
+    "question": "Hvordan forklarer du kunden hvorfor engine model, serial number og mariniseringsleverandør trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0655",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0656",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0657",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Scania?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0658",
+    "question": "Hva gjør du hvis kunden bare oppgir Yanmar og modellnavn?",
+    "answer": "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0659",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0660",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0661",
+    "question": "Hvilke identifikasjonsdata er viktigst for Mitsubishi?",
+    "answer": "Kontroller engine model, serial number og mariniseringsleverandør og verifiser opplysningene i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0662",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0663",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0664",
+    "question": "Hvordan forklarer du kunden hvorfor engine number, application og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0665",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0666",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0667",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Volvo Penta?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0668",
+    "question": "Hva gjør du hvis kunden bare oppgir Mitsubishi og modellnavn?",
+    "answer": "Be om engine model, serial number og mariniseringsleverandør, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0669",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0670",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0671",
+    "question": "Hvilke identifikasjonsdata er viktigst for Scania?",
+    "answer": "Kontroller engine number, application og rating og verifiser opplysningene i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0672",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0673",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0674",
+    "question": "Hvordan forklarer du kunden hvorfor Engine Type, Serial Number og Product Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0675",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0676",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0677",
+    "question": "Hva må verifiseres før serviceintervall oppgis for MAN?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0678",
+    "question": "Hva gjør du hvis kunden bare oppgir Scania og modellnavn?",
+    "answer": "Be om engine number, application og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0679",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0680",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0681",
+    "question": "Hvilke identifikasjonsdata er viktigst for Volvo Penta?",
+    "answer": "Kontroller Engine Type, Serial Number og Product Number og verifiser opplysningene i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0682",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0683",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0684",
+    "question": "Hvordan forklarer du kunden hvorfor engine type, engine number og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0685",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0686",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0687",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Caterpillar (CAT)?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0688",
+    "question": "Hva gjør du hvis kunden bare oppgir Volvo Penta og modellnavn?",
+    "answer": "Be om Engine Type, Serial Number og Product Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0689",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0690",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0691",
+    "question": "Hvilke identifikasjonsdata er viktigst for MAN?",
+    "answer": "Kontroller engine type, engine number og rating og verifiser opplysningene i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0692",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0693",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0694",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, Serial Number Prefix og Arrangement Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0695",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0696",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0697",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Cummins?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0698",
+    "question": "Hva gjør du hvis kunden bare oppgir MAN og modellnavn?",
+    "answer": "Be om engine type, engine number og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0699",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0700",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0701",
+    "question": "Hvilke identifikasjonsdata er viktigst for Caterpillar (CAT)?",
+    "answer": "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0702",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0703",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0704",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, CPL og dataplate trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0705",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0706",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0707",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Yanmar?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0708",
+    "question": "Hva gjør du hvis kunden bare oppgir Caterpillar (CAT) og modellnavn?",
+    "answer": "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0709",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0710",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0711",
+    "question": "Hvilke identifikasjonsdata er viktigst for Cummins?",
+    "answer": "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0712",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0713",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0714",
+    "question": "Hvordan forklarer du kunden hvorfor model code, serial number og marine gear/saildrive trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0715",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0716",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0717",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Mitsubishi?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0718",
+    "question": "Hva gjør du hvis kunden bare oppgir Cummins og modellnavn?",
+    "answer": "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0719",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0720",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0721",
+    "question": "Hvilke identifikasjonsdata er viktigst for Yanmar?",
+    "answer": "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0722",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0723",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0724",
+    "question": "Hvordan forklarer du kunden hvorfor engine model, serial number og mariniseringsleverandør trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0725",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0726",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0727",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Scania?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0728",
+    "question": "Hva gjør du hvis kunden bare oppgir Yanmar og modellnavn?",
+    "answer": "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0729",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0730",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0731",
+    "question": "Hvilke identifikasjonsdata er viktigst for Mitsubishi?",
+    "answer": "Kontroller engine model, serial number og mariniseringsleverandør og verifiser opplysningene i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0732",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0733",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0734",
+    "question": "Hvordan forklarer du kunden hvorfor engine number, application og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0735",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0736",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0737",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Volvo Penta?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0738",
+    "question": "Hva gjør du hvis kunden bare oppgir Mitsubishi og modellnavn?",
+    "answer": "Be om engine model, serial number og mariniseringsleverandør, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0739",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0740",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0741",
+    "question": "Hvilke identifikasjonsdata er viktigst for Scania?",
+    "answer": "Kontroller engine number, application og rating og verifiser opplysningene i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0742",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0743",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0744",
+    "question": "Hvordan forklarer du kunden hvorfor Engine Type, Serial Number og Product Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0745",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0746",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0747",
+    "question": "Hva må verifiseres før serviceintervall oppgis for MAN?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0748",
+    "question": "Hva gjør du hvis kunden bare oppgir Scania og modellnavn?",
+    "answer": "Be om engine number, application og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0749",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0750",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0751",
+    "question": "Hvilke identifikasjonsdata er viktigst for Volvo Penta?",
+    "answer": "Kontroller Engine Type, Serial Number og Product Number og verifiser opplysningene i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0752",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0753",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0754",
+    "question": "Hvordan forklarer du kunden hvorfor engine type, engine number og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0755",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0756",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0757",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Caterpillar (CAT)?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0758",
+    "question": "Hva gjør du hvis kunden bare oppgir Volvo Penta og modellnavn?",
+    "answer": "Be om Engine Type, Serial Number og Product Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0759",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0760",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0761",
+    "question": "Hvilke identifikasjonsdata er viktigst for MAN?",
+    "answer": "Kontroller engine type, engine number og rating og verifiser opplysningene i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0762",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0763",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0764",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, Serial Number Prefix og Arrangement Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0765",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0766",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0767",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Cummins?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0768",
+    "question": "Hva gjør du hvis kunden bare oppgir MAN og modellnavn?",
+    "answer": "Be om engine type, engine number og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0769",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0770",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0771",
+    "question": "Hvilke identifikasjonsdata er viktigst for Caterpillar (CAT)?",
+    "answer": "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0772",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0773",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0774",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, CPL og dataplate trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0775",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0776",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0777",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Yanmar?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0778",
+    "question": "Hva gjør du hvis kunden bare oppgir Caterpillar (CAT) og modellnavn?",
+    "answer": "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0779",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0780",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0781",
+    "question": "Hvilke identifikasjonsdata er viktigst for Cummins?",
+    "answer": "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0782",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0783",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0784",
+    "question": "Hvordan forklarer du kunden hvorfor model code, serial number og marine gear/saildrive trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0785",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0786",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0787",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Mitsubishi?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0788",
+    "question": "Hva gjør du hvis kunden bare oppgir Cummins og modellnavn?",
+    "answer": "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0789",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0790",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0791",
+    "question": "Hvilke identifikasjonsdata er viktigst for Yanmar?",
+    "answer": "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0792",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0793",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0794",
+    "question": "Hvordan forklarer du kunden hvorfor engine model, serial number og mariniseringsleverandør trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0795",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0796",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0797",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Scania?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0798",
+    "question": "Hva gjør du hvis kunden bare oppgir Yanmar og modellnavn?",
+    "answer": "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0799",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0800",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0801",
+    "question": "Hvilke identifikasjonsdata er viktigst for Mitsubishi?",
+    "answer": "Kontroller engine model, serial number og mariniseringsleverandør og verifiser opplysningene i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0802",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0803",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0804",
+    "question": "Hvordan forklarer du kunden hvorfor engine number, application og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0805",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0806",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0807",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Volvo Penta?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0808",
+    "question": "Hva gjør du hvis kunden bare oppgir Mitsubishi og modellnavn?",
+    "answer": "Be om engine model, serial number og mariniseringsleverandør, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0809",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0810",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0811",
+    "question": "Hvilke identifikasjonsdata er viktigst for Scania?",
+    "answer": "Kontroller engine number, application og rating og verifiser opplysningene i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0812",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0813",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0814",
+    "question": "Hvordan forklarer du kunden hvorfor Engine Type, Serial Number og Product Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0815",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0816",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0817",
+    "question": "Hva må verifiseres før serviceintervall oppgis for MAN?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0818",
+    "question": "Hva gjør du hvis kunden bare oppgir Scania og modellnavn?",
+    "answer": "Be om engine number, application og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0819",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0820",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0821",
+    "question": "Hvilke identifikasjonsdata er viktigst for Volvo Penta?",
+    "answer": "Kontroller Engine Type, Serial Number og Product Number og verifiser opplysningene i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0822",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0823",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0824",
+    "question": "Hvordan forklarer du kunden hvorfor engine type, engine number og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0825",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0826",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0827",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Caterpillar (CAT)?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0828",
+    "question": "Hva gjør du hvis kunden bare oppgir Volvo Penta og modellnavn?",
+    "answer": "Be om Engine Type, Serial Number og Product Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0829",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0830",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0831",
+    "question": "Hvilke identifikasjonsdata er viktigst for MAN?",
+    "answer": "Kontroller engine type, engine number og rating og verifiser opplysningene i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0832",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0833",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0834",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, Serial Number Prefix og Arrangement Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0835",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0836",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0837",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Cummins?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0838",
+    "question": "Hva gjør du hvis kunden bare oppgir MAN og modellnavn?",
+    "answer": "Be om engine type, engine number og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0839",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0840",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0841",
+    "question": "Hvilke identifikasjonsdata er viktigst for Caterpillar (CAT)?",
+    "answer": "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0842",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0843",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0844",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, CPL og dataplate trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0845",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0846",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0847",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Yanmar?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0848",
+    "question": "Hva gjør du hvis kunden bare oppgir Caterpillar (CAT) og modellnavn?",
+    "answer": "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0849",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0850",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0851",
+    "question": "Hvilke identifikasjonsdata er viktigst for Cummins?",
+    "answer": "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0852",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0853",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0854",
+    "question": "Hvordan forklarer du kunden hvorfor model code, serial number og marine gear/saildrive trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0855",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0856",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0857",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Mitsubishi?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0858",
+    "question": "Hva gjør du hvis kunden bare oppgir Cummins og modellnavn?",
+    "answer": "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0859",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0860",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0861",
+    "question": "Hvilke identifikasjonsdata er viktigst for Yanmar?",
+    "answer": "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0862",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0863",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0864",
+    "question": "Hvordan forklarer du kunden hvorfor engine model, serial number og mariniseringsleverandør trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0865",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0866",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0867",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Scania?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0868",
+    "question": "Hva gjør du hvis kunden bare oppgir Yanmar og modellnavn?",
+    "answer": "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0869",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0870",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0871",
+    "question": "Hvilke identifikasjonsdata er viktigst for Mitsubishi?",
+    "answer": "Kontroller engine model, serial number og mariniseringsleverandør og verifiser opplysningene i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0872",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0873",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0874",
+    "question": "Hvordan forklarer du kunden hvorfor engine number, application og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0875",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0876",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0877",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Volvo Penta?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0878",
+    "question": "Hva gjør du hvis kunden bare oppgir Mitsubishi og modellnavn?",
+    "answer": "Be om engine model, serial number og mariniseringsleverandør, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0879",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0880",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0881",
+    "question": "Hvilke identifikasjonsdata er viktigst for Scania?",
+    "answer": "Kontroller engine number, application og rating og verifiser opplysningene i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0882",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0883",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0884",
+    "question": "Hvordan forklarer du kunden hvorfor Engine Type, Serial Number og Product Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0885",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0886",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0887",
+    "question": "Hva må verifiseres før serviceintervall oppgis for MAN?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0888",
+    "question": "Hva gjør du hvis kunden bare oppgir Scania og modellnavn?",
+    "answer": "Be om engine number, application og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0889",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0890",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0891",
+    "question": "Hvilke identifikasjonsdata er viktigst for Volvo Penta?",
+    "answer": "Kontroller Engine Type, Serial Number og Product Number og verifiser opplysningene i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0892",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0893",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0894",
+    "question": "Hvordan forklarer du kunden hvorfor engine type, engine number og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0895",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0896",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0897",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Caterpillar (CAT)?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0898",
+    "question": "Hva gjør du hvis kunden bare oppgir Volvo Penta og modellnavn?",
+    "answer": "Be om Engine Type, Serial Number og Product Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0899",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0900",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0901",
+    "question": "Hvilke identifikasjonsdata er viktigst for MAN?",
+    "answer": "Kontroller engine type, engine number og rating og verifiser opplysningene i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0902",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0903",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0904",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, Serial Number Prefix og Arrangement Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0905",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0906",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0907",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Cummins?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0908",
+    "question": "Hva gjør du hvis kunden bare oppgir MAN og modellnavn?",
+    "answer": "Be om engine type, engine number og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0909",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0910",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0911",
+    "question": "Hvilke identifikasjonsdata er viktigst for Caterpillar (CAT)?",
+    "answer": "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0912",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0913",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0914",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, CPL og dataplate trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0915",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0916",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0917",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Yanmar?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0918",
+    "question": "Hva gjør du hvis kunden bare oppgir Caterpillar (CAT) og modellnavn?",
+    "answer": "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0919",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0920",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0921",
+    "question": "Hvilke identifikasjonsdata er viktigst for Cummins?",
+    "answer": "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0922",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0923",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0924",
+    "question": "Hvordan forklarer du kunden hvorfor model code, serial number og marine gear/saildrive trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0925",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0926",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0927",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Mitsubishi?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0928",
+    "question": "Hva gjør du hvis kunden bare oppgir Cummins og modellnavn?",
+    "answer": "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0929",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0930",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0931",
+    "question": "Hvilke identifikasjonsdata er viktigst for Yanmar?",
+    "answer": "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0932",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0933",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0934",
+    "question": "Hvordan forklarer du kunden hvorfor engine model, serial number og mariniseringsleverandør trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0935",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0936",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0937",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Scania?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0938",
+    "question": "Hva gjør du hvis kunden bare oppgir Yanmar og modellnavn?",
+    "answer": "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0939",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0940",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0941",
+    "question": "Hvilke identifikasjonsdata er viktigst for Mitsubishi?",
+    "answer": "Kontroller engine model, serial number og mariniseringsleverandør og verifiser opplysningene i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0942",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0943",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0944",
+    "question": "Hvordan forklarer du kunden hvorfor engine number, application og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0945",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0946",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0947",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Volvo Penta?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0948",
+    "question": "Hva gjør du hvis kunden bare oppgir Mitsubishi og modellnavn?",
+    "answer": "Be om engine model, serial number og mariniseringsleverandør, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0949",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0950",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0951",
+    "question": "Hvilke identifikasjonsdata er viktigst for Scania?",
+    "answer": "Kontroller engine number, application og rating og verifiser opplysningene i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0952",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0953",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0954",
+    "question": "Hvordan forklarer du kunden hvorfor Engine Type, Serial Number og Product Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0955",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0956",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0957",
+    "question": "Hva må verifiseres før serviceintervall oppgis for MAN?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0958",
+    "question": "Hva gjør du hvis kunden bare oppgir Scania og modellnavn?",
+    "answer": "Be om engine number, application og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0959",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0960",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0961",
+    "question": "Hvilke identifikasjonsdata er viktigst for Volvo Penta?",
+    "answer": "Kontroller Engine Type, Serial Number og Product Number og verifiser opplysningene i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0962",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0963",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0964",
+    "question": "Hvordan forklarer du kunden hvorfor engine type, engine number og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0965",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0966",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0967",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Caterpillar (CAT)?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0968",
+    "question": "Hva gjør du hvis kunden bare oppgir Volvo Penta og modellnavn?",
+    "answer": "Be om Engine Type, Serial Number og Product Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0969",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0970",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0971",
+    "question": "Hvilke identifikasjonsdata er viktigst for MAN?",
+    "answer": "Kontroller engine type, engine number og rating og verifiser opplysningene i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0972",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0973",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0974",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, Serial Number Prefix og Arrangement Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0975",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0976",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0977",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Cummins?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0978",
+    "question": "Hva gjør du hvis kunden bare oppgir MAN og modellnavn?",
+    "answer": "Be om engine type, engine number og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0979",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0980",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0981",
+    "question": "Hvilke identifikasjonsdata er viktigst for Caterpillar (CAT)?",
+    "answer": "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0982",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0983",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0984",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, CPL og dataplate trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0985",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0986",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0987",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Yanmar?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0988",
+    "question": "Hva gjør du hvis kunden bare oppgir Caterpillar (CAT) og modellnavn?",
+    "answer": "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0989",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0990",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0991",
+    "question": "Hvilke identifikasjonsdata er viktigst for Cummins?",
+    "answer": "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0992",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-0993",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-0994",
+    "question": "Hvordan forklarer du kunden hvorfor model code, serial number og marine gear/saildrive trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-0995",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-0996",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-0997",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Mitsubishi?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-0998",
+    "question": "Hva gjør du hvis kunden bare oppgir Cummins og modellnavn?",
+    "answer": "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-0999",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-1000",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-1001",
+    "question": "Hvilke identifikasjonsdata er viktigst for Yanmar?",
+    "answer": "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-1002",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-1003",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-1004",
+    "question": "Hvordan forklarer du kunden hvorfor engine model, serial number og mariniseringsleverandør trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-1005",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-1006",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-1007",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Scania?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-1008",
+    "question": "Hva gjør du hvis kunden bare oppgir Yanmar og modellnavn?",
+    "answer": "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-1009",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-1010",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-1011",
+    "question": "Hvilke identifikasjonsdata er viktigst for Mitsubishi?",
+    "answer": "Kontroller engine model, serial number og mariniseringsleverandør og verifiser opplysningene i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-1012",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-1013",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-1014",
+    "question": "Hvordan forklarer du kunden hvorfor engine number, application og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-1015",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-1016",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-1017",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Volvo Penta?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-1018",
+    "question": "Hva gjør du hvis kunden bare oppgir Mitsubishi og modellnavn?",
+    "answer": "Be om engine model, serial number og mariniseringsleverandør, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-1019",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-1020",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-1021",
+    "question": "Hvilke identifikasjonsdata er viktigst for Scania?",
+    "answer": "Kontroller engine number, application og rating og verifiser opplysningene i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-1022",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-1023",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-1024",
+    "question": "Hvordan forklarer du kunden hvorfor Engine Type, Serial Number og Product Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-1025",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-1026",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-1027",
+    "question": "Hva må verifiseres før serviceintervall oppgis for MAN?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-1028",
+    "question": "Hva gjør du hvis kunden bare oppgir Scania og modellnavn?",
+    "answer": "Be om engine number, application og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-1029",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-1030",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-1031",
+    "question": "Hvilke identifikasjonsdata er viktigst for Volvo Penta?",
+    "answer": "Kontroller Engine Type, Serial Number og Product Number og verifiser opplysningene i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-1032",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-1033",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-1034",
+    "question": "Hvordan forklarer du kunden hvorfor engine type, engine number og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-1035",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-1036",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-1037",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Caterpillar (CAT)?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-1038",
+    "question": "Hva gjør du hvis kunden bare oppgir Volvo Penta og modellnavn?",
+    "answer": "Be om Engine Type, Serial Number og Product Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-1039",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-1040",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-1041",
+    "question": "Hvilke identifikasjonsdata er viktigst for MAN?",
+    "answer": "Kontroller engine type, engine number og rating og verifiser opplysningene i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-1042",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-1043",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-1044",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, Serial Number Prefix og Arrangement Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-1045",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-1046",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-1047",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Cummins?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-1048",
+    "question": "Hva gjør du hvis kunden bare oppgir MAN og modellnavn?",
+    "answer": "Be om engine type, engine number og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-1049",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-1050",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-1051",
+    "question": "Hvilke identifikasjonsdata er viktigst for Caterpillar (CAT)?",
+    "answer": "Kontroller ESN, Serial Number Prefix og Arrangement Number og verifiser opplysningene i SIS / Parts Manual.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-1052",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-1053",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-1054",
+    "question": "Hvordan forklarer du kunden hvorfor ESN, CPL og dataplate trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-1055",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-1056",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-1057",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Yanmar?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-1058",
+    "question": "Hva gjør du hvis kunden bare oppgir Caterpillar (CAT) og modellnavn?",
+    "answer": "Be om ESN, Serial Number Prefix og Arrangement Number, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-1059",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-1060",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-1061",
+    "question": "Hvilke identifikasjonsdata er viktigst for Cummins?",
+    "answer": "Kontroller ESN, CPL og dataplate og verifiser opplysningene i QuickServe / BOM.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-1062",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-1063",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-1064",
+    "question": "Hvordan forklarer du kunden hvorfor model code, serial number og marine gear/saildrive trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-1065",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-1066",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-1067",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Mitsubishi?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-1068",
+    "question": "Hva gjør du hvis kunden bare oppgir Cummins og modellnavn?",
+    "answer": "Be om ESN, CPL og dataplate, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-1069",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-1070",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-1071",
+    "question": "Hvilke identifikasjonsdata er viktigst for Yanmar?",
+    "answer": "Kontroller model code, serial number og marine gear/saildrive og verifiser opplysningene i Yanmar parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-1072",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-1073",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-1074",
+    "question": "Hvordan forklarer du kunden hvorfor engine model, serial number og mariniseringsleverandør trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-1075",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-1076",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-1077",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Scania?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-1078",
+    "question": "Hva gjør du hvis kunden bare oppgir Yanmar og modellnavn?",
+    "answer": "Be om model code, serial number og marine gear/saildrive, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-1079",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-1080",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-1081",
+    "question": "Hvilke identifikasjonsdata er viktigst for Mitsubishi?",
+    "answer": "Kontroller engine model, serial number og mariniseringsleverandør og verifiser opplysningene i Mitsubishi/mariniseringsdokumentasjon.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-1082",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-1083",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-1084",
+    "question": "Hvordan forklarer du kunden hvorfor engine number, application og rating trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-1085",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-1086",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-1087",
+    "question": "Hva må verifiseres før serviceintervall oppgis for Volvo Penta?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i Volvo Penta parts documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-1088",
+    "question": "Hva gjør du hvis kunden bare oppgir Mitsubishi og modellnavn?",
+    "answer": "Be om engine model, serial number og mariniseringsleverandør, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-1089",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-1090",
+    "question": "Hvorfor holder det ikke med bilde av delen alene?",
+    "answer": "Fordi bilde sjelden bekrefter motorvariant, posisjon, produksjonsperiode eller supersession.",
+    "category": "eksosanlegg",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-1091",
+    "question": "Hvilke identifikasjonsdata er viktigst for Scania?",
+    "answer": "Kontroller engine number, application og rating og verifiser opplysningene i Scania parts catalogue.",
+    "category": "kjølesystem",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-1092",
+    "question": "Hva bør du spørre om når kunden melder vannlekkasje eller varmgang?",
+    "answer": "Avklar når symptomet oppstår, siste service, motoridentitet og om korrosjon, vanninjeksjon, slange og mottrykk er kontrollert.",
+    "category": "eksosanlegg",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-1093",
+    "question": "Hva er vanlig feil ved bestilling av impeller?",
+    "answer": "Å bestille fra bilde eller gammelt nummer uten å kontrollere variant, posisjon og supersession.",
+    "category": "kjølesystem",
+    "manufacturer": "Caterpillar (CAT)"
+  },
+  {
+    "id": "FC-1094",
+    "question": "Hvordan forklarer du kunden hvorfor Engine Type, Serial Number og Product Number trengs?",
+    "answer": "Forklar at samme modell kan ha flere varianter, og at identifikasjonen hindrer feil del og ny driftsstans.",
+    "category": "eksosanlegg",
+    "manufacturer": "Volvo Penta"
+  },
+  {
+    "id": "FC-1095",
+    "question": "Hvilket system hører impeller oftest til?",
+    "answer": "impeller vurderes i kjølesystem, men monteringsposisjon og produsentdata må bekreftes.",
+    "category": "kjølesystem",
+    "manufacturer": "Mitsubishi"
+  },
+  {
+    "id": "FC-1096",
+    "question": "Hva skal stå i et godt saksnotat?",
+    "answer": "Kunde, motoridentitet, symptom, bilder, vurdering, valgt del, kilde, forbehold og neste steg.",
+    "category": "eksosanlegg",
+    "manufacturer": "Cummins"
+  },
+  {
+    "id": "FC-1097",
+    "question": "Hva må verifiseres før serviceintervall oppgis for MAN?",
+    "answer": "Produsentens vedlikeholdsplan, motorvariant, driftstimer, kalenderkrav, belastning og miljø i MAN service documentation.",
+    "category": "kjølesystem",
+    "manufacturer": "MAN"
+  },
+  {
+    "id": "FC-1098",
+    "question": "Hva gjør du hvis kunden bare oppgir Scania og modellnavn?",
+    "answer": "Be om engine number, application og rating, bilde av skilt og informasjon om applikasjon før del bekreftes.",
+    "category": "eksosanlegg",
+    "manufacturer": "Scania"
+  },
+  {
+    "id": "FC-1099",
+    "question": "Hvorfor kan høy temperatur ha flere mulige årsaker?",
+    "answer": "Fordi kjølesystem påvirkes av flere komponenter, blant annet sjøvannsfilter, impeller, varmeveksler og termostat.",
+    "category": "kjølesystem",
+    "manufacturer": "Yanmar"
+  },
+  {
+    "id": "FC-1100",
+    "question": "Hva er forskjellen på symptom og årsak?",
+    "answer": "Symptom er det kunden opplever; årsak er teknisk feil som må bekreftes med kontroll eller diagnose.",
+    "category": "eksosanlegg",
+    "manufacturer": "Caterpillar (CAT)"
+  }
+];
+const TRAINER_KEY = 'marineTrainer.v1';
+let currentTrainerSession = null;
+let currentFlashcardIndex = 0;
+
+function loadTrainerState() {
+  try {
+    return Object.assign({ xp: 0, completedLessons: [], answered: 0, correct: 0, wrongQueue: [], badges: [], lastTrainDate: null, streak: 0, lessonScores: {}, dailyGoal: 60 }, JSON.parse(localStorage.getItem(TRAINER_KEY) || '{}'));
+  } catch (_) {
+    return { xp: 0, completedLessons: [], answered: 0, correct: 0, wrongQueue: [], badges: [], lastTrainDate: null, streak: 0, lessonScores: {}, dailyGoal: 60 };
+  }
+}
+const trainerState = loadTrainerState();
+function saveTrainerState() { localStorage.setItem(TRAINER_KEY, JSON.stringify(trainerState)); }
+function trainerLevel() {
+  return TRAINER_DATA.xpLevels.find(l => trainerState.xp >= l.min && trainerState.xp <= l.max) || TRAINER_DATA.xpLevels[TRAINER_DATA.xpLevels.length - 1];
+}
+function xpForDifficulty(difficulty) { return { easy: 10, medium: 20, hard: 40, case: 60 }[difficulty] || 10; }
+function updateTrainerStreak() {
+  const today = new Date().toISOString().slice(0,10);
+  if (trainerState.lastTrainDate === today) return;
+  const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0,10);
+  trainerState.streak = trainerState.lastTrainDate === yesterday ? trainerState.streak + 1 : 1;
+  trainerState.lastTrainDate = today;
+}
+function trainerNextLesson() {
+  for (const level of TRAINER_DATA.path) {
+    for (const lesson of level.lessons) {
+      if (!trainerState.completedLessons.includes(lesson.id)) return lesson;
+    }
+  }
+  return TRAINER_DATA.path[0].lessons[0];
+}
+function initTrainer() {
+  if (!$('#view-trainer')) return;
+  $('#startTrainerLesson')?.addEventListener('click', () => startTrainerLesson(trainerNextLesson().id));
+  $('#startReview')?.addEventListener('click', startReviewSession);
+  $('#openFlashcards')?.addEventListener('click', renderTrainerFlashcard);
+  document.addEventListener('click', event => {
+    const lesson = event.target.closest('[data-trainer-lesson]');
+    if (lesson) startTrainerLesson(lesson.dataset.trainerLesson);
+    const answer = event.target.closest('[data-trainer-answer]');
+    if (answer) answerTrainerQuestion(Number(answer.dataset.trainerAnswer));
+    const next = event.target.closest('#trainerNextQuestion');
+    if (next) renderTrainerQuestion();
+    const flashNext = event.target.closest('#trainerNextFlashcard');
+    if (flashNext) { currentFlashcardIndex = (currentFlashcardIndex + 1) % TRAINER_FLASHCARDS.length; renderTrainerFlashcard(); }
+    const flashReveal = event.target.closest('#trainerRevealFlashcard');
+    if (flashReveal) $('#trainerFlashcardAnswer')?.classList.remove('hidden');
+  });
+  renderTrainer();
+}
+function renderTrainer() {
+  const level = trainerLevel();
+  const completed = trainerState.completedLessons.length;
+  const totalLessons = TRAINER_DATA.path.reduce((sum,l) => sum + l.lessons.length, 0);
+  const percent = Math.round((completed / totalLessons) * 100);
+  const next = trainerNextLesson();
+  if ($('#trainerXp')) $('#trainerXp').textContent = trainerState.xp;
+  if ($('#trainerLevel')) $('#trainerLevel').textContent = level.level;
+  if ($('#trainerStreak')) $('#trainerStreak').textContent = `🔥 ${trainerState.streak}`;
+  if ($('#trainerPercent')) $('#trainerPercent').textContent = percent + '%';
+  if ($('#trainerProgressBar')) $('#trainerProgressBar').style.width = percent + '%';
+  if ($('#trainerNext')) $('#trainerNext').textContent = `Neste anbefalte leksjon: ${next.title} (${next.xp} XP). Dagens mål: ${trainerState.dailyGoal} XP.`;
+  renderTrainerPath();
+  renderTrainerBadges();
+  renderTrainerProgressDetails();
+  if (!$('#trainerQuiz')?.textContent.trim()) $('#trainerQuiz').innerHTML = '<p class="muted">Start neste leksjon for å få spørsmål. Feil svar legges automatisk i Review.</p>';
+  if (!$('#trainerFlashcards')?.textContent.trim()) renderTrainerFlashcard();
+}
+function renderTrainerPath() {
+  const host = $('#trainerPath'); if (!host) return;
+  host.innerHTML = TRAINER_DATA.path.map(level => `<article class="trainer-level"><div><strong>Level ${level.level}: ${escapeHtml(level.title)}</strong><p>${escapeHtml(level.description)}</p></div><div class="trainer-lessons">${level.lessons.map(lesson => `<button class="trainer-lesson ${trainerState.completedLessons.includes(lesson.id) ? 'done' : ''}" data-trainer-lesson="${lesson.id}"><span>${escapeHtml(lesson.title)}</span><em>${lesson.xp} XP · ${lesson.difficulty}</em></button>`).join('')}</div></article>`).join('');
+}
+function questionsForLesson(lesson) {
+  const byChapter = TRAINER_DATA.questions.filter(q => q.tags?.includes(lesson.chapter) || q.lesson === lesson.chapter);
+  const general = TRAINER_DATA.questions.filter(q => !byChapter.includes(q));
+  return shuffle([...byChapter.slice(0, 4), ...general.slice(0, 4)]).slice(0, 7);
+}
+function startTrainerLesson(id) {
+  const lesson = TRAINER_DATA.path.flatMap(l => l.lessons).find(l => l.id === id) || trainerNextLesson();
+  currentTrainerSession = { mode: 'lesson', lesson, queue: questionsForLesson(lesson), index: 0, correct: 0, earned: 0, answered: false };
+  renderTrainerQuestion();
+}
+function startReviewSession() {
+  const queued = trainerState.wrongQueue.slice(0, 12).map(id => TRAINER_DATA.questions.find(q => q.id === id)).filter(Boolean);
+  currentTrainerSession = { mode: 'review', lesson: null, queue: queued.length ? queued : shuffle(TRAINER_DATA.questions).slice(0, 8), index: 0, correct: 0, earned: 0, answered: false };
+  renderTrainerQuestion();
+}
+function renderTrainerQuestion() {
+  const host = $('#trainerQuiz'); if (!host || !currentTrainerSession) return;
+  if (currentTrainerSession.index >= currentTrainerSession.queue.length) return finishTrainerSession();
+  const q = currentTrainerSession.queue[currentTrainerSession.index];
+  const choices = shuffle(q.choices.map((text, original) => ({ text, original })));
+  currentTrainerSession.current = { q, choices, correctIndex: choices.findIndex(c => c.original === q.answer) };
+  currentTrainerSession.answered = false;
+  host.innerHTML = `<div class="trainer-question"><div class="quiz-meta"><strong>${labelForQuestionType(q.type)}</strong><span>${q.difficulty} · ${xpForDifficulty(q.difficulty)} XP</span></div><h3>${escapeHtml(q.prompt)}</h3><div class="trainer-answer-grid">${choices.map((c, i) => `<button data-trainer-answer="${i}">${escapeHtml(c.text)}</button>`).join('')}</div><p id="trainerFeedback" class="explanation hidden"></p></div>`;
+}
+function labelForQuestionType(type) {
+  return { multiple:'Flervalg', truefalse:'Sant/usant', match:'Match komponent', partnumber:'Finn delenummer', system:'Identifiser system', 'customer-case':'Kundescenario', 'workshop-case':'Verkstedscenario', flashcard:'Flashcard' }[type] || 'Spørsmål';
+}
+function answerTrainerQuestion(index) {
+  if (!currentTrainerSession || currentTrainerSession.answered) return;
+  const cur = currentTrainerSession.current;
+  const ok = index === cur.correctIndex;
+  currentTrainerSession.answered = true;
+  trainerState.answered += 1;
+  if (ok) {
+    const xp = xpForDifficulty(cur.q.difficulty);
+    trainerState.xp += xp;
+    currentTrainerSession.earned += xp;
+    currentTrainerSession.correct += 1;
+    trainerState.correct += 1;
+  } else if (!trainerState.wrongQueue.includes(cur.q.id)) {
+    trainerState.wrongQueue.push(cur.q.id);
+  }
+  updateTrainerStreak();
+  unlockTrainerBadges(cur.q, ok);
+  saveTrainerState();
+  const feedback = $('#trainerFeedback');
+  if (feedback) {
+    feedback.classList.remove('hidden');
+    feedback.innerHTML = `<strong>${ok ? 'Riktig' : 'Ikke helt'}.</strong> ${escapeHtml(cur.q.explanation)} ${ok ? '' : 'Dette spørsmålet kommer tilbake i Review.'}<br><button id="trainerNextQuestion">Neste</button>`;
+  }
+  $$('#trainerQuiz [data-trainer-answer]').forEach((btn, i) => {
+    btn.disabled = true;
+    btn.classList.toggle('correct', i === cur.correctIndex);
+    btn.classList.toggle('wrong', i === index && !ok);
+  });
+  renderTrainer();
+}
+function finishTrainerSession() {
+  const host = $('#trainerQuiz');
+  const session = currentTrainerSession;
+  if (session.mode === 'lesson' && session.correct >= Math.ceil(session.queue.length * 0.7) && !trainerState.completedLessons.includes(session.lesson.id)) {
+    trainerState.completedLessons.push(session.lesson.id);
+  }
+  trainerState.wrongQueue = trainerState.wrongQueue.slice(-80);
+  saveTrainerState();
+  host.innerHTML = `<div class="quiz-result"><h3>Leksjon ferdig</h3><p>${session.correct} av ${session.queue.length} riktige. Du tjente ${session.earned} XP.</p><button id="startTrainerLesson">Neste leksjon</button><button id="startReview" class="secondary">Review</button></div>`;
+  $('#startTrainerLesson')?.addEventListener('click', () => startTrainerLesson(trainerNextLesson().id));
+  $('#startReview')?.addEventListener('click', startReviewSession);
+  currentTrainerSession = null;
+  renderTrainer();
+}
+function unlockTrainerBadges(q, ok) {
+  const add = id => { if (!trainerState.badges.includes(id)) trainerState.badges.push(id); };
+  if (trainerState.completedLessons.length >= 0) add('first-lesson');
+  if (trainerState.answered >= 100) add('questions-100');
+  if (trainerState.streak >= 7) add('streak-7');
+  if (trainerState.streak >= 30) add('streak-30');
+  const tags = (q.tags || []).join(' ').toLowerCase();
+  if (ok && tags.includes('common rail')) add('common-rail');
+  if (ok && (tags.includes('turbo') || tags.includes('luft'))) add('turbo');
+  if (ok && q.type === 'customer-case') add('support');
+  if (ok && q.type === 'workshop-case') add('workshop');
+  if (ok && tags.includes('volvo')) add('volvo');
+  if (ok && tags.includes('cummins')) add('cummins');
+  if (ok && (tags.includes('caterpillar') || tags.includes('cat'))) add('cat');
+  if (ok && tags.includes('man')) add('man');
+  if (ok && tags.includes('yanmar')) add('yanmar');
+}
+function renderTrainerBadges() {
+  const host = $('#trainerBadges'); if (!host) return;
+  host.innerHTML = TRAINER_DATA.badges.map(b => `<div class="badge ${trainerState.badges.includes(b.id) ? 'earned' : ''}"><strong>${escapeHtml(b.title)}</strong><span>${escapeHtml(b.description)}</span></div>`).join('');
+}
+function renderTrainerProgressDetails() {
+  const host = $('#trainerProgressDetails'); if (!host) return;
+  const totalLessons = TRAINER_DATA.path.reduce((sum,l) => sum + l.lessons.length, 0);
+  const percent = Math.round((trainerState.completedLessons.length / totalLessons) * 100);
+  host.innerHTML = `<table><thead><tr><th>Målepunkt</th><th>Status</th></tr></thead><tbody><tr><td>XP</td><td>${trainerState.xp}</td></tr><tr><td>Level</td><td>${trainerLevel().level}</td></tr><tr><td>Prosent fullført</td><td>${percent}%</td></tr><tr><td>Fullførte leksjoner</td><td>${trainerState.completedLessons.length} av ${totalLessons}</td></tr><tr><td>Fullførte quizzer/spørsmål</td><td>${trainerState.answered} besvart, ${trainerState.correct} riktige</td></tr><tr><td>Review-kø</td><td>${trainerState.wrongQueue.length} spørsmål</td></tr><tr><td>Badges</td><td>${trainerState.badges.length} av ${TRAINER_DATA.badges.length}</td></tr><tr><td>Dagens mål</td><td>${trainerState.dailyGoal} XP</td></tr></tbody></table>`;
+}
+function renderTrainerFlashcard() {
+  const host = $('#trainerFlashcards'); if (!host) return;
+  const card = TRAINER_FLASHCARDS[currentFlashcardIndex % TRAINER_FLASHCARDS.length];
+  host.innerHTML = `<article class="trainer-flashcard"><span class="kicker">${escapeHtml(card.manufacturer)} · ${escapeHtml(card.category)}</span><h3>${escapeHtml(card.question)}</h3><p id="trainerFlashcardAnswer" class="hidden">${escapeHtml(card.answer)}</p><div class="action-row"><button id="trainerRevealFlashcard">Vis svar</button><button id="trainerNextFlashcard" class="secondary">Neste kort</button></div></article>`;
+}
+function initMarineTrainer() { initTrainer(); }
+
+const WORK_SIM_KEY = 'marineWorkSimulator.v1';
+let currentSimCase = null;
+
+function loadWorkSimState() {
+  try {
+    return Object.assign({ score: 0, correct: 0, total: 0, sessionsToday: 0, lastDate: null, history: [], dailyQueue: [] }, JSON.parse(localStorage.getItem(WORK_SIM_KEY) || '{}'));
+  } catch (_) {
+    return { score: 0, correct: 0, total: 0, sessionsToday: 0, lastDate: null, history: [], dailyQueue: [] };
+  }
+}
+const workSimState = loadWorkSimState();
+function saveWorkSimState() { localStorage.setItem(WORK_SIM_KEY, JSON.stringify(workSimState)); }
+function simTodayKey() { return new Date().toISOString().slice(0, 10); }
+function simEnsureToday() {
+  const today = simTodayKey();
+  if (workSimState.lastDate !== today) {
+    workSimState.lastDate = today;
+    workSimState.sessionsToday = 0;
+    workSimState.dailyQueue = [];
+    saveWorkSimState();
+  }
+}
+function simPick(items, offset = 0) {
+  if (!items.length) return null;
+  return items[Math.abs((Date.now() + offset) % items.length)];
+}
+function simRandomPart(offset = 0) {
+  return simPick(PARTS_DATABASE, offset) || PARTS_DATABASE[0];
+}
+function simChapterName(id) {
+  const chapter = chapterById(id);
+  return chapter ? `${chapter.chapter} ${chapter.shortTitle}` : `Kapittel ${id}`;
+}
+function simModeLabel(mode) {
+  return {
+    phone: 'Telefon fra kunde',
+    parts: 'Finn riktig reservedel',
+    troubleshooting: 'Feilsøking',
+    email: 'E-postsimulator',
+    warranty: 'Garantisak',
+    workshop: 'Verksteddialog',
+    time: 'Tidsutfordring',
+    difficult: 'Vanskelig kunde',
+    quiz: 'Quiz',
+    daily: 'Daglig oppdrag'
+  }[mode] || 'Simulering';
+}
+function createWorkSimCase(mode) {
+  if (mode === 'daily') return createDailyOverviewCase();
+  if (mode === 'quiz') return createQuizSimCase();
+  const part = simRandomPart(mode.length * 31);
+  const related = part.relatedChapter || '17';
+  const maker = PLATFORM.manufacturers.find(m => part.manufacturer.includes(m.name) || m.aliases.some(a => part.manufacturer.includes(a))) || PLATFORM.manufacturers[0];
+  const commonRepeat = [related, '12', '17'].filter((v, i, arr) => v && arr.indexOf(v) === i);
+  const serialHint = `${part.manufacturer}, ${part.motor}, serienummer ${part.serialNumberPattern}, motornummer ${part.engineNumberPattern}`;
+  const cases = {
+    phone: {
+      mode,
+      title: 'Kunde ringer med driftsproblem',
+      intro: `Kunden sier: "Motoren går dårlig og vi trenger deler raskt." Du har foreløpig bare produsent og en vag symptombeskrivelse.`,
+      details: [`Skjult opplysning: ${serialHint}.`, `Kunden har bilde av typeplate og komponent, men har ikke sendt det ennå.`],
+      question: 'Hva er beste første oppfølgingsspørsmål?',
+      points: 25,
+      repeat: commonRepeat,
+      choices: [
+        { label: 'Be om bilde av typeplate, serienummer/motornummer, symptom, driftssituasjon og bilde av aktuell komponent.', correct: true, feedback: 'Riktig. Du skiller mellom symptom, motoridentitet og delbehov før du lover en reservedel.' },
+        { label: `Foreslå ${part.component} umiddelbart fordi symptomet passer omtrent.`, correct: false, feedback: 'For tidlig. Samme symptom kan skyldes flere systemer, og motorvariant må verifiseres.' },
+        { label: 'Be kunden ringe tilbake når motoren er demontert.', correct: false, feedback: 'For passivt. Du kan samle grunninformasjon og hjelpe kunden videre allerede nå.' },
+        { label: 'Spør bare etter modellnavn og leveringsadresse.', correct: false, feedback: 'Modellnavn alene er ikke nok til bindende delidentifikasjon.' }
+      ]
+    },
+    parts: {
+      mode,
+      title: 'Finn riktig reservedel',
+      intro: `Oppslag fra søkedatabasen: ${serialHint}. Kunden ber om ${part.component} i ${part.system}.`,
+      details: [`Dokumentasjonskilde i opplæringsdatabasen: ${part.documentation}.`, `Notat: ${part.notes}`],
+      question: 'Hvilket delenummer skal brukes som treningsoppslag før produsentverifikasjon?',
+      points: 30,
+      repeat: commonRepeat,
+      choices: shuffle([
+        { label: `${part.partNumber} - ${part.component}`, correct: true, feedback: 'Riktig treningsoppslag. I reell ordre må nummeret kontrolleres mot produsentens katalog og supersession.' },
+        { label: `${simRandomPart(5).partNumber} - lignende komponent`, correct: false, feedback: 'Feil. Lignende komponent fra annen motor eller variant kan gi feilbestilling.' },
+        { label: `${simRandomPart(9).partNumber} - brukbart hvis kunden har hastverk`, correct: false, feedback: 'Hastverk fjerner ikke kravet om sikker identifikasjon.' },
+        { label: 'Bestill etter bildet uten delenummer.', correct: false, feedback: 'Bilde er støtte, ikke tilstrekkelig bestillingsgrunnlag alene.' }
+      ])
+    },
+    troubleshooting: {
+      mode,
+      title: 'Feilsøking med kunde på telefon',
+      intro: `${part.manufacturer} ${part.motor}: Kunden melder feil i ${part.system}. Aktuell komponent i saken er ${part.component}.`,
+      details: ['Motoren står i båt, kunden ønsker rask avgjørelse, og verkstedet har begrenset tid.', 'Du skal velge neste kontroll, ikke gjette ferdig årsak.'],
+      question: 'Hva er mest profesjonelt neste feilsøkingstrinn?',
+      points: 30,
+      repeat: [related, '18', '19', '20'].filter(Boolean),
+      choices: [
+        { label: 'Bekreft motoridentitet, noter symptom, kontroller enkle måleverdier/visuell inspeksjon og dokumenter før del anbefales.', correct: true, feedback: 'Riktig. God feilsøking går fra fakta til kontroll til delvalg.' },
+        { label: `Bytt ${part.component} først, siden kunden nevnte systemet.`, correct: false, feedback: 'Komponentbytte uten kontroll gir høy risiko for feil del og misfornøyd kunde.' },
+        { label: 'Slett alarmen og be kunden prøve igjen uten mer dokumentasjon.', correct: false, feedback: 'Alarmhistorikk, måleverdier og driftsforhold må dokumenteres før konklusjon.' },
+        { label: 'Søk etter billigste uoriginale del for å løse saken raskt.', correct: false, feedback: 'Prisvalg kommer etter korrekt identifikasjon og teknisk vurdering.' }
+      ]
+    },
+    email: {
+      mode,
+      type: 'email',
+      title: 'E-postsimulator',
+      intro: `Kunden skriver: "Hei, vi trenger ${part.component} til ${part.manufacturer} ${part.motor}. Kan dere sende pris og levering i dag?"`,
+      details: [`Du vet at korrekt oppslag krever serienummer/motornummer og gjerne bilde av typeplate.`, `Treningspost: ${part.partNumber}, men dette skal ikke bekreftes uten verifikasjon.`],
+      question: 'Skriv et kort profesjonelt svar. Systemet ser etter viktige elementer.',
+      points: 40,
+      repeat: ['06', '12', '17', related].filter(Boolean),
+      keywords: ['serienummer', 'motornummer', 'typeplate', 'bilde', 'symptom', 'delnummer', 'produsent', 'forbehold', 'levering', 'neste']
+    },
+    warranty: {
+      mode,
+      title: 'Reklamasjon og garanti',
+      intro: `Kunden mener at ${part.component} har sviktet etter kort tid og ber om ny del på garanti.`,
+      details: [`Motor: ${serialHint}.`, 'Kunden har foreløpig ikke sendt driftstimer, monteringsdato, bilder, feilkode eller servicehistorikk.'],
+      question: 'Hva er riktig håndtering?',
+      points: 35,
+      repeat: ['23', '24', '12', related].filter(Boolean),
+      choices: [
+        { label: 'Be om komplett dokumentasjon før vurdering: kjøpsdata, montering, bilder, serienummer, driftstimer, symptom, feilkoder og servicehistorikk.', correct: true, feedback: 'Riktig. Garantivurdering krever dokumentasjon og sporbarhet før man lover dekning.' },
+        { label: 'Godkjenn saken direkte for å roe kunden.', correct: false, feedback: 'Feil. Da kan bedriften ta ansvar for en sak som ikke er dokumentert eller dekket.' },
+        { label: 'Avvis saken uten å se dokumentasjon.', correct: false, feedback: 'Feil. Kunden skal få tydelig krav til dokumentasjon og rettferdig vurdering.' },
+        { label: 'Send en ny del og ta dokumentasjonen senere.', correct: false, feedback: 'Risiko. Dokumentasjon bør inn før garantiløfte eller kreditering.' }
+      ]
+    },
+    workshop: {
+      mode,
+      title: 'Verksteddialog',
+      intro: `Mekaniker står med demontert motorområde og spør etter riktig ${part.component}.`,
+      details: [`Mekaniker oppgir ${part.manufacturer} ${part.motor}, men ikke komplett identifikasjon.`, 'Båten skal ut igjen raskt, og feil del stopper jobben.'],
+      question: 'Hvordan hjelper du mekanikeren raskest og tryggest?',
+      points: 30,
+      repeat: ['02', '06', '17', related].filter(Boolean),
+      choices: [
+        { label: 'Be om bilde av typeplate og demontert del, kontroller posisjon/antall, søk katalog og svar med delnummer, lagerstatus og forbehold.', correct: true, feedback: 'Riktig. Du kombinerer verkstedets tempo med dokumentert delkontroll.' },
+        { label: 'Finn en del som ligner på lager og send den til verkstedet.', correct: false, feedback: 'Lagerpress må ikke overstyre identifikasjon.' },
+        { label: 'Be mekaniker finne delen selv i katalogen.', correct: false, feedback: 'Samarbeid er bedre. Du skal støtte verkstedet med strukturert oppslag.' },
+        { label: 'Opprett ordre uten bilder for å spare tid.', correct: false, feedback: 'Det sparer ofte minutter nå, men kan koste timer senere.' }
+      ]
+    },
+    time: {
+      mode,
+      title: 'Tidsutfordring med flere saker',
+      intro: 'Tre saker kommer samtidig: en havarist med driftsstans, et rutinemessig filtersett og en kunde som spør etter pris uten motor-ID.',
+      details: [`Kritisk sak gjelder ${part.manufacturer} ${part.motor} og mulig ${part.component}.`, 'Du må prioritere uten å miste dokumentasjon.'],
+      question: 'Hvilken prioritering er best?',
+      points: 25,
+      repeat: ['03', '04', '06'],
+      choices: [
+        { label: 'Registrer alle sakene, gi rask mottaksbekreftelse, prioriter driftsstans først og be samtidig de andre om manglende identifikasjon.', correct: true, feedback: 'Riktig. Du skaper ro, prioriterer risiko og holder sporbarhet.' },
+        { label: 'Svar først på den enkleste saken for å få den unna.', correct: false, feedback: 'Enkelt er ikke alltid viktigst. Driftskritiske saker må vurderes først.' },
+        { label: 'Hopp over saksnotat til du har bedre tid.', correct: false, feedback: 'Dokumentasjon er ekstra viktig når tempoet er høyt.' },
+        { label: 'Lov alle svar innen ti minutter.', correct: false, feedback: 'Urealistiske frister skaper mer stress og dårligere kvalitet.' }
+      ]
+    },
+    difficult: {
+      mode,
+      title: 'Vanskelig kunde',
+      intro: 'Kunden er irritert fordi forrige bestilling ikke passet. Han vil at du sender ny del umiddelbart uten flere spørsmål.',
+      details: [`Aktuell motor kan være ${part.manufacturer} ${part.motor}.`, 'Tidligere sak manglet bilde av typeplate og dokumentert katalogoppslag.'],
+      question: 'Hva er best respons?',
+      points: 30,
+      repeat: ['02', '04', '06', '24'],
+      choices: [
+        { label: 'Bekreft frustrasjonen, forklar hvorfor identifikasjon beskytter kunden, be om nødvendig dokumentasjon og gi tydelig neste oppdateringstidspunkt.', correct: true, feedback: 'Riktig. Du er tydelig, rolig og løsningsorientert uten å gjette.' },
+        { label: 'Si at kunden selv har skylden fordi han manglet serienummer.', correct: false, feedback: 'Feil tone. Ansvar kan avklares uten å eskalere konflikten.' },
+        { label: 'Send ny del uten verifikasjon for å bli ferdig.', correct: false, feedback: 'Da kan samme feil gjentas.' },
+        { label: 'Unngå å svare til kunden roer seg.', correct: false, feedback: 'Vanskelige kunder trenger strukturert respons, ikke stillhet.' }
+      ]
+    }
+  };
+  return cases[mode] || cases.phone;
+}
+function createQuizSimCase() {
+  const source = simPick(TRAINER_DATA.questions, 77) || TRAINER_DATA.questions[0];
+  const choices = shuffle(source.choices.map((label, idx) => ({ label, correct: idx === source.answer, feedback: source.explanation })));
+  return {
+    mode: 'quiz',
+    title: 'Daglig quiz',
+    intro: 'Kort repetisjon hentet fra eksisterende Trainer-spørsmål.',
+    details: [`Type: ${labelForQuestionType(source.type)}. Vanskelighet: ${source.difficulty}.`],
+    question: source.prompt,
+    points: xpForDifficulty(source.difficulty),
+    repeat: source.tags?.filter(tag => /^\d{2}$/.test(tag)).slice(0, 3) || ['01'],
+    choices
+  };
+}
+function createDailyOverviewCase() {
+  return {
+    mode: 'daily',
+    title: 'Daglig oppdrag',
+    intro: 'Dagens arbeidspakke består av 3 kundesaker, 2 verkstedsaker, 1 reklamasjon og 1 quiz.',
+    details: ['Start oppdraget for å få sakene servert én etter én. Resultatene lagres lokalt.'],
+    question: 'Klar for dagens økt?',
+    points: 0,
+    repeat: ['02', '06', '17'],
+    choices: [{ label: 'Start daglig oppdrag', correct: true, feedback: 'Dagens oppdrag er startet.' }]
+  };
+}
+function renderWorkSimulator() {
+  simEnsureToday();
+  const accuracy = workSimState.total ? Math.round((workSimState.correct / workSimState.total) * 100) : 0;
+  if ($('#simScore')) $('#simScore').textContent = workSimState.score;
+  if ($('#simCasesDone')) $('#simCasesDone').textContent = workSimState.total;
+  if ($('#simAccuracy')) $('#simAccuracy').textContent = accuracy + '%';
+  if ($('#simStreak')) $('#simStreak').textContent = workSimState.sessionsToday;
+  renderSimHistory();
+}
+function renderSimCase(simCase) {
+  const host = $('#simCase');
+  if (!host || !simCase) return;
+  const details = simCase.details?.length ? `<div class="sim-details">${simCase.details.map(d => `<p>${escapeHtml(d)}</p>`).join('')}</div>` : '';
+  if (simCase.type === 'email') {
+    host.innerHTML = `<article class="sim-case"><span class="kicker">${simModeLabel(simCase.mode)}</span><h3>${escapeHtml(simCase.title)}</h3><p>${escapeHtml(simCase.intro)}</p>${details}<h4>${escapeHtml(simCase.question)}</h4><textarea id="simEmailText" class="sim-email-box" rows="8" placeholder="Skriv kundesvar her..."></textarea><button id="simEvaluateEmail">Vurder svar</button></article>`;
+    return;
+  }
+  host.innerHTML = `<article class="sim-case"><span class="kicker">${simModeLabel(simCase.mode)}</span><h3>${escapeHtml(simCase.title)}</h3><p>${escapeHtml(simCase.intro)}</p>${details}<h4>${escapeHtml(simCase.question)}</h4><div class="sim-choice-grid">${(simCase.choices || []).map((choice, idx) => `<button class="sim-choice" data-sim-answer="${idx}">${escapeHtml(choice.label)}</button>`).join('')}</div></article>`;
+}
+function startSimCase(mode = 'phone', fromDaily = false) {
+  currentSimCase = createWorkSimCase(mode);
+  currentSimCase.fromDaily = fromDaily;
+  renderSimCase(currentSimCase);
+  $('#simResult').innerHTML = '<p class="muted">Svar på saken for å få poeng, tilbakemelding og anbefalt repetisjon.</p>';
+  $$('.sim-menu button').forEach(btn => btn.classList.toggle('active', btn.dataset.simMode === mode));
+}
+function evaluateSimAnswer(index) {
+  if (!currentSimCase) return;
+  const choice = currentSimCase.choices[index];
+  if (!choice) return;
+  if (currentSimCase.mode === 'daily') return startSimDailyMission();
+  finishSimCase(Boolean(choice.correct), choice.correct ? currentSimCase.points : 0, choice.feedback, currentSimCase.repeat || []);
+  $$('#simCase [data-sim-answer]').forEach((btn, i) => {
+    btn.disabled = true;
+    btn.classList.toggle('correct', currentSimCase.choices[i]?.correct);
+    btn.classList.toggle('wrong', i === index && !choice.correct);
+  });
+}
+function evaluateSimEmail() {
+  if (!currentSimCase) return;
+  const text = normalize($('#simEmailText')?.value || '');
+  const hits = currentSimCase.keywords.filter(keyword => text.includes(normalize(keyword)));
+  const ok = hits.length >= 5;
+  const missing = currentSimCase.keywords.filter(keyword => !hits.includes(keyword)).slice(0, 4);
+  const feedback = ok
+    ? `Godt svar. Du fikk med ${hits.length} viktige elementer: ${hits.join(', ')}.`
+    : `Svaret mangler flere nøkkelpunkter. Legg særlig til: ${missing.join(', ')}.`;
+  finishSimCase(ok, Math.min(currentSimCase.points, hits.length * 5), feedback, currentSimCase.repeat || []);
+  $('#simEvaluateEmail').disabled = true;
+}
+function finishSimCase(ok, points, feedback, repeat) {
+  simEnsureToday();
+  workSimState.total += 1;
+  workSimState.sessionsToday += 1;
+  if (ok) workSimState.correct += 1;
+  workSimState.score += points;
+  const entry = {
+    date: new Date().toISOString(),
+    mode: currentSimCase.mode,
+    title: currentSimCase.title,
+    ok,
+    points,
+    feedback,
+    repeat: repeat.slice(0, 4)
+  };
+  workSimState.history.unshift(entry);
+  workSimState.history = workSimState.history.slice(0, 25);
+  saveWorkSimState();
+  renderSimResult(entry);
+  renderWorkSimulator();
+  if (currentSimCase.fromDaily) {
+    const nextBtn = $('#simNextCase');
+    if (nextBtn) nextBtn.textContent = workSimState.dailyQueue.length ? `Neste daglige sak (${workSimState.dailyQueue.length} igjen)` : 'Avslutt daglig oppdrag';
+  }
+}
+function renderSimResult(entry) {
+  const host = $('#simResult');
+  if (!host) return;
+  const repeat = entry.repeat?.length ? entry.repeat.map(id => `<button class="secondary open-chapter" data-chapter="${id}">${escapeHtml(simChapterName(id))}</button>`).join('') : '<span class="muted">Ingen spesifikke kapitler foreslått.</span>';
+  host.innerHTML = `<div class="sim-result ${entry.ok ? 'good' : 'warn'}"><h4>${entry.ok ? 'God håndtering' : 'Må forbedres'}</h4><p><strong>${entry.points} poeng.</strong> ${escapeHtml(entry.feedback)}</p><div class="sim-feedback-grid"><div><strong>Hva gikk bra</strong><p>${entry.ok ? 'Du brukte dokumentasjon og struktur før beslutning.' : 'Du fikk saken videre og kan nå forbedre beslutningsgrunnlaget.'}</p></div><div><strong>Hva kan forbedres</strong><p>${entry.ok ? 'Fortsett å skrive tydelige forbehold og neste steg.' : 'Stopp tidligere ved manglende identifikasjon, og be om bilder/typeplate før del bekreftes.'}</p></div></div><div class="action-row">${repeat}</div></div>`;
+}
+function renderSimHistory() {
+  const host = $('#simHistory');
+  if (!host) return;
+  if (!workSimState.history.length) {
+    host.innerHTML = '<p class="muted">Ingen simuleringer fullført ennå.</p>';
+    return;
+  }
+  host.innerHTML = `<div class="sim-history-list">${workSimState.history.slice(0, 8).map(item => `<article class="sim-history-item"><strong>${escapeHtml(simModeLabel(item.mode))}: ${escapeHtml(item.title)}</strong><span>${item.ok ? 'Bestått' : 'Trenger øving'} · ${item.points} poeng · ${new Date(item.date).toLocaleDateString('nb-NO')}</span></article>`).join('')}</div>`;
+}
+function startSimDailyMission() {
+  simEnsureToday();
+  workSimState.dailyQueue = ['phone', 'phone', 'phone', 'workshop', 'workshop', 'warranty', 'quiz'];
+  saveWorkSimState();
+  startNextDailyCase();
+}
+function startNextDailyCase() {
+  simEnsureToday();
+  const mode = workSimState.dailyQueue.shift();
+  saveWorkSimState();
+  if (!mode) {
+    currentSimCase = null;
+    $('#simCase').innerHTML = '<article class="sim-case"><span class="kicker">Daglig oppdrag</span><h3>Dagens arbeidspakke er fullført</h3><p>Du har gjennomført kundesaker, verkstedspørsmål, reklamasjon og quiz. Se resultatlisten for repetisjonspunkter.</p></article>';
+    $('#simResult').innerHTML = '<div class="sim-result good"><h4>Daglig økt ferdig</h4><p>Bruk anbefalte kapitler under for repetisjon før neste arbeidsøkt.</p></div>';
+    renderWorkSimulator();
+    return;
+  }
+  startSimCase(mode, true);
+}
+function resetWorkSimulator() {
+  if (!confirm('Vil du nullstille Work Simulator-resultater på denne enheten?')) return;
+  workSimState.score = 0;
+  workSimState.correct = 0;
+  workSimState.total = 0;
+  workSimState.sessionsToday = 0;
+  workSimState.history = [];
+  workSimState.dailyQueue = [];
+  workSimState.lastDate = simTodayKey();
+  saveWorkSimState();
+  startSimCase('phone');
+  renderWorkSimulator();
+}
+function initWorkSimulator() {
+  if (!$('#view-work-simulator')) return;
+  simEnsureToday();
+  $$('.sim-menu [data-sim-mode]').forEach(btn => btn.addEventListener('click', () => startSimCase(btn.dataset.simMode)));
+  $('#simStartDay')?.addEventListener('click', startSimDailyMission);
+  $('#simNextCase')?.addEventListener('click', () => workSimState.dailyQueue.length ? startNextDailyCase() : startSimCase('phone'));
+  $('#simReset')?.addEventListener('click', resetWorkSimulator);
+  document.addEventListener('click', event => {
+    const answer = event.target.closest('[data-sim-answer]');
+    if (answer) evaluateSimAnswer(Number(answer.dataset.simAnswer));
+    if (event.target.closest('#simEvaluateEmail')) evaluateSimEmail();
+  });
+  renderWorkSimulator();
+  startSimCase('phone');
+}
+
 function init() {
   document.documentElement.dataset.theme = state.theme || 'light';
   bindEvents();
@@ -17692,6 +39454,8 @@ function init() {
   renderQuickRefs();
   renderSearch();
   initPhaseModules();
+  initMarineTrainer();
+  initWorkSimulator();
   updateProgressUI();
   openChapter(state.lastVisited || '01');
   setView('dashboard');

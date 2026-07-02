@@ -24,3 +24,7 @@ Håndboken dekker Caterpillar (CAT), Volvo Penta, Mitsubishi, Cummins, MAN, Scan
 - `website/parts-database.json` inneholder lokal opplæringsdatabase for reservedelssøk med produsentverifikasjon.
 - `website/manifest.webmanifest` og `website/service-worker.js` gjør plattformen til PWA med offline-støtte.
 - Plattformen har interaktive diagrammer, reservedelsdatabase og arbeidsmodus med lokal lagring.
+
+- `website/trainer-data.json` inneholder Marine Trainer-læringssti, quizbank, XP-nivåer og badges.
+- Plattformen har en `Trainer`-seksjon med XP, level, streak, learning path, review og flashcards.
+- Plattformen har en `Work Simulator`-seksjon som simulerer telefon fra kunde, deleoppslag, feilsøking, e-postsvar, garantisaker, verksteddialog, tidsprioritering, vanskelige kunder og daglige oppdrag. Modulen bruker eksisterende kapitler, quizdata, flashcards og reservedelsdatabase, og lagrer poeng, presisjon og historikk lokalt i nettleseren.
