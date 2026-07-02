@@ -1,0 +1,19 @@
+{
+  "name": "Marine opplæringsplattform",
+  "short_name": "Marine Mentor",
+  "description": "Digital opplæringsplattform for marine reservedeler og marinemotorservice.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f766e",
+  "lang": "nb-NO",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

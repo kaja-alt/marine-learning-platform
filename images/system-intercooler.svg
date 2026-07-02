@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+<title id="title">Intercooler / ladeluftkjøler</title>
+<desc id="desc">Kjøler komprimert luft før den går inn i motoren</desc>
+
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+      </marker>
+      <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.12"/>
+      </filter>
+      <style>
+        .title{font:700 34px Arial,Helvetica,sans-serif;fill:#172033}
+        .subtitle{font:400 17px Arial,Helvetica,sans-serif;fill:#526071}
+        .label{font:700 16px Arial,Helvetica,sans-serif;fill:#172033}
+        .small{font:400 13px Arial,Helvetica,sans-serif;fill:#526071}
+        .tiny{font:400 12px Arial,Helvetica,sans-serif;fill:#526071}
+        .arrow{fill:none;stroke:#334155;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#arrow)}
+        .flow-blue{stroke:#2563eb}.flow-red{stroke:#dc2626}.flow-green{stroke:#0f766e}.flow-orange{stroke:#ea580c}.flow-cyan{stroke:#0891b2}.flow-purple{stroke:#7c3aed}.flow-slate{stroke:#334155}.flow-gray{stroke:#64748b}
+      </style>
+    </defs>
+<rect width="1280" height="760" rx="0" fill="#f8fafc"/>
+<text x="48" y="58" class="title">Intercooler / ladeluftkjøler</text>
+<text x="48" y="88" class="subtitle">Kjøler komprimert luft før den går inn i motoren</text>
+<line x1="48" y1="126" x2="1232" y2="126" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="48" y1="324" x2="1232" y2="324" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="48" y1="522" x2="1232" y2="522" stroke="#e2e8f0" stroke-width="1"/>
+<circle cx="175.0" cy="350.0" r="50.0" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="175.0" y="342.0" text-anchor="middle" class="label">Turbo kompressor</text>
+<text x="175.0" y="370.0" text-anchor="middle" class="small">orange</text>
+<rect x="330" y="310" width="150" height="80" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="405.0" y="342.0" text-anchor="middle" class="label">Varm ladeluft</text>
+<text x="405.0" y="370.0" text-anchor="middle" class="small">orange</text>
+<rect x="540" y="245" width="210" height="160" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="645.0" y="317.0" text-anchor="middle" class="label">Intercooler</text>
+<text x="645.0" y="345.0" text-anchor="middle" class="small">cyan</text>
+<rect x="535" y="480" width="220" height="75" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="645.0" y="509.5" text-anchor="middle" class="label">Kjølemedium</text>
+<text x="645.0" y="537.5" text-anchor="middle" class="small">blue</text>
+<rect x="865" y="300" width="190" height="100" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="960.0" y="342.0" text-anchor="middle" class="label">Innsugsmanifold</text>
+<text x="960.0" y="370.0" text-anchor="middle" class="small">slate</text>
+<rect x="640" y="120" width="130" height="70" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="705.0" y="147.0" text-anchor="middle" class="label">Kondens / lekkasje</text>
+<text x="705.0" y="175.0" text-anchor="middle" class="small">gray</text>
+<line x1="175.0" y1="350.0" x2="405.0" y2="350.0" class="arrow flow-orange"/>
+<rect x="220.0" y="332.0" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="290.0" y="350.0" text-anchor="middle" class="tiny">trykk</text>
+<line x1="405.0" y1="350.0" x2="645.0" y2="325.0" class="arrow flow-orange"/>
+<rect x="455.0" y="319.5" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="525.0" y="337.5" text-anchor="middle" class="tiny">varm</text>
+<line x1="645.0" y1="325.0" x2="960.0" y2="350.0" class="arrow flow-cyan"/>
+<rect x="732.5" y="319.5" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="802.5" y="337.5" text-anchor="middle" class="tiny">kaldere luft</text>
+<line x1="645.0" y1="517.5" x2="645.0" y2="325.0" class="arrow flow-blue"/>
+<rect x="575.0" y="403.25" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="645.0" y="421.25" text-anchor="middle" class="tiny">kjøling</text>
+<line x1="645.0" y1="325.0" x2="705.0" y2="155.0" class="arrow flow-gray"/>
+<rect x="605.0" y="222.0" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="675.0" y="240.0" text-anchor="middle" class="tiny">kontroll</text>
+<rect x="48" y="690" width="1184" height="42" rx="10" fill="#fff" stroke="#e2e8f0"/>
+<text x="64" y="716" class="small">Lekk intercooler kan gi røyk, lav effekt, vann i innsug eller korrosjonsskade.</text>
+</svg>

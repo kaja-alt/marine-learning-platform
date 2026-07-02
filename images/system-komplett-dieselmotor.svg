@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+<title id="title">Komplett marine dieselmotor</title>
+<desc id="desc">Hovedkomponenter og systemgrenser for reservedels- og supportarbeid</desc>
+
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+      </marker>
+      <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.12"/>
+      </filter>
+      <style>
+        .title{font:700 34px Arial,Helvetica,sans-serif;fill:#172033}
+        .subtitle{font:400 17px Arial,Helvetica,sans-serif;fill:#526071}
+        .label{font:700 16px Arial,Helvetica,sans-serif;fill:#172033}
+        .small{font:400 13px Arial,Helvetica,sans-serif;fill:#526071}
+        .tiny{font:400 12px Arial,Helvetica,sans-serif;fill:#526071}
+        .arrow{fill:none;stroke:#334155;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#arrow)}
+        .flow-blue{stroke:#2563eb}.flow-red{stroke:#dc2626}.flow-green{stroke:#0f766e}.flow-orange{stroke:#ea580c}.flow-cyan{stroke:#0891b2}.flow-purple{stroke:#7c3aed}.flow-slate{stroke:#334155}.flow-gray{stroke:#64748b}
+      </style>
+    </defs>
+<rect width="1280" height="760" rx="0" fill="#f8fafc"/>
+<text x="48" y="58" class="title">Komplett marine dieselmotor</text>
+<text x="48" y="88" class="subtitle">Hovedkomponenter og systemgrenser for reservedels- og supportarbeid</text>
+<line x1="48" y1="126" x2="1232" y2="126" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="48" y1="324" x2="1232" y2="324" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="48" y1="522" x2="1232" y2="522" stroke="#e2e8f0" stroke-width="1"/>
+<rect x="60" y="190" width="140" height="72" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="130.0" y="218.0" text-anchor="middle" class="label">Luftinntak</text>
+<text x="130.0" y="246.0" text-anchor="middle" class="small">cyan</text>
+<circle cx="322.5" cy="202.5" r="52.5" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="322.5" y="194.5" text-anchor="middle" class="label">Turbocharger</text>
+<text x="322.5" y="222.5" text-anchor="middle" class="small">orange</text>
+<rect x="455" y="150" width="150" height="105" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="530.0" y="194.5" text-anchor="middle" class="label">Intercooler</text>
+<text x="530.0" y="222.5" text-anchor="middle" class="small">cyan</text>
+<rect x="650" y="190" width="230" height="150" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="765.0" y="257.0" text-anchor="middle" class="label">Motorblokk</text>
+<text x="765.0" y="285.0" text-anchor="middle" class="small">slate</text>
+<rect x="930" y="220" width="130" height="90" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="995.0" y="257.0" text-anchor="middle" class="label">Marine gear</text>
+<text x="995.0" y="285.0" text-anchor="middle" class="small">purple</text>
+<rect x="1110" y="230" width="120" height="75" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1170.0" y="259.5" text-anchor="middle" class="label">Propellanlegg</text>
+<text x="1170.0" y="287.5" text-anchor="middle" class="small">blue</text>
+<rect x="210" y="440" width="150" height="85" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="285.0" y="474.5" text-anchor="middle" class="label">Drivstoffsystem</text>
+<text x="285.0" y="502.5" text-anchor="middle" class="small">green</text>
+<rect x="455" y="440" width="150" height="85" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="530.0" y="474.5" text-anchor="middle" class="label">Smøresystem</text>
+<text x="530.0" y="502.5" text-anchor="middle" class="small">amber</text>
+<rect x="700" y="440" width="160" height="85" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="780.0" y="474.5" text-anchor="middle" class="label">Kjølesystem</text>
+<text x="780.0" y="502.5" text-anchor="middle" class="small">blue</text>
+<rect x="950" y="440" width="155" height="85" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1027.5" y="474.5" text-anchor="middle" class="label">Eksosanlegg</text>
+<text x="1027.5" y="502.5" text-anchor="middle" class="small">red</text>
+<line x1="130.0" y1="226.0" x2="322.5" y2="202.5" class="arrow flow-cyan"/>
+<rect x="156.25" y="196.25" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="226.25" y="214.25" text-anchor="middle" class="tiny">ren luft</text>
+<line x1="322.5" y1="202.5" x2="530.0" y2="202.5" class="arrow flow-cyan"/>
+<rect x="356.25" y="184.5" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="426.25" y="202.5" text-anchor="middle" class="tiny">trykkluft</text>
+<line x1="530.0" y1="202.5" x2="765.0" y2="265.0" class="arrow flow-cyan"/>
+<rect x="577.5" y="215.75" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="647.5" y="233.75" text-anchor="middle" class="tiny">ladeluft</text>
+<line x1="285.0" y1="482.5" x2="765.0" y2="265.0" class="arrow flow-green"/>
+<rect x="455.0" y="355.75" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="525.0" y="373.75" text-anchor="middle" class="tiny">diesel</text>
+<line x1="530.0" y1="482.5" x2="765.0" y2="265.0" class="arrow flow-orange"/>
+<rect x="577.5" y="355.75" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="647.5" y="373.75" text-anchor="middle" class="tiny">olje</text>
+<line x1="780.0" y1="482.5" x2="765.0" y2="265.0" class="arrow flow-blue"/>
+<rect x="702.5" y="355.75" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="772.5" y="373.75" text-anchor="middle" class="tiny">varme ut</text>
+<line x1="765.0" y1="265.0" x2="1027.5" y2="482.5" class="arrow flow-red"/>
+<rect x="826.25" y="355.75" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="896.25" y="373.75" text-anchor="middle" class="tiny">eksos</text>
+<line x1="765.0" y1="265.0" x2="995.0" y2="265.0" class="arrow flow-purple"/>
+<rect x="810.0" y="247.0" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="880.0" y="265.0" text-anchor="middle" class="tiny">moment</text>
+<line x1="995.0" y1="265.0" x2="1170.0" y2="267.5" class="arrow flow-blue"/>
+<rect x="1012.5" y="248.25" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="1082.5" y="266.25" text-anchor="middle" class="tiny">drift</text>
+<rect x="48" y="690" width="1184" height="42" rx="10" fill="#fff" stroke="#e2e8f0"/>
+<text x="64" y="716" class="small">Bruk diagrammet til å plassere kundens symptom i riktig system før delnummer velges.</text>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+<title id="title">Dynamo</title>
+<desc id="desc">Mekanisk drift, lading og spenningsregulering</desc>
+
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+      </marker>
+      <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.12"/>
+      </filter>
+      <style>
+        .title{font:700 34px Arial,Helvetica,sans-serif;fill:#172033}
+        .subtitle{font:400 17px Arial,Helvetica,sans-serif;fill:#526071}
+        .label{font:700 16px Arial,Helvetica,sans-serif;fill:#172033}
+        .small{font:400 13px Arial,Helvetica,sans-serif;fill:#526071}
+        .tiny{font:400 12px Arial,Helvetica,sans-serif;fill:#526071}
+        .arrow{fill:none;stroke:#334155;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#arrow)}
+        .flow-blue{stroke:#2563eb}.flow-red{stroke:#dc2626}.flow-green{stroke:#0f766e}.flow-orange{stroke:#ea580c}.flow-cyan{stroke:#0891b2}.flow-purple{stroke:#7c3aed}.flow-slate{stroke:#334155}.flow-gray{stroke:#64748b}
+      </style>
+    </defs>
+<rect width="1280" height="760" rx="0" fill="#f8fafc"/>
+<text x="48" y="58" class="title">Dynamo</text>
+<text x="48" y="88" class="subtitle">Mekanisk drift, lading og spenningsregulering</text>
+<line x1="48" y1="126" x2="1232" y2="126" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="48" y1="324" x2="1232" y2="324" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="48" y1="522" x2="1232" y2="522" stroke="#e2e8f0" stroke-width="1"/>
+<circle cx="162.5" cy="355.0" r="45.0" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="162.5" y="347.0" text-anchor="middle" class="label">Veivakselreimskive</text>
+<text x="162.5" y="375.0" text-anchor="middle" class="small">slate</text>
+<rect x="310" y="315" width="150" height="80" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="385.0" y="347.0" text-anchor="middle" class="label">Reim</text>
+<text x="385.0" y="375.0" text-anchor="middle" class="small">gray</text>
+<circle cx="605.0" cy="347.5" r="72.5" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="605.0" y="339.5" text-anchor="middle" class="label">Dynamo</text>
+<text x="605.0" y="367.5" text-anchor="middle" class="small">blue</text>
+<rect x="760" y="295" width="150" height="95" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="835.0" y="334.5" text-anchor="middle" class="label">Regulator</text>
+<text x="835.0" y="362.5" text-anchor="middle" class="small">purple</text>
+<rect x="980" y="280" width="160" height="110" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1060.0" y="327.0" text-anchor="middle" class="label">Batteri</text>
+<text x="1060.0" y="355.0" text-anchor="middle" class="small">amber</text>
+<rect x="760" y="455" width="150" height="80" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="835.0" y="487.0" text-anchor="middle" class="label">Ladelampe</text>
+<text x="835.0" y="515.0" text-anchor="middle" class="small">orange</text>
+<line x1="162.5" y1="355.0" x2="385.0" y2="355.0" class="arrow flow-slate"/>
+<rect x="203.75" y="337.0" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="273.75" y="355.0" text-anchor="middle" class="tiny">drift</text>
+<line x1="385.0" y1="355.0" x2="605.0" y2="347.5" class="arrow flow-slate"/>
+<rect x="425.0" y="333.25" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="495.0" y="351.25" text-anchor="middle" class="tiny">rotasjon</text>
+<line x1="605.0" y1="347.5" x2="835.0" y2="342.5" class="arrow flow-purple"/>
+<rect x="650.0" y="327.0" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="720.0" y="345.0" text-anchor="middle" class="tiny">feedback</text>
+<line x1="835.0" y1="342.5" x2="605.0" y2="347.5" class="arrow flow-purple"/>
+<rect x="650.0" y="327.0" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="720.0" y="345.0" text-anchor="middle" class="tiny">felt</text>
+<line x1="605.0" y1="347.5" x2="1060.0" y2="335.0" class="arrow flow-blue"/>
+<rect x="762.5" y="323.25" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="832.5" y="341.25" text-anchor="middle" class="tiny">lading</text>
+<line x1="835.0" y1="342.5" x2="835.0" y2="495.0" class="arrow flow-orange"/>
+<rect x="765.0" y="400.75" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="835.0" y="418.75" text-anchor="middle" class="tiny">varsel</text>
+<rect x="48" y="690" width="1184" height="42" rx="10" fill="#fff" stroke="#e2e8f0"/>
+<text x="64" y="716" class="small">Hylende reim, lav ladespenning og varm dynamo må vurderes samlet.</text>
+</svg>

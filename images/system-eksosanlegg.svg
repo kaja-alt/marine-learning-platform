@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+<title id="title">Eksosanlegg</title>
+<desc id="desc">Tørr og våt eksosdel i marine installasjoner</desc>
+
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+      </marker>
+      <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.12"/>
+      </filter>
+      <style>
+        .title{font:700 34px Arial,Helvetica,sans-serif;fill:#172033}
+        .subtitle{font:400 17px Arial,Helvetica,sans-serif;fill:#526071}
+        .label{font:700 16px Arial,Helvetica,sans-serif;fill:#172033}
+        .small{font:400 13px Arial,Helvetica,sans-serif;fill:#526071}
+        .tiny{font:400 12px Arial,Helvetica,sans-serif;fill:#526071}
+        .arrow{fill:none;stroke:#334155;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#arrow)}
+        .flow-blue{stroke:#2563eb}.flow-red{stroke:#dc2626}.flow-green{stroke:#0f766e}.flow-orange{stroke:#ea580c}.flow-cyan{stroke:#0891b2}.flow-purple{stroke:#7c3aed}.flow-slate{stroke:#334155}.flow-gray{stroke:#64748b}
+      </style>
+    </defs>
+<rect width="1280" height="760" rx="0" fill="#f8fafc"/>
+<text x="48" y="58" class="title">Eksosanlegg</text>
+<text x="48" y="88" class="subtitle">Tørr og våt eksosdel i marine installasjoner</text>
+<line x1="48" y1="126" x2="1232" y2="126" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="48" y1="324" x2="1232" y2="324" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="48" y1="522" x2="1232" y2="522" stroke="#e2e8f0" stroke-width="1"/>
+<rect x="75" y="260" width="165" height="105" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="157.5" y="304.5" text-anchor="middle" class="label">Eksosmanifold</text>
+<text x="157.5" y="332.5" text-anchor="middle" class="small">red</text>
+<circle cx="375.0" cy="310.0" r="65.0" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="375.0" y="302.0" text-anchor="middle" class="label">Turbo turbin</text>
+<text x="375.0" y="330.0" text-anchor="middle" class="small">red</text>
+<rect x="520" y="240" width="165" height="125" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="602.5" y="294.5" text-anchor="middle" class="label">Eksosbend</text>
+<text x="602.5" y="322.5" text-anchor="middle" class="small">red</text>
+<rect x="520" y="450" width="165" height="75" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="602.5" y="479.5" text-anchor="middle" class="label">Sjøvann inn</text>
+<text x="602.5" y="507.5" text-anchor="middle" class="small">cyan</text>
+<rect x="750" y="270" width="165" height="95" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="832.5" y="309.5" text-anchor="middle" class="label">Våt eksosslange</text>
+<text x="832.5" y="337.5" text-anchor="middle" class="small">red</text>
+<path d="M960,278 C960,254 1120,254 1120,278 L1120,357 C1120,381 960,381 960,357 Z" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<ellipse cx="1040.0" cy="278" rx="80.0" ry="18" fill="#e2e8f0" stroke="#334155" stroke-width="2.5"/>
+<text x="1040.0" y="309.5" text-anchor="middle" class="label">Vannlås / lyddemper</text>
+<text x="1040.0" y="337.5" text-anchor="middle" class="small">slate</text>
+<rect x="1135" y="290" width="95" height="75" rx="12" fill="#e2e8f0" stroke="#334155" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1182.5" y="319.5" text-anchor="middle" class="label">Utløp</text>
+<text x="1182.5" y="347.5" text-anchor="middle" class="small">red</text>
+<line x1="157.5" y1="312.5" x2="375.0" y2="310.0" class="arrow flow-red"/>
+<rect x="196.25" y="293.25" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="266.25" y="311.25" text-anchor="middle" class="tiny">eksos</text>
+<line x1="375.0" y1="310.0" x2="602.5" y2="302.5" class="arrow flow-red"/>
+<rect x="418.75" y="288.25" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="488.75" y="306.25" text-anchor="middle" class="tiny">varm</text>
+<line x1="602.5" y1="487.5" x2="602.5" y2="302.5" class="arrow flow-cyan"/>
+<rect x="532.5" y="377.0" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="602.5" y="395.0" text-anchor="middle" class="tiny">kjøling</text>
+<line x1="602.5" y1="302.5" x2="832.5" y2="317.5" class="arrow flow-red"/>
+<rect x="647.5" y="292.0" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="717.5" y="310.0" text-anchor="middle" class="tiny">våt eksos</text>
+<line x1="832.5" y1="317.5" x2="1040.0" y2="317.5" class="arrow flow-red"/>
+<rect x="866.25" y="299.5" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="936.25" y="317.5" text-anchor="middle" class="tiny">blanding</text>
+<line x1="1040.0" y1="317.5" x2="1182.5" y2="327.5" class="arrow flow-red"/>
+<rect x="1041.25" y="304.5" width="140" height="25" rx="12" fill="white" stroke="#e2e8f0"/>
+<text x="1111.25" y="322.5" text-anchor="middle" class="tiny">ut</text>
+<rect x="48" y="690" width="1184" height="42" rx="10" fill="#fff" stroke="#e2e8f0"/>
+<text x="64" y="716" class="small">Korrosjon i eksosbend og feil vanninjeksjon er vanlige årsaker til alvorlige følgeskader.</text>
+</svg>

@@ -1,0 +1,562 @@
+[
+  {
+    "id": "FM-001",
+    "feil": "Bestiller impeller fra bilde alene",
+    "hvorfor": "Tidspress gjør at første synlige spor føles tilstrekkelig.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Caterpillar (CAT) betyr det å kontrollere ESN, Serial Number Prefix og Arrangement Number i SIS / Parts Manual.",
+    "eksempel": "Typisk eksempel: høy temperatur fører til ønske om impeller, men riktig kontroll er sjøvannsfilter, impeller, varmeveksler og termostat."
+  },
+  {
+    "id": "FM-002",
+    "feil": "Bruker modellnavn uten Engine Type, Serial Number og Product Number",
+    "hvorfor": "Nye ansatte undervurderer hvor mange varianter samme motorfamilie kan ha.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Volvo Penta betyr det å kontrollere Engine Type, Serial Number og Product Number i Volvo Penta parts documentation.",
+    "eksempel": "Typisk eksempel: lavt oljetrykk fører til ønske om oljefilter, men riktig kontroll er oljenivå, filter, giver, viskositet og lekkasje."
+  },
+  {
+    "id": "FM-003",
+    "feil": "Lover levering før lagerstatus er bekreftet",
+    "hvorfor": "Kunden spør ofte om levering før teknisk grunnlag er komplett.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Mitsubishi betyr det å kontrollere engine model, serial number og mariniseringsleverandør i Mitsubishi/mariniseringsdokumentasjon.",
+    "eksempel": "Typisk eksempel: ujevn gange fører til ønske om drivstoffilter, men riktig kontroll er vann i diesel, luft, filterrestriksjon og matepumpe."
+  },
+  {
+    "id": "FM-004",
+    "feil": "Blander symptom og årsak",
+    "hvorfor": "Kunden beskriver driftserfaring, ikke diagnose.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Cummins betyr det å kontrollere ESN, CPL og dataplate i QuickServe / BOM.",
+    "eksempel": "Typisk eksempel: alarm og redusert effekt fører til ønske om trykksensor, men riktig kontroll er feilkode, rail pressure, kontakt og renhet."
+  },
+  {
+    "id": "FM-005",
+    "feil": "Glemmer å dokumentere produsentkilde",
+    "hvorfor": "Katalogoppslaget oppleves ferdig selv om kilde ikke er notert.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For MAN betyr det å kontrollere engine type, engine number og rating i MAN service documentation.",
+    "eksempel": "Typisk eksempel: lav effekt og sort røyk fører til ønske om turbocharger, men riktig kontroll er luftfilter, slanger, intercooler og eksosmottrykk."
+  },
+  {
+    "id": "FM-006",
+    "feil": "Overser supersession og kitinnhold",
+    "hvorfor": "Gamle fakturaer og gamle delnummer skaper falsk trygghet.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Scania betyr det å kontrollere engine number, application og rating i Scania parts catalogue.",
+    "eksempel": "Typisk eksempel: vannlekkasje eller varmgang fører til ønske om eksosbend, men riktig kontroll er korrosjon, vanninjeksjon, slange og mottrykk."
+  },
+  {
+    "id": "FM-007",
+    "feil": "Sender kundesvar uten tydelig neste steg",
+    "hvorfor": "Saken blir håndtert muntlig og mister sporbarhet.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Yanmar betyr det å kontrollere model code, serial number og marine gear/saildrive i Yanmar parts documentation.",
+    "eksempel": "Typisk eksempel: intermitterende alarm fører til ønske om sensor, men riktig kontroll er spenning, jord, kontakt, kabel og feilkode."
+  },
+  {
+    "id": "FM-008",
+    "feil": "Forveksler komplett enhet og reparasjonssett",
+    "hvorfor": "Komponentnavn brukes ulikt av kunde, verksted og leverandør.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Caterpillar (CAT) betyr det å kontrollere ESN, Serial Number Prefix og Arrangement Number i SIS / Parts Manual.",
+    "eksempel": "Typisk eksempel: klikkelyd uten start fører til ønske om startmotor, men riktig kontroll er batteri, hovedbryter, rele, solenoid og jord."
+  },
+  {
+    "id": "FM-009",
+    "feil": "Bestiller dynamo fra bilde alene",
+    "hvorfor": "Tidspress gjør at første synlige spor føles tilstrekkelig.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Volvo Penta betyr det å kontrollere Engine Type, Serial Number og Product Number i Volvo Penta parts documentation.",
+    "eksempel": "Typisk eksempel: lav ladespenning fører til ønske om dynamo, men riktig kontroll er reim, regulator, batteri og spenningsfall."
+  },
+  {
+    "id": "FM-010",
+    "feil": "Bruker modellnavn uten engine model, serial number og mariniseringsleverandør",
+    "hvorfor": "Nye ansatte undervurderer hvor mange varianter samme motorfamilie kan ha.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Mitsubishi betyr det å kontrollere engine model, serial number og mariniseringsleverandør i Mitsubishi/mariniseringsdokumentasjon.",
+    "eksempel": "Typisk eksempel: vibrasjon eller varm gearolje fører til ønske om gearoljekjøler, men riktig kontroll er oljenivå, kjøling, oppretting og belastning."
+  },
+  {
+    "id": "FM-011",
+    "feil": "Lover levering før lagerstatus er bekreftet",
+    "hvorfor": "Kunden spør ofte om levering før teknisk grunnlag er komplett.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Cummins betyr det å kontrollere ESN, CPL og dataplate i QuickServe / BOM.",
+    "eksempel": "Typisk eksempel: høy temperatur fører til ønske om impeller, men riktig kontroll er sjøvannsfilter, impeller, varmeveksler og termostat."
+  },
+  {
+    "id": "FM-012",
+    "feil": "Blander symptom og årsak",
+    "hvorfor": "Kunden beskriver driftserfaring, ikke diagnose.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For MAN betyr det å kontrollere engine type, engine number og rating i MAN service documentation.",
+    "eksempel": "Typisk eksempel: lavt oljetrykk fører til ønske om oljefilter, men riktig kontroll er oljenivå, filter, giver, viskositet og lekkasje."
+  },
+  {
+    "id": "FM-013",
+    "feil": "Glemmer å dokumentere produsentkilde",
+    "hvorfor": "Katalogoppslaget oppleves ferdig selv om kilde ikke er notert.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Scania betyr det å kontrollere engine number, application og rating i Scania parts catalogue.",
+    "eksempel": "Typisk eksempel: ujevn gange fører til ønske om drivstoffilter, men riktig kontroll er vann i diesel, luft, filterrestriksjon og matepumpe."
+  },
+  {
+    "id": "FM-014",
+    "feil": "Overser supersession og kitinnhold",
+    "hvorfor": "Gamle fakturaer og gamle delnummer skaper falsk trygghet.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Yanmar betyr det å kontrollere model code, serial number og marine gear/saildrive i Yanmar parts documentation.",
+    "eksempel": "Typisk eksempel: alarm og redusert effekt fører til ønske om trykksensor, men riktig kontroll er feilkode, rail pressure, kontakt og renhet."
+  },
+  {
+    "id": "FM-015",
+    "feil": "Sender kundesvar uten tydelig neste steg",
+    "hvorfor": "Saken blir håndtert muntlig og mister sporbarhet.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Caterpillar (CAT) betyr det å kontrollere ESN, Serial Number Prefix og Arrangement Number i SIS / Parts Manual.",
+    "eksempel": "Typisk eksempel: lav effekt og sort røyk fører til ønske om turbocharger, men riktig kontroll er luftfilter, slanger, intercooler og eksosmottrykk."
+  },
+  {
+    "id": "FM-016",
+    "feil": "Forveksler komplett enhet og reparasjonssett",
+    "hvorfor": "Komponentnavn brukes ulikt av kunde, verksted og leverandør.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Volvo Penta betyr det å kontrollere Engine Type, Serial Number og Product Number i Volvo Penta parts documentation.",
+    "eksempel": "Typisk eksempel: vannlekkasje eller varmgang fører til ønske om eksosbend, men riktig kontroll er korrosjon, vanninjeksjon, slange og mottrykk."
+  },
+  {
+    "id": "FM-017",
+    "feil": "Bestiller sensor fra bilde alene",
+    "hvorfor": "Tidspress gjør at første synlige spor føles tilstrekkelig.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Mitsubishi betyr det å kontrollere engine model, serial number og mariniseringsleverandør i Mitsubishi/mariniseringsdokumentasjon.",
+    "eksempel": "Typisk eksempel: intermitterende alarm fører til ønske om sensor, men riktig kontroll er spenning, jord, kontakt, kabel og feilkode."
+  },
+  {
+    "id": "FM-018",
+    "feil": "Bruker modellnavn uten ESN, CPL og dataplate",
+    "hvorfor": "Nye ansatte undervurderer hvor mange varianter samme motorfamilie kan ha.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Cummins betyr det å kontrollere ESN, CPL og dataplate i QuickServe / BOM.",
+    "eksempel": "Typisk eksempel: klikkelyd uten start fører til ønske om startmotor, men riktig kontroll er batteri, hovedbryter, rele, solenoid og jord."
+  },
+  {
+    "id": "FM-019",
+    "feil": "Lover levering før lagerstatus er bekreftet",
+    "hvorfor": "Kunden spør ofte om levering før teknisk grunnlag er komplett.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For MAN betyr det å kontrollere engine type, engine number og rating i MAN service documentation.",
+    "eksempel": "Typisk eksempel: lav ladespenning fører til ønske om dynamo, men riktig kontroll er reim, regulator, batteri og spenningsfall."
+  },
+  {
+    "id": "FM-020",
+    "feil": "Blander symptom og årsak",
+    "hvorfor": "Kunden beskriver driftserfaring, ikke diagnose.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Scania betyr det å kontrollere engine number, application og rating i Scania parts catalogue.",
+    "eksempel": "Typisk eksempel: vibrasjon eller varm gearolje fører til ønske om gearoljekjøler, men riktig kontroll er oljenivå, kjøling, oppretting og belastning."
+  },
+  {
+    "id": "FM-021",
+    "feil": "Glemmer å dokumentere produsentkilde",
+    "hvorfor": "Katalogoppslaget oppleves ferdig selv om kilde ikke er notert.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Yanmar betyr det å kontrollere model code, serial number og marine gear/saildrive i Yanmar parts documentation.",
+    "eksempel": "Typisk eksempel: høy temperatur fører til ønske om impeller, men riktig kontroll er sjøvannsfilter, impeller, varmeveksler og termostat."
+  },
+  {
+    "id": "FM-022",
+    "feil": "Overser supersession og kitinnhold",
+    "hvorfor": "Gamle fakturaer og gamle delnummer skaper falsk trygghet.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Caterpillar (CAT) betyr det å kontrollere ESN, Serial Number Prefix og Arrangement Number i SIS / Parts Manual.",
+    "eksempel": "Typisk eksempel: lavt oljetrykk fører til ønske om oljefilter, men riktig kontroll er oljenivå, filter, giver, viskositet og lekkasje."
+  },
+  {
+    "id": "FM-023",
+    "feil": "Sender kundesvar uten tydelig neste steg",
+    "hvorfor": "Saken blir håndtert muntlig og mister sporbarhet.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Volvo Penta betyr det å kontrollere Engine Type, Serial Number og Product Number i Volvo Penta parts documentation.",
+    "eksempel": "Typisk eksempel: ujevn gange fører til ønske om drivstoffilter, men riktig kontroll er vann i diesel, luft, filterrestriksjon og matepumpe."
+  },
+  {
+    "id": "FM-024",
+    "feil": "Forveksler komplett enhet og reparasjonssett",
+    "hvorfor": "Komponentnavn brukes ulikt av kunde, verksted og leverandør.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Mitsubishi betyr det å kontrollere engine model, serial number og mariniseringsleverandør i Mitsubishi/mariniseringsdokumentasjon.",
+    "eksempel": "Typisk eksempel: alarm og redusert effekt fører til ønske om trykksensor, men riktig kontroll er feilkode, rail pressure, kontakt og renhet."
+  },
+  {
+    "id": "FM-025",
+    "feil": "Bestiller turbocharger fra bilde alene",
+    "hvorfor": "Tidspress gjør at første synlige spor føles tilstrekkelig.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Cummins betyr det å kontrollere ESN, CPL og dataplate i QuickServe / BOM.",
+    "eksempel": "Typisk eksempel: lav effekt og sort røyk fører til ønske om turbocharger, men riktig kontroll er luftfilter, slanger, intercooler og eksosmottrykk."
+  },
+  {
+    "id": "FM-026",
+    "feil": "Bruker modellnavn uten engine type, engine number og rating",
+    "hvorfor": "Nye ansatte undervurderer hvor mange varianter samme motorfamilie kan ha.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For MAN betyr det å kontrollere engine type, engine number og rating i MAN service documentation.",
+    "eksempel": "Typisk eksempel: vannlekkasje eller varmgang fører til ønske om eksosbend, men riktig kontroll er korrosjon, vanninjeksjon, slange og mottrykk."
+  },
+  {
+    "id": "FM-027",
+    "feil": "Lover levering før lagerstatus er bekreftet",
+    "hvorfor": "Kunden spør ofte om levering før teknisk grunnlag er komplett.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Scania betyr det å kontrollere engine number, application og rating i Scania parts catalogue.",
+    "eksempel": "Typisk eksempel: intermitterende alarm fører til ønske om sensor, men riktig kontroll er spenning, jord, kontakt, kabel og feilkode."
+  },
+  {
+    "id": "FM-028",
+    "feil": "Blander symptom og årsak",
+    "hvorfor": "Kunden beskriver driftserfaring, ikke diagnose.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Yanmar betyr det å kontrollere model code, serial number og marine gear/saildrive i Yanmar parts documentation.",
+    "eksempel": "Typisk eksempel: klikkelyd uten start fører til ønske om startmotor, men riktig kontroll er batteri, hovedbryter, rele, solenoid og jord."
+  },
+  {
+    "id": "FM-029",
+    "feil": "Glemmer å dokumentere produsentkilde",
+    "hvorfor": "Katalogoppslaget oppleves ferdig selv om kilde ikke er notert.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Caterpillar (CAT) betyr det å kontrollere ESN, Serial Number Prefix og Arrangement Number i SIS / Parts Manual.",
+    "eksempel": "Typisk eksempel: lav ladespenning fører til ønske om dynamo, men riktig kontroll er reim, regulator, batteri og spenningsfall."
+  },
+  {
+    "id": "FM-030",
+    "feil": "Overser supersession og kitinnhold",
+    "hvorfor": "Gamle fakturaer og gamle delnummer skaper falsk trygghet.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Volvo Penta betyr det å kontrollere Engine Type, Serial Number og Product Number i Volvo Penta parts documentation.",
+    "eksempel": "Typisk eksempel: vibrasjon eller varm gearolje fører til ønske om gearoljekjøler, men riktig kontroll er oljenivå, kjøling, oppretting og belastning."
+  },
+  {
+    "id": "FM-031",
+    "feil": "Sender kundesvar uten tydelig neste steg",
+    "hvorfor": "Saken blir håndtert muntlig og mister sporbarhet.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Mitsubishi betyr det å kontrollere engine model, serial number og mariniseringsleverandør i Mitsubishi/mariniseringsdokumentasjon.",
+    "eksempel": "Typisk eksempel: høy temperatur fører til ønske om impeller, men riktig kontroll er sjøvannsfilter, impeller, varmeveksler og termostat."
+  },
+  {
+    "id": "FM-032",
+    "feil": "Forveksler komplett enhet og reparasjonssett",
+    "hvorfor": "Komponentnavn brukes ulikt av kunde, verksted og leverandør.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Cummins betyr det å kontrollere ESN, CPL og dataplate i QuickServe / BOM.",
+    "eksempel": "Typisk eksempel: lavt oljetrykk fører til ønske om oljefilter, men riktig kontroll er oljenivå, filter, giver, viskositet og lekkasje."
+  },
+  {
+    "id": "FM-033",
+    "feil": "Bestiller drivstoffilter fra bilde alene",
+    "hvorfor": "Tidspress gjør at første synlige spor føles tilstrekkelig.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For MAN betyr det å kontrollere engine type, engine number og rating i MAN service documentation.",
+    "eksempel": "Typisk eksempel: ujevn gange fører til ønske om drivstoffilter, men riktig kontroll er vann i diesel, luft, filterrestriksjon og matepumpe."
+  },
+  {
+    "id": "FM-034",
+    "feil": "Bruker modellnavn uten engine number, application og rating",
+    "hvorfor": "Nye ansatte undervurderer hvor mange varianter samme motorfamilie kan ha.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Scania betyr det å kontrollere engine number, application og rating i Scania parts catalogue.",
+    "eksempel": "Typisk eksempel: alarm og redusert effekt fører til ønske om trykksensor, men riktig kontroll er feilkode, rail pressure, kontakt og renhet."
+  },
+  {
+    "id": "FM-035",
+    "feil": "Lover levering før lagerstatus er bekreftet",
+    "hvorfor": "Kunden spør ofte om levering før teknisk grunnlag er komplett.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Yanmar betyr det å kontrollere model code, serial number og marine gear/saildrive i Yanmar parts documentation.",
+    "eksempel": "Typisk eksempel: lav effekt og sort røyk fører til ønske om turbocharger, men riktig kontroll er luftfilter, slanger, intercooler og eksosmottrykk."
+  },
+  {
+    "id": "FM-036",
+    "feil": "Blander symptom og årsak",
+    "hvorfor": "Kunden beskriver driftserfaring, ikke diagnose.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Caterpillar (CAT) betyr det å kontrollere ESN, Serial Number Prefix og Arrangement Number i SIS / Parts Manual.",
+    "eksempel": "Typisk eksempel: vannlekkasje eller varmgang fører til ønske om eksosbend, men riktig kontroll er korrosjon, vanninjeksjon, slange og mottrykk."
+  },
+  {
+    "id": "FM-037",
+    "feil": "Glemmer å dokumentere produsentkilde",
+    "hvorfor": "Katalogoppslaget oppleves ferdig selv om kilde ikke er notert.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Volvo Penta betyr det å kontrollere Engine Type, Serial Number og Product Number i Volvo Penta parts documentation.",
+    "eksempel": "Typisk eksempel: intermitterende alarm fører til ønske om sensor, men riktig kontroll er spenning, jord, kontakt, kabel og feilkode."
+  },
+  {
+    "id": "FM-038",
+    "feil": "Overser supersession og kitinnhold",
+    "hvorfor": "Gamle fakturaer og gamle delnummer skaper falsk trygghet.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Mitsubishi betyr det å kontrollere engine model, serial number og mariniseringsleverandør i Mitsubishi/mariniseringsdokumentasjon.",
+    "eksempel": "Typisk eksempel: klikkelyd uten start fører til ønske om startmotor, men riktig kontroll er batteri, hovedbryter, rele, solenoid og jord."
+  },
+  {
+    "id": "FM-039",
+    "feil": "Sender kundesvar uten tydelig neste steg",
+    "hvorfor": "Saken blir håndtert muntlig og mister sporbarhet.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Cummins betyr det å kontrollere ESN, CPL og dataplate i QuickServe / BOM.",
+    "eksempel": "Typisk eksempel: lav ladespenning fører til ønske om dynamo, men riktig kontroll er reim, regulator, batteri og spenningsfall."
+  },
+  {
+    "id": "FM-040",
+    "feil": "Forveksler komplett enhet og reparasjonssett",
+    "hvorfor": "Komponentnavn brukes ulikt av kunde, verksted og leverandør.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For MAN betyr det å kontrollere engine type, engine number og rating i MAN service documentation.",
+    "eksempel": "Typisk eksempel: vibrasjon eller varm gearolje fører til ønske om gearoljekjøler, men riktig kontroll er oljenivå, kjøling, oppretting og belastning."
+  },
+  {
+    "id": "FM-041",
+    "feil": "Bestiller impeller fra bilde alene",
+    "hvorfor": "Tidspress gjør at første synlige spor føles tilstrekkelig.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Scania betyr det å kontrollere engine number, application og rating i Scania parts catalogue.",
+    "eksempel": "Typisk eksempel: høy temperatur fører til ønske om impeller, men riktig kontroll er sjøvannsfilter, impeller, varmeveksler og termostat."
+  },
+  {
+    "id": "FM-042",
+    "feil": "Bruker modellnavn uten model code, serial number og marine gear/saildrive",
+    "hvorfor": "Nye ansatte undervurderer hvor mange varianter samme motorfamilie kan ha.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Yanmar betyr det å kontrollere model code, serial number og marine gear/saildrive i Yanmar parts documentation.",
+    "eksempel": "Typisk eksempel: lavt oljetrykk fører til ønske om oljefilter, men riktig kontroll er oljenivå, filter, giver, viskositet og lekkasje."
+  },
+  {
+    "id": "FM-043",
+    "feil": "Lover levering før lagerstatus er bekreftet",
+    "hvorfor": "Kunden spør ofte om levering før teknisk grunnlag er komplett.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Caterpillar (CAT) betyr det å kontrollere ESN, Serial Number Prefix og Arrangement Number i SIS / Parts Manual.",
+    "eksempel": "Typisk eksempel: ujevn gange fører til ønske om drivstoffilter, men riktig kontroll er vann i diesel, luft, filterrestriksjon og matepumpe."
+  },
+  {
+    "id": "FM-044",
+    "feil": "Blander symptom og årsak",
+    "hvorfor": "Kunden beskriver driftserfaring, ikke diagnose.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Volvo Penta betyr det å kontrollere Engine Type, Serial Number og Product Number i Volvo Penta parts documentation.",
+    "eksempel": "Typisk eksempel: alarm og redusert effekt fører til ønske om trykksensor, men riktig kontroll er feilkode, rail pressure, kontakt og renhet."
+  },
+  {
+    "id": "FM-045",
+    "feil": "Glemmer å dokumentere produsentkilde",
+    "hvorfor": "Katalogoppslaget oppleves ferdig selv om kilde ikke er notert.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Mitsubishi betyr det å kontrollere engine model, serial number og mariniseringsleverandør i Mitsubishi/mariniseringsdokumentasjon.",
+    "eksempel": "Typisk eksempel: lav effekt og sort røyk fører til ønske om turbocharger, men riktig kontroll er luftfilter, slanger, intercooler og eksosmottrykk."
+  },
+  {
+    "id": "FM-046",
+    "feil": "Overser supersession og kitinnhold",
+    "hvorfor": "Gamle fakturaer og gamle delnummer skaper falsk trygghet.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Cummins betyr det å kontrollere ESN, CPL og dataplate i QuickServe / BOM.",
+    "eksempel": "Typisk eksempel: vannlekkasje eller varmgang fører til ønske om eksosbend, men riktig kontroll er korrosjon, vanninjeksjon, slange og mottrykk."
+  },
+  {
+    "id": "FM-047",
+    "feil": "Sender kundesvar uten tydelig neste steg",
+    "hvorfor": "Saken blir håndtert muntlig og mister sporbarhet.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For MAN betyr det å kontrollere engine type, engine number og rating i MAN service documentation.",
+    "eksempel": "Typisk eksempel: intermitterende alarm fører til ønske om sensor, men riktig kontroll er spenning, jord, kontakt, kabel og feilkode."
+  },
+  {
+    "id": "FM-048",
+    "feil": "Forveksler komplett enhet og reparasjonssett",
+    "hvorfor": "Komponentnavn brukes ulikt av kunde, verksted og leverandør.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Scania betyr det å kontrollere engine number, application og rating i Scania parts catalogue.",
+    "eksempel": "Typisk eksempel: klikkelyd uten start fører til ønske om startmotor, men riktig kontroll er batteri, hovedbryter, rele, solenoid og jord."
+  },
+  {
+    "id": "FM-049",
+    "feil": "Bestiller dynamo fra bilde alene",
+    "hvorfor": "Tidspress gjør at første synlige spor føles tilstrekkelig.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Yanmar betyr det å kontrollere model code, serial number og marine gear/saildrive i Yanmar parts documentation.",
+    "eksempel": "Typisk eksempel: lav ladespenning fører til ønske om dynamo, men riktig kontroll er reim, regulator, batteri og spenningsfall."
+  },
+  {
+    "id": "FM-050",
+    "feil": "Bruker modellnavn uten ESN, Serial Number Prefix og Arrangement Number",
+    "hvorfor": "Nye ansatte undervurderer hvor mange varianter samme motorfamilie kan ha.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Caterpillar (CAT) betyr det å kontrollere ESN, Serial Number Prefix og Arrangement Number i SIS / Parts Manual.",
+    "eksempel": "Typisk eksempel: vibrasjon eller varm gearolje fører til ønske om gearoljekjøler, men riktig kontroll er oljenivå, kjøling, oppretting og belastning."
+  },
+  {
+    "id": "FM-051",
+    "feil": "Lover levering før lagerstatus er bekreftet",
+    "hvorfor": "Kunden spør ofte om levering før teknisk grunnlag er komplett.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Volvo Penta betyr det å kontrollere Engine Type, Serial Number og Product Number i Volvo Penta parts documentation.",
+    "eksempel": "Typisk eksempel: høy temperatur fører til ønske om impeller, men riktig kontroll er sjøvannsfilter, impeller, varmeveksler og termostat."
+  },
+  {
+    "id": "FM-052",
+    "feil": "Blander symptom og årsak",
+    "hvorfor": "Kunden beskriver driftserfaring, ikke diagnose.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Mitsubishi betyr det å kontrollere engine model, serial number og mariniseringsleverandør i Mitsubishi/mariniseringsdokumentasjon.",
+    "eksempel": "Typisk eksempel: lavt oljetrykk fører til ønske om oljefilter, men riktig kontroll er oljenivå, filter, giver, viskositet og lekkasje."
+  },
+  {
+    "id": "FM-053",
+    "feil": "Glemmer å dokumentere produsentkilde",
+    "hvorfor": "Katalogoppslaget oppleves ferdig selv om kilde ikke er notert.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Cummins betyr det å kontrollere ESN, CPL og dataplate i QuickServe / BOM.",
+    "eksempel": "Typisk eksempel: ujevn gange fører til ønske om drivstoffilter, men riktig kontroll er vann i diesel, luft, filterrestriksjon og matepumpe."
+  },
+  {
+    "id": "FM-054",
+    "feil": "Overser supersession og kitinnhold",
+    "hvorfor": "Gamle fakturaer og gamle delnummer skaper falsk trygghet.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For MAN betyr det å kontrollere engine type, engine number og rating i MAN service documentation.",
+    "eksempel": "Typisk eksempel: alarm og redusert effekt fører til ønske om trykksensor, men riktig kontroll er feilkode, rail pressure, kontakt og renhet."
+  },
+  {
+    "id": "FM-055",
+    "feil": "Sender kundesvar uten tydelig neste steg",
+    "hvorfor": "Saken blir håndtert muntlig og mister sporbarhet.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Scania betyr det å kontrollere engine number, application og rating i Scania parts catalogue.",
+    "eksempel": "Typisk eksempel: lav effekt og sort røyk fører til ønske om turbocharger, men riktig kontroll er luftfilter, slanger, intercooler og eksosmottrykk."
+  },
+  {
+    "id": "FM-056",
+    "feil": "Forveksler komplett enhet og reparasjonssett",
+    "hvorfor": "Komponentnavn brukes ulikt av kunde, verksted og leverandør.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Yanmar betyr det å kontrollere model code, serial number og marine gear/saildrive i Yanmar parts documentation.",
+    "eksempel": "Typisk eksempel: vannlekkasje eller varmgang fører til ønske om eksosbend, men riktig kontroll er korrosjon, vanninjeksjon, slange og mottrykk."
+  },
+  {
+    "id": "FM-057",
+    "feil": "Bestiller sensor fra bilde alene",
+    "hvorfor": "Tidspress gjør at første synlige spor føles tilstrekkelig.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Caterpillar (CAT) betyr det å kontrollere ESN, Serial Number Prefix og Arrangement Number i SIS / Parts Manual.",
+    "eksempel": "Typisk eksempel: intermitterende alarm fører til ønske om sensor, men riktig kontroll er spenning, jord, kontakt, kabel og feilkode."
+  },
+  {
+    "id": "FM-058",
+    "feil": "Bruker modellnavn uten Engine Type, Serial Number og Product Number",
+    "hvorfor": "Nye ansatte undervurderer hvor mange varianter samme motorfamilie kan ha.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Volvo Penta betyr det å kontrollere Engine Type, Serial Number og Product Number i Volvo Penta parts documentation.",
+    "eksempel": "Typisk eksempel: klikkelyd uten start fører til ønske om startmotor, men riktig kontroll er batteri, hovedbryter, rele, solenoid og jord."
+  },
+  {
+    "id": "FM-059",
+    "feil": "Lover levering før lagerstatus er bekreftet",
+    "hvorfor": "Kunden spør ofte om levering før teknisk grunnlag er komplett.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Mitsubishi betyr det å kontrollere engine model, serial number og mariniseringsleverandør i Mitsubishi/mariniseringsdokumentasjon.",
+    "eksempel": "Typisk eksempel: lav ladespenning fører til ønske om dynamo, men riktig kontroll er reim, regulator, batteri og spenningsfall."
+  },
+  {
+    "id": "FM-060",
+    "feil": "Blander symptom og årsak",
+    "hvorfor": "Kunden beskriver driftserfaring, ikke diagnose.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Cummins betyr det å kontrollere ESN, CPL og dataplate i QuickServe / BOM.",
+    "eksempel": "Typisk eksempel: vibrasjon eller varm gearolje fører til ønske om gearoljekjøler, men riktig kontroll er oljenivå, kjøling, oppretting og belastning."
+  },
+  {
+    "id": "FM-061",
+    "feil": "Glemmer å dokumentere produsentkilde",
+    "hvorfor": "Katalogoppslaget oppleves ferdig selv om kilde ikke er notert.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For MAN betyr det å kontrollere engine type, engine number og rating i MAN service documentation.",
+    "eksempel": "Typisk eksempel: høy temperatur fører til ønske om impeller, men riktig kontroll er sjøvannsfilter, impeller, varmeveksler og termostat."
+  },
+  {
+    "id": "FM-062",
+    "feil": "Overser supersession og kitinnhold",
+    "hvorfor": "Gamle fakturaer og gamle delnummer skaper falsk trygghet.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Scania betyr det å kontrollere engine number, application og rating i Scania parts catalogue.",
+    "eksempel": "Typisk eksempel: lavt oljetrykk fører til ønske om oljefilter, men riktig kontroll er oljenivå, filter, giver, viskositet og lekkasje."
+  },
+  {
+    "id": "FM-063",
+    "feil": "Sender kundesvar uten tydelig neste steg",
+    "hvorfor": "Saken blir håndtert muntlig og mister sporbarhet.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Yanmar betyr det å kontrollere model code, serial number og marine gear/saildrive i Yanmar parts documentation.",
+    "eksempel": "Typisk eksempel: ujevn gange fører til ønske om drivstoffilter, men riktig kontroll er vann i diesel, luft, filterrestriksjon og matepumpe."
+  },
+  {
+    "id": "FM-064",
+    "feil": "Forveksler komplett enhet og reparasjonssett",
+    "hvorfor": "Komponentnavn brukes ulikt av kunde, verksted og leverandør.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Caterpillar (CAT) betyr det å kontrollere ESN, Serial Number Prefix og Arrangement Number i SIS / Parts Manual.",
+    "eksempel": "Typisk eksempel: alarm og redusert effekt fører til ønske om trykksensor, men riktig kontroll er feilkode, rail pressure, kontakt og renhet."
+  },
+  {
+    "id": "FM-065",
+    "feil": "Bestiller turbocharger fra bilde alene",
+    "hvorfor": "Tidspress gjør at første synlige spor føles tilstrekkelig.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Volvo Penta betyr det å kontrollere Engine Type, Serial Number og Product Number i Volvo Penta parts documentation.",
+    "eksempel": "Typisk eksempel: lav effekt og sort røyk fører til ønske om turbocharger, men riktig kontroll er luftfilter, slanger, intercooler og eksosmottrykk."
+  },
+  {
+    "id": "FM-066",
+    "feil": "Bruker modellnavn uten engine model, serial number og mariniseringsleverandør",
+    "hvorfor": "Nye ansatte undervurderer hvor mange varianter samme motorfamilie kan ha.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Mitsubishi betyr det å kontrollere engine model, serial number og mariniseringsleverandør i Mitsubishi/mariniseringsdokumentasjon.",
+    "eksempel": "Typisk eksempel: vannlekkasje eller varmgang fører til ønske om eksosbend, men riktig kontroll er korrosjon, vanninjeksjon, slange og mottrykk."
+  },
+  {
+    "id": "FM-067",
+    "feil": "Lover levering før lagerstatus er bekreftet",
+    "hvorfor": "Kunden spør ofte om levering før teknisk grunnlag er komplett.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Cummins betyr det å kontrollere ESN, CPL og dataplate i QuickServe / BOM.",
+    "eksempel": "Typisk eksempel: intermitterende alarm fører til ønske om sensor, men riktig kontroll er spenning, jord, kontakt, kabel og feilkode."
+  },
+  {
+    "id": "FM-068",
+    "feil": "Blander symptom og årsak",
+    "hvorfor": "Kunden beskriver driftserfaring, ikke diagnose.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For MAN betyr det å kontrollere engine type, engine number og rating i MAN service documentation.",
+    "eksempel": "Typisk eksempel: klikkelyd uten start fører til ønske om startmotor, men riktig kontroll er batteri, hovedbryter, rele, solenoid og jord."
+  },
+  {
+    "id": "FM-069",
+    "feil": "Glemmer å dokumentere produsentkilde",
+    "hvorfor": "Katalogoppslaget oppleves ferdig selv om kilde ikke er notert.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Scania betyr det å kontrollere engine number, application og rating i Scania parts catalogue.",
+    "eksempel": "Typisk eksempel: lav ladespenning fører til ønske om dynamo, men riktig kontroll er reim, regulator, batteri og spenningsfall."
+  },
+  {
+    "id": "FM-070",
+    "feil": "Overser supersession og kitinnhold",
+    "hvorfor": "Gamle fakturaer og gamle delnummer skaper falsk trygghet.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Yanmar betyr det å kontrollere model code, serial number og marine gear/saildrive i Yanmar parts documentation.",
+    "eksempel": "Typisk eksempel: vibrasjon eller varm gearolje fører til ønske om gearoljekjøler, men riktig kontroll er oljenivå, kjøling, oppretting og belastning."
+  },
+  {
+    "id": "FM-071",
+    "feil": "Sender kundesvar uten tydelig neste steg",
+    "hvorfor": "Saken blir håndtert muntlig og mister sporbarhet.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Caterpillar (CAT) betyr det å kontrollere ESN, Serial Number Prefix og Arrangement Number i SIS / Parts Manual.",
+    "eksempel": "Typisk eksempel: høy temperatur fører til ønske om impeller, men riktig kontroll er sjøvannsfilter, impeller, varmeveksler og termostat."
+  },
+  {
+    "id": "FM-072",
+    "feil": "Forveksler komplett enhet og reparasjonssett",
+    "hvorfor": "Komponentnavn brukes ulikt av kunde, verksted og leverandør.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Volvo Penta betyr det å kontrollere Engine Type, Serial Number og Product Number i Volvo Penta parts documentation.",
+    "eksempel": "Typisk eksempel: lavt oljetrykk fører til ønske om oljefilter, men riktig kontroll er oljenivå, filter, giver, viskositet og lekkasje."
+  },
+  {
+    "id": "FM-073",
+    "feil": "Bestiller drivstoffilter fra bilde alene",
+    "hvorfor": "Tidspress gjør at første synlige spor føles tilstrekkelig.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Mitsubishi betyr det å kontrollere engine model, serial number og mariniseringsleverandør i Mitsubishi/mariniseringsdokumentasjon.",
+    "eksempel": "Typisk eksempel: ujevn gange fører til ønske om drivstoffilter, men riktig kontroll er vann i diesel, luft, filterrestriksjon og matepumpe."
+  },
+  {
+    "id": "FM-074",
+    "feil": "Bruker modellnavn uten ESN, CPL og dataplate",
+    "hvorfor": "Nye ansatte undervurderer hvor mange varianter samme motorfamilie kan ha.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Cummins betyr det å kontrollere ESN, CPL og dataplate i QuickServe / BOM.",
+    "eksempel": "Typisk eksempel: alarm og redusert effekt fører til ønske om trykksensor, men riktig kontroll er feilkode, rail pressure, kontakt og renhet."
+  },
+  {
+    "id": "FM-075",
+    "feil": "Lover levering før lagerstatus er bekreftet",
+    "hvorfor": "Kunden spør ofte om levering før teknisk grunnlag er komplett.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For MAN betyr det å kontrollere engine type, engine number og rating i MAN service documentation.",
+    "eksempel": "Typisk eksempel: lav effekt og sort røyk fører til ønske om turbocharger, men riktig kontroll er luftfilter, slanger, intercooler og eksosmottrykk."
+  },
+  {
+    "id": "FM-076",
+    "feil": "Blander symptom og årsak",
+    "hvorfor": "Kunden beskriver driftserfaring, ikke diagnose.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Scania betyr det å kontrollere engine number, application og rating i Scania parts catalogue.",
+    "eksempel": "Typisk eksempel: vannlekkasje eller varmgang fører til ønske om eksosbend, men riktig kontroll er korrosjon, vanninjeksjon, slange og mottrykk."
+  },
+  {
+    "id": "FM-077",
+    "feil": "Glemmer å dokumentere produsentkilde",
+    "hvorfor": "Katalogoppslaget oppleves ferdig selv om kilde ikke er notert.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Yanmar betyr det å kontrollere model code, serial number og marine gear/saildrive i Yanmar parts documentation.",
+    "eksempel": "Typisk eksempel: intermitterende alarm fører til ønske om sensor, men riktig kontroll er spenning, jord, kontakt, kabel og feilkode."
+  },
+  {
+    "id": "FM-078",
+    "feil": "Overser supersession og kitinnhold",
+    "hvorfor": "Gamle fakturaer og gamle delnummer skaper falsk trygghet.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Caterpillar (CAT) betyr det å kontrollere ESN, Serial Number Prefix og Arrangement Number i SIS / Parts Manual.",
+    "eksempel": "Typisk eksempel: klikkelyd uten start fører til ønske om startmotor, men riktig kontroll er batteri, hovedbryter, rele, solenoid og jord."
+  },
+  {
+    "id": "FM-079",
+    "feil": "Sender kundesvar uten tydelig neste steg",
+    "hvorfor": "Saken blir håndtert muntlig og mister sporbarhet.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Volvo Penta betyr det å kontrollere Engine Type, Serial Number og Product Number i Volvo Penta parts documentation.",
+    "eksempel": "Typisk eksempel: lav ladespenning fører til ønske om dynamo, men riktig kontroll er reim, regulator, batteri og spenningsfall."
+  },
+  {
+    "id": "FM-080",
+    "feil": "Forveksler komplett enhet og reparasjonssett",
+    "hvorfor": "Komponentnavn brukes ulikt av kunde, verksted og leverandør.",
+    "unngas": "Stopp saken til motoridentitet, komponentposisjon og produsentkilde er dokumentert. For Mitsubishi betyr det å kontrollere engine model, serial number og mariniseringsleverandør i Mitsubishi/mariniseringsdokumentasjon.",
+    "eksempel": "Typisk eksempel: vibrasjon eller varm gearolje fører til ønske om gearoljekjøler, men riktig kontroll er oljenivå, kjøling, oppretting og belastning."
+  }
+]
