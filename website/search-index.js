@@ -39528,6 +39528,122 @@ function initWorkSimulator() {
   startSimCase('phone');
 }
 
+function chapterPartsForInteractive(chapterId) {
+  const direct = PARTS_DATABASE.filter(p => p.relatedChapter === chapterId).slice(0, 4);
+  if (direct.length) return direct;
+  const fallback = PARTS_DATABASE.filter((_, index) => index % 50 === Number(chapterId) % 50).slice(0, 4);
+  return fallback.length ? fallback : PARTS_DATABASE.slice(0, 4);
+}
+function simulatorModesForChapter(chapterId) {
+  const n = Number(chapterId);
+  if (n >= 26 && n <= 32) return ['parts', 'workshop', 'phone'];
+  if ([12, 13, 14, 15, 17, 39, 41].includes(n)) return ['parts', 'phone', 'workshop'];
+  if ([18, 21, 22, 23, 24, 25, 42, 43].includes(n)) return ['difficult', 'email', 'warranty'];
+  if ([19, 20, 38, 40].includes(n)) return ['time', 'workshop', 'email'];
+  if ([11, 16, 33, 34, 35, 36, 37, 44, 45, 46].includes(n)) return ['troubleshooting', 'workshop', 'daily'];
+  return ['phone', 'parts', 'troubleshooting'];
+}
+function chapterWorkshopTip(chapterId) {
+  const n = Number(chapterId);
+  if (n >= 26 && n <= 32) return 'Sjekk alltid produsentens identifikasjonsfelt før du sammenligner delnummer. Samme motornavn kan ha flere varianter.';
+  if ([12, 13, 14, 15, 17, 39, 41].includes(n)) return 'Be om bilde av typeplate og komponent. Avskrevne tegn, gamle nummer og posisjon på motoren er vanlige feilkilder.';
+  if ([18, 19, 20, 21, 22, 23, 24, 25].includes(n)) return 'Når tempoet øker, skriv kortere, men ikke hopp over forbehold, neste steg og hvem som eier saken.';
+  if ([33, 34, 35].includes(n)) return 'På eldre eller ombygde motorer er historikk og bilder like viktige som modellnavn. Marker alltid usikkerhet tydelig.';
+  return 'Tenk system først og del etterpå: symptom, kontroll, årsak, delnummer og dokumentasjon må henge sammen.';
+}
+function chapterStepLabels(chapterId) {
+  const n = Number(chapterId);
+  if ([12, 13, 14, 15, 17, 39, 41].includes(n)) return ['Finn motor-ID', 'Bekreft variant', 'Sjekk delnummer', 'Dokumenter forbehold'];
+  if ([18, 21, 22, 23, 24, 25, 42].includes(n)) return ['Lytt til kunden', 'Avklar fakta', 'Velg neste steg', 'Svar skriftlig'];
+  if (n >= 26 && n <= 32) return ['Velg produsent', 'Finn korrekt ID-felt', 'Sjekk katalog', 'Verifiser supersession'];
+  if ([11, 16, 33, 34, 35, 36, 37, 44, 45, 46].includes(n)) return ['Forstå systemet', 'Observer symptom', 'Kontroller komponent', 'Anbefal tiltak'];
+  return ['Les situasjonen', 'Samle data', 'Kontroller kilde', 'Følg opp saken'];
+}
+function renderInteractiveChapterBlock(chapter) {
+  const quiz = quizById(chapter.chapter);
+  const question = quiz?.questions?.[0];
+  const parts = chapterPartsForInteractive(chapter.chapter);
+  const steps = chapterStepLabels(chapter.chapter);
+  const simModes = simulatorModesForChapter(chapter.chapter);
+  return `<section class="chapter-interactive" data-interactive-chapter="${chapter.chapter}">
+    <div class="interactive-head"><span class="kicker">Interaktiv trening</span><h2>Øv mens du leser kapittel ${chapter.chapter}</h2><p>Bruk illustrasjoner, delkort, stegvis arbeidsflyt, verkstedtips og korte spørsmål for å gjøre kapitlet praktisk.</p></div>
+    <div class="interactive-chapter-grid">
+      <article class="interactive-panel">
+        <h3>Illustrasjoner og motordeler</h3>
+        <div class="part-card-grid">${parts.map(part => `<div class="part-card"><div class="part-visual" aria-hidden="true"><span></span></div><strong>${escapeHtml(part.component)}</strong><em>${escapeHtml(part.system)} · ${escapeHtml(part.manufacturer)}</em><small>${escapeHtml(part.partNumber)}</small><p>Kontroller faktisk delnummer, variant og supersession mot produsentens dokumentasjon.</p></div>`).join('')}</div>
+      </article>
+      <article class="interactive-panel">
+        <h3>Steg-for-steg</h3>
+        <div class="step-animation">${steps.map((step, index) => `<div class="flow-step" style="--step:${index}"><span>${index + 1}</span><strong>${escapeHtml(step)}</strong></div>`).join('')}</div>
+        <button class="secondary mini" data-run-steps>Spill av steg</button>
+      </article>
+      <article class="interactive-panel">
+        <h3>Vanlige feil</h3>
+        <ul>
+          <li>Bekrefter del før motoridentitet er sikker.</li>
+          <li>Bruker bilde som eneste grunnlag for bestilling.</li>
+          <li>Glemmer å sjekke variant, side, antall eller kitinnhold.</li>
+        </ul>
+      </article>
+      <article class="interactive-panel workshop-tip">
+        <h3>Tips fra verkstedet</h3>
+        <p>${escapeHtml(chapterWorkshopTip(chapter.chapter))}</p>
+      </article>
+      <article class="interactive-panel">
+        <h3>Miniquiz underveis</h3>
+        ${question ? `<p>${escapeHtml(question.question)}</p><div class="mini-quiz">${question.choices.map((choice, index) => `<button data-mini-answer="${index}" data-correct="${index === question.answer ? 'true' : 'false'}">${escapeHtml(choice)}</button>`).join('')}</div><p class="mini-feedback muted hidden">${escapeHtml(question.explanation)}</p>` : '<p class="muted">Ingen quiz er koblet til dette kapitlet ennå.</p>'}
+      </article>
+      <article class="interactive-panel">
+        <h3>Work Simulator</h3>
+        <p>Tren kapitlet i realistiske saker.</p>
+        <div class="action-row">${simModes.map(mode => `<button class="secondary" data-start-sim="${mode}">${escapeHtml(simModeLabel(mode))}</button>`).join('')}</div>
+      </article>
+    </div>
+    <div class="interactive-summary"><strong>Oppsummering til slutt:</strong> Forklar kapitlets hovedpoeng med egne ord, gjennomfør minst ett simulatorvalg og noter ett tema du vil repetere senere.</div>
+  </section>`;
+}
+function initInteractiveChapters() {
+  $$('.chapter-card').forEach(card => {
+    if ($('.chapter-interactive', card)) return;
+    const chapter = chapterById(card.dataset.chapter);
+    const body = $('.chapter-body', card);
+    if (!chapter || !body) return;
+    const firstFigure = $('figure', body);
+    if (firstFigure) firstFigure.insertAdjacentHTML('afterend', renderInteractiveChapterBlock(chapter));
+    else body.insertAdjacentHTML('afterbegin', renderInteractiveChapterBlock(chapter));
+  });
+  document.addEventListener('click', event => {
+    const stepBtn = event.target.closest('[data-run-steps]');
+    if (stepBtn) {
+      const block = stepBtn.closest('.chapter-interactive');
+      block?.classList.remove('steps-running');
+      void block?.offsetWidth;
+      block?.classList.add('steps-running');
+    }
+    const mini = event.target.closest('[data-mini-answer]');
+    if (mini) {
+      const panel = mini.closest('.interactive-panel');
+      const ok = mini.dataset.correct === 'true';
+      $$('[data-mini-answer]', panel).forEach(btn => {
+        btn.disabled = true;
+        btn.classList.toggle('correct', btn.dataset.correct === 'true');
+        btn.classList.toggle('wrong', btn === mini && !ok);
+      });
+      const feedback = $('.mini-feedback', panel);
+      if (feedback) {
+        feedback.classList.remove('hidden');
+        feedback.innerHTML = `<strong>${ok ? 'Riktig.' : 'Ikke helt.'}</strong> ${feedback.textContent}`;
+      }
+    }
+    const sim = event.target.closest('[data-start-sim]');
+    if (sim) {
+      setView('work-simulator');
+      startSimCase(sim.dataset.startSim);
+      $('#view-work-simulator')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+}
+
 function init() {
   document.documentElement.dataset.theme = state.theme || 'light';
   bindEvents();
@@ -39538,6 +39654,7 @@ function init() {
   initPhaseModules();
   initMarineTrainer();
   initWorkSimulator();
+  initInteractiveChapters();
   updateProgressUI();
   openChapter(state.lastVisited || '01');
   setView('dashboard');
