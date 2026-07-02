@@ -44,6 +44,20 @@ button:hover { filter:brightness(.97); transform:translateY(-1px); }
 .status-card strong { color:var(--accent); }
 .status-card em { color:var(--muted); font-style:normal; font-size:12px; }
 .status-card.done { border-color:color-mix(in srgb,var(--good) 45%,var(--line)); background:color-mix(in srgb,var(--good) 10%,var(--paper)); }
+.startplan-dashboard { border-color:color-mix(in srgb,var(--accent) 35%,var(--line)); background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 8%,var(--paper)),var(--paper)); }
+.startplan-shell { display:grid; gap:18px; }
+.startplan-hero { background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 14%,var(--paper)),var(--paper)); }
+.startplan-hero h2 { margin:0 0 8px; padding:0; border:0; font-size:32px; }
+.startplan-metrics,.startplan-grid,.milestone-grid { display:grid; gap:12px; }
+.startplan-metrics { grid-template-columns:repeat(4,minmax(0,1fr)); margin-top:18px; }
+.startplan-metrics div,.startplan-grid article,.milestone-grid article { padding:15px; background:var(--paper-2); border:1px solid var(--line); border-radius:var(--radius); }
+.startplan-metrics strong { display:block; color:var(--accent); font-size:20px; }
+.startplan-metrics span { color:var(--muted); font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.06em; }
+.startplan-grid { grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); }
+.milestone-grid { grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); }
+.startplan-grid strong,.milestone-grid strong { display:block; margin-bottom:5px; color:var(--ink); }
+.startplan-grid p,.milestone-grid p { margin:0; color:var(--muted); }
+.startplan-checklist li { margin:8px 0; }
 #view-chapters { grid-template-columns:300px minmax(0,1fr); gap:18px; }
 #view-chapters.active-view { display:grid; }
 .chapter-sidebar { position:sticky; top:64px; align-self:start; max-height:calc(100vh - 84px); overflow:auto; padding:18px; background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); }
@@ -107,8 +121,8 @@ figcaption { margin-top:8px; color:var(--muted); font-size:13px; }
 .install-dialog p { margin:0 0 18px; color:var(--muted); }
 .install-close { position:absolute; top:12px; right:12px; width:34px; height:34px; padding:0; color:var(--ink); background:var(--paper-2); border:1px solid var(--line); border-radius:50%; }
 @media (max-width:1100px) { .dashboard-grid,.quick-grid { grid-template-columns:1fr 1fr; } .maker-grid { grid-template-columns:1fr 1fr; } #view-chapters.active-view { grid-template-columns:1fr; } .chapter-sidebar { position:relative; top:auto; max-height:none; } }
-@media (max-width:760px) { .app-header { display:block; padding:22px; } .header-actions { justify-content:flex-start; margin-top:14px; } .app-shell { padding:14px; } .dashboard-grid,.quick-grid,.search-grid,.maker-grid { grid-template-columns:1fr; } .split-head,.chapter-toolbar,.maker-head { display:block; } .chapter-card,.panel { padding:18px; } .app-tabs { padding:8px 10px; } }
-@media print { .app-header,.app-tabs,.chapter-sidebar,.header-actions,.action-row,.mark-complete,.ghost,.danger,#view-dashboard,#view-quiz,#view-search,#view-quickrefs,#view-manufacturers { display:none !important; } body { background:white; color:#111827; } .app-shell { max-width:none; padding:0; } #view-chapters,.chapter-card,.chapter-card.active-chapter { display:block !important; box-shadow:none; border:0; padding:0; } .chapter-card { page-break-before:always; } figure,.question,.panel { page-break-inside:avoid; } }
+@media (max-width:760px) { .app-header { display:block; padding:22px; } .header-actions { justify-content:flex-start; margin-top:14px; } .app-shell { padding:14px; } .dashboard-grid,.quick-grid,.search-grid,.maker-grid,.startplan-metrics { grid-template-columns:1fr; } .split-head,.chapter-toolbar,.maker-head { display:block; } .chapter-card,.panel { padding:18px; } .app-tabs { padding:8px 10px; } }
+@media print { .app-header,.app-tabs,.chapter-sidebar,.header-actions,.action-row,.mark-complete,.ghost,.danger,#view-dashboard,#view-startplan,#view-quiz,#view-search,#view-quickrefs,#view-manufacturers { display:none !important; } body { background:white; color:#111827; } .app-shell { max-width:none; padding:0; } #view-chapters,.chapter-card,.chapter-card.active-chapter { display:block !important; box-shadow:none; border:0; padding:0; } .chapter-card { page-break-before:always; } figure,.question,.panel { page-break-inside:avoid; } }
 
 
 /* Phase 7-10 modules */

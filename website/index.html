@@ -24,6 +24,7 @@
   </header>
   <nav class="app-tabs" aria-label="Hovedmeny">
     <button data-view="dashboard" class="active">Dashboard</button>
+    <button data-view="startplan">Startplan</button>
     <button data-view="chapters">Kapitler</button>
     <button data-view="quiz">Quiz</button>
     <button data-view="trainer">Trainer</button>
@@ -44,8 +45,100 @@
         <article class="metric"><strong id="quizAverage">0%</strong><span>snitt på quiz</span></article>
         <article class="metric"><strong id="lastVisited">Ingen</strong><span>siste besøkte kapittel</span></article>
       </div>
-      <div class="action-row"><button id="continueBtn">Fortsett</button><button id="recommendedBtn" class="secondary">Anbefalt neste</button><button data-view-jump="quiz" class="secondary">Ta quiz</button></div>
+      <div class="action-row"><button id="continueBtn">Fortsett</button><button id="recommendedBtn" class="secondary">Anbefalt neste</button><button data-view-jump="startplan" class="secondary">Åpne Startplan</button><button data-view-jump="quiz" class="secondary">Ta quiz</button></div>
+      <div class="panel startplan-dashboard"><span class="kicker">Startplan</span><h3>Forberedelse frem til jobbstart i desember</h3><p>Følg en fast rytme med kapitler, quiz, repetisjon og Work Simulator-oppgaver hver uke.</p><div class="action-row"><button data-view-jump="startplan">Se planen</button><button data-view-jump="trainer" class="secondary">Tren daglig</button><button data-view-jump="work-simulator" class="secondary">Start simulering</button></div></div>
       <div class="panel"><h3>Kapitteloversikt</h3><div id="dashboardChapterList" class="chapter-status-grid"></div></div>
+    </section>
+
+    <section id="view-startplan" class="view">
+      <div class="startplan-shell">
+        <section class="panel startplan-hero">
+          <span class="kicker">Startplan</span>
+          <h2>Forberedelse til jobbstart i desember</h2>
+          <p>Planen er laget for å bygge trygghet i marine dieselmotorer, reservedeler, serienummer, teknisk kundeservice og praktisk arbeidsflyt før første arbeidsdag.</p>
+          <div class="startplan-metrics">
+            <div><strong>30-45 min</strong><span>daglig læring</span></div>
+            <div><strong>5 dager</strong><span>per uke</span></div>
+            <div><strong>3+2+1</strong><span>kapittel, quiz, simulator</span></div>
+            <div><strong>Desember</strong><span>klar for oppstart</span></div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h3>Daglig læringsplan</h3>
+          <div class="startplan-grid">
+            <article><strong>Mandag</strong><p>Les anbefalt kapittel for uken. Noter nye fagord på norsk og engelsk.</p></article>
+            <article><strong>Tirsdag</strong><p>Repeter systemforståelse: komponent, funksjon, symptom og mulig feilårsak.</p></article>
+            <article><strong>Onsdag</strong><p>Ta quiz og skriv ned alle spørsmål du bommer på.</p></article>
+            <article><strong>Torsdag</strong><p>Kjør Work Simulator med kunde-, verksted- eller garantisak.</p></article>
+            <article><strong>Fredag</strong><p>Oppsummer uken: hva kan du forklare uten hjelp, og hva må repeteres?</p></article>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h3>Ukentlig plan frem til desember</h3>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Uke</th><th>Hovedmål</th><th>Anbefalte kapitler</th><th>Quizmål</th><th>Simulatoroppgaver</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Forstå rollen og arbeidsflyten</td><td>01, 02, 03</td><td>2 quizzer, minst 80%</td><td>2 kundetelefoner</td></tr>
+              <tr><td>2</td><td>Nøyaktighet, dokumentasjon og fagbegreper</td><td>04, 05, 06</td><td>3 quizzer, skriv feilnotat</td><td>1 e-post + 1 tidsutfordring</td></tr>
+              <tr><td>3</td><td>Kundebehov og ordregrunnlag</td><td>07, 08, 09</td><td>3 quizzer, minst 85%</td><td>3 kundesaker</td></tr>
+              <tr><td>4</td><td>Kundekommunikasjon og motoroppbygning</td><td>10, 11, 12</td><td>2 quizzer + repetisjon</td><td>2 verksteddialoger</td></tr>
+              <tr><td>5</td><td>Motoridentifikasjon og serienummer</td><td>13, 14, 15</td><td>3 quizzer, forklar ID-prosess muntlig</td><td>3 deleoppslag</td></tr>
+              <tr><td>6</td><td>Reservedelskategorier og delnummer</td><td>16, 17, 18</td><td>3 quizzer, minst 85%</td><td>2 feilbestillingscaser</td></tr>
+              <tr><td>7</td><td>Hastesaker og leverandøroppfølging</td><td>19, 20, 21</td><td>2 quizzer</td><td>2 tidsutfordringer + 1 e-post</td></tr>
+              <tr><td>8</td><td>Uklare opplysninger, forsinkelser og klager</td><td>22, 23, 24, 25</td><td>4 quizzer, minst 80%</td><td>2 vanskelige kunder + 1 garanti</td></tr>
+              <tr><td>9</td><td>Caterpillar og Volvo Penta</td><td>26, 27</td><td>2 produsentquizzer</td><td>2 merkevise deleoppslag</td></tr>
+              <tr><td>10</td><td>Mitsubishi og Cummins</td><td>28, 29</td><td>2 produsentquizzer</td><td>2 verkstedscaser</td></tr>
+              <tr><td>11</td><td>MAN, Scania og Yanmar</td><td>30, 31, 32</td><td>3 produsentquizzer</td><td>3 merkevise kundesaker</td></tr>
+              <tr><td>12</td><td>Kjøling, smøring og drivstoff</td><td>33, 34, 35</td><td>3 systemquizzer</td><td>3 feilsøkingssaker</td></tr>
+              <tr><td>13</td><td>Sikkerhet, miljø og kontrollister</td><td>36, 37, 38</td><td>2 quizzer + sjekklisteprøve</td><td>1 garanti + 1 verksted</td></tr>
+              <tr><td>14</td><td>Validering og ordreoppfølging</td><td>39, 40, 41</td><td>3 quizzer, minst 85%</td><td>3 reservedelsoppslag</td></tr>
+              <tr><td>15</td><td>Akutt support og nyansatt-feller</td><td>42, 43, 44</td><td>3 quizzer</td><td>2 tidsutfordringer + daglig oppdrag</td></tr>
+              <tr><td>16</td><td>Kvalitet, fremtidig service og oppsummering</td><td>45, 46, 47</td><td>3 quizzer, identifiser svake tema</td><td>2 blandede simuleringer</td></tr>
+              <tr><td>17</td><td>Ordliste, spørsmål og referanser</td><td>48, 49, 50</td><td>3 quizzer + flashcards</td><td>1 e-post + 1 deleoppslag</td></tr>
+              <tr><td>18-20</td><td>Repetisjon av svake tema</td><td>Velg 6-9 svakeste kapitler</td><td>Alle svake quizzer til 90%</td><td>Minst 8 blandede saker</td></tr>
+              <tr><td>21-22</td><td>Arbeidsdagstrening</td><td>06, 12, 17, 20, 25, 39</td><td>5 kontrollquizzer</td><td>3 daglige oppdrag</td></tr>
+              <tr><td>23-24</td><td>Desemberklar</td><td>26-32 + egne svake tema</td><td>Sluttgjennomgang minst 85%</td><td>Full arbeidsdag i simulator</td></tr>
+            </tbody>
+          </table></div>
+        </section>
+
+        <section class="panel">
+          <h3>Månedlige milepæler</h3>
+          <div class="milestone-grid">
+            <article><strong>Juli</strong><p>Forstå grunnleggende motor, arbeidsflyt, kundedialog og dokumentasjon.</p></article>
+            <article><strong>August</strong><p>Bli trygg på serienummer, motornummer, delnummer og reservedelskategorier.</p></article>
+            <article><strong>September</strong><p>Kunne håndtere vanlige kundesaker, hastesaker, klager og produsentforskjeller.</p></article>
+            <article><strong>Oktober</strong><p>Bygge systemforståelse for kjøling, smøring, drivstoff, elektrisk og feilsøking.</p></article>
+            <article><strong>November</strong><p>Trene på realistiske arbeidsdager, svake tema og sikre svar under tidspress.</p></article>
+            <article><strong>Desember</strong><p>Kunne jobbe strukturert med kunde, verksted, katalog, dokumentasjon og oppfølging.</p></article>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h3>Dette bør sitte innen desember</h3>
+          <ul class="startplan-checklist">
+            <li>Forklare forskjellen på symptom, årsak, komponent og bestillbar reservedel.</li>
+            <li>Be om riktige opplysninger: fabrikat, modell, serienummer, motornummer, bilde av typeplate, delbilde og driftskontekst.</li>
+            <li>Bruke produsentterminologi for CAT, Volvo Penta, Mitsubishi, Cummins, MAN, Scania og Yanmar.</li>
+            <li>Forstå vanlige systemer: kjøling, smøring, drivstoff, luft, eksos, elektrisk, ECU/CAN og gir/propell.</li>
+            <li>Håndtere uklare kunder rolig og profesjonelt uten å love deler før identifikasjon er god nok.</li>
+            <li>Dokumentere beslutninger slik at en kollega kan overta saken.</li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <h3>Repetisjon av svake tema</h3>
+          <div class="startplan-grid">
+            <article><strong>Hvis quizscore er under 80%</strong><p>Les kapitlet på nytt, skriv tre egne kontrollspørsmål og ta quiz igjen etter 24 timer.</p></article>
+            <article><strong>Hvis simulatoren stopper opp</strong><p>Repeter kapittel 06, 12, 17, 20 eller 25 avhengig av feilen.</p></article>
+            <article><strong>Hvis produsenter blandes</strong><p>Lag en egen sammenligningstabell for kapittel 26-32.</p></article>
+            <article><strong>Hvis delnummer er usikkert</strong><p>Tren på motor-ID, supersession, posisjon, antall, kitinnhold og produsentverifikasjon.</p></article>
+          </div>
+          <div class="action-row"><button data-view-jump="trainer">Åpne Trainer</button><button data-view-jump="work-simulator" class="secondary">Åpne Work Simulator</button><button data-view-jump="quiz" class="secondary">Åpne quiz</button></div>
+        </section>
+      </div>
     </section>
 
     <section id="view-chapters" class="view">
@@ -15230,7 +15323,7 @@
 
     <section id="view-trainer" class="view">
       <div class="trainer-shell">
-        <div class="trainer-hero panel"><span class="kicker">Marine Trainer</span><h2>Daglig teknisk trening</h2><p>En Duolingo-inspirert læringssti for marine dieselmotorer, reservedeler og teknisk kundeservice.</p><div class="trainer-metrics"><div><strong id="trainerXp">0</strong><span>XP</span></div><div><strong id="trainerLevel">1</strong><span>Level</span></div><div><strong id="trainerStreak">🔥 0</strong><span>Streak</span></div><div><strong id="trainerPercent">0%</strong><span>Fullført</span></div></div><div class="progress-rail"><span id="trainerProgressBar"></span></div><div class="action-row"><button id="startTrainerLesson">Start neste leksjon</button><button id="startReview" class="secondary">Review</button><button id="openFlashcards" class="secondary">Flashcards</button></div><p id="trainerNext" class="muted"></p></div>
+        <div class="trainer-hero panel"><span class="kicker">Marine Trainer</span><h2>Daglig teknisk trening</h2><p>En strukturert læringssti for marine dieselmotorer, reservedeler og teknisk kundeservice.</p><div class="trainer-metrics"><div><strong id="trainerXp">0</strong><span>XP</span></div><div><strong id="trainerLevel">1</strong><span>Level</span></div><div><strong id="trainerStreak">🔥 0</strong><span>Streak</span></div><div><strong id="trainerPercent">0%</strong><span>Fullført</span></div></div><div class="progress-rail"><span id="trainerProgressBar"></span></div><div class="action-row"><button id="startTrainerLesson">Start neste leksjon</button><button id="startReview" class="secondary">Review</button><button id="openFlashcards" class="secondary">Flashcards</button></div><p id="trainerNext" class="muted"></p></div>
         <div class="trainer-grid"><section class="panel"><h3>Learning Path</h3><div id="trainerPath" class="trainer-path"></div></section><section class="panel"><h3>Quiz</h3><div id="trainerQuiz"></div></section></div>
         <div class="trainer-grid"><section class="panel"><h3>Badges</h3><div id="trainerBadges" class="badge-grid"></div></section><section class="panel"><h3>Flashcards</h3><div id="trainerFlashcards"></div></section></div>
         <section class="panel"><h3>Progress</h3><div id="trainerProgressDetails" class="trainer-progress-details"></div></section>
