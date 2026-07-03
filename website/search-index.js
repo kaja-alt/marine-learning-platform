@@ -39087,8 +39087,23 @@ function handleTrainerStart(id, source = 'knapp') {
     setTrainerError(`Klikket ble registrert, men level kunne ikke åpnes: ${error?.message || error}`);
   }
 }
+function trainerClickTarget(event, selector) {
+  const target = event.target;
+  return target && typeof target.closest === 'function' ? target.closest(selector) : null;
+}
 function startSelectedTrainerLevel(source = 'Start leksjon-knappen') {
   handleTrainerStart(trainerState.activeLevel || trainerNextLevel().level, source);
+}
+function handleTrainerLevelButton(event, button) {
+  event.preventDefault();
+  event.stopPropagation();
+  if (!button || button.disabled) return;
+  const levelNumber = Number(button.dataset.trainerLevel);
+  if (!levelNumber) {
+    setTrainerError('Klikket ble registrert, men levelnummer mangler på knappen.');
+    return;
+  }
+  handleTrainerStart(levelNumber, 'Start level-knappen');
 }
 function bindTrainerStartButtons() {
   $$('#startTrainerLesson').forEach(button => {
@@ -39101,40 +39116,48 @@ function bindTrainerStartButtons() {
     });
   });
 }
+function bindTrainerLevelButtons() {
+  $$('#trainerPath [data-trainer-level]').forEach(button => {
+    if (button.dataset.boundTrainerLevel === 'true') return;
+    button.dataset.boundTrainerLevel = 'true';
+    button.addEventListener('click', event => handleTrainerLevelButton(event, button));
+  });
+}
 function initTrainer() {
   if (!$('#view-trainer')) return;
   bindTrainerStartButtons();
+  bindTrainerLevelButtons();
   $('#startReview')?.addEventListener('click', startReviewSession);
   $('#openFlashcards')?.addEventListener('click', renderTrainerFlashcard);
   document.addEventListener('click', event => {
-    const start = event.target.closest('[data-trainer-start]');
+    const start = trainerClickTarget(event, '[data-trainer-start]');
     if (start) {
       handleTrainerStart(start.dataset.trainerStart === 'next' ? trainerNextLevel().level : trainerState.activeLevel || trainerNextLevel().level, 'Start leksjon-knappen');
       return;
     }
-    const level = event.target.closest('[data-trainer-level]');
+    const level = trainerClickTarget(event, '[data-trainer-level]');
     if (level) {
       handleTrainerStart(Number(level.dataset.trainerLevel), 'Learning Path');
       return;
     }
-    const lesson = event.target.closest('[data-trainer-lesson]');
+    const lesson = trainerClickTarget(event, '[data-trainer-lesson]');
     if (lesson) {
       selectedTrainerLessonId = lesson.dataset.trainerLesson;
       const selected = trainerLessonById(selectedTrainerLessonId);
       handleTrainerStart(selected?.level || trainerNextLevel().level, 'Learning Path');
       return;
     }
-    const answer = event.target.closest('[data-trainer-answer]');
+    const answer = trainerClickTarget(event, '[data-trainer-answer]');
     if (answer) answerTrainerQuestion(Number(answer.dataset.trainerAnswer));
-    const next = event.target.closest('#trainerNextQuestion');
+    const next = trainerClickTarget(event, '#trainerNextQuestion');
     if (next) advanceTrainerQuestion();
-    const retryLevel = event.target.closest('[data-trainer-retry-level]');
+    const retryLevel = trainerClickTarget(event, '[data-trainer-retry-level]');
     if (retryLevel) startTrainerLevel(Number(retryLevel.dataset.trainerRetryLevel), true);
-    const nextLevel = event.target.closest('[data-trainer-next-level]');
+    const nextLevel = trainerClickTarget(event, '[data-trainer-next-level]');
     if (nextLevel) startTrainerLevel(Number(nextLevel.dataset.trainerNextLevel));
-    const flashNext = event.target.closest('#trainerNextFlashcard');
+    const flashNext = trainerClickTarget(event, '#trainerNextFlashcard');
     if (flashNext) { currentFlashcardIndex = (currentFlashcardIndex + 1) % TRAINER_FLASHCARDS.length; renderTrainerFlashcard(); }
-    const flashReveal = event.target.closest('#trainerRevealFlashcard');
+    const flashReveal = trainerClickTarget(event, '#trainerRevealFlashcard');
     if (flashReveal) $('#trainerFlashcardAnswer')?.classList.remove('hidden');
   });
   renderTrainer();
@@ -39156,6 +39179,7 @@ function renderTrainer() {
   if (!$('#trainerFlashcards')?.textContent.trim()) renderTrainerFlashcard();
   if ($('#trainerStatus') && !$('#trainerStatus').textContent.trim()) setTrainerStatus('Trainer klar.');
   bindTrainerStartButtons();
+  bindTrainerLevelButtons();
 }
 function renderTrainerPath() {
   const host = $('#trainerPath'); if (!host) return;
@@ -39964,4 +39988,8 @@ function init() {
   openChapter(state.lastVisited || '01');
   setView('dashboard');
 }
-init();
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init, { once: true });
+} else {
+  init();
+}
