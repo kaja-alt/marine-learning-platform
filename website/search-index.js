@@ -39052,21 +39052,39 @@ function trainerLessonById(id) {
 }
 function setTrainerError(message) {
   const host = $('#trainerQuiz');
+  setTrainerStatus(message, true);
   if (!host) return;
   host.innerHTML = `<div class="trainer-error"><strong>Kan ikke starte leksjonen.</strong><p>${escapeHtml(message)}</p></div>`;
 }
+function setTrainerStatus(message, isError = false) {
+  const status = $('#trainerStatus');
+  if (!status) return;
+  status.textContent = message;
+  status.classList.toggle('error', isError);
+}
+function handleTrainerStart(id, source = 'knapp') {
+  setTrainerStatus(`Starter Trainer-leksjon fra ${source} ...`);
+  try {
+    startTrainerLesson(id);
+  } catch (error) {
+    setTrainerError(`Klikket ble registrert, men leksjonen kunne ikke åpnes: ${error?.message || error}`);
+  }
+}
 function initTrainer() {
   if (!$('#view-trainer')) return;
-  $('#startTrainerLesson')?.addEventListener('click', () => startTrainerLesson(selectedTrainerLessonId || trainerNextLesson().id));
   $('#startReview')?.addEventListener('click', startReviewSession);
   $('#openFlashcards')?.addEventListener('click', renderTrainerFlashcard);
   document.addEventListener('click', event => {
     const start = event.target.closest('[data-trainer-start]');
-    if (start) startTrainerLesson(start.dataset.trainerStart === 'next' ? trainerNextLesson().id : selectedTrainerLessonId || trainerNextLesson().id);
+    if (start) {
+      handleTrainerStart(start.dataset.trainerStart === 'next' ? trainerNextLesson().id : selectedTrainerLessonId || trainerNextLesson().id, 'Start leksjon-knappen');
+      return;
+    }
     const lesson = event.target.closest('[data-trainer-lesson]');
     if (lesson) {
       selectedTrainerLessonId = lesson.dataset.trainerLesson;
-      startTrainerLesson(selectedTrainerLessonId);
+      handleTrainerStart(selectedTrainerLessonId, 'Learning Path');
+      return;
     }
     const answer = event.target.closest('[data-trainer-answer]');
     if (answer) answerTrainerQuestion(Number(answer.dataset.trainerAnswer));
@@ -39096,6 +39114,7 @@ function renderTrainer() {
   renderTrainerProgressDetails();
   if (!$('#trainerQuiz')?.textContent.trim()) $('#trainerQuiz').innerHTML = '<p class="muted">Start neste leksjon for å få spørsmål. Feil svar legges automatisk i Review.</p>';
   if (!$('#trainerFlashcards')?.textContent.trim()) renderTrainerFlashcard();
+  if ($('#trainerStatus') && !$('#trainerStatus').textContent.trim()) setTrainerStatus('Trainer klar.');
 }
 function renderTrainerPath() {
   const host = $('#trainerPath'); if (!host) return;
@@ -39131,6 +39150,7 @@ function startTrainerLesson(id) {
   currentTrainerSession = { mode: 'lesson', lesson, queue, index: 0, correct: 0, earned: 0, answered: false };
   renderTrainerQuestion();
   renderTrainer();
+  setTrainerStatus(`Leksjon åpnet: ${lesson.title}. Svar på spørsmålet under Quiz.`);
 }
 function startReviewSession() {
   const validQuestions = TRAINER_DATA.questions.map(normalizedTrainerQuestion).filter(Boolean);
