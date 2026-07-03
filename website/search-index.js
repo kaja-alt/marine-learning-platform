@@ -39017,10 +39017,11 @@ let currentFlashcardIndex = 0;
 let selectedTrainerLessonId = null;
 
 function loadTrainerState() {
+  const defaults = { xp: 0, completedLessons: [], completedLevels: [], answered: 0, correct: 0, wrongQueue: [], badges: [], lastTrainDate: null, streak: 0, lessonScores: {}, levelScores: {}, levelMistakes: {}, dailyGoal: 60, activeLevel: 1 };
   try {
-    return Object.assign({ xp: 0, completedLessons: [], answered: 0, correct: 0, wrongQueue: [], badges: [], lastTrainDate: null, streak: 0, lessonScores: {}, dailyGoal: 60 }, JSON.parse(localStorage.getItem(TRAINER_KEY) || '{}'));
+    return Object.assign(defaults, JSON.parse(localStorage.getItem(TRAINER_KEY) || '{}'));
   } catch (_) {
-    return { xp: 0, completedLessons: [], answered: 0, correct: 0, wrongQueue: [], badges: [], lastTrainDate: null, streak: 0, lessonScores: {}, dailyGoal: 60 };
+    return defaults;
   }
 }
 const trainerState = loadTrainerState();
@@ -39044,6 +39045,22 @@ function trainerNextLesson() {
   }
   return TRAINER_DATA.path[0].lessons[0];
 }
+function trainerLevelData(levelNumber) {
+  return TRAINER_DATA.path.find(level => Number(level.level) === Number(levelNumber));
+}
+function trainerIsLevelPassed(levelNumber) {
+  return trainerState.completedLevels.includes(Number(levelNumber));
+}
+function trainerIsLevelUnlocked(levelNumber) {
+  const n = Number(levelNumber);
+  return n === 1 || trainerIsLevelPassed(n - 1);
+}
+function trainerNextLevel() {
+  return TRAINER_DATA.path.find(level => trainerIsLevelUnlocked(level.level) && !trainerIsLevelPassed(level.level)) || TRAINER_DATA.path[TRAINER_DATA.path.length - 1];
+}
+function trainerLevelPercent() {
+  return Math.round((trainerState.completedLevels.length / TRAINER_DATA.path.length) * 100);
+}
 function trainerLessons() {
   return TRAINER_DATA.path.flatMap(level => level.lessons || []);
 }
@@ -39063,15 +39080,15 @@ function setTrainerStatus(message, isError = false) {
   status.classList.toggle('error', isError);
 }
 function handleTrainerStart(id, source = 'knapp') {
-  setTrainerStatus(`Starter Trainer-leksjon fra ${source} ...`);
+  setTrainerStatus(`Starter Trainer-level fra ${source} ...`);
   try {
-    startTrainerLesson(id);
+    startTrainerLevel(id || trainerNextLevel().level);
   } catch (error) {
-    setTrainerError(`Klikket ble registrert, men leksjonen kunne ikke åpnes: ${error?.message || error}`);
+    setTrainerError(`Klikket ble registrert, men level kunne ikke åpnes: ${error?.message || error}`);
   }
 }
-function startSelectedTrainerLesson(source = 'Start leksjon-knappen') {
-  handleTrainerStart(selectedTrainerLessonId || trainerNextLesson().id, source);
+function startSelectedTrainerLevel(source = 'Start leksjon-knappen') {
+  handleTrainerStart(trainerState.activeLevel || trainerNextLevel().level, source);
 }
 function bindTrainerStartButtons() {
   $$('#startTrainerLesson').forEach(button => {
@@ -39080,7 +39097,7 @@ function bindTrainerStartButtons() {
     button.addEventListener('click', event => {
       event.preventDefault();
       event.stopPropagation();
-      startSelectedTrainerLesson('Start leksjon-knappen');
+      startSelectedTrainerLevel('Start leksjon-knappen');
     });
   });
 }
@@ -39092,19 +39109,29 @@ function initTrainer() {
   document.addEventListener('click', event => {
     const start = event.target.closest('[data-trainer-start]');
     if (start) {
-      handleTrainerStart(start.dataset.trainerStart === 'next' ? trainerNextLesson().id : selectedTrainerLessonId || trainerNextLesson().id, 'Start leksjon-knappen');
+      handleTrainerStart(start.dataset.trainerStart === 'next' ? trainerNextLevel().level : trainerState.activeLevel || trainerNextLevel().level, 'Start leksjon-knappen');
+      return;
+    }
+    const level = event.target.closest('[data-trainer-level]');
+    if (level) {
+      handleTrainerStart(Number(level.dataset.trainerLevel), 'Learning Path');
       return;
     }
     const lesson = event.target.closest('[data-trainer-lesson]');
     if (lesson) {
       selectedTrainerLessonId = lesson.dataset.trainerLesson;
-      handleTrainerStart(selectedTrainerLessonId, 'Learning Path');
+      const selected = trainerLessonById(selectedTrainerLessonId);
+      handleTrainerStart(selected?.level || trainerNextLevel().level, 'Learning Path');
       return;
     }
     const answer = event.target.closest('[data-trainer-answer]');
     if (answer) answerTrainerQuestion(Number(answer.dataset.trainerAnswer));
     const next = event.target.closest('#trainerNextQuestion');
     if (next) advanceTrainerQuestion();
+    const retryLevel = event.target.closest('[data-trainer-retry-level]');
+    if (retryLevel) startTrainerLevel(Number(retryLevel.dataset.trainerRetryLevel), true);
+    const nextLevel = event.target.closest('[data-trainer-next-level]');
+    if (nextLevel) startTrainerLevel(Number(nextLevel.dataset.trainerNextLevel));
     const flashNext = event.target.closest('#trainerNextFlashcard');
     if (flashNext) { currentFlashcardIndex = (currentFlashcardIndex + 1) % TRAINER_FLASHCARDS.length; renderTrainerFlashcard(); }
     const flashReveal = event.target.closest('#trainerRevealFlashcard');
@@ -39114,16 +39141,14 @@ function initTrainer() {
 }
 function renderTrainer() {
   const level = trainerLevel();
-  const completed = trainerState.completedLessons.length;
-  const totalLessons = TRAINER_DATA.path.reduce((sum,l) => sum + l.lessons.length, 0);
-  const percent = Math.round((completed / totalLessons) * 100);
-  const next = trainerNextLesson();
+  const percent = trainerLevelPercent();
+  const next = trainerNextLevel();
   if ($('#trainerXp')) $('#trainerXp').textContent = trainerState.xp;
   if ($('#trainerLevel')) $('#trainerLevel').textContent = level.level;
   if ($('#trainerStreak')) $('#trainerStreak').textContent = `🔥 ${trainerState.streak}`;
   if ($('#trainerPercent')) $('#trainerPercent').textContent = percent + '%';
   if ($('#trainerProgressBar')) $('#trainerProgressBar').style.width = percent + '%';
-  if ($('#trainerNext')) $('#trainerNext').textContent = `Neste anbefalte leksjon: ${next.title} (${next.xp} XP). Dagens mål: ${trainerState.dailyGoal} XP.`;
+  if ($('#trainerNext')) $('#trainerNext').textContent = `Neste anbefalte level: Level ${next.level} - ${next.title}. Bestå med minst 70 %. Dagens mål: ${trainerState.dailyGoal} XP.`;
   renderTrainerPath();
   renderTrainerBadges();
   renderTrainerProgressDetails();
@@ -39134,7 +39159,22 @@ function renderTrainer() {
 }
 function renderTrainerPath() {
   const host = $('#trainerPath'); if (!host) return;
-  host.innerHTML = TRAINER_DATA.path.map(level => `<article class="trainer-level"><div><strong>Level ${level.level}: ${escapeHtml(level.title)}</strong><p>${escapeHtml(level.description)}</p></div><div class="trainer-lessons">${level.lessons.map(lesson => `<button class="trainer-lesson ${trainerState.completedLessons.includes(lesson.id) ? 'done' : ''} ${selectedTrainerLessonId === lesson.id ? 'selected' : ''}" data-trainer-lesson="${lesson.id}"><span>${escapeHtml(lesson.title)}</span><em>${lesson.xp} XP · ${lesson.difficulty}</em></button>`).join('')}</div></article>`).join('');
+  host.innerHTML = TRAINER_DATA.path.map(level => {
+    const locked = !trainerIsLevelUnlocked(level.level);
+    const passed = trainerIsLevelPassed(level.level);
+    const score = trainerState.levelScores[level.level];
+    const questions = questionsForLevel(level).length;
+    const lessons = level.lessons.map(lesson => `<span>${escapeHtml(lesson.title)}</span>`).join('');
+    return `<article class="trainer-level ${locked ? 'locked' : ''} ${passed ? 'done' : ''}">
+      <div class="trainer-level-head">
+        <div><strong>Level ${level.level}: ${escapeHtml(level.title)}</strong><p>${escapeHtml(level.description)}</p></div>
+        <span class="level-pill">${locked ? 'Låst' : passed ? 'Bestått' : 'Åpen'}</span>
+      </div>
+      <div class="level-meta"><span>${questions} spørsmål</span><span>${score ? `${score.percent}% sist` : '70% for å bestå'}</span><span>${level.lessons.length} tema</span></div>
+      <div class="trainer-lessons">${lessons}</div>
+      <button class="trainer-level-start" data-trainer-level="${level.level}" ${locked ? 'disabled' : ''}>${locked ? `Fullfør Level ${Number(level.level) - 1} først` : passed ? 'Repeter level' : 'Start level'}</button>
+    </article>`;
+  }).join('');
 }
 function normalizedTrainerQuestion(q) {
   if (!q || !Array.isArray(q.choices) || q.choices.length < 2) return null;
@@ -39143,6 +39183,30 @@ function normalizedTrainerQuestion(q) {
   const prompt = q.prompt || q.question;
   if (!prompt) return null;
   return Object.assign({}, q, { prompt, answer, difficulty: q.difficulty || 'easy', type: q.type || 'multiple', explanation: q.explanation || 'Ingen forklaring er registrert for dette spørsmålet.' });
+}
+function uniqueTrainerQuestions(questions) {
+  const seen = new Set();
+  return questions.filter(q => {
+    const key = q.id || q.prompt;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+function questionsForLevel(level, retryMistakes = false) {
+  const validQuestions = TRAINER_DATA.questions.map(normalizedTrainerQuestion).filter(Boolean);
+  if (retryMistakes) {
+    const missed = (trainerState.levelMistakes[level.level] || []).map(id => validQuestions.find(q => q.id === id)).filter(Boolean);
+    return missed.length ? missed.slice(0, 10) : [];
+  }
+  const chapters = (level.lessons || []).map(lesson => String(lesson.chapter || '').padStart(2, '0'));
+  const byChapter = validQuestions.filter(q => chapters.some(chapter => q.tags?.includes(chapter) || q.lesson === chapter));
+  const byTitle = validQuestions.filter(q => {
+    const text = `${q.prompt} ${(q.tags || []).join(' ')}`.toLowerCase();
+    return (level.lessons || []).some(lesson => text.includes(String(lesson.title).toLowerCase().split(' ')[0]));
+  });
+  const general = validQuestions.filter(q => !byChapter.includes(q) && !byTitle.includes(q));
+  return uniqueTrainerQuestions([...shuffle(byChapter), ...shuffle(byTitle), ...shuffle(general)]).slice(0, 10);
 }
 function questionsForLesson(lesson) {
   const chapter = String(lesson.chapter || '').padStart(2, '0');
@@ -39157,16 +39221,30 @@ function startTrainerLesson(id) {
     setTrainerError(`Fant ikke Trainer-leksjonen "${id || 'ukjent'}". Kontroller at leksjonen finnes i læringsstien.`);
     return;
   }
-  const queue = questionsForLesson(lesson);
-  if (!queue.length) {
-    setTrainerError(`Leksjonen "${lesson.title}" mangler spørsmål. Legg til Trainer-spørsmål med tag "${String(lesson.chapter).padStart(2, '0')}" eller lesson "${lesson.id}".`);
+  startTrainerLevel(lesson.level);
+}
+function startTrainerLevel(levelNumber, retryMistakes = false) {
+  const level = trainerLevelData(levelNumber);
+  if (!level) {
+    setTrainerError(`Fant ikke Trainer-level "${levelNumber || 'ukjent'}".`);
     return;
   }
-  selectedTrainerLessonId = lesson.id;
-  currentTrainerSession = { mode: 'lesson', lesson, queue, index: 0, correct: 0, earned: 0, answered: false };
+  if (!trainerIsLevelUnlocked(level.level)) {
+    setTrainerError(`Level ${level.level} er låst. Bestå Level ${Number(level.level) - 1} med minst 70 % først.`);
+    return;
+  }
+  const queue = questionsForLevel(level, retryMistakes);
+  if (!queue.length) {
+    setTrainerError(`Level ${level.level} mangler spørsmål. Kontroller Trainer-spørsmål for temaene i "${level.title}".`);
+    return;
+  }
+  trainerState.activeLevel = level.level;
+  selectedTrainerLessonId = level.lessons?.[0]?.id || null;
+  currentTrainerSession = { mode: retryMistakes ? 'retry' : 'level', level, lesson: level.lessons?.[0] || null, queue, index: 0, correct: 0, earned: 0, answered: false, mistakes: [] };
+  saveTrainerState();
   renderTrainerQuestion();
   renderTrainer();
-  setTrainerStatus(`Leksjon åpnet: ${lesson.title}. Svar på spørsmålet under Quiz.`);
+  setTrainerStatus(`Level ${level.level} åpnet: ${level.title}. Svar på spørsmålene under Quiz.`);
 }
 function startReviewSession() {
   const validQuestions = TRAINER_DATA.questions.map(normalizedTrainerQuestion).filter(Boolean);
@@ -39176,7 +39254,7 @@ function startReviewSession() {
     setTrainerError('Review kan ikke startes fordi Trainer mangler gyldige spørsmål.');
     return;
   }
-  currentTrainerSession = { mode: 'review', lesson: null, queue, index: 0, correct: 0, earned: 0, answered: false };
+  currentTrainerSession = { mode: 'review', lesson: null, queue, index: 0, correct: 0, earned: 0, answered: false, mistakes: [] };
   renderTrainerQuestion();
 }
 function renderTrainerQuestion() {
@@ -39190,8 +39268,17 @@ function renderTrainerQuestion() {
   const choices = shuffle(q.choices.map((text, original) => ({ text, original })));
   currentTrainerSession.current = { q, choices, correctIndex: choices.findIndex(c => c.original === q.answer) };
   currentTrainerSession.answered = false;
-  const lesson = currentTrainerSession.lesson;
-  host.innerHTML = `<div class="trainer-question"><div class="quiz-meta"><strong>${lesson ? escapeHtml(lesson.title) : 'Review'}</strong><span>${currentTrainerSession.index + 1} av ${currentTrainerSession.queue.length}</span></div><div class="quiz-meta"><strong>${labelForQuestionType(q.type)}</strong><span>${q.difficulty} · ${xpForDifficulty(q.difficulty)} XP</span></div><h3>${escapeHtml(q.prompt)}</h3><div class="trainer-answer-grid">${choices.map((c, i) => `<button data-trainer-answer="${i}">${escapeHtml(c.text)}</button>`).join('')}</div><p id="trainerFeedback" class="explanation hidden"></p><p class="muted">Oppgave: Velg beste svar. XP og progresjon oppdateres når du svarer.</p></div>`;
+  const level = currentTrainerSession.level;
+  const progress = Math.round((currentTrainerSession.index / currentTrainerSession.queue.length) * 100);
+  host.innerHTML = `<div class="trainer-question">
+    <div class="level-session-head"><span class="kicker">${level ? `Level ${level.level}` : 'Review'}</span><strong>${level ? escapeHtml(level.title) : 'Repeter feil svar'}</strong></div>
+    <div class="progress-rail trainer-question-progress"><span style="width:${progress}%"></span></div>
+    <div class="quiz-meta"><strong>Spørsmål ${currentTrainerSession.index + 1} av ${currentTrainerSession.queue.length}</strong><span>${labelForQuestionType(q.type)} · ${q.difficulty} · ${xpForDifficulty(q.difficulty)} XP</span></div>
+    <h3>${escapeHtml(q.prompt)}</h3>
+    <div class="trainer-answer-grid">${choices.map((c, i) => `<button data-trainer-answer="${i}">${escapeHtml(c.text)}</button>`).join('')}</div>
+    <div id="trainerFeedback" class="trainer-feedback hidden"></div>
+    <p class="muted">Velg beste svar. XP og level-progresjon oppdateres etter hvert riktige svar.</p>
+  </div>`;
 }
 function advanceTrainerQuestion() {
   if (!currentTrainerSession) return;
@@ -39201,6 +39288,13 @@ function advanceTrainerQuestion() {
 }
 function labelForQuestionType(type) {
   return { multiple:'Flervalg', truefalse:'Sant/usant', match:'Match komponent', partnumber:'Finn delenummer', system:'Identifiser system', 'customer-case':'Kundescenario', 'workshop-case':'Verkstedscenario', flashcard:'Flashcard' }[type] || 'Spørsmål';
+}
+function trainerRememberPoint(q) {
+  const tags = (q.tags || []).join(', ');
+  if (/serienummer|motornummer|engine|serial/i.test(`${q.prompt} ${tags}`)) return 'Husk dette: Motoridentitet skal bekreftes før delnummer eller feilsvar gis.';
+  if (/kunde|support|kommunikasjon|klage/i.test(`${q.prompt} ${tags}`)) return 'Husk dette: Gode kundesvar skiller fakta, antakelser, forbehold og neste steg.';
+  if (/del|part|reservedel|supersession|kit/i.test(`${q.prompt} ${tags}`)) return 'Husk dette: Delnummer må alltid kobles til variant, posisjon, antall og produsentkilde.';
+  return 'Husk dette: Start med dokumenterte fakta, ikke magefølelse, når du velger neste handling.';
 }
 function answerTrainerQuestion(index) {
   if (!currentTrainerSession || currentTrainerSession.answered) return;
@@ -39221,13 +39315,22 @@ function answerTrainerQuestion(index) {
   } else if (!trainerState.wrongQueue.includes(cur.q.id)) {
     trainerState.wrongQueue.push(cur.q.id);
   }
-  updateTrainerStreak();
+  if (!ok) currentTrainerSession.mistakes.push(cur.q.id);
   unlockTrainerBadges(cur.q, ok);
   saveTrainerState();
   const feedback = $('#trainerFeedback');
+  const correctText = cur.choices[cur.correctIndex]?.text || cur.q.choices[cur.q.answer];
+  const selectedText = cur.choices[index]?.text || '';
   if (feedback) {
     feedback.classList.remove('hidden');
-    feedback.innerHTML = `<strong>${ok ? 'Riktig' : 'Ikke helt'}.</strong> ${escapeHtml(cur.q.explanation)} ${ok ? '' : 'Dette spørsmålet kommer tilbake i Review.'}<br><button id="trainerNextQuestion">Neste</button>`;
+    feedback.classList.toggle('correct', ok);
+    feedback.classList.toggle('wrong', !ok);
+    feedback.innerHTML = `<h4>${ok ? 'Riktig svar' : 'Ikke helt riktig'}</h4>
+      <p>${escapeHtml(cur.q.explanation)}</p>
+      <p><strong>Hvorfor riktig svar er riktig:</strong> ${escapeHtml(correctText)} følger den dokumenterte arbeidsmåten for temaet.</p>
+      ${ok ? '' : `<p><strong>Hvorfor ditt svar er feil:</strong> ${escapeHtml(selectedText)} mangler nødvendig kontroll eller bygger på en antakelse som kan gi feil del, feil diagnose eller svakt kundesvar.</p>`}
+      <p><strong>${escapeHtml(trainerRememberPoint(cur.q))}</strong></p>
+      <button id="trainerNextQuestion">Neste spørsmål</button>`;
   }
   $$('#trainerQuiz [data-trainer-answer]').forEach((btn, i) => {
     btn.disabled = true;
@@ -39239,19 +39342,58 @@ function answerTrainerQuestion(index) {
 function finishTrainerSession() {
   const host = $('#trainerQuiz');
   const session = currentTrainerSession;
-  if (session.mode === 'lesson' && session.correct >= Math.ceil(session.queue.length * 0.7) && !trainerState.completedLessons.includes(session.lesson.id)) {
-    trainerState.completedLessons.push(session.lesson.id);
+  const percent = Math.round((session.correct / session.queue.length) * 100);
+  const passed = percent >= 70;
+  const levelNumber = session.level?.level;
+  const isLevelSession = (session.mode === 'level' || session.mode === 'retry') && levelNumber;
+  if (isLevelSession) {
+    trainerState.levelScores[levelNumber] = { correct: session.correct, total: session.queue.length, percent, xp: session.earned, date: new Date().toISOString() };
+    trainerState.levelMistakes[levelNumber] = session.mistakes.slice();
+    if (passed && !trainerState.completedLevels.includes(Number(levelNumber))) trainerState.completedLevels.push(Number(levelNumber));
+    (session.level.lessons || []).forEach(lesson => {
+      if (passed && !trainerState.completedLessons.includes(lesson.id)) trainerState.completedLessons.push(lesson.id);
+    });
   }
+  updateTrainerStreak();
   trainerState.wrongQueue = trainerState.wrongQueue.slice(-80);
   saveTrainerState();
-  host.innerHTML = `<div class="quiz-result"><h3>Leksjon ferdig</h3><p>${session.correct} av ${session.queue.length} riktige. Du tjente ${session.earned} XP.</p><button data-trainer-start="next">Neste leksjon</button><button id="startReview" class="secondary">Review</button></div>`;
-  $('#startReview')?.addEventListener('click', startReviewSession);
+  const repeatTopics = uniqueTrainerQuestions(session.mistakes.map(id => session.queue.find(q => q.id === id)).filter(Boolean)).map(q => labelForQuestionType(q.type)).slice(0, 4);
+  const nextLevel = trainerLevelData(Number(levelNumber || 1) + 1);
   currentTrainerSession = null;
   renderTrainer();
+  if (!isLevelSession) {
+    host.innerHTML = `<div class="quiz-result trainer-level-result">
+      <span class="kicker">Review ferdig</span>
+      <h3>Resultat for repetisjon</h3>
+      <div class="result-score"><strong>${session.correct} av ${session.queue.length}</strong><span>${percent}%</span><span>${session.earned} XP opptjent</span></div>
+      <p>Feil svar ligger fortsatt i Review-køen til de repeteres riktig i senere økter.</p>
+      <div class="action-row">
+        <button id="startReview">Start ny review</button>
+        <button data-trainer-start="next" class="secondary">Start neste level</button>
+      </div>
+    </div>`;
+    $('#startReview')?.addEventListener('click', startReviewSession);
+    setTrainerStatus(`Review ferdig: ${percent} %.`);
+    return;
+  }
+  host.innerHTML = `<div class="quiz-result trainer-level-result">
+    <span class="kicker">${passed ? 'Level bestått' : 'Level ikke bestått'}</span>
+    <h3>Resultat for Level ${levelNumber}: ${escapeHtml(session.level?.title || 'Trainer')}</h3>
+    <div class="result-score"><strong>${session.correct} av ${session.queue.length}</strong><span>${percent}%</span><span>${session.earned} XP opptjent</span></div>
+    <p>${passed ? 'Bra jobbet. Neste level er låst opp.' : 'Du trenger minst 70 % for å låse opp neste level.'}</p>
+    <h4>Tema du bør repetere</h4>
+    <ul>${(repeatTopics.length ? repeatTopics : ['Ingen tydelige svake tema i denne runden.']).map(topic => `<li>${escapeHtml(topic)}</li>`).join('')}</ul>
+    <div class="action-row">
+      <button data-trainer-retry-level="${levelNumber}" ${session.mistakes.length ? '' : 'disabled'}>Repeter feil svar</button>
+      <button data-trainer-next-level="${nextLevel?.level || levelNumber}" class="secondary" ${passed && nextLevel ? '' : 'disabled'}>Gå til neste level</button>
+    </div>
+  </div>`;
+  $('#startReview')?.addEventListener('click', startReviewSession);
+  setTrainerStatus(`Level ${levelNumber} ferdig: ${percent} %. ${passed ? 'Neste level er låst opp.' : 'Repeter feil svar og prøv igjen.'}`);
 }
 function unlockTrainerBadges(q, ok) {
   const add = id => { if (!trainerState.badges.includes(id)) trainerState.badges.push(id); };
-  if (trainerState.completedLessons.length >= 0) add('first-lesson');
+  if (trainerState.completedLessons.length > 0 || trainerState.answered > 0) add('first-lesson');
   if (trainerState.answered >= 100) add('questions-100');
   if (trainerState.streak >= 7) add('streak-7');
   if (trainerState.streak >= 30) add('streak-30');
@@ -39273,8 +39415,9 @@ function renderTrainerBadges() {
 function renderTrainerProgressDetails() {
   const host = $('#trainerProgressDetails'); if (!host) return;
   const totalLessons = TRAINER_DATA.path.reduce((sum,l) => sum + l.lessons.length, 0);
-  const percent = Math.round((trainerState.completedLessons.length / totalLessons) * 100);
-  host.innerHTML = `<table><thead><tr><th>Målepunkt</th><th>Status</th></tr></thead><tbody><tr><td>XP</td><td>${trainerState.xp}</td></tr><tr><td>Level</td><td>${trainerLevel().level}</td></tr><tr><td>Prosent fullført</td><td>${percent}%</td></tr><tr><td>Fullførte leksjoner</td><td>${trainerState.completedLessons.length} av ${totalLessons}</td></tr><tr><td>Fullførte quizzer/spørsmål</td><td>${trainerState.answered} besvart, ${trainerState.correct} riktige</td></tr><tr><td>Review-kø</td><td>${trainerState.wrongQueue.length} spørsmål</td></tr><tr><td>Badges</td><td>${trainerState.badges.length} av ${TRAINER_DATA.badges.length}</td></tr><tr><td>Dagens mål</td><td>${trainerState.dailyGoal} XP</td></tr></tbody></table>`;
+  const percent = trainerLevelPercent();
+  const activeScore = trainerState.levelScores[trainerState.activeLevel];
+  host.innerHTML = `<table><thead><tr><th>Målepunkt</th><th>Status</th></tr></thead><tbody><tr><td>XP</td><td>${trainerState.xp}</td></tr><tr><td>XP-level</td><td>${trainerLevel().level}</td></tr><tr><td>Level-progresjon</td><td>${percent}%</td></tr><tr><td>Beståtte levels</td><td>${trainerState.completedLevels.length} av ${TRAINER_DATA.path.length}</td></tr><tr><td>Fullførte leksjonstema</td><td>${trainerState.completedLessons.length} av ${totalLessons}</td></tr><tr><td>Siste level-score</td><td>${activeScore ? `${activeScore.correct} av ${activeScore.total} (${activeScore.percent}%)` : 'Ingen fullført level ennå'}</td></tr><tr><td>Fullførte spørsmål</td><td>${trainerState.answered} besvart, ${trainerState.correct} riktige</td></tr><tr><td>Review-kø</td><td>${trainerState.wrongQueue.length} spørsmål</td></tr><tr><td>Badges</td><td>${trainerState.badges.length} av ${TRAINER_DATA.badges.length}</td></tr><tr><td>Dagens mål</td><td>${trainerState.dailyGoal} XP</td></tr></tbody></table>`;
 }
 function renderTrainerFlashcard() {
   const host = $('#trainerFlashcards'); if (!host) return;

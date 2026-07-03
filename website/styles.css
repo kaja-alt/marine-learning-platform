@@ -198,10 +198,17 @@ figcaption { margin-top:8px; color:var(--muted); font-size:13px; }
 .trainer-metrics span { color:var(--muted); font-weight:800; font-size:12px; text-transform:uppercase; letter-spacing:.06em; }
 .trainer-grid { display:grid; grid-template-columns:minmax(0,1.4fr) minmax(320px,.8fr); gap:18px; align-items:start; }
 .trainer-path { display:grid; gap:14px; }
-.trainer-level { padding:15px; border:1px solid var(--line); border-radius:var(--radius); background:var(--paper-2); }
+.trainer-level { padding:16px; border:1px solid var(--line); border-radius:var(--radius); background:linear-gradient(180deg,var(--paper),var(--paper-2)); box-shadow:0 10px 24px rgba(15,23,42,.06); }
+.trainer-level.locked { opacity:.58; }
+.trainer-level.done { border-color:color-mix(in srgb,var(--good) 45%,var(--line)); background:color-mix(in srgb,var(--good) 8%,var(--paper)); }
+.trainer-level-head { display:flex; justify-content:space-between; gap:12px; align-items:start; }
 .trainer-level > div:first-child strong { font-size:18px; color:var(--ink); }
 .trainer-level p { margin:5px 0 12px; color:var(--muted); }
-.trainer-lessons { display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:8px; }
+.level-pill { white-space:nowrap; padding:5px 9px; border-radius:999px; color:var(--accent); background:color-mix(in srgb,var(--accent) 10%,var(--paper)); border:1px solid color-mix(in srgb,var(--accent) 25%,var(--line)); font-size:12px; font-weight:900; }
+.level-meta { display:flex; gap:8px; flex-wrap:wrap; margin:10px 0; }
+.level-meta span { padding:5px 8px; border-radius:999px; background:var(--paper); border:1px solid var(--line); color:var(--muted); font-size:12px; font-weight:800; }
+.trainer-lessons { display:flex; flex-wrap:wrap; gap:6px; margin:10px 0; }
+.trainer-lessons span { padding:5px 8px; border-radius:999px; background:var(--paper); border:1px solid var(--line); color:var(--muted); font-size:12px; }
 .trainer-lesson { color:var(--ink); background:var(--paper); border:1px solid var(--line); text-align:left; display:grid; gap:2px; }
 .trainer-lesson span { font-weight:800; }
 .trainer-lesson em { color:var(--muted); font-size:12px; font-style:normal; }
@@ -211,11 +218,21 @@ figcaption { margin-top:8px; color:var(--muted); font-size:13px; }
 .trainer-status.error { border-color:var(--bad); background:color-mix(in srgb,var(--bad) 8%,var(--paper)); }
 .trainer-error { padding:14px; border:1px solid var(--bad); border-radius:var(--radius); background:color-mix(in srgb,var(--bad) 8%,var(--paper)); }
 .trainer-error p { margin:6px 0 0; color:var(--muted); }
+.trainer-level-start { width:100%; min-height:48px; }
+.level-session-head { display:grid; gap:3px; margin-bottom:10px; }
+.level-session-head strong { font-size:20px; }
+.trainer-question-progress { margin:10px 0 14px; }
 .trainer-question h3 { margin-top:12px; }
 .trainer-answer-grid { display:grid; gap:9px; margin-top:14px; }
-.trainer-answer-grid button { color:var(--ink); background:var(--paper-2); border:1px solid var(--line); text-align:left; }
+.trainer-answer-grid button { min-height:52px; color:var(--ink); background:var(--paper-2); border:1px solid var(--line); text-align:left; }
 .trainer-answer-grid button.correct { border-color:var(--good); background:color-mix(in srgb,var(--good) 14%,var(--paper)); }
 .trainer-answer-grid button.wrong { border-color:var(--bad); background:color-mix(in srgb,var(--bad) 10%,var(--paper)); }
+.trainer-feedback { margin-top:14px; padding:15px; border:1px solid var(--line); border-radius:var(--radius); background:var(--paper-2); }
+.trainer-feedback.correct { border-color:var(--good); background:color-mix(in srgb,var(--good) 10%,var(--paper)); }
+.trainer-feedback.wrong { border-color:var(--bad); background:color-mix(in srgb,var(--bad) 8%,var(--paper)); }
+.trainer-feedback h4 { margin:0 0 8px; }
+.trainer-level-result .result-score { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:14px 0; }
+.trainer-level-result .result-score > * { padding:12px; border:1px solid var(--line); border-radius:var(--radius); background:var(--paper); text-align:center; font-weight:900; }
 .badge-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:10px; }
 .badge { padding:13px; border:1px solid var(--line); border-radius:var(--radius); background:var(--paper-2); opacity:.62; }
 .badge.earned { opacity:1; border-color:var(--good); background:color-mix(in srgb,var(--good) 12%,var(--paper)); }
