@@ -39014,6 +39014,7 @@ const TRAINER_FLASHCARDS = [
 const TRAINER_KEY = 'marineTrainer.v1';
 let currentTrainerSession = null;
 let currentFlashcardIndex = 0;
+let selectedTrainerLessonId = null;
 
 function loadTrainerState() {
   try {
@@ -39043,18 +39044,34 @@ function trainerNextLesson() {
   }
   return TRAINER_DATA.path[0].lessons[0];
 }
+function trainerLessons() {
+  return TRAINER_DATA.path.flatMap(level => level.lessons || []);
+}
+function trainerLessonById(id) {
+  return trainerLessons().find(lesson => lesson.id === id);
+}
+function setTrainerError(message) {
+  const host = $('#trainerQuiz');
+  if (!host) return;
+  host.innerHTML = `<div class="trainer-error"><strong>Kan ikke starte leksjonen.</strong><p>${escapeHtml(message)}</p></div>`;
+}
 function initTrainer() {
   if (!$('#view-trainer')) return;
-  $('#startTrainerLesson')?.addEventListener('click', () => startTrainerLesson(trainerNextLesson().id));
+  $('#startTrainerLesson')?.addEventListener('click', () => startTrainerLesson(selectedTrainerLessonId || trainerNextLesson().id));
   $('#startReview')?.addEventListener('click', startReviewSession);
   $('#openFlashcards')?.addEventListener('click', renderTrainerFlashcard);
   document.addEventListener('click', event => {
+    const start = event.target.closest('[data-trainer-start]');
+    if (start) startTrainerLesson(start.dataset.trainerStart === 'next' ? trainerNextLesson().id : selectedTrainerLessonId || trainerNextLesson().id);
     const lesson = event.target.closest('[data-trainer-lesson]');
-    if (lesson) startTrainerLesson(lesson.dataset.trainerLesson);
+    if (lesson) {
+      selectedTrainerLessonId = lesson.dataset.trainerLesson;
+      startTrainerLesson(selectedTrainerLessonId);
+    }
     const answer = event.target.closest('[data-trainer-answer]');
     if (answer) answerTrainerQuestion(Number(answer.dataset.trainerAnswer));
     const next = event.target.closest('#trainerNextQuestion');
-    if (next) renderTrainerQuestion();
+    if (next) advanceTrainerQuestion();
     const flashNext = event.target.closest('#trainerNextFlashcard');
     if (flashNext) { currentFlashcardIndex = (currentFlashcardIndex + 1) % TRAINER_FLASHCARDS.length; renderTrainerFlashcard(); }
     const flashReveal = event.target.closest('#trainerRevealFlashcard');
@@ -39082,31 +39099,69 @@ function renderTrainer() {
 }
 function renderTrainerPath() {
   const host = $('#trainerPath'); if (!host) return;
-  host.innerHTML = TRAINER_DATA.path.map(level => `<article class="trainer-level"><div><strong>Level ${level.level}: ${escapeHtml(level.title)}</strong><p>${escapeHtml(level.description)}</p></div><div class="trainer-lessons">${level.lessons.map(lesson => `<button class="trainer-lesson ${trainerState.completedLessons.includes(lesson.id) ? 'done' : ''}" data-trainer-lesson="${lesson.id}"><span>${escapeHtml(lesson.title)}</span><em>${lesson.xp} XP · ${lesson.difficulty}</em></button>`).join('')}</div></article>`).join('');
+  host.innerHTML = TRAINER_DATA.path.map(level => `<article class="trainer-level"><div><strong>Level ${level.level}: ${escapeHtml(level.title)}</strong><p>${escapeHtml(level.description)}</p></div><div class="trainer-lessons">${level.lessons.map(lesson => `<button class="trainer-lesson ${trainerState.completedLessons.includes(lesson.id) ? 'done' : ''} ${selectedTrainerLessonId === lesson.id ? 'selected' : ''}" data-trainer-lesson="${lesson.id}"><span>${escapeHtml(lesson.title)}</span><em>${lesson.xp} XP · ${lesson.difficulty}</em></button>`).join('')}</div></article>`).join('');
+}
+function normalizedTrainerQuestion(q) {
+  if (!q || !Array.isArray(q.choices) || q.choices.length < 2) return null;
+  const answer = Number(q.answer);
+  if (!Number.isInteger(answer) || answer < 0 || answer >= q.choices.length) return null;
+  const prompt = q.prompt || q.question;
+  if (!prompt) return null;
+  return Object.assign({}, q, { prompt, answer, difficulty: q.difficulty || 'easy', type: q.type || 'multiple', explanation: q.explanation || 'Ingen forklaring er registrert for dette spørsmålet.' });
 }
 function questionsForLesson(lesson) {
-  const byChapter = TRAINER_DATA.questions.filter(q => q.tags?.includes(lesson.chapter) || q.lesson === lesson.chapter);
-  const general = TRAINER_DATA.questions.filter(q => !byChapter.includes(q));
+  const chapter = String(lesson.chapter || '').padStart(2, '0');
+  const validQuestions = TRAINER_DATA.questions.map(normalizedTrainerQuestion).filter(Boolean);
+  const byChapter = validQuestions.filter(q => q.tags?.includes(chapter) || q.tags?.includes(lesson.chapter) || q.lesson === chapter || q.lesson === lesson.id);
+  const general = validQuestions.filter(q => !byChapter.includes(q));
   return shuffle([...byChapter.slice(0, 4), ...general.slice(0, 4)]).slice(0, 7);
 }
 function startTrainerLesson(id) {
-  const lesson = TRAINER_DATA.path.flatMap(l => l.lessons).find(l => l.id === id) || trainerNextLesson();
-  currentTrainerSession = { mode: 'lesson', lesson, queue: questionsForLesson(lesson), index: 0, correct: 0, earned: 0, answered: false };
+  const lesson = trainerLessonById(id);
+  if (!lesson) {
+    setTrainerError(`Fant ikke Trainer-leksjonen "${id || 'ukjent'}". Kontroller at leksjonen finnes i læringsstien.`);
+    return;
+  }
+  const queue = questionsForLesson(lesson);
+  if (!queue.length) {
+    setTrainerError(`Leksjonen "${lesson.title}" mangler spørsmål. Legg til Trainer-spørsmål med tag "${String(lesson.chapter).padStart(2, '0')}" eller lesson "${lesson.id}".`);
+    return;
+  }
+  selectedTrainerLessonId = lesson.id;
+  currentTrainerSession = { mode: 'lesson', lesson, queue, index: 0, correct: 0, earned: 0, answered: false };
   renderTrainerQuestion();
+  renderTrainer();
 }
 function startReviewSession() {
-  const queued = trainerState.wrongQueue.slice(0, 12).map(id => TRAINER_DATA.questions.find(q => q.id === id)).filter(Boolean);
-  currentTrainerSession = { mode: 'review', lesson: null, queue: queued.length ? queued : shuffle(TRAINER_DATA.questions).slice(0, 8), index: 0, correct: 0, earned: 0, answered: false };
+  const validQuestions = TRAINER_DATA.questions.map(normalizedTrainerQuestion).filter(Boolean);
+  const queued = trainerState.wrongQueue.slice(0, 12).map(id => validQuestions.find(q => q.id === id)).filter(Boolean);
+  const queue = queued.length ? queued : shuffle(validQuestions).slice(0, 8);
+  if (!queue.length) {
+    setTrainerError('Review kan ikke startes fordi Trainer mangler gyldige spørsmål.');
+    return;
+  }
+  currentTrainerSession = { mode: 'review', lesson: null, queue, index: 0, correct: 0, earned: 0, answered: false };
   renderTrainerQuestion();
 }
 function renderTrainerQuestion() {
   const host = $('#trainerQuiz'); if (!host || !currentTrainerSession) return;
   if (currentTrainerSession.index >= currentTrainerSession.queue.length) return finishTrainerSession();
   const q = currentTrainerSession.queue[currentTrainerSession.index];
+  if (!q) {
+    setTrainerError('Spørsmålsdata mangler for denne leksjonen.');
+    return;
+  }
   const choices = shuffle(q.choices.map((text, original) => ({ text, original })));
   currentTrainerSession.current = { q, choices, correctIndex: choices.findIndex(c => c.original === q.answer) };
   currentTrainerSession.answered = false;
-  host.innerHTML = `<div class="trainer-question"><div class="quiz-meta"><strong>${labelForQuestionType(q.type)}</strong><span>${q.difficulty} · ${xpForDifficulty(q.difficulty)} XP</span></div><h3>${escapeHtml(q.prompt)}</h3><div class="trainer-answer-grid">${choices.map((c, i) => `<button data-trainer-answer="${i}">${escapeHtml(c.text)}</button>`).join('')}</div><p id="trainerFeedback" class="explanation hidden"></p></div>`;
+  const lesson = currentTrainerSession.lesson;
+  host.innerHTML = `<div class="trainer-question"><div class="quiz-meta"><strong>${lesson ? escapeHtml(lesson.title) : 'Review'}</strong><span>${currentTrainerSession.index + 1} av ${currentTrainerSession.queue.length}</span></div><div class="quiz-meta"><strong>${labelForQuestionType(q.type)}</strong><span>${q.difficulty} · ${xpForDifficulty(q.difficulty)} XP</span></div><h3>${escapeHtml(q.prompt)}</h3><div class="trainer-answer-grid">${choices.map((c, i) => `<button data-trainer-answer="${i}">${escapeHtml(c.text)}</button>`).join('')}</div><p id="trainerFeedback" class="explanation hidden"></p><p class="muted">Oppgave: Velg beste svar. XP og progresjon oppdateres når du svarer.</p></div>`;
+}
+function advanceTrainerQuestion() {
+  if (!currentTrainerSession) return;
+  currentTrainerSession.index += 1;
+  currentTrainerSession.answered = false;
+  renderTrainerQuestion();
 }
 function labelForQuestionType(type) {
   return { multiple:'Flervalg', truefalse:'Sant/usant', match:'Match komponent', partnumber:'Finn delenummer', system:'Identifiser system', 'customer-case':'Kundescenario', 'workshop-case':'Verkstedscenario', flashcard:'Flashcard' }[type] || 'Spørsmål';
@@ -39114,6 +39169,10 @@ function labelForQuestionType(type) {
 function answerTrainerQuestion(index) {
   if (!currentTrainerSession || currentTrainerSession.answered) return;
   const cur = currentTrainerSession.current;
+  if (!cur) {
+    setTrainerError('Spørsmålet ble ikke lastet riktig. Start leksjonen på nytt.');
+    return;
+  }
   const ok = index === cur.correctIndex;
   currentTrainerSession.answered = true;
   trainerState.answered += 1;
@@ -39149,8 +39208,7 @@ function finishTrainerSession() {
   }
   trainerState.wrongQueue = trainerState.wrongQueue.slice(-80);
   saveTrainerState();
-  host.innerHTML = `<div class="quiz-result"><h3>Leksjon ferdig</h3><p>${session.correct} av ${session.queue.length} riktige. Du tjente ${session.earned} XP.</p><button id="startTrainerLesson">Neste leksjon</button><button id="startReview" class="secondary">Review</button></div>`;
-  $('#startTrainerLesson')?.addEventListener('click', () => startTrainerLesson(trainerNextLesson().id));
+  host.innerHTML = `<div class="quiz-result"><h3>Leksjon ferdig</h3><p>${session.correct} av ${session.queue.length} riktige. Du tjente ${session.earned} XP.</p><button data-trainer-start="next">Neste leksjon</button><button id="startReview" class="secondary">Review</button></div>`;
   $('#startReview')?.addEventListener('click', startReviewSession);
   currentTrainerSession = null;
   renderTrainer();
