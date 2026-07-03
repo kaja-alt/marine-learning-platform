@@ -39070,8 +39070,23 @@ function handleTrainerStart(id, source = 'knapp') {
     setTrainerError(`Klikket ble registrert, men leksjonen kunne ikke åpnes: ${error?.message || error}`);
   }
 }
+function startSelectedTrainerLesson(source = 'Start leksjon-knappen') {
+  handleTrainerStart(selectedTrainerLessonId || trainerNextLesson().id, source);
+}
+function bindTrainerStartButtons() {
+  $$('#startTrainerLesson').forEach(button => {
+    if (button.dataset.boundTrainerStart === 'true') return;
+    button.dataset.boundTrainerStart = 'true';
+    button.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopPropagation();
+      startSelectedTrainerLesson('Start leksjon-knappen');
+    });
+  });
+}
 function initTrainer() {
   if (!$('#view-trainer')) return;
+  bindTrainerStartButtons();
   $('#startReview')?.addEventListener('click', startReviewSession);
   $('#openFlashcards')?.addEventListener('click', renderTrainerFlashcard);
   document.addEventListener('click', event => {
@@ -39115,6 +39130,7 @@ function renderTrainer() {
   if (!$('#trainerQuiz')?.textContent.trim()) $('#trainerQuiz').innerHTML = '<p class="muted">Start neste leksjon for å få spørsmål. Feil svar legges automatisk i Review.</p>';
   if (!$('#trainerFlashcards')?.textContent.trim()) renderTrainerFlashcard();
   if ($('#trainerStatus') && !$('#trainerStatus').textContent.trim()) setTrainerStatus('Trainer klar.');
+  bindTrainerStartButtons();
 }
 function renderTrainerPath() {
   const host = $('#trainerPath'); if (!host) return;

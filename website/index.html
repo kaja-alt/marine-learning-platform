@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Marine opplæringsplattform</title>
-  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="manifest" href="manifest.webmanifest?v=11">
   <meta name="theme-color" content="#0f766e">
   <link rel="apple-touch-icon" href="icon.svg">
-  <link rel="stylesheet" href="styles.css?v=10">
+  <link rel="stylesheet" href="styles.css?v=11">
 </head>
 <body>
   <header class="app-header">
@@ -15432,6 +15432,28 @@
     </section>
 
   </main>
-  <script src="search-index.js?v=10"></script>
+  <script src="search-index.js?v=11"></script>
+  <script>
+    (() => {
+      const setTrainerFallbackStatus = (message, isError = false) => {
+        const status = document.querySelector('#trainerStatus');
+        if (!status) return;
+        status.textContent = message;
+        status.classList.toggle('error', isError);
+      };
+      document.addEventListener('click', event => {
+        const button = event.target.closest?.('#startTrainerLesson,[data-trainer-start]');
+        if (!button) return;
+        setTrainerFallbackStatus('Start leksjon-klikk registrert. Åpner Trainer ...');
+        window.setTimeout(() => {
+          const hasQuestion = document.querySelectorAll('#trainerQuiz [data-trainer-answer]').length > 0;
+          const hasError = document.querySelector('#trainerQuiz .trainer-error');
+          if (!hasQuestion && !hasError) {
+            setTrainerFallbackStatus('Klikket ble registrert, men leksjonen åpnet ikke. Lukk appen helt og åpne den på nytt slik at PWA-cache v11 tas i bruk.', true);
+          }
+        }, 1200);
+      }, true);
+    })();
+  </script>
 </body>
 </html>

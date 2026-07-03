@@ -1,9 +1,9 @@
-const CACHE_NAME = 'marine-platform-v10';
+const CACHE_NAME = 'marine-platform-v11';
 const ASSETS = [
   './',
   './index.html',
-  './styles.css?v=10',
-  './search-index.js?v=10',
+  './styles.css?v=11',
+  './search-index.js?v=11',
   './search-data.json',
   './parts-database.json',
   './trainer-data.json',
@@ -25,7 +25,7 @@ self.addEventListener('install', event => {
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys()
-      .then(keys => Promise.all(keys.filter(key => key.startsWith('marine-platform-') && key !== CACHE_NAME).map(key => caches.delete(key))))
+      .then(keys => Promise.all(keys.filter(key => /^(marine-platform|marineTraining|marine-learning)/.test(key) && key !== CACHE_NAME).map(key => caches.delete(key))))
       .then(() => self.clients.claim())
       .then(() => self.clients.matchAll({ type: 'window' }))
       .then(clients => clients.forEach(client => client.navigate(client.url)))
