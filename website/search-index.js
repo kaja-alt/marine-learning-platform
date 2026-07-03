@@ -39070,6 +39070,7 @@ function trainerLessonById(id) {
 function setTrainerError(message) {
   const host = $('#trainerQuiz');
   setTrainerStatus(message, true);
+  updateTrainerDebug({ error: message });
   if (!host) return;
   host.innerHTML = `<div class="trainer-error"><strong>Kan ikke starte leksjonen.</strong><p>${escapeHtml(message)}</p></div>`;
 }
@@ -39079,7 +39080,45 @@ function setTrainerStatus(message, isError = false) {
   status.textContent = message;
   status.classList.toggle('error', isError);
 }
+function trainerDebugLine(label, value) {
+  if (value === undefined || value === null || value === '') return `${label}: -`;
+  if (typeof value === 'boolean') return `${label}: ${value ? 'ja' : 'nei'}`;
+  return `${label}: ${String(value)}`;
+}
+function updateTrainerDebug(details = {}) {
+  const host = $('#trainerDebug pre');
+  if (!host) return;
+  const levelNumber = details.levelId ?? trainerState.activeLevel ?? '-';
+  let level = null;
+  let questionCount = '-';
+  try {
+    level = trainerLevelData(levelNumber);
+    if (level) questionCount = questionsForLevel(level, Boolean(details.retryMistakes)).length;
+  } catch (error) {
+    questionCount = `feil ved telling: ${error?.message || error}`;
+  }
+  const lines = [
+    details.message || 'Trainer diagnostics updated',
+    trainerDebugLine('timestamp', new Date().toLocaleString('no-NO')),
+    trainerDebugLine('level-id', levelNumber),
+    trainerDebugLine('trainer-data finnes', typeof TRAINER_DATA !== 'undefined' && Boolean(TRAINER_DATA)),
+    trainerDebugLine('levels i trainer-data', TRAINER_DATA?.path?.length),
+    trainerDebugLine('spørsmål i trainer-data', TRAINER_DATA?.questions?.length),
+    trainerDebugLine('valgt level finnes', Boolean(level)),
+    trainerDebugLine('spørsmål funnet for valgt level', questionCount),
+    trainerDebugLine('source', details.source),
+    trainerDebugLine('button text', details.buttonText),
+    trainerDebugLine('error', details.error)
+  ];
+  host.textContent = lines.join('\n');
+}
+function showTrainerRuntimeError(type, error) {
+  const message = error?.message || error?.reason?.message || error?.reason || error || 'Ukjent JavaScript-feil';
+  updateTrainerDebug({ message: `JavaScript ${type}`, error: message });
+  setTrainerStatus(`JavaScript-feil i Trainer: ${message}`, true);
+}
 function handleTrainerStart(id, source = 'knapp') {
+  updateTrainerDebug({ message: 'Start level clicked', levelId: id || trainerNextLevel().level, source });
   setTrainerStatus(`Starter Trainer-level fra ${source} ...`);
   try {
     startTrainerLevel(id || trainerNextLevel().level);
@@ -39099,6 +39138,7 @@ function handleTrainerLevelButton(event, button) {
   event.stopPropagation();
   if (!button || button.disabled) return;
   const levelNumber = Number(button.dataset.trainerLevel);
+  updateTrainerDebug({ message: 'Start level clicked', levelId: button.dataset.trainerLevel, source: 'direct addEventListener', buttonText: button.textContent.trim() });
   if (!levelNumber) {
     setTrainerError('Klikket ble registrert, men levelnummer mangler på knappen.');
     return;
@@ -39125,6 +39165,7 @@ function bindTrainerLevelButtons() {
 }
 function initTrainer() {
   if (!$('#view-trainer')) return;
+  updateTrainerDebug({ message: 'Trainer diagnostics ready', levelId: trainerState.activeLevel || trainerNextLevel().level, source: 'initTrainer' });
   bindTrainerStartButtons();
   bindTrainerLevelButtons();
   $('#startReview')?.addEventListener('click', startReviewSession);
@@ -39248,6 +39289,7 @@ function startTrainerLesson(id) {
   startTrainerLevel(lesson.level);
 }
 function startTrainerLevel(levelNumber, retryMistakes = false) {
+  updateTrainerDebug({ message: 'Start level clicked', levelId: levelNumber, retryMistakes, source: 'startTrainerLevel' });
   const level = trainerLevelData(levelNumber);
   if (!level) {
     setTrainerError(`Fant ikke Trainer-level "${levelNumber || 'ukjent'}".`);
@@ -39258,6 +39300,7 @@ function startTrainerLevel(levelNumber, retryMistakes = false) {
     return;
   }
   const queue = questionsForLevel(level, retryMistakes);
+  updateTrainerDebug({ message: 'Start level clicked', levelId: level.level, retryMistakes, source: 'questionsForLevel complete' });
   if (!queue.length) {
     setTrainerError(`Level ${level.level} mangler spørsmål. Kontroller Trainer-spørsmål for temaene i "${level.title}".`);
     return;
@@ -39988,6 +40031,12 @@ function init() {
   openChapter(state.lastVisited || '01');
   setView('dashboard');
 }
+window.onerror = (message, source, lineno, colno, error) => {
+  showTrainerRuntimeError('onerror', `${message || error?.message || 'Ukjent feil'} (${source || 'ukjent kilde'}:${lineno || 0}:${colno || 0})`);
+};
+window.addEventListener('unhandledrejection', event => {
+  showTrainerRuntimeError('unhandledrejection', event.reason?.message || event.reason || 'Ukjent promise-feil');
+});
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', init, { once: true });
 } else {
