@@ -1,4 +1,4 @@
-const CACHE_NAME = 'marine-platform-legacy-website-v15';
+const CACHE_NAME = 'marine-platform-legacy-website-v16';
 
 self.addEventListener('install', event => {
   event.waitUntil(self.skipWaiting());
@@ -11,7 +11,7 @@ self.addEventListener('activate', event => {
       .then(() => self.clients.claim())
       .then(() => self.clients.matchAll({ type: 'window' }))
       .then(clients => {
-        const target = new URL('../index.html?v=15', self.registration.scope).toString();
+        const target = new URL('../index.html?v=16', self.registration.scope).toString();
         return Promise.all(clients.map(client => client.navigate(target)));
       })
   );
@@ -19,6 +19,6 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
   if (event.request.mode === 'navigate') {
-    event.respondWith(Response.redirect(new URL('../index.html?v=15', self.registration.scope).toString(), 302));
+    event.respondWith(Response.redirect(new URL('../index.html?v=16', self.registration.scope).toString(), 302));
   }
 });
