@@ -198,6 +198,49 @@ function renderSearch() {
   update();
 }
 function escapeHtml(s) { return String(s).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c])); }
+function safeOn(selector, eventName, handler, root = document) {
+  const node = $(selector, root);
+  if (node) node.addEventListener(eventName, handler);
+  return node;
+}
+function bindCriticalActionRouter() {
+  if (document.documentElement.dataset.criticalRouterBound === 'true') return;
+  document.documentElement.dataset.criticalRouterBound = 'true';
+  document.addEventListener('click', event => {
+    const critical = event.target.closest('#startTrainerLesson,[data-trainer-level],#openFlashcards,#simStartDay,#simContinueDaily');
+    if (!critical) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    try {
+      if (critical.matches('#startTrainerLesson')) {
+        setView('trainer');
+        startSelectedTrainerLevel('Start leksjon-knappen');
+        return;
+      }
+      if (critical.matches('[data-trainer-level]')) {
+        setView('trainer');
+        handleTrainerStart(Number(critical.dataset.trainerLevel), 'Learning Path');
+        return;
+      }
+      if (critical.matches('#openFlashcards')) {
+        setView('trainer');
+        startTrainerFlashcards();
+        return;
+      }
+      if (critical.matches('#simStartDay')) {
+        setView('work-simulator');
+        startSimDailyMission();
+        return;
+      }
+      if (critical.matches('#simContinueDaily')) startNextDailyCase();
+    } catch (error) {
+      const message = `Handlingen kunne ikke startes: ${error?.message || error}`;
+      if (critical.matches('#simStartDay,#simContinueDaily') && $('#simResult')) $('#simResult').innerHTML = `<div class="sim-result warn"><h4>Teknisk feil</h4><p>${escapeHtml(message)}</p></div>`;
+      else if ($('#trainerStatus')) setTrainerStatus(message, true);
+      else console.error(message);
+    }
+  }, true);
+}
 function bindEvents() {
   $$('.app-tabs button').forEach(btn => btn.addEventListener('click', () => setView(btn.dataset.view)));
   $$('[data-view-jump]').forEach(btn => btn.addEventListener('click', () => setView(btn.dataset.viewJump)));
@@ -214,14 +257,14 @@ function bindEvents() {
     const maker = event.target.closest('[data-maker-target]');
     if (maker) document.getElementById('maker-' + maker.dataset.makerTarget)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
-  $('#continueBtn').addEventListener('click', () => openChapter(state.lastVisited || nextRecommended().chapter));
-  $('#recommendedBtn').addEventListener('click', () => openChapter(nextRecommended().chapter));
-  $('#resetProgress').addEventListener('click', () => {
+  safeOn('#continueBtn', 'click', () => openChapter(state.lastVisited || nextRecommended().chapter));
+  safeOn('#recommendedBtn', 'click', () => openChapter(nextRecommended().chapter));
+  safeOn('#resetProgress', 'click', () => {
     if (!confirm('Vil du starte progresjon og quizresultater på nytt?')) return;
     state.completed = []; state.lastVisited = null; state.quizResults = {}; saveState(); updateProgressUI(); renderDashboard(); renderQuizHistory();
   });
-  $('#themeToggle').addEventListener('click', () => { state.theme = state.theme === 'dark' ? 'light' : 'dark'; saveState(); updateProgressUI(); });
-  $('#chapterFilter').addEventListener('input', event => {
+  safeOn('#themeToggle', 'click', () => { state.theme = state.theme === 'dark' ? 'light' : 'dark'; saveState(); updateProgressUI(); });
+  safeOn('#chapterFilter', 'input', event => {
     const q = normalize(event.target.value);
     $$('.chapter-link').forEach(btn => btn.classList.toggle('hidden', q && !normalize(btn.textContent).includes(q)));
   });
@@ -40242,6 +40285,7 @@ function initInteractiveChapters() {
 
 function init() {
   document.documentElement.dataset.theme = state.theme || 'light';
+  bindCriticalActionRouter();
   bindEvents();
   renderDashboard();
   initQuiz();
