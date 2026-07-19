@@ -39014,10 +39014,11 @@ const TRAINER_FLASHCARDS = [
 const TRAINER_KEY = 'marineTrainer.v1';
 let currentTrainerSession = null;
 let currentFlashcardIndex = 0;
+let currentFlashcardSession = null;
 let selectedTrainerLessonId = null;
 
 function loadTrainerState() {
-  const defaults = { xp: 0, completedLessons: [], completedLevels: [], answered: 0, correct: 0, wrongQueue: [], badges: [], lastTrainDate: null, streak: 0, lessonScores: {}, levelScores: {}, levelMistakes: {}, dailyGoal: 60, activeLevel: 1 };
+  const defaults = { xp: 0, completedLessons: [], completedLevels: [], answered: 0, correct: 0, wrongQueue: [], badges: [], lastTrainDate: null, streak: 0, lessonScores: {}, levelScores: {}, levelMistakes: {}, dailyGoal: 60, activeLevel: 1, flashcardsAnswered: 0, flashcardsKnown: 0, flashcardReviewQueue: [], flashcardSessions: [] };
   try {
     return Object.assign(defaults, JSON.parse(localStorage.getItem(TRAINER_KEY) || '{}'));
   } catch (_) {
@@ -39129,7 +39130,10 @@ function initTrainer() {
   bindTrainerStartButtons();
   bindTrainerLevelButtons();
   $('#startReview')?.addEventListener('click', startReviewSession);
-  $('#openFlashcards')?.addEventListener('click', renderTrainerFlashcard);
+  $('#openFlashcards')?.addEventListener('click', event => {
+    event.preventDefault();
+    startTrainerFlashcards();
+  });
   document.addEventListener('click', event => {
     const start = trainerClickTarget(event, '[data-trainer-start]');
     if (start) {
@@ -39158,14 +39162,20 @@ function initTrainer() {
     if (next) advanceTrainerQuestion();
     const back = trainerClickTarget(event, '#trainerBackToPath');
     if (back) closeTrainerLessonScreen();
+    const flashReveal = trainerClickTarget(event, '#trainerFlashcardReveal');
+    if (flashReveal) revealTrainerFlashcard();
+    const flashRate = trainerClickTarget(event, '[data-flashcard-rating]');
+    if (flashRate) rateTrainerFlashcard(flashRate.dataset.flashcardRating);
+    const flashNext = trainerClickTarget(event, '#trainerFlashcardNext');
+    if (flashNext) advanceTrainerFlashcard();
+    const flashFinish = trainerClickTarget(event, '#trainerFlashcardFinish');
+    if (flashFinish) finishTrainerFlashcards();
+    const flashBack = trainerClickTarget(event, '#trainerFlashcardBack');
+    if (flashBack) closeTrainerFlashcardScreen();
     const retryLevel = trainerClickTarget(event, '[data-trainer-retry-level]');
     if (retryLevel) startTrainerLevel(Number(retryLevel.dataset.trainerRetryLevel), true);
     const nextLevel = trainerClickTarget(event, '[data-trainer-next-level]');
     if (nextLevel) startTrainerLevel(Number(nextLevel.dataset.trainerNextLevel));
-    const flashNext = trainerClickTarget(event, '#trainerNextFlashcard');
-    if (flashNext) { currentFlashcardIndex = (currentFlashcardIndex + 1) % TRAINER_FLASHCARDS.length; renderTrainerFlashcard(); }
-    const flashReveal = trainerClickTarget(event, '#trainerRevealFlashcard');
-    if (flashReveal) $('#trainerFlashcardAnswer')?.classList.remove('hidden');
   });
   renderTrainer();
 }
@@ -39183,7 +39193,6 @@ function renderTrainer() {
   renderTrainerBadges();
   renderTrainerProgressDetails();
   if (!$('#trainerQuiz')?.textContent.trim()) $('#trainerQuiz').innerHTML = '<p class="muted">Start neste leksjon for å få spørsmål. Feil svar legges automatisk i Review.</p>';
-  if (!$('#trainerFlashcards')?.textContent.trim()) renderTrainerFlashcard();
   if ($('#trainerStatus') && !$('#trainerStatus').textContent.trim()) setTrainerStatus('Trainer klar.');
   bindTrainerStartButtons();
   bindTrainerLevelButtons();
@@ -39259,6 +39268,7 @@ function trainerShell() {
 }
 function showTrainerLessonScreen() {
   const screen = $('#trainer-lesson-screen');
+  trainerShell()?.classList.remove('flashcards-active');
   trainerShell()?.classList.add('lesson-active');
   screen?.classList.remove('hidden');
   screen?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -39273,6 +39283,30 @@ function closeTrainerLessonScreen() {
   }
   renderTrainer();
   $('#view-trainer')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function showTrainerFlashcardScreen() {
+  const screen = $('#trainer-flashcard-screen');
+  trainerShell()?.classList.remove('lesson-active');
+  trainerShell()?.classList.add('flashcards-active');
+  screen?.classList.remove('hidden');
+  screen?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function closeTrainerFlashcardScreen() {
+  currentFlashcardSession = null;
+  trainerShell()?.classList.remove('flashcards-active');
+  const screen = $('#trainer-flashcard-screen');
+  if (screen) {
+    screen.classList.add('hidden');
+    screen.innerHTML = '';
+  }
+  renderTrainer();
+  $('#view-trainer')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function setTrainerFlashcardError(message) {
+  setTrainerStatus(message, true);
+  showTrainerFlashcardScreen();
+  const host = $('#trainer-flashcard-screen');
+  if (host) host.innerHTML = `<div class="trainer-error"><strong>Kan ikke åpne Flashcards.</strong><p>${escapeHtml(message)}</p><button id="trainerFlashcardBack" class="secondary">Tilbake til Trainer</button></div>`;
 }
 function startTrainerLevel(levelNumber, retryMistakes = false) {
   const level = trainerLevelData(levelNumber);
@@ -39493,12 +39527,134 @@ function renderTrainerProgressDetails() {
   const totalLessons = TRAINER_DATA.path.reduce((sum,l) => sum + l.lessons.length, 0);
   const percent = trainerLevelPercent();
   const activeScore = trainerState.levelScores[trainerState.activeLevel];
-  host.innerHTML = `<table><thead><tr><th>Målepunkt</th><th>Status</th></tr></thead><tbody><tr><td>XP</td><td>${trainerState.xp}</td></tr><tr><td>XP-level</td><td>${trainerLevel().level}</td></tr><tr><td>Level-progresjon</td><td>${percent}%</td></tr><tr><td>Beståtte levels</td><td>${trainerState.completedLevels.length} av ${TRAINER_DATA.path.length}</td></tr><tr><td>Fullførte leksjonstema</td><td>${trainerState.completedLessons.length} av ${totalLessons}</td></tr><tr><td>Siste level-score</td><td>${activeScore ? `${activeScore.correct} av ${activeScore.total} (${activeScore.percent}%)` : 'Ingen fullført level ennå'}</td></tr><tr><td>Fullførte spørsmål</td><td>${trainerState.answered} besvart, ${trainerState.correct} riktige</td></tr><tr><td>Review-kø</td><td>${trainerState.wrongQueue.length} spørsmål</td></tr><tr><td>Badges</td><td>${trainerState.badges.length} av ${TRAINER_DATA.badges.length}</td></tr><tr><td>Dagens mål</td><td>${trainerState.dailyGoal} XP</td></tr></tbody></table>`;
+  host.innerHTML = `<table><thead><tr><th>Målepunkt</th><th>Status</th></tr></thead><tbody><tr><td>XP</td><td>${trainerState.xp}</td></tr><tr><td>XP-level</td><td>${trainerLevel().level}</td></tr><tr><td>Level-progresjon</td><td>${percent}%</td></tr><tr><td>Beståtte levels</td><td>${trainerState.completedLevels.length} av ${TRAINER_DATA.path.length}</td></tr><tr><td>Fullførte leksjonstema</td><td>${trainerState.completedLessons.length} av ${totalLessons}</td></tr><tr><td>Siste level-score</td><td>${activeScore ? `${activeScore.correct} av ${activeScore.total} (${activeScore.percent}%)` : 'Ingen fullført level ennå'}</td></tr><tr><td>Fullførte spørsmål</td><td>${trainerState.answered} besvart, ${trainerState.correct} riktige</td></tr><tr><td>Flashcards</td><td>${trainerState.flashcardsAnswered || 0} besvart, ${trainerState.flashcardsKnown || 0} kunne</td></tr><tr><td>Review-kø</td><td>${trainerState.wrongQueue.length} spørsmål / ${(trainerState.flashcardReviewQueue || []).length} flashcards</td></tr><tr><td>Badges</td><td>${trainerState.badges.length} av ${TRAINER_DATA.badges.length}</td></tr><tr><td>Dagens mål</td><td>${trainerState.dailyGoal} XP</td></tr></tbody></table>`;
+}
+function trainerFlashcardDeck() {
+  if (!Array.isArray(TRAINER_FLASHCARDS) || !TRAINER_FLASHCARDS.length) return [];
+  const reviewIds = trainerState.flashcardReviewQueue || [];
+  const reviewCards = reviewIds.map(id => TRAINER_FLASHCARDS.find(card => card.id === id)).filter(Boolean);
+  const freshCards = TRAINER_FLASHCARDS.filter(card => !reviewIds.includes(card.id));
+  return uniqueById([...reviewCards, ...freshCards]).slice(0, 20);
+}
+function uniqueById(items) {
+  const seen = new Set();
+  return items.filter(item => {
+    const key = item.id || item.question;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+function startTrainerFlashcards() {
+  try {
+    const deck = trainerFlashcardDeck();
+    if (!deck.length) {
+      setTrainerFlashcardError('Fant ingen flashcard-data. Kontroller at search-index.js lastes fra /marine-learning-platform/ og at TRAINER_FLASHCARDS finnes.');
+      return;
+    }
+    currentFlashcardSession = { deck, index: 0, revealed: false, currentRating: null, ratings: [], known: 0, unsure: 0, missed: 0, reviewIds: [] };
+    showTrainerFlashcardScreen();
+    renderTrainerFlashcard();
+    setTrainerStatus(`Flashcards åpnet: ${deck.length} kort lastet.`);
+  } catch (error) {
+    setTrainerFlashcardError(`JavaScript-feil ved åpning av Flashcards: ${error?.message || error}`);
+  }
 }
 function renderTrainerFlashcard() {
-  const host = $('#trainerFlashcards'); if (!host) return;
-  const card = TRAINER_FLASHCARDS[currentFlashcardIndex % TRAINER_FLASHCARDS.length];
-  host.innerHTML = `<article class="trainer-flashcard"><span class="kicker">${escapeHtml(card.manufacturer)} · ${escapeHtml(card.category)}</span><h3>${escapeHtml(card.question)}</h3><p id="trainerFlashcardAnswer" class="hidden">${escapeHtml(card.answer)}</p><div class="action-row"><button id="trainerRevealFlashcard">Vis svar</button><button id="trainerNextFlashcard" class="secondary">Neste kort</button></div></article>`;
+  const host = $('#trainer-flashcard-screen');
+  if (!host || !currentFlashcardSession) return;
+  const session = currentFlashcardSession;
+  const card = session.deck[session.index];
+  if (!card) return finishTrainerFlashcards();
+  const total = session.deck.length;
+  const progress = Math.round(((session.index + 1) / total) * 100);
+  const answer = session.revealed ? `<div class="flashcard-back"><span class="kicker">Svar</span><p>${escapeHtml(card.answer)}</p></div>` : '';
+  const ratingDisabled = session.revealed ? '' : 'disabled';
+  host.innerHTML = `<article class="trainer-flashcard active-flashcard">
+    <div class="lesson-topbar"><button id="trainerFlashcardBack" class="secondary">Tilbake til Trainer</button><span class="kicker">${escapeHtml(card.manufacturer || 'Flashcard')}</span></div>
+    <div class="progress-rail trainer-question-progress"><span style="width:${progress}%"></span></div>
+    <div class="quiz-meta"><strong>Kort ${session.index + 1} av ${total}</strong><span>${escapeHtml(card.category || 'repetisjon')}</span></div>
+    <div class="flashcard-front"><span class="kicker">Spørsmål</span><h3>${escapeHtml(card.question)}</h3></div>
+    ${answer}
+    <div class="flashcard-actions">
+      <button id="trainerFlashcardReveal" ${session.revealed ? 'disabled' : ''}>Vis svar</button>
+      <button data-flashcard-rating="known" class="secondary ${session.currentRating === 'known' ? 'selected' : ''}" ${ratingDisabled}>Kunne</button>
+      <button data-flashcard-rating="unsure" class="secondary ${session.currentRating === 'unsure' ? 'selected' : ''}" ${ratingDisabled}>Usikker</button>
+      <button data-flashcard-rating="missed" class="secondary ${session.currentRating === 'missed' ? 'selected' : ''}" ${ratingDisabled}>Kunne ikke</button>
+      <button id="trainerFlashcardNext" class="secondary" ${session.revealed ? '' : 'disabled'}>Neste kort</button>
+      <button id="trainerFlashcardFinish" class="secondary">Avslutt økten</button>
+    </div>
+  </article>`;
+}
+function revealTrainerFlashcard() {
+  if (!currentFlashcardSession) return;
+  currentFlashcardSession.revealed = true;
+  renderTrainerFlashcard();
+}
+function rateTrainerFlashcard(rating) {
+  if (!currentFlashcardSession || !currentFlashcardSession.revealed) return;
+  const session = currentFlashcardSession;
+  const card = session.deck[session.index];
+  if (!card) return;
+  const existing = session.ratings.find(item => item.id === card.id);
+  if (existing) {
+    if (existing.rating === 'known') session.known = Math.max(0, session.known - 1);
+    if (existing.rating === 'unsure') session.unsure = Math.max(0, session.unsure - 1);
+    if (existing.rating === 'missed') session.missed = Math.max(0, session.missed - 1);
+    existing.rating = rating;
+  }
+  else session.ratings.push({ id: card.id, rating });
+  session.currentRating = rating;
+  if (rating === 'known') session.known += 1;
+  if (rating === 'unsure') session.unsure += 1;
+  if (rating === 'missed') session.missed += 1;
+  if ((rating === 'unsure' || rating === 'missed') && !session.reviewIds.includes(card.id)) session.reviewIds.push(card.id);
+  renderTrainerFlashcard();
+}
+function advanceTrainerFlashcard() {
+  if (!currentFlashcardSession) return;
+  currentFlashcardSession.index += 1;
+  currentFlashcardSession.revealed = false;
+  currentFlashcardSession.currentRating = null;
+  if (currentFlashcardSession.index >= currentFlashcardSession.deck.length) finishTrainerFlashcards();
+  else renderTrainerFlashcard();
+}
+function finishTrainerFlashcards() {
+  const host = $('#trainer-flashcard-screen');
+  const session = currentFlashcardSession;
+  if (!host || !session) return;
+  const answered = session.ratings.length;
+  const known = session.ratings.filter(item => item.rating === 'known').length;
+  const unsure = session.ratings.filter(item => item.rating === 'unsure').length;
+  const missed = session.ratings.filter(item => item.rating === 'missed').length;
+  const earned = known * 5 + unsure * 2;
+  trainerState.xp += earned;
+  trainerState.flashcardsAnswered += answered;
+  trainerState.flashcardsKnown += known;
+  const reviewSet = new Set([...(trainerState.flashcardReviewQueue || []), ...session.reviewIds]);
+  trainerState.flashcardReviewQueue = [...reviewSet].slice(-120);
+  trainerState.wrongQueue = uniqueById([...(trainerState.wrongQueue || []).map(id => ({ id })), ...session.reviewIds.map(id => ({ id }))]).map(item => item.id).slice(-120);
+  trainerState.flashcardSessions.unshift({ date: new Date().toISOString(), answered, known, unsure, missed, xp: earned });
+  trainerState.flashcardSessions = trainerState.flashcardSessions.slice(0, 20);
+  updateTrainerStreak();
+  saveTrainerState();
+  currentFlashcardSession = null;
+  renderTrainer();
+  host.innerHTML = `<div class="quiz-result trainer-level-result">
+    <span class="kicker">Flashcards fullført</span>
+    <h3>Resultat for repetisjon</h3>
+    <div class="result-score"><strong>${answered} kort</strong><span>${known} kunne</span><span>${earned} XP</span></div>
+    <p>${unsure + missed} kort ble lagt i repetisjonskøen.</p>
+    <div class="action-row">
+      <button id="openFlashcards">Start ny økt</button>
+      <button id="trainerFlashcardBack" class="secondary">Tilbake til Trainer</button>
+    </div>
+  </div>`;
+  $('#openFlashcards')?.addEventListener('click', event => {
+    event.preventDefault();
+    startTrainerFlashcards();
+  });
+  setTrainerStatus(`Flashcards fullført: ${answered} kort, ${earned} XP, ${unsure + missed} til review.`);
 }
 function initMarineTrainer() { initTrainer(); }
 

@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Marine opplæringsplattform</title>
-  <link rel="manifest" href="manifest.webmanifest?v=16">
+  <link rel="manifest" href="manifest.webmanifest?v=17">
   <meta name="theme-color" content="#0f766e">
   <link rel="apple-touch-icon" href="icon.svg">
-  <link rel="stylesheet" href="styles.css?v=16">
+  <link rel="stylesheet" href="styles.css?v=17">
 </head>
 <body>
   <header class="app-header">
@@ -15325,8 +15325,9 @@
       <div class="trainer-shell">
         <div class="trainer-hero panel trainer-dashboard"><span class="kicker">Marine Trainer</span><h2>Daglig teknisk trening</h2><p>En strukturert læringssti for marine dieselmotorer, reservedeler og teknisk kundeservice.</p><div class="trainer-metrics"><div><strong id="trainerXp">0</strong><span>XP</span></div><div><strong id="trainerLevel">1</strong><span>Level</span></div><div><strong id="trainerStreak">🔥 0</strong><span>Streak</span></div><div><strong id="trainerPercent">0%</strong><span>Fullført</span></div></div><div class="progress-rail"><span id="trainerProgressBar"></span></div><div class="action-row"><button id="startTrainerLesson" data-trainer-start="selected">Start neste leksjon</button><button id="startReview" class="secondary">Review</button><button id="openFlashcards" class="secondary">Flashcards</button></div><p id="trainerStatus" class="trainer-status" role="status" aria-live="polite">Trainer klar.</p><p id="trainerNext" class="muted"></p></div>
         <section id="trainer-lesson-screen" class="trainer-lesson-screen panel hidden" tabindex="-1"></section>
+        <section id="trainer-flashcard-screen" class="trainer-flashcard-screen panel hidden" tabindex="-1"></section>
         <div class="trainer-grid trainer-learning-area"><section class="panel trainer-learning-path"><h3>Learning Path</h3><div id="trainerPath" class="trainer-path"></div></section><section class="panel trainer-quiz-panel"><h3>Quiz</h3><div id="trainerQuiz"></div></section></div>
-        <div class="trainer-grid trainer-support-area"><section class="panel"><h3>Badges</h3><div id="trainerBadges" class="badge-grid"></div></section><section class="panel"><h3>Flashcards</h3><div id="trainerFlashcards"></div></section></div>
+        <div class="trainer-grid trainer-support-area"><section class="panel"><h3>Badges</h3><div id="trainerBadges" class="badge-grid"></div></section><section class="panel"><h3>Flashcards</h3><p class="muted">Åpne Flashcards fra Trainer-dashboardet for egen repetisjonsskjerm.</p></section></div>
         <section class="panel trainer-progress-panel"><h3>Progress</h3><div id="trainerProgressDetails" class="trainer-progress-details"></div></section>
       </div>
     </section>
@@ -15433,6 +15434,6 @@
     </section>
 
   </main>
-  <script src="search-index.js?v=16"></script>
+  <script src="search-index.js?v=17"></script>
 </body>
 </html>
