@@ -1,9 +1,9 @@
-const CACHE_NAME = 'marine-platform-v17';
+const CACHE_NAME = 'marine-platform-v18';
 const ASSETS = [
   './',
   './index.html',
-  './styles.css?v=17',
-  './search-index.js?v=17',
+  './styles.css?v=18',
+  './search-index.js?v=18',
   './search-data.json',
   './parts-database.json',
   './trainer-data.json',

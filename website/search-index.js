@@ -39162,16 +39162,6 @@ function initTrainer() {
     if (next) advanceTrainerQuestion();
     const back = trainerClickTarget(event, '#trainerBackToPath');
     if (back) closeTrainerLessonScreen();
-    const flashReveal = trainerClickTarget(event, '#trainerFlashcardReveal');
-    if (flashReveal) revealTrainerFlashcard();
-    const flashRate = trainerClickTarget(event, '[data-flashcard-rating]');
-    if (flashRate) rateTrainerFlashcard(flashRate.dataset.flashcardRating);
-    const flashNext = trainerClickTarget(event, '#trainerFlashcardNext');
-    if (flashNext) advanceTrainerFlashcard();
-    const flashFinish = trainerClickTarget(event, '#trainerFlashcardFinish');
-    if (flashFinish) finishTrainerFlashcards();
-    const flashBack = trainerClickTarget(event, '#trainerFlashcardBack');
-    if (flashBack) closeTrainerFlashcardScreen();
     const retryLevel = trainerClickTarget(event, '[data-trainer-retry-level]');
     if (retryLevel) startTrainerLevel(Number(retryLevel.dataset.trainerRetryLevel), true);
     const nextLevel = trainerClickTarget(event, '[data-trainer-next-level]');
@@ -39307,6 +39297,32 @@ function setTrainerFlashcardError(message) {
   showTrainerFlashcardScreen();
   const host = $('#trainer-flashcard-screen');
   if (host) host.innerHTML = `<div class="trainer-error"><strong>Kan ikke åpne Flashcards.</strong><p>${escapeHtml(message)}</p><button id="trainerFlashcardBack" class="secondary">Tilbake til Trainer</button></div>`;
+  bindTrainerFlashcardButtons();
+}
+function bindTrainerFlashcardButtons() {
+  const host = $('#trainer-flashcard-screen');
+  if (!host) return;
+  const bind = (selector, handler) => {
+    host.querySelectorAll(selector).forEach(button => {
+      if (button.dataset.boundFlashcard === 'true') return;
+      button.dataset.boundFlashcard = 'true';
+      button.addEventListener('click', event => {
+        event.preventDefault();
+        event.stopPropagation();
+        try {
+          handler(button);
+        } catch (error) {
+          setTrainerFlashcardError(`JavaScript-feil i Flashcards: ${error?.message || error}`);
+        }
+      });
+    });
+  };
+  bind('#trainerFlashcardReveal', () => revealTrainerFlashcard());
+  bind('[data-flashcard-rating]', button => rateTrainerFlashcard(button.dataset.flashcardRating));
+  bind('#trainerFlashcardNext', () => advanceTrainerFlashcard());
+  bind('#trainerFlashcardFinish', () => finishTrainerFlashcards());
+  bind('#trainerFlashcardBack', () => closeTrainerFlashcardScreen());
+  bind('#trainerFlashcardRestart', () => startTrainerFlashcards());
 }
 function startTrainerLevel(levelNumber, retryMistakes = false) {
   const level = trainerLevelData(levelNumber);
@@ -39585,6 +39601,7 @@ function renderTrainerFlashcard() {
       <button id="trainerFlashcardFinish" class="secondary">Avslutt økten</button>
     </div>
   </article>`;
+  bindTrainerFlashcardButtons();
 }
 function revealTrainerFlashcard() {
   if (!currentFlashcardSession) return;
@@ -39646,14 +39663,11 @@ function finishTrainerFlashcards() {
     <div class="result-score"><strong>${answered} kort</strong><span>${known} kunne</span><span>${earned} XP</span></div>
     <p>${unsure + missed} kort ble lagt i repetisjonskøen.</p>
     <div class="action-row">
-      <button id="openFlashcards">Start ny økt</button>
+      <button id="trainerFlashcardRestart">Start ny økt</button>
       <button id="trainerFlashcardBack" class="secondary">Tilbake til Trainer</button>
     </div>
   </div>`;
-  $('#openFlashcards')?.addEventListener('click', event => {
-    event.preventDefault();
-    startTrainerFlashcards();
-  });
+  bindTrainerFlashcardButtons();
   setTrainerStatus(`Flashcards fullført: ${answered} kort, ${earned} XP, ${unsure + missed} til review.`);
 }
 function initMarineTrainer() { initTrainer(); }
