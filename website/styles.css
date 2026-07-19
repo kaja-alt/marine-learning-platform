@@ -285,6 +285,11 @@ figcaption { margin-top:8px; color:var(--muted); font-size:13px; }
 .sim-case h4 { margin:8px 0 0; font-size:18px; }
 .sim-details { display:grid; gap:8px; padding:14px; border:1px solid var(--line); border-left:5px solid var(--accent); border-radius:var(--radius); background:color-mix(in srgb,var(--accent) 7%,var(--paper)); }
 .sim-details p { margin:0; color:var(--ink); }
+.sim-meta,.sim-daily-progress { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+.sim-meta span,.sim-daily-progress span,.sim-daily-progress strong { padding:7px 10px; border:1px solid var(--line); border-radius:999px; background:var(--paper-2); font-size:13px; }
+.sim-image { margin:0; padding:12px; border:1px solid var(--line); border-radius:var(--radius); background:var(--paper-2); }
+.sim-image img { width:100%; max-height:170px; object-fit:contain; display:block; }
+.sim-image figcaption { margin-top:8px; color:var(--muted); font-size:13px; }
 .sim-choice-grid { display:grid; gap:10px; }
 .sim-choice { color:var(--ink); background:var(--paper-2); border:1px solid var(--line); text-align:left; line-height:1.35; }
 .sim-choice.correct { border-color:var(--good); background:color-mix(in srgb,var(--good) 14%,var(--paper)); }
@@ -298,9 +303,13 @@ figcaption { margin-top:8px; color:var(--muted); font-size:13px; }
 .sim-feedback-grid div { padding:12px; border:1px solid var(--line); border-radius:var(--radius); background:var(--paper); }
 .sim-feedback-grid strong { display:block; margin-bottom:5px; }
 .sim-feedback-grid p { margin:0; color:var(--muted); }
+.sim-summary-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:12px 0; }
+.sim-summary-grid div { padding:12px; border:1px solid var(--line); border-radius:var(--radius); background:var(--paper); text-align:center; }
+.sim-summary-grid strong { display:block; font-size:26px; color:var(--accent); }
+.sim-summary-grid span { color:var(--muted); font-size:13px; font-weight:800; text-transform:uppercase; }
 .sim-history-list { display:grid; gap:8px; margin-top:12px; }
 .sim-history-item { display:flex; justify-content:space-between; gap:12px; padding:12px; border:1px solid var(--line); border-radius:var(--radius); background:var(--paper-2); }
 .sim-history-item span { color:var(--muted); font-size:13px; white-space:nowrap; }
 @media (max-width:1000px) { .sim-grid { grid-template-columns:1fr; } .sim-menu { position:static; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); } .sim-menu h3 { grid-column:1/-1; } }
-@media (max-width:760px) { .sim-feedback-grid,.sim-history-item { display:grid; grid-template-columns:1fr; } .sim-history-item span { white-space:normal; } }
+@media (max-width:760px) { .sim-feedback-grid,.sim-history-item,.sim-summary-grid { display:grid; grid-template-columns:1fr; } .sim-history-item span { white-space:normal; } }
 @media print { #view-work-simulator { display:none !important; } }

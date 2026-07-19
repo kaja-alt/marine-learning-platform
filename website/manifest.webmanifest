@@ -2,7 +2,7 @@
   "name": "Marine opplæringsplattform",
   "short_name": "Marine Mentor",
   "description": "Digital opplæringsplattform for marine reservedeler og marinemotorservice.",
-  "start_url": "./index.html?v=18",
+  "start_url": "./index.html?v=19",
   "scope": "./",
   "display": "standalone",
   "background_color": "#0f172a",

@@ -39674,6 +39674,7 @@ function initMarineTrainer() { initTrainer(); }
 
 const WORK_SIM_KEY = 'marineWorkSimulator.v1';
 let currentSimCase = null;
+let currentDailySession = null;
 
 function loadWorkSimState() {
   try {
@@ -39719,6 +39720,18 @@ function simModeLabel(mode) {
     daily: 'Daglig oppdrag'
   }[mode] || 'Simulering';
 }
+function simChannelLabel(mode) {
+  if (mode === 'email') return 'E-post';
+  if (mode === 'phone' || mode === 'difficult' || mode === 'time') return 'Telefon';
+  if (mode === 'workshop') return 'Verksteddialog';
+  if (mode === 'warranty') return 'Reklamasjon';
+  if (mode === 'quiz') return 'Quiz';
+  return 'Kundehenvendelse';
+}
+function simImageMarkup(simCase) {
+  if (!simCase?.image) return '';
+  return `<figure class="sim-image"><img src="${escapeHtml(simCase.image.src)}" alt="${escapeHtml(simCase.image.alt || simCase.title)}"><figcaption>${escapeHtml(simCase.image.caption || '')}</figcaption></figure>`;
+}
 function createWorkSimCase(mode) {
   if (mode === 'daily') return createDailyOverviewCase();
   if (mode === 'quiz') return createQuizSimCase();
@@ -39732,6 +39745,8 @@ function createWorkSimCase(mode) {
       mode,
       title: 'Kunde ringer med driftsproblem',
       intro: `Kunden sier: "Motoren går dårlig og vi trenger deler raskt." Du har foreløpig bare produsent og en vag symptombeskrivelse.`,
+      channel: 'Telefon',
+      image: { src: 'icon.svg', alt: 'Illustrasjon av kundehenvendelse på telefon', caption: 'Bildeplassholder: kunde ringer om motorproblem.' },
       details: [`Skjult opplysning: ${serialHint}.`, `Kunden har bilde av typeplate og komponent, men har ikke sendt det ennå.`],
       question: 'Hva er beste første oppfølgingsspørsmål?',
       points: 25,
@@ -39747,6 +39762,8 @@ function createWorkSimCase(mode) {
       mode,
       title: 'Finn riktig reservedel',
       intro: `Oppslag fra søkedatabasen: ${serialHint}. Kunden ber om ${part.component} i ${part.system}.`,
+      channel: 'Kundehenvendelse',
+      image: { src: 'icon.svg', alt: 'Illustrasjon av deleoppslag', caption: 'Bildeplassholder: typeplate, komponentbilde og katalogoppslag.' },
       details: [`Dokumentasjonskilde i opplæringsdatabasen: ${part.documentation}.`, `Notat: ${part.notes}`],
       question: 'Hvilket delenummer skal brukes som treningsoppslag før produsentverifikasjon?',
       points: 30,
@@ -39762,6 +39779,8 @@ function createWorkSimCase(mode) {
       mode,
       title: 'Feilsøking med kunde på telefon',
       intro: `${part.manufacturer} ${part.motor}: Kunden melder feil i ${part.system}. Aktuell komponent i saken er ${part.component}.`,
+      channel: 'Telefon',
+      image: { src: 'icon.svg', alt: 'Illustrasjon av feilsøking', caption: 'Bildeplassholder: målepunkt og systemkontroll.' },
       details: ['Motoren står i båt, kunden ønsker rask avgjørelse, og verkstedet har begrenset tid.', 'Du skal velge neste kontroll, ikke gjette ferdig årsak.'],
       question: 'Hva er mest profesjonelt neste feilsøkingstrinn?',
       points: 30,
@@ -39778,6 +39797,8 @@ function createWorkSimCase(mode) {
       type: 'email',
       title: 'E-postsimulator',
       intro: `Kunden skriver: "Hei, vi trenger ${part.component} til ${part.manufacturer} ${part.motor}. Kan dere sende pris og levering i dag?"`,
+      channel: 'E-post',
+      image: { src: 'icon.svg', alt: 'Illustrasjon av e-post fra kunde', caption: 'Bildeplassholder: innkommende kunde-e-post.' },
       details: [`Du vet at korrekt oppslag krever serienummer/motornummer og gjerne bilde av typeplate.`, `Treningspost: ${part.partNumber}, men dette skal ikke bekreftes uten verifikasjon.`],
       question: 'Skriv et kort profesjonelt svar. Systemet ser etter viktige elementer.',
       points: 40,
@@ -39788,6 +39809,8 @@ function createWorkSimCase(mode) {
       mode,
       title: 'Reklamasjon og garanti',
       intro: `Kunden mener at ${part.component} har sviktet etter kort tid og ber om ny del på garanti.`,
+      channel: 'Reklamasjon',
+      image: { src: 'icon.svg', alt: 'Illustrasjon av garantisak', caption: 'Bildeplassholder: dokumentasjon for reklamasjon.' },
       details: [`Motor: ${serialHint}.`, 'Kunden har foreløpig ikke sendt driftstimer, monteringsdato, bilder, feilkode eller servicehistorikk.'],
       question: 'Hva er riktig håndtering?',
       points: 35,
@@ -39803,6 +39826,8 @@ function createWorkSimCase(mode) {
       mode,
       title: 'Verksteddialog',
       intro: `Mekaniker står med demontert motorområde og spør etter riktig ${part.component}.`,
+      channel: 'Verksteddialog',
+      image: { src: 'icon.svg', alt: 'Illustrasjon av verksteddialog', caption: 'Bildeplassholder: demontert komponent på verkstedbenk.' },
       details: [`Mekaniker oppgir ${part.manufacturer} ${part.motor}, men ikke komplett identifikasjon.`, 'Båten skal ut igjen raskt, og feil del stopper jobben.'],
       question: 'Hvordan hjelper du mekanikeren raskest og tryggest?',
       points: 30,
@@ -39818,6 +39843,8 @@ function createWorkSimCase(mode) {
       mode,
       title: 'Tidsutfordring med flere saker',
       intro: 'Tre saker kommer samtidig: en havarist med driftsstans, et rutinemessig filtersett og en kunde som spør etter pris uten motor-ID.',
+      channel: 'Telefon',
+      image: { src: 'icon.svg', alt: 'Illustrasjon av prioritering', caption: 'Bildeplassholder: flere saker og tidsfrist.' },
       details: [`Kritisk sak gjelder ${part.manufacturer} ${part.motor} og mulig ${part.component}.`, 'Du må prioritere uten å miste dokumentasjon.'],
       question: 'Hvilken prioritering er best?',
       points: 25,
@@ -39833,6 +39860,8 @@ function createWorkSimCase(mode) {
       mode,
       title: 'Vanskelig kunde',
       intro: 'Kunden er irritert fordi forrige bestilling ikke passet. Han vil at du sender ny del umiddelbart uten flere spørsmål.',
+      channel: 'Telefon',
+      image: { src: 'icon.svg', alt: 'Illustrasjon av vanskelig kundesamtale', caption: 'Bildeplassholder: stresset kundedialog.' },
       details: [`Aktuell motor kan være ${part.manufacturer} ${part.motor}.`, 'Tidligere sak manglet bilde av typeplate og dokumentert katalogoppslag.'],
       question: 'Hva er best respons?',
       points: 30,
@@ -39854,6 +39883,7 @@ function createQuizSimCase() {
     mode: 'quiz',
     title: 'Daglig quiz',
     intro: 'Kort repetisjon hentet fra eksisterende Trainer-spørsmål.',
+    channel: 'Quiz',
     details: [`Type: ${labelForQuestionType(source.type)}. Vanskelighet: ${source.difficulty}.`],
     question: source.prompt,
     points: xpForDifficulty(source.difficulty),
@@ -39886,11 +39916,14 @@ function renderSimCase(simCase) {
   const host = $('#simCase');
   if (!host || !simCase) return;
   const details = simCase.details?.length ? `<div class="sim-details">${simCase.details.map(d => `<p>${escapeHtml(d)}</p>`).join('')}</div>` : '';
+  const progress = currentDailySession && simCase.fromDaily ? `<div class="sim-daily-progress"><strong>Daglig oppdrag ${currentDailySession.completed + 1} av ${currentDailySession.total}</strong><span>${currentDailySession.xp} XP i dag</span></div>` : '';
+  const image = simImageMarkup(simCase);
+  const meta = `<div class="sim-meta"><span>${escapeHtml(simCase.channel || simChannelLabel(simCase.mode))}</span><span>${Number(simCase.points || 0)} poeng</span></div>`;
   if (simCase.type === 'email') {
-    host.innerHTML = `<article class="sim-case"><span class="kicker">${simModeLabel(simCase.mode)}</span><h3>${escapeHtml(simCase.title)}</h3><p>${escapeHtml(simCase.intro)}</p>${details}<h4>${escapeHtml(simCase.question)}</h4><textarea id="simEmailText" class="sim-email-box" rows="8" placeholder="Skriv kundesvar her..."></textarea><button id="simEvaluateEmail">Vurder svar</button></article>`;
+    host.innerHTML = `<article class="sim-case"><span class="kicker">${simModeLabel(simCase.mode)}</span><h3>${escapeHtml(simCase.title)}</h3>${meta}${progress}<p>${escapeHtml(simCase.intro)}</p>${image}${details}<h4>${escapeHtml(simCase.question)}</h4><textarea id="simEmailText" class="sim-email-box" rows="8" placeholder="Skriv kundesvar her..."></textarea><button id="simEvaluateEmail">Vurder svar</button></article>`;
     return;
   }
-  host.innerHTML = `<article class="sim-case"><span class="kicker">${simModeLabel(simCase.mode)}</span><h3>${escapeHtml(simCase.title)}</h3><p>${escapeHtml(simCase.intro)}</p>${details}<h4>${escapeHtml(simCase.question)}</h4><div class="sim-choice-grid">${(simCase.choices || []).map((choice, idx) => `<button class="sim-choice" data-sim-answer="${idx}">${escapeHtml(choice.label)}</button>`).join('')}</div></article>`;
+  host.innerHTML = `<article class="sim-case"><span class="kicker">${simModeLabel(simCase.mode)}</span><h3>${escapeHtml(simCase.title)}</h3>${meta}${progress}<p>${escapeHtml(simCase.intro)}</p>${image}${details}<h4>${escapeHtml(simCase.question)}</h4><div class="sim-choice-grid">${(simCase.choices || []).map((choice, idx) => `<button class="sim-choice" data-sim-answer="${idx}">${escapeHtml(choice.label)}</button>`).join('')}</div></article>`;
 }
 function startSimCase(mode = 'phone', fromDaily = false) {
   currentSimCase = createWorkSimCase(mode);
@@ -39903,7 +39936,6 @@ function evaluateSimAnswer(index) {
   if (!currentSimCase) return;
   const choice = currentSimCase.choices[index];
   if (!choice) return;
-  if (currentSimCase.mode === 'daily') return startSimDailyMission();
   finishSimCase(Boolean(choice.correct), choice.correct ? currentSimCase.points : 0, choice.feedback, currentSimCase.repeat || []);
   $$('#simCase [data-sim-answer]').forEach((btn, i) => {
     btn.disabled = true;
@@ -39940,6 +39972,12 @@ function finishSimCase(ok, points, feedback, repeat) {
   };
   workSimState.history.unshift(entry);
   workSimState.history = workSimState.history.slice(0, 25);
+  if (currentSimCase.fromDaily && currentDailySession) {
+    currentDailySession.completed += 1;
+    currentDailySession.xp += points;
+    if (ok) currentDailySession.correct += 1;
+    else currentDailySession.wrong += 1;
+  }
   saveWorkSimState();
   renderSimResult(entry);
   renderWorkSimulator();
@@ -39952,7 +39990,8 @@ function renderSimResult(entry) {
   const host = $('#simResult');
   if (!host) return;
   const repeat = entry.repeat?.length ? entry.repeat.map(id => `<button class="secondary open-chapter" data-chapter="${id}">${escapeHtml(simChapterName(id))}</button>`).join('') : '<span class="muted">Ingen spesifikke kapitler foreslått.</span>';
-  host.innerHTML = `<div class="sim-result ${entry.ok ? 'good' : 'warn'}"><h4>${entry.ok ? 'God håndtering' : 'Må forbedres'}</h4><p><strong>${entry.points} poeng.</strong> ${escapeHtml(entry.feedback)}</p><div class="sim-feedback-grid"><div><strong>Hva gikk bra</strong><p>${entry.ok ? 'Du brukte dokumentasjon og struktur før beslutning.' : 'Du fikk saken videre og kan nå forbedre beslutningsgrunnlaget.'}</p></div><div><strong>Hva kan forbedres</strong><p>${entry.ok ? 'Fortsett å skrive tydelige forbehold og neste steg.' : 'Stopp tidligere ved manglende identifikasjon, og be om bilder/typeplate før del bekreftes.'}</p></div></div><div class="action-row">${repeat}</div></div>`;
+  const dailyNext = currentSimCase?.fromDaily ? `<button id="simContinueDaily">${workSimState.dailyQueue.length ? 'Neste oppdrag' : 'Vis dagens resultat'}</button>` : '';
+  host.innerHTML = `<div class="sim-result ${entry.ok ? 'good' : 'warn'}"><h4>${entry.ok ? 'God håndtering' : 'Må forbedres'}</h4><p><strong>Konsekvens:</strong> ${entry.ok ? 'Kunden får tryggere svar, færre feilbestillinger og bedre fremdrift.' : 'Saken kan gi feil del, ny ventetid eller svak dokumentasjon hvis den håndteres slik.'}</p><p><strong>Forklaring:</strong> ${escapeHtml(entry.feedback)}</p><p><strong>Hvorfor svaret var ${entry.ok ? 'riktig' : 'feil'}:</strong> ${entry.ok ? 'Valget bygger på identifikasjon, dokumentasjon og kontroll før konklusjon.' : 'Valget hopper over nødvendig kontroll eller lover mer enn saken dokumenterer.'}</p><p><strong>${entry.points} poeng.</strong></p><div class="sim-feedback-grid"><div><strong>Hva gikk bra</strong><p>${entry.ok ? 'Du brukte dokumentasjon og struktur før beslutning.' : 'Du fikk saken videre og kan nå forbedre beslutningsgrunnlaget.'}</p></div><div><strong>Hva kan forbedres</strong><p>${entry.ok ? 'Fortsett å skrive tydelige forbehold og neste steg.' : 'Stopp tidligere ved manglende identifikasjon, og be om bilder/typeplate før del bekreftes.'}</p></div></div><div class="action-row">${dailyNext}${repeat}</div></div>`;
 }
 function renderSimHistory() {
   const host = $('#simHistory');
@@ -39966,6 +40005,7 @@ function renderSimHistory() {
 function startSimDailyMission() {
   simEnsureToday();
   workSimState.dailyQueue = ['phone', 'phone', 'phone', 'workshop', 'workshop', 'warranty', 'quiz'];
+  currentDailySession = { total: workSimState.dailyQueue.length, completed: 0, correct: 0, wrong: 0, xp: 0, started: new Date().toISOString() };
   saveWorkSimState();
   startNextDailyCase();
 }
@@ -39975,8 +40015,12 @@ function startNextDailyCase() {
   saveWorkSimState();
   if (!mode) {
     currentSimCase = null;
+    const session = currentDailySession || { total: 0, completed: 0, correct: 0, wrong: 0, xp: 0 };
+    const satisfaction = session.completed ? Math.max(0, Math.round((session.correct / session.completed) * 100)) : 0;
+    const errorRate = session.completed ? Math.round((session.wrong / session.completed) * 100) : 0;
     $('#simCase').innerHTML = '<article class="sim-case"><span class="kicker">Daglig oppdrag</span><h3>Dagens arbeidspakke er fullført</h3><p>Du har gjennomført kundesaker, verkstedspørsmål, reklamasjon og quiz. Se resultatlisten for repetisjonspunkter.</p></article>';
-    $('#simResult').innerHTML = '<div class="sim-result good"><h4>Daglig økt ferdig</h4><p>Bruk anbefalte kapitler under for repetisjon før neste arbeidsøkt.</p></div>';
+    $('#simResult').innerHTML = `<div class="sim-result good"><h4>Daglig økt ferdig</h4><div class="sim-summary-grid"><div><strong>${session.xp}</strong><span>XP</span></div><div><strong>${satisfaction}%</strong><span>Kundetilfredshet</span></div><div><strong>${errorRate}%</strong><span>Feilprosent</span></div></div><p>Bruk anbefalte kapitler under for repetisjon før neste arbeidsøkt.</p></div>`;
+    currentDailySession = null;
     renderWorkSimulator();
     return;
   }
@@ -40006,6 +40050,7 @@ function initWorkSimulator() {
     const answer = event.target.closest('[data-sim-answer]');
     if (answer) evaluateSimAnswer(Number(answer.dataset.simAnswer));
     if (event.target.closest('#simEvaluateEmail')) evaluateSimEmail();
+    if (event.target.closest('#simContinueDaily')) startNextDailyCase();
   });
   renderWorkSimulator();
   startSimCase('phone');
