@@ -207,7 +207,7 @@ function bindCriticalActionRouter() {
   if (document.documentElement.dataset.criticalRouterBound === 'true') return;
   document.documentElement.dataset.criticalRouterBound = 'true';
   document.addEventListener('click', event => {
-    const critical = event.target.closest('#startTrainerLesson,[data-trainer-level],#openFlashcards,#simStartDay,#simContinueDaily');
+    const critical = event.target.closest('#startTrainerLesson,[data-trainer-level],#openFlashcards,#simStartDay,#simNextCase,#simContinueDaily');
     if (!critical) return;
     event.preventDefault();
     event.stopImmediatePropagation();
@@ -232,10 +232,13 @@ function bindCriticalActionRouter() {
         startSimDailyMission();
         return;
       }
-      if (critical.matches('#simContinueDaily')) startNextDailyCase();
+      if (critical.matches('#simNextCase,#simContinueDaily')) {
+        setView('work-simulator');
+        continueSimCaseFlow();
+      }
     } catch (error) {
       const message = `Handlingen kunne ikke startes: ${error?.message || error}`;
-      if (critical.matches('#simStartDay,#simContinueDaily') && $('#simResult')) $('#simResult').innerHTML = `<div class="sim-result warn"><h4>Teknisk feil</h4><p>${escapeHtml(message)}</p></div>`;
+      if (critical.matches('#simStartDay,#simNextCase,#simContinueDaily') && $('#simResult')) $('#simResult').innerHTML = `<div class="sim-result warn"><h4>Teknisk feil</h4><p>${escapeHtml(message)}</p></div>`;
       else if ($('#trainerStatus')) setTrainerStatus(message, true);
       else console.error(message);
     }
@@ -39959,7 +39962,7 @@ function renderSimCase(simCase) {
   const host = $('#simCase');
   if (!host || !simCase) return;
   const details = simCase.details?.length ? `<div class="sim-details">${simCase.details.map(d => `<p>${escapeHtml(d)}</p>`).join('')}</div>` : '';
-  const progress = currentDailySession && simCase.fromDaily ? `<div class="sim-daily-progress"><strong>Daglig oppdrag ${currentDailySession.completed + 1} av ${currentDailySession.total}</strong><span>${currentDailySession.xp} XP i dag</span></div>` : '';
+  const progress = currentDailySession && simCase.fromDaily ? `<div class="sim-daily-progress"><strong>Sak ${currentDailySession.completed + 1} av ${currentDailySession.total}</strong><span>${currentDailySession.xp} XP i dag</span></div>` : '';
   const image = simImageMarkup(simCase);
   const meta = `<div class="sim-meta"><span>${escapeHtml(simCase.channel || simChannelLabel(simCase.mode))}</span><span>${Number(simCase.points || 0)} poeng</span></div>`;
   if (simCase.type === 'email') {
@@ -39971,6 +39974,7 @@ function renderSimCase(simCase) {
 function startSimCase(mode = 'phone', fromDaily = false) {
   currentSimCase = createWorkSimCase(mode);
   currentSimCase.fromDaily = fromDaily;
+  currentSimCase.answered = false;
   renderSimCase(currentSimCase);
   $('#simResult').innerHTML = '<p class="muted">Svar på saken for å få poeng, tilbakemelding og anbefalt repetisjon.</p>';
   $$('.sim-menu button').forEach(btn => btn.classList.toggle('active', btn.dataset.simMode === mode));
@@ -39999,6 +40003,8 @@ function evaluateSimEmail() {
   $('#simEvaluateEmail').disabled = true;
 }
 function finishSimCase(ok, points, feedback, repeat) {
+  if (!currentSimCase || currentSimCase.answered) return;
+  currentSimCase.answered = true;
   simEnsureToday();
   workSimState.total += 1;
   workSimState.sessionsToday += 1;
@@ -40026,14 +40032,14 @@ function finishSimCase(ok, points, feedback, repeat) {
   renderWorkSimulator();
   if (currentSimCase.fromDaily) {
     const nextBtn = $('#simNextCase');
-    if (nextBtn) nextBtn.textContent = workSimState.dailyQueue.length ? `Neste daglige sak (${workSimState.dailyQueue.length} igjen)` : 'Avslutt daglig oppdrag';
+    if (nextBtn) nextBtn.textContent = workSimState.dailyQueue.length ? `Neste sak (${workSimState.dailyQueue.length} igjen)` : 'Vis dagens resultat';
   }
 }
 function renderSimResult(entry) {
   const host = $('#simResult');
   if (!host) return;
   const repeat = entry.repeat?.length ? entry.repeat.map(id => `<button class="secondary open-chapter" data-chapter="${id}">${escapeHtml(simChapterName(id))}</button>`).join('') : '<span class="muted">Ingen spesifikke kapitler foreslått.</span>';
-  const dailyNext = currentSimCase?.fromDaily ? `<button id="simContinueDaily">${workSimState.dailyQueue.length ? 'Neste oppdrag' : 'Vis dagens resultat'}</button>` : '';
+  const dailyNext = currentSimCase?.fromDaily ? `<button id="simContinueDaily">${workSimState.dailyQueue.length ? 'Neste sak' : 'Vis dagens resultat'}</button>` : '';
   host.innerHTML = `<div class="sim-result ${entry.ok ? 'good' : 'warn'}"><h4>${entry.ok ? 'God håndtering' : 'Må forbedres'}</h4><p><strong>Konsekvens:</strong> ${entry.ok ? 'Kunden får tryggere svar, færre feilbestillinger og bedre fremdrift.' : 'Saken kan gi feil del, ny ventetid eller svak dokumentasjon hvis den håndteres slik.'}</p><p><strong>Forklaring:</strong> ${escapeHtml(entry.feedback)}</p><p><strong>Hvorfor svaret var ${entry.ok ? 'riktig' : 'feil'}:</strong> ${entry.ok ? 'Valget bygger på identifikasjon, dokumentasjon og kontroll før konklusjon.' : 'Valget hopper over nødvendig kontroll eller lover mer enn saken dokumenterer.'}</p><p><strong>${entry.points} poeng.</strong></p><div class="sim-feedback-grid"><div><strong>Hva gikk bra</strong><p>${entry.ok ? 'Du brukte dokumentasjon og struktur før beslutning.' : 'Du fikk saken videre og kan nå forbedre beslutningsgrunnlaget.'}</p></div><div><strong>Hva kan forbedres</strong><p>${entry.ok ? 'Fortsett å skrive tydelige forbehold og neste steg.' : 'Stopp tidligere ved manglende identifikasjon, og be om bilder/typeplate før del bekreftes.'}</p></div></div><div class="action-row">${dailyNext}${repeat}</div></div>`;
 }
 function renderSimHistory() {
@@ -40069,6 +40075,18 @@ function startNextDailyCase() {
   }
   startSimCase(mode, true);
 }
+function continueSimCaseFlow() {
+  if (currentSimCase?.fromDaily || currentDailySession) {
+    if (currentSimCase && !currentSimCase.answered) {
+      $('#simResult').innerHTML = '<div class="sim-result warn"><h4>Svar på saken først</h4><p>Velg et svaralternativ og les forklaringen før neste sak lastes.</p></div>';
+      return;
+    }
+    startNextDailyCase();
+    return;
+  }
+  if (workSimState.dailyQueue.length) startNextDailyCase();
+  else startSimCase('phone');
+}
 function resetWorkSimulator() {
   if (!confirm('Vil du nullstille Work Simulator-resultater på denne enheten?')) return;
   workSimState.score = 0;
@@ -40087,13 +40105,13 @@ function initWorkSimulator() {
   simEnsureToday();
   $$('.sim-menu [data-sim-mode]').forEach(btn => btn.addEventListener('click', () => startSimCase(btn.dataset.simMode)));
   $('#simStartDay')?.addEventListener('click', startSimDailyMission);
-  $('#simNextCase')?.addEventListener('click', () => workSimState.dailyQueue.length ? startNextDailyCase() : startSimCase('phone'));
+  $('#simNextCase')?.addEventListener('click', continueSimCaseFlow);
   $('#simReset')?.addEventListener('click', resetWorkSimulator);
   document.addEventListener('click', event => {
     const answer = event.target.closest('[data-sim-answer]');
     if (answer) evaluateSimAnswer(Number(answer.dataset.simAnswer));
     if (event.target.closest('#simEvaluateEmail')) evaluateSimEmail();
-    if (event.target.closest('#simContinueDaily')) startNextDailyCase();
+    if (event.target.closest('#simContinueDaily')) continueSimCaseFlow();
   });
   renderWorkSimulator();
   startSimCase('phone');
